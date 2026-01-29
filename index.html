@@ -4,149 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BULWARK-FUND</title>
 
-    <link rel="icon" type="image/x-icon" href="/assets/img/logo2.svg">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/grid.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Плаўны пераход для змены фону */
-        header {
-            transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
-        }
-    </style>
+    <title>Bulwark — Ваша надзейная абарона</title>
+
+
 </head>
 
-<body class="bg-white text-[#1a1a1a]">
+<body>
 
-    <div class="relative w-full bg-cover bg-center bg-no-repeat"
-        style="background-image: url('assets/img/hero-bg.webp');">
+    <load src="./src/partials/header.html" />
+    <main>
+        <load src="./src/partials/hero.html" />
+        <load src="./src/partials/sidebar.html" />
+    </main>
 
-        <div class="absolute inset-0 bg-black/50 z-0"></div>
+    <load src="./src/partials/footer.html" />
 
-        <header id="main-header" class="fixed top-0 left-0 w-full z-50 bg-[#1a1a1a]">
-            <div class="bg-black/40 py-2 border-b border-white/5">
-                <div class="container-custom flex justify-end items-center space-x-5">
-                    <div class="flex space-x-5 text-white text-base">
-                        <a href="#" class="hover:text-red-500 transition-colors"><i
-                                class="fa-brands fa-telegram"></i></a>
-                        <a href="#" class="hover:text-red-500 transition-colors"><i
-                                class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="hover:text-red-500 transition-colors"><i
-                                class="fa-brands fa-facebook"></i></a>
-                        <a href="#" class="hover:text-red-500 transition-colors"><i
-                                class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#" class="hover:text-red-500 transition-colors"><i
-                                class="fa-brands fa-youtube"></i></a>
-                    </div>
-                    <div class="h-3 w-[1px] bg-gray-600"></div>
-                    <div class="flex space-x-3 text-[10px] font-black text-white uppercase tracking-tighter">
-                        <a href="#" class="text-red-500">BE</a>
-                        <a href="#" class="hover:text-red-500 transition-colors text-gray-400">EN</a>
-                        <a href="#" class="hover:text-red-500 transition-colors text-gray-400">UA</a>
-                        <a href="#" class="hover:text-red-500 transition-colors text-gray-400">Ru</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container-custom">
-                <div class="flex items-center justify-between py-4 border-b border-white/10">
-                    <a href="/" class="flex items-center group">
-                        <div class="mr-4">
-                            <img src="assets/img/logo.svg" alt="Logo" class="h-12 md:h-20 w-auto object-contain">
-                        </div>
-                        <div class="flex flex-col justify-center">
-                            <span
-                                class="text-lg md:text-xl font-black uppercase leading-[0.85] tracking-tighter text-white">
-                                Bulwark<br>fund
-                            </span>
-                            <span class="text-[10px] uppercase tracking-[0.2em] text-gray-400 mt-1 font-bold">
-                                Ukraine
-                            </span>
-                        </div>
-                    </a>
-
-                    <nav
-                        class="hidden md:flex items-center space-x-8 uppercase text-[13px] font-black tracking-widest text-white">
-                        <a href="#" class="hover:text-red-600 transition-colors">Пра нас</a>
-                        <a href="#" class="hover:text-red-600 transition-colors">Дабраахвотніку</a>
-                        <a href="#" class="hover:text-red-600 transition-colors">Навіны</a>
-                        <a href="#" class="hover:text-red-600 transition-colors">Дапамога</a>
-                        <a href="#" class="hover:text-red-600 transition-colors">Кантакты</a>
-                        <a href="#"
-                            class="border-2 border-red-600 text-red-600 px-6 py-2 hover:bg-red-600 hover:text-white transition-all">
-                            Падтрымаць
-                        </a>
-                    </nav>
-
-                    <button class="md:hidden text-white">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </header>
-
-        <section class="relative z-10 text-white pt-32 pb-20 md:pt-48 md:pb-32 xl:pt-64 xl:pb-48">
-            <div class="container-custom">
-                <div class="max-w-3xl">
-                    <h1
-                        class="text-4xl md:text-6xl xl:text-7xl font-black uppercase leading-[0.9] mb-6 tracking-tighter">
-                        Надзейны шчыт <span class="text-red-600">Тваёй</span> свабоды
-                    </h1>
-                    <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl font-medium">
-                        Дапамагаем тым, хто бароніць незалежнасць. Bulwark Fund — гэта падтрымка, якая даходзіць да
-                        кожнага салдата на перадавой.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-5">
-                        <a href="#"
-                            class="bg-red-600 text-white px-10 py-4 font-black uppercase tracking-widest text-center hover:bg-white hover:text-black transition-all">
-                            Далучыцца
-                        </a>
-                        <a href="#"
-                            class="border-2 border-white text-white px-10 py-4 font-black uppercase tracking-widest text-center hover:bg-white hover:text-black transition-all">
-                            Даведацца больш
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <section class="py-20 bg-white">
-        <div class="container-custom">
-            <h2 class="text-3xl font-black uppercase mb-16 italic">Наша дзейнасць</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="group cursor-pointer">
-                    <div class="h-1 w-12 bg-red-600 mb-6 transition-all group-hover:w-full"></div>
-                    <h3 class="text-xl font-black uppercase mb-4">Логістыка</h3>
-                    <p class="text-gray-600 text-sm">Хуткая дастаўка неабходнага рыштунку.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        const header = document.getElementById('main-header');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                // Пры скроле робім празрыстым з эфектам размыцця (Blur)
-                header.classList.remove('bg-[#1a1a1a]');
-                header.classList.add('bg-black/40', 'backdrop-blur-md');
-            } else {
-                // Вяртаем шчыльны чорны колер
-                header.classList.add('bg-[#1a1a1a]');
-                header.classList.remove('bg-black/40', 'backdrop-blur-md');
-            }
-        });
-    </script>
-
+    <script type="module" src="./src/main.js"></script>
 </body>
 
 </html>

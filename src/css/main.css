@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@layer base {
+    @import "./reset.css";
+    @import "./style.css";
+    @import "./grid.css";
+}
+
+/* Стылі секцый імпартуем ніжэй */
+@import "./sections/sidebar.css";

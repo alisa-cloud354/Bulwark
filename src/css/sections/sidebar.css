@@ -1,0 +1,16 @@
+/* src/css/sections/sidebar.css */
+
+#sidebar {
+    /* Гэта забяспечвае плыўнасць */
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Калі клас .closed ёсць — ссоўваем на 100% управа */
+#sidebar.closed {
+    transform: translateX(100%) !important;
+}
+
+/* Калі класа .closed няма — вяртаем на месца */
+#sidebar:not(.closed) {
+    transform: translateX(0) !important;
+}

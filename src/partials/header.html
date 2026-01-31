@@ -9,15 +9,15 @@
                 <a href="#" class="hover:text-red-600 transition-colors"><i class="fa-brands fa-youtube"></i></a>
             </div>
 
-            <div class="relative group dropdown-lang">
-                <button
+            <div class="relative dropdown-lang inline-block">
+
+                <button id="lang-btn"
                     class="flex items-center gap-2 text-[12px] font-black text-white uppercase tracking-widest cursor-pointer py-1">
                     <span class="text-red-600">BE</span>
-                    <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
+                    <i class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
                 </button>
 
-                <div
-                    class="absolute right-0 top-full pt-2 opacity-0 invisible translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 z-60">
+                <div class="dropdown-content absolute right-0 top-full pt-2 z-60">
                     <div class="bg-[#1a1a1a] border border-white/10 shadow-2xl flex flex-col min-w-15">
                         <a href="#"
                             class="px-4 py-2 text-[11px] font-black text-gray-400 hover:text-white hover:bg-white/5 transition-colors border-b border-white/5">EN</a>

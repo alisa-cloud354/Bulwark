@@ -1,15 +1,37 @@
 /* src/css/header.css */
 
-
-.dropdown-lang.is-active div,
-.dropdown-lang:hover div {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: translateY(0) !important;
+/* 1. Базавы стан (закрыта) */
+.dropdown-lang .dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
 }
 
-/* Паварот стрэлкі */
-.dropdown-lang.is-active i.fa-chevron-down,
-.dropdown-lang:hover i.fa-chevron-down {
+/* 2. Стан "Адкрыта": праз клас (мабільны/клік) */
+.dropdown-lang.is-active .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Круцім стрэлку пры актыўным класе */
+.dropdown-lang.is-active #lang-btn i {
     transform: rotate(180deg);
+}
+
+/* 3. Дэсктоп: дадаем ховер (толькі для прылад, якія яго падтрымліваюць) */
+@media (min-width: 1280px) {
+    .dropdown-lang:hover .dropdown-content {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .dropdown-lang:hover #lang-btn i {
+        transform: rotate(180deg);
+    }
 }

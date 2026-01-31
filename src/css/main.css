@@ -2,6 +2,7 @@
 @import "tailwindcss";
 @import "./sections/sidebar.css";
 @import "./sections/hero.css";
+@import "./sections/header.css";
 
 @layer base {
     @import "./reset.css";

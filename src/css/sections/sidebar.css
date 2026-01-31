@@ -1,16 +1,22 @@
 /* src/css/sections/sidebar.css */
 
 #sidebar {
-    /* Гэта забяспечвае плыўнасць */
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-/* Калі клас .closed ёсць — ссоўваем на 100% управа */
-#sidebar.closed {
-    transform: translateX(100%) !important;
+/* Стылізацыя мабільнага блока ўнутры сайдбара */
+#sidebar .border-red-600\/50 {
+    background: rgba(220, 38, 38, 0.05);
+    /* Ледзь заўважны чырвоны фон */
 }
 
-/* Калі класа .closed няма — вяртаем на месца */
-#sidebar:not(.closed) {
-    transform: translateX(0) !important;
+/* Эфект для пунктаў, якія не ўваходзяць у асноўнае меню */
+#sidebar nav a {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+}
+
+#sidebar .mt-auto p {
+    color: #ef4444;
+    /* Чырвоны колер для слогана */
 }

@@ -2,6 +2,8 @@
 
 /* 1. Базавы стан (закрыта) */
 .dropdown-lang .dropdown-content {
+    display: none;
+    /* Дадаем, каб не перакрывала элементы пад сабой */
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
@@ -11,6 +13,8 @@
 
 /* 2. Стан "Адкрыта": праз клас (мабільны/клік) */
 .dropdown-lang.is-active .dropdown-content {
+    display: block;
+    /* Уключаем бачнасць */
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -22,9 +26,10 @@
     transform: rotate(180deg);
 }
 
-/* 3. Дэсктоп: дадаем ховер (толькі для прылад, якія яго падтрымліваюць) */
+/* 3. Дэсктоп: дадаем ховер (ад 1280px) */
 @media (min-width: 1280px) {
     .dropdown-lang:hover .dropdown-content {
+        display: block;
         opacity: 1;
         visibility: visible;
         transform: translateY(0);

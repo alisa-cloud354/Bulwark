@@ -7,81 +7,77 @@
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Bulwark — Ваша надзейная абарона</title>
+    <title>Bulwark-fund</title>
 
 
-  <script type="module" crossorigin src="/assets/index-B1f1yKVF.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-Br99nVWQ.css">
+  <script type="module" crossorigin src="/assets/index-BGUdKok6.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DAsAnMVp.css">
 </head>
 
 <body>
 
-    <header id="main-header" class="fixed top-0 left-0 w-full z-50 bg-[#1a1a1a]">
-    <div class="bg-black/40 py-2 border-b border-white/5">
-        <div class="container-custom flex justify-end items-center gap-10">
-            <div class="flex items-center gap-5 text-white text-base">
-                <a href="#" class="hover:text-red-600 transition-colors cursor-pointer"><i
-                        class="fa-brands fa-telegram"></i></a>
-                <a href="#" class="hover:text-red-600 transition-colors cursor-pointer"><i
-                        class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="hover:text-red-600 transition-colors cursor-pointer"><i
-                        class="fa-brands fa-facebook"></i></a>
-                <a href="#" class="hover:text-red-600 transition-colors cursor-pointer"><i
-                        class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" class="hover:text-red-600 transition-colors cursor-pointer"><i
-                        class="fa-brands fa-youtube"></i></a>
+    <header id="main-header" class="fixed top-0 left-0 w-full bg-[#1a1a1a] z-50">
+    <div class="bg-black/40 border-b border-white/5 py-2">
+        <div class="container-custom flex justify-end items-center gap-8">
+            <div class="flex items-center gap-6 text-white text-xl">
+                <a href="#" class="hover:text-red-600 transition-colors"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#" class="hover:text-red-600 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-red-600 transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-red-600 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="hover:text-red-600 transition-colors"><i class="fa-brands fa-youtube"></i></a>
             </div>
 
-            <div class="flex items-center gap-3 text-[10px] font-black text-white uppercase tracking-tighter">
-                <a href="#" class="text-red-600 cursor-pointer">BE</a>
-                <a href="#" class="hover:text-red-600 transition-colors text-gray-400 cursor-pointer">EN</a>
-                <a href="#" class="hover:text-red-600 transition-colors text-gray-400 cursor-pointer">UA</a>
-                <a href="#" class="hover:text-red-600 transition-colors text-gray-400 cursor-pointer">RU</a>
+            <div class="relative dropdown-lang inline-block">
+                <button id="lang-btn"
+                    class="flex items-center gap-2 text-[12px] font-black text-white uppercase tracking-widest cursor-pointer py-1">
+                    <span id="current-lang" class="text-red-600">BE</span>
+                    <i class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
+                </button>
+
+                <div class="dropdown-content absolute right-0 top-full pt-2 z-60">
+                    <div class="bg-[#1a1a1a] border border-white/10 shadow-2xl flex flex-col min-w-15">
+                        <button data-lang="en"
+                            class="lang-switch px-4 py-2 text-[11px] font-black text-gray-400 hover:text-white hover:bg-white/5 transition-colors border-b border-white/5 text-left">EN</button>
+                        <button data-lang="ua"
+                            class="lang-switch px-4 py-2 text-[11px] font-black text-gray-400 hover:text-white hover:bg-white/5 transition-colors border-b border-white/5 text-left">UA</button>
+                        <button data-lang="be"
+                            class="lang-switch px-4 py-2 text-[11px] font-black text-gray-400 hover:text-white hover:bg-white/5 transition-colors border-b border-white/5 text-left">BE</button>
+                        <button data-lang="ru"
+                            class="lang-switch px-4 py-2 text-[11px] font-black text-gray-400 hover:text-white hover:bg-white/5 transition-colors text-left">RU</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="container-custom">
-        <div class="flex items-center justify-between py-4">
-            <a href="/" class="flex items-center">
-                <img src="/assets/logo-auvefE4y.svg" alt="Logo" class="h-12 md:h-20 w-auto object-contain mr-4">
-                <div class="flex flex-col text-white uppercase font-black leading-tight">
-                    <span class="text-lg md:text-xl tracking-tighter">Bulwark<br>fund</span>
-                    <span class="text-[10px] tracking-[0.2em] text-gray-400 font-bold">Ukraine</span>
-                </div>
-            </a>
+    <div class="container-custom flex items-center justify-between py-2">
+        <a href="/" class="flex items-center">
+            <img src="/assets/logo-auvefE4y.svg" alt="Logo" class="h-12 md:h-20 w-auto object-contain mr-4">
+            <div class="flex flex-col text-white uppercase font-black leading-[0.85]">
+                <span class="text-lg md:text-xl tracking-tighter">Bulwark<br>fund</span>
+                <span class="text-[10px] tracking-[0.2em] text-gray-400 font-bold mt-1 uppercase">Ukraine</span>
+            </div>
+        </a>
 
-            <nav
-                class="hidden md:flex items-center space-x-10 uppercase text-[13px] font-black tracking-widest text-white">
-                <a href="#projects" class="hover:text-red-600 transition-colors cursor-pointer">Праекты</a>
-                <a href="#contacts" class="hover:text-red-600 transition-colors cursor-pointer">Кантакты</a>
-
-                <a href="#"
-                    class="bg-red-600 text-white px-8 py-2.5 hover:bg-white hover:text-black transition-all cursor-pointer">
-                    Падтрымаць
-                </a>
-
-                <button id="open-sidebar"
-                    class="text-white hover:text-red-600 transition-colors flex items-center bg-transparent border-none p-0 outline-none cursor-pointer">
-                    <i class="fa-solid fa-bars text-3xl"></i>
-                </button>
-            </nav>
-
-            <button id="mobile-menu-btn" class="md:hidden text-white bg-transparent border-none p-0 cursor-pointer">
+        <nav class="hidden xl:flex items-center space-x-10 uppercase text-[13px] font-black tracking-widest text-white">
+            <a href="#projects" data-i18n="nav.projects" class="hover:text-red-600 transition-colors">Праекты</a>
+            <a href="#contacts" data-i18n="nav.contacts" class="hover:text-red-600 transition-colors">Кантакты</a>
+            <a href="#donate" data-i18n="nav.donate"
+                class="bg-red-600 text-white px-8 py-2.5 hover:bg-white hover:text-black transition-all">Падтрымаць</a>
+            <button id="open-sidebar"
+                class="text-white hover:text-red-600 transition-colors flex items-center cursor-pointer">
                 <i class="fa-solid fa-bars text-3xl"></i>
             </button>
-        </div>
+        </nav>
+
+        <button id="mobile-menu-btn" class="xl:hidden text-white cursor-pointer">
+            <i class="fa-solid fa-bars text-3xl"></i>
+        </button>
     </div>
 </header>
-    <main>
-        <section class="hero">
-    <div class="container">
-        <h1>Bulwark — Ваша надзейная абарона</h1>
-        <p>Мы ствараем сучасныя вэб-рашэнні.</p>
-    </div>
-</section>
-        <div id="sidebar"
+    <div id="sidebar"
     class="fixed top-0 right-0 h-full w-62.5 bg-[#1a1a1a] z-100 shadow-2xl flex flex-col transition-transform duration-300 translate-x-full">
+
     <div class="pt-6 pr-6 flex justify-end">
         <button id="close-sidebar"
             class="text-white hover:text-red-600 transition-colors bg-transparent border-none p-0 cursor-pointer outline-none">
@@ -89,24 +85,254 @@
         </button>
     </div>
 
+    <div class="xl:hidden px-6 pt-4 pb-6 mb-4 border border-red-600/50 mx-4 flex flex-col space-y-4 text-center">
+        <a href="#projects" data-i18n="nav.projects"
+            class="text-white uppercase font-black tracking-widest text-[13px] hover:text-red-600 transition-colors">Праекты</a>
+        <a href="#contacts" data-i18n="nav.contacts"
+            class="text-white uppercase font-black tracking-widest text-[13px] hover:text-red-600 transition-colors">Кантакты</a>
+        <a href="#donate" data-i18n="nav.donate"
+            class="bg-red-600 text-white py-3 uppercase font-black tracking-widest text-[11px] hover:bg-white hover:text-black transition-all">Падтрымаць</a>
+    </div>
+
     <nav
-        class="flex flex-col mt-10 space-y-6 text-white uppercase font-black tracking-widest text-[13px] text-center items-center">
-        <a href="#" class="hover:text-red-600 transition-colors duration-200">Пра фонд</a>
-        <a href="#" class="hover:text-red-600 transition-colors duration-200">Матэрыялы</a>
-        <a href="#" class="hover:text-red-600 transition-colors duration-200">Дабраахвотнікам</a>
-        <a href="#" class="hover:text-red-600 transition-colors duration-200">Партнёры</a>
-        <a href="#" class="hover:text-red-600 transition-colors duration-200">Дапамога</a>
-        <a href="#" class="hover:text-red-600 transition-colors duration-200">Гісторыя</a>
+        class="flex flex-col space-y-6 text-white uppercase font-black tracking-widest text-[13px] text-center items-center">
+        <a href="#about" data-i18n="nav.about"
+            class="hover:text-red-600 transition-colors duration-200 text-gray-400">Пра фонд</a>
+        <a href="#materials" data-i18n="nav.materials"
+            class="hover:text-red-600 transition-colors duration-200 text-gray-400">Матэрыялы</a>
+        <a href="#volunteers" data-i18n="nav.volunteers"
+            class="hover:text-red-600 transition-colors duration-200 text-gray-400">Дабраахвотнікам</a>
+        <a href="#partners" data-i18n="nav.partners"
+            class="hover:text-red-600 transition-colors duration-200 text-gray-400">Партнёры</a>
+        <a href="#services" data-i18n="nav.services"
+            class="hover:text-red-600 transition-colors duration-200 text-gray-400">Дапамога</a>
+        <a href="#history" data-i18n="nav.history"
+            class="hover:text-red-600 transition-colors duration-200 text-gray-400">Гісторыя</a>
     </nav>
 
     <div class="mt-auto p-8 border-t border-white/10 text-center">
-        <p class="text-gray-500 text-[10px] tracking-widest uppercase mb-4">Нашы кантакты</p>
-        <a href="mailto:info@bulwark.fund"
-            class="text-white hover:text-red-600 transition-colors font-bold text-sm tracking-tight">info@bulwark.fund</a>
+        <div class="w-10 h-px bg-red-600 mx-auto mb-6"></div>
+        <p data-i18n="sidebar.slogan"
+            class="text-white text-[11px] uppercase font-black tracking-[0.2em] leading-relaxed italic">
+            Ваша надзейная абарона
+        </p>
     </div>
 </div>
 
 <div id="sidebar-overlay" class="fixed inset-0 bg-black/70 z-90 hidden opacity-0 transition-opacity duration-300"></div>
+    <main>
+        <section class="hero-bg relative flex items-start overflow-hidden">
+    <div class="container-custom relative z-10 w-full">
+        <div>
+            <h1 class="text-white text-5xl md:text-7xl font-black uppercase leading-[0.9] tracking-tighter">
+                <span data-i18n="hero.title_part1">Ваша</span> <br>
+                <span class="text-red-600" data-i18n="hero.title_part2">надзейная</span> <br>
+                <span data-i18n="hero.title_part3">абарона</span>
+            </h1>
+            <p data-i18n="hero.description"
+                class="text-gray-400 text-lg md:text-xl max-w-xl leading-relaxed font-medium">
+                Дапамагаем тым, хто бароніць наш спакой. Фонд Bulwark — гэта празрыстасць, шчырасць і эфектыўная
+                падтрымка.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#help" data-i18n="hero.btn_get_help"
+                    class="bg-red-600 text-white px-10 py-4 uppercase font-black tracking-widest text-sm hover:bg-white hover:text-black transition-all">
+                    Атрымаць дапамогу
+                </a>
+                <a href="#donate" data-i18n="nav.donate"
+                    class="bg-red-600 text-white px-10 py-4 uppercase font-black tracking-widest text-sm hover:bg-white hover:text-black transition-all cursor-pointer">
+                    Падтрымаць
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+        <section id="about" class="py-24 bg-[#1a1a1a] text-white">
+    <div class="container-custom">
+        <div class="flex flex-col lg:flex-row gap-16">
+
+            <div class="lg:w-1/2">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-0.5 bg-red-600"></div>
+                    <span data-i18n="about.tag"
+                        class="uppercase tracking-[0.4em] text-red-600 font-black text-[10px]">Місія і візія</span>
+                </div>
+                <h2 class="text-5xl md:text-7xl font-black uppercase leading-none mb-10 tracking-tighter">
+                    <span data-i18n="about.title_top">Два народы</span><br>
+                    <span class="text-gray-700" data-i18n="about.title_bottom">Адна свабода</span>
+                </h2>
+                <p data-i18n="about.lead" class="text-xl text-gray-300 leading-relaxed font-light mb-8">
+                    «Bulwark» — гэта прастора, дзе агульнае мінулае і сяброўства народаў становяцца фундаментам агульнай
+                    будучыні.
+                </p>
+                <div class="space-y-4 text-gray-500 text-base leading-relaxed">
+                    <p data-i18n="about.p1">
+                        Мы будуем сетку падтрымкі, якая дазволіць беларусам аднойчы вярнуцца дадому і прынесці з сабой
+                        вопыт і каштоўнасці для пабудовы новай, свабоднай краіны.
+                    </p>
+                    <p data-i18n="about.p2">
+                        Інвестыцыя ў наш фонд — гэта ўклад у стабільнасць усёй Еўропы. Дэмакратычная Беларусь з'яўляецца
+                        ключом да бяспекі ўсяго рэгіёна.
+                    </p>
+                </div>
+            </div>
+
+            <div class="lg:w-1/2 bg-black/20 border border-white/5 p-10 flex flex-col justify-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+                    <div class="flex flex-col">
+                        <div data-i18n="about.stat_tag_1"
+                            class="text-[10px] uppercase tracking-[0.3em] text-red-600 font-bold mb-3">Статус</div>
+                        <div class="min-h-12 md:min-h-16 flex items-center">
+                            <h3 data-i18n="about.stat_title_1"
+                                class="text-2xl font-black uppercase tracking-tight leading-none">Дзейны фонд</h3>
+                        </div>
+                        <div class="w-8 h-px bg-red-600/30 my-4"></div>
+                        <p data-i18n="about.stat_desc_1" class="text-sm text-gray-500 leading-relaxed">
+                            Маем сетку экспертаў, чат-бот і прамую сувязь з добраахвотнікамі.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <div data-i18n="about.stat_tag_2"
+                            class="text-[10px] uppercase tracking-[0.3em] text-red-600 font-bold mb-3">Мэта</div>
+                        <div class="min-h-12 md:min-h-16 flex items-center">
+                            <h3 data-i18n="about.stat_title_2"
+                                class="text-2xl font-black uppercase tracking-tight leading-none">Вяртанне дадому</h3>
+                        </div>
+                        <div class="w-8 h-px bg-red-600/30 my-4"></div>
+                        <p data-i18n="about.stat_desc_2" class="text-sm text-gray-500 leading-relaxed">
+                            Кожны дыктатар падае. Мы рыхтуем будаўнікоў новай Беларусі.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="mt-12 pt-8 border-t border-white/5">
+                    <p data-i18n="about.quote" class="italic text-gray-400 font-serif text-lg leading-relaxed">
+                        "Свабода не мае межаў, а тыранія — гэта агульная пагроза для ўсяго рэгіёна."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <section id="history" class="py-24 bg-black text-white overflow-hidden">
+    <div class="container-custom">
+        <div class="mb-16">
+            <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-px bg-red-600"></div>
+                <span data-i18n="history.tag"
+                    class="uppercase tracking-[0.4em] text-red-600 font-black text-[10px]">Чалавечы фактар</span>
+            </div>
+            <h2 data-i18n="history.title" class="text-5xl md:text-6xl font-black uppercase tracking-tighter">Наша
+                гісторыя</h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+            <div class="lg:col-span-5 space-y-12">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="relative group">
+                        <div class="aspect-3/4 bg-gray-900 border border-white/5 overflow-hidden">
+                            <img src="/assets/alisa-B26AsN_h.jpg" alt="Аліса Касенка"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-red-600/80 backdrop-blur-sm p-3">
+                            <p data-i18n="history.alisa_label"
+                                class="text-[9px] font-black uppercase tracking-[0.2em] text-white">Аліса / Харкаў</p>
+                        </div>
+                    </div>
+
+                    <div class="relative group">
+                        <div class="aspect-3/4 bg-gray-900 border border-white/5 overflow-hidden">
+                            <img src="/assets/vlad-Tlhoh6Lu.jpg" alt="Уладзіслаў Салавей"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-red-600/80 backdrop-blur-sm p-3">
+                            <p data-i18n="history.vlad_label"
+                                class="text-[9px] font-black uppercase tracking-[0.2em] text-white">Улад / Мінск</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-3 pt-4">
+                    <a href="https://www.youtube.com/watch?v=q6A4ad6-Uc4" target="_blank"
+                        class="flex items-center justify-between p-4 bg-white/5 border border-white/10 hover:border-red-600 transition-all group">
+                        <div class="flex flex-col">
+                            <span
+                                class="text-[9px] text-red-600 font-black uppercase tracking-widest mb-1">YouTube</span>
+                            <span data-i18n="history.link_youtube"
+                                class="text-[11px] font-black uppercase tracking-widest text-gray-400 group-hover:text-white">Глядзець
+                                фільм пра «Соню»</span>
+                        </div>
+                        <i class="fa-brands fa-youtube text-2xl"></i>
+                    </a>
+                    <a href="https://spring96.org/ru/news/99103" target="_blank"
+                        class="flex items-center justify-between p-4 bg-white/5 border border-white/10 hover:border-red-600 transition-all group">
+                        <div class="flex flex-col">
+                            <span
+                                class="text-[9px] text-gray-500 font-black uppercase tracking-widest mb-1">Viasna96</span>
+                            <span data-i18n="history.link_viasna"
+                                class="text-[11px] font-black uppercase tracking-widest text-gray-400 group-hover:text-white">Гісторыя
+                                рэпрэсій</span>
+                        </div>
+                        <i class="fa-solid fa-shield-halved text-xl text-gray-600 group-hover:text-white"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 space-y-8 lg:pl-10">
+                <div class="prose prose-invert max-w-none">
+                    <p data-i18n="history.lead"
+                        class="text-2xl font-light leading-snug text-gray-200 italic border-l-2 border-red-600 pl-6">
+                        Гісторыя «Булварка» пачалася не ў офісе, а праз сустрэчу ўкраінкі з Харкава і беларускага
+                        добраахвотніка.
+                    </p>
+
+                    <div class="space-y-6 text-gray-400 text-base leading-relaxed mt-12">
+                        <p>
+                            <strong data-i18n="history.alisa_name" class="text-white">Аліса Касенка</strong> <span
+                                data-i18n="history.alisa_text">нарадзілася ў Харкаве. Да 24 лютага 2022 года яна жыла
+                                звычайным жыццём, але пасля пачатку ўварвання прайшла праз абстрэлы і эвакуацыю. Яна
+                                вярнулася ва Украіну з цвёрдым рашэннем: гэта яе дом, і яна ні на што яго не
+                                абмяняе.</span>
+                        </p>
+                        <p>
+                            <span data-i18n="history.vlad_intro">Яе муж,</span> <strong data-i18n="history.vlad_name"
+                                class="text-white">Уладзіслаў Салавей (пазыўны «Соня»)</strong>, <span
+                                data-i18n="history.vlad_text">родам з Мінска. У 2020 годзе ён прайшоў праз рэпрэсіі і
+                                катаванні ў Акрэсціне за ўдзел у мірных пратэстах. З пачаткам вялікай вайны ён без
+                                ваганняў паехаў ваяваць за свабоду Украіны і будучыню вольнай Беларусі.</span>
+                        </p>
+                        <p data-i18n="history.vlad_path">
+                            Улад прайшоў шлях ад пяхоцінца ў батальёне «Літвін» да камандзіра разведгрупы палка
+                            Каліноўскага. Зараз ён служыць у разведбаце брыгады «Хартыя».
+                        </p>
+
+                        <div class="py-8">
+                            <p data-i18n="history.slogan_label"
+                                class="text-white font-black uppercase tracking-widest text-sm mb-2">Наш лозунг:</p>
+                            <p data-i18n="history.slogan_text"
+                                class="text-4xl font-black uppercase text-red-600 tracking-tighter">Два народы — адна
+                                свабода</p>
+                        </div>
+
+                        <p>
+                            <span data-i18n="history.conclusion_1">Сёння яны разам будуюць фонд «Булварк», аб'ядноўваючы
+                                тых, хто верыць: свабода — гэта права кожнага. Яны працуюць дзеля таго дня, калі можна
+                                будзе сказаць:</span> <strong data-i18n="history.conclusion_highlight"
+                                class="text-white uppercase tracking-wider">«Мы вяртаемся. Мы будуем новую
+                                Беларусь!»</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
     </main>
 
     

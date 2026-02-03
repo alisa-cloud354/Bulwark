@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "contacts": "Contacts",
+    "donate": "Donate",
+    "about": "About",
+    "materials": "Materials",
+    "volunteers": "Volunteers",
+    "partners": "Partners",
+    "services": "Help",
+    "history": "History"
+  },
+  "sidebar": {
+    "slogan": "Your reliable protection"
+  },
+  "hero": {
+    "title_part1": "Your",
+    "title_part2": "reliable",
+    "title_part3": "protection",
+    "description": "Helping those who defend our peace. Bulwark Foundation stands for transparency, sincerity, and effective support.",
+    "btn_get_help": "Get Help"
+  },
+  "about": {
+    "tag": "Mission & Vision",
+    "title_top": "Two Nations",
+    "title_bottom": "One Freedom",
+    "lead": "Bulwark is a space where a shared past and the friendship of nations become the foundation of a common future.",
+    "p1": "We are building a support network that will allow Belarusians to one day return home, bringing with them the experience and values needed to build a new, free country.",
+    "p2": "An investment in our foundation is a contribution to the stability of all Europe. A democratic Belarus is key to the security of the entire region.",
+    "stat_tag_1": "Status",
+    "stat_title_1": "Active Foundation",
+    "stat_desc_1": "We have a network of experts, a chatbot, and direct contact with volunteers.",
+    "stat_tag_2": "Goal",
+    "stat_title_2": "Returning Home",
+    "stat_desc_2": "Every dictator falls. We are preparing the builders of a new Belarus.",
+    "quote": "\"Freedom has no borders, and tyranny is a common threat to the entire region.\""
+  },
+  "history": {
+    "tag": "Human Factor",
+    "title": "Our History",
+    "alisa_label": "Alisa / Kharkiv",
+    "vlad_label": "Vlad / Minsk",
+    "link_youtube": "Watch film about «Sonya»",
+    "link_viasna": "History of repression",
+    "lead": "The story of Bulwark began not in an office, but through the meeting of a Ukrainian woman from Kharkiv and a Belarusian volunteer.",
+    "alisa_name": "Alisa Kosenko",
+    "alisa_text": "was born in Kharkiv. Until February 24, 2022, she lived an ordinary life, but after the full-scale invasion, she went through shelling and evacuation. She returned to Ukraine with a firm decision: this is her home, and she will not trade it for anything.",
+    "vlad_intro": "Her husband,",
+    "vlad_name": "Uladzislau Salavei (callsign «Sonya»)",
+    "vlad_text": "is from Minsk. In 2020, he endured repression and torture at Akrestsina for participating in peaceful protests. With the start of the great war, he did not hesitate to fight for the freedom of Ukraine and the future of a free Belarus.",
+    "vlad_path": "Vlad went from being an infantryman in the «Litvin» battalion to the commander of a reconnaissance group in the Kastus Kalinouski Regiment. He currently serves in the reconnaissance battalion of the «Khartia» brigade.",
+    "slogan_label": "Our Slogan:",
+    "slogan_text": "Two Nations — One Freedom",
+    "conclusion_1": "Today, they are building the Bulwark Foundation together, uniting those who believe that freedom is a right for everyone. They work for the day when they can say:",
+    "conclusion_highlight": "«We are returning. We are building a new Belarus!»"
+  }
+}

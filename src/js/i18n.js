@@ -1,7 +1,7 @@
 // Функцыя для загрузкі і змены мовы
 export async function setLanguage(lang) {
   try {
-    const response = await fetch(`/src/locales/${lang}.json`);
+    const response = await fetch(`./locales/${lang}.json`);
     if (!response.ok)
       throw new Error(`Не атрымалася загрузіць файл: ${lang}.json`);
 

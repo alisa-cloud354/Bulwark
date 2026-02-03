@@ -1,14 +1,14 @@
 {
   "nav": {
-    "projects": "Праекты",
-    "contacts": "Кантакты",
-    "donate": "Падтрымаць",
     "about": "Пра фонд",
-    "materials": "Матэрыялы",
+    "activity": "Дзейнасць",
     "volunteers": "Дабраахвотнікам",
-    "partners": "Партнёры",
-    "services": "Дапамога",
-    "history": "Гісторыя"
+    "support": "Падтрымаць",
+    "materials": "Матэрыялы",
+    "news": "Навіны",
+    "reports": "Справаздачы",
+    "history": "Гісторыя",
+    "contacts": "Кантакты"
   },
   "sidebar": {
     "slogan": "Ваша надзейная абарона"

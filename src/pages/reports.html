@@ -1,92 +1,133 @@
-<section id="reports" class="py-24 bg-black overflow-hidden">
-    <div class="container-custom">
-        <div class="relative">
-            <div class="flex items-center justify-between mb-8">
-                <h3 data-i18n="nav.reports" class="text-2xl font-black text-white uppercase italic">Справаздачы</h3>
-                <div class="flex gap-2">
-                    <button
-                        class="reports-prev w-10 h-10 border border-white/10 text-white hover:bg-red-600 hover:border-red-600 transition-all flex items-center justify-center focus:outline-none">
-                        <i class="fa-solid fa-chevron-left"></i>
-                    </button>
-                    <button
-                        class="reports-next w-10 h-10 border border-white/10 text-white hover:bg-red-600 hover:border-red-600 transition-all flex items-center justify-center focus:outline-none">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
+<!DOCTYPE html>
+<html lang="be">
 
-            <div class="swiper reports-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide h-auto">
-                        <div class="bg-[#1a1a1a] border border-white/5 h-full flex flex-col">
-                            <div class="aspect-video bg-red-600/5 flex items-center justify-center p-8 overflow-hidden">
-                                <i class="fa-regular fa-file-pdf text-4xl text-red-600"></i>
-                            </div>
-                            <div class="p-6 flex flex-col grow">
-                                <h4 data-i18n="materials.rep_1"
-                                    class="text-white font-bold mb-3 line-clamp-2 italic uppercase tracking-wider text-sm">
-                                    Фінансавая справаздача 2023</h4>
-                                <p class="text-gray-400 text-sm mb-6 line-clamp-3">Падрабязны разбор выдаткаў фонду на
-                                    юрыдычную дапамогу за мінулы год.</p>
-                                <a href="#" data-i18n="materials.download"
-                                    class="mt-auto text-red-600 text-[10px] font-black uppercase tracking-widest hover:text-white transition-colors">Спампаваць
-                                    PDF</a>
-                            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Справаздачы | Bulwark</title>
+
+
+</head>
+
+<body>
+
+    <load src="/src/partials/header.html" />
+    <load src="/src/partials/mobile-menu.html" />
+
+
+
+    <main class="relative min-h-screen w-full overflow-hidden bg-black">
+        <section id="reports" class="py-24 bg-black overflow-hidden">
+            <div class="container-custom">
+                <div class="relative">
+                    <div class="flex items-center justify-between mb-8">
+                        <h3 data-i18n="nav.reports" class="text-2xl font-black text-white uppercase italic">Справаздачы
+                        </h3>
+                        <div class="flex gap-2">
+                            <button
+                                class="reports-prev w-10 h-10 border border-white/10 text-white hover:bg-red-600 hover:border-red-600 transition-all flex items-center justify-center focus:outline-none">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button
+                                class="reports-next w-10 h-10 border border-white/10 text-white hover:bg-red-600 hover:border-red-600 transition-all flex items-center justify-center focus:outline-none">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
                         </div>
                     </div>
-                    <div class="swiper-slide h-auto">
-                        <div class="bg-[#1a1a1a] border border-white/5 h-full flex flex-col">
-                            <div class="aspect-video bg-red-600/5 flex items-center justify-center p-8 overflow-hidden">
-                                <i class="fa-regular fa-file-pdf text-4xl text-red-600"></i>
+
+                    <div class="swiper reports-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide h-auto">
+                                <div class="bg-[#1a1a1a] border border-white/5 h-full flex flex-col">
+                                    <div
+                                        class="aspect-video bg-red-600/5 flex items-center justify-center p-8 overflow-hidden">
+                                        <i class="fa-regular fa-file-pdf text-4xl text-red-600"></i>
+                                    </div>
+                                    <div class="p-6 flex flex-col grow">
+                                        <h4 data-i18n="materials.rep_1"
+                                            class="text-white font-bold mb-3 line-clamp-2 italic uppercase tracking-wider text-sm">
+                                            Фінансавая справаздача 2023</h4>
+                                        <p class="text-gray-400 text-sm mb-6 line-clamp-3">Падрабязны разбор выдаткаў
+                                            фонду на
+                                            юрыдычную дапамогу за мінулы год.</p>
+                                        <a href="#" data-i18n="materials.download"
+                                            class="mt-auto text-red-600 text-[10px] font-black uppercase tracking-widest hover:text-white transition-colors">Спампаваць
+                                            PDF</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="p-6 flex flex-col grow">
-                                <h4 data-i18n="materials.rep_2"
-                                    class="text-white font-bold mb-3 line-clamp-2 italic uppercase tracking-wider text-sm">
-                                    Фінансавая справаздача 2023</h4>
-                                <p class="text-gray-400 text-sm mb-6 line-clamp-3">Падрабязны разбор выдаткаў фонду на
-                                    юрыдычную дапамогу за мінулы год.</p>
-                                <a href="#" data-i18n="materials.download"
-                                    class="mt-auto text-red-600 text-[10px] font-black uppercase tracking-widest hover:text-white transition-colors">Спампаваць
-                                    PDF</a>
+                            <div class="swiper-slide h-auto">
+                                <div class="bg-[#1a1a1a] border border-white/5 h-full flex flex-col">
+                                    <div
+                                        class="aspect-video bg-red-600/5 flex items-center justify-center p-8 overflow-hidden">
+                                        <i class="fa-regular fa-file-pdf text-4xl text-red-600"></i>
+                                    </div>
+                                    <div class="p-6 flex flex-col grow">
+                                        <h4 data-i18n="materials.rep_2"
+                                            class="text-white font-bold mb-3 line-clamp-2 italic uppercase tracking-wider text-sm">
+                                            Фінансавая справаздача 2023</h4>
+                                        <p class="text-gray-400 text-sm mb-6 line-clamp-3">Падрабязны разбор выдаткаў
+                                            фонду на
+                                            юрыдычную дапамогу за мінулы год.</p>
+                                        <a href="#" data-i18n="materials.download"
+                                            class="mt-auto text-red-600 text-[10px] font-black uppercase tracking-widest hover:text-white transition-colors">Спампаваць
+                                            PDF</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide h-auto">
-                        <div class="bg-[#1a1a1a] border border-white/5 h-full flex flex-col">
-                            <div class="aspect-video bg-red-600/5 flex items-center justify-center p-8 overflow-hidden">
-                                <i class="fa-regular fa-file-pdf text-4xl text-red-600"></i>
+                            <div class="swiper-slide h-auto">
+                                <div class="bg-[#1a1a1a] border border-white/5 h-full flex flex-col">
+                                    <div
+                                        class="aspect-video bg-red-600/5 flex items-center justify-center p-8 overflow-hidden">
+                                        <i class="fa-regular fa-file-pdf text-4xl text-red-600"></i>
+                                    </div>
+                                    <div class="p-6 flex flex-col grow">
+                                        <h4 data-i18n="materials.rep_3"
+                                            class="text-white font-bold mb-3 line-clamp-2 italic uppercase tracking-wider text-sm">
+                                            Фінансавая справаздача 2023</h4>
+                                        <p class="text-gray-400 text-sm mb-6 line-clamp-3">Падрабязны разбор выдаткаў
+                                            фонду на
+                                            юрыдычную дапамогу за мінулы год.</p>
+                                        <a href="#" data-i18n="materials.download"
+                                            class="mt-auto text-red-600 text-[10px] font-black uppercase tracking-widest hover:text-white transition-colors">Спампаваць
+                                            PDF</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="p-6 flex flex-col grow">
-                                <h4 data-i18n="materials.rep_3"
-                                    class="text-white font-bold mb-3 line-clamp-2 italic uppercase tracking-wider text-sm">
-                                    Фінансавая справаздача 2023</h4>
-                                <p class="text-gray-400 text-sm mb-6 line-clamp-3">Падрабязны разбор выдаткаў фонду на
-                                    юрыдычную дапамогу за мінулы год.</p>
-                                <a href="#" data-i18n="materials.download"
-                                    class="mt-auto text-red-600 text-[10px] font-black uppercase tracking-widest hover:text-white transition-colors">Спампаваць
-                                    PDF</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide h-auto">
-                        <div class="bg-[#1a1a1a] border border-white/5 h-full flex flex-col">
-                            <div class="aspect-video bg-red-600/5 flex items-center justify-center p-8 overflow-hidden">
-                                <i class="fa-regular fa-file-pdf text-4xl text-red-600"></i>
-                            </div>
-                            <div class="p-6 flex flex-col grow">
-                                <h4 data-i18n="materials.rep_4"
-                                    class="text-white font-bold mb-3 line-clamp-2 italic uppercase tracking-wider text-sm">
-                                    Фінансавая справаздача 2023</h4>
-                                <p class="text-gray-400 text-sm mb-6 line-clamp-3">Падрабязны разбор выдаткаў фонду на
-                                    юрыдычную дапамогу за мінулы год.</p>
-                                <a href="#" data-i18n="materials.download"
-                                    class="mt-auto text-red-600 text-[10px] font-black uppercase tracking-widest hover:text-white transition-colors">Спампаваць
-                                    PDF</a>
+                            <div class="swiper-slide h-auto">
+                                <div class="bg-[#1a1a1a] border border-white/5 h-full flex flex-col">
+                                    <div
+                                        class="aspect-video bg-red-600/5 flex items-center justify-center p-8 overflow-hidden">
+                                        <i class="fa-regular fa-file-pdf text-4xl text-red-600"></i>
+                                    </div>
+                                    <div class="p-6 flex flex-col grow">
+                                        <h4 data-i18n="materials.rep_4"
+                                            class="text-white font-bold mb-3 line-clamp-2 italic uppercase tracking-wider text-sm">
+                                            Фінансавая справаздача 2023</h4>
+                                        <p class="text-gray-400 text-sm mb-6 line-clamp-3">Падрабязны разбор выдаткаў
+                                            фонду на
+                                            юрыдычную дапамогу за мінулы год.</p>
+                                        <a href="#" data-i18n="materials.download"
+                                            class="mt-auto text-red-600 text-[10px] font-black uppercase tracking-widest hover:text-white transition-colors">Спампаваць
+                                            PDF</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
+
+    </main>
+
+
+    <load src="/src/partials/footer.html" />
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

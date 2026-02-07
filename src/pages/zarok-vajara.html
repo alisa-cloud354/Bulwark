@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="be">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Гістарычны экскурс | Bulwark</title>
+
+
+</head>
+
+<body>
+
+    <load src="/src/partials/header.html" />
+    <load src="/src/partials/mobile-menu.html" />
+
+
+
+    <main class="relative min-h-screen w-full overflow-hidden bg-black">
+
+        <div class="absolute inset-0 z-0">
+            <img src="/src/assets/img/vajary-blur.png" class="w-full h-full object-cover " alt="Background">
+            <div class="absolute inset-0 bg-linear-to-b from-black via-black/40 to-black"></div>
+        </div>
+
+        <div class="relative z-10 h-screen w-full flex items-center justify-center">
+            <div class="h-full w-full max-w-5xl overflow-hidden relative mask-fade">
+
+                <div class="animate-scroll-vertical space-y-20 py-[50vh]">
+                    <div class="text-center space-y-12 px-6">
+                        <h1 class="text-6xl md:text-8xl font-black uppercase tracking-tighter text-red-600 mb-20">Зарок
+                            ваяра</h1>
+
+                        <div class="text-3xl md:text-5xl font-black uppercase leading-tight tracking-tight space-y-16">
+                            <p>Беларусь! Маці мая Радзіма!</p>
+                            <p>Клянуся вызваляць і бараніць Цябе там, дзе знаходжуся зараз і куды прывядзе мяне лёс
+                                Твайго
+                                вызвалення.</p>
+                            <p>Біцца да перамогі за Тваю свабоду, як біліся нашы продкі з ардынскім прыгнётам маскавітаў
+                                пад
+                                Оршай, Смаленскам, Палонкай.</p>
+                            <p>Бязлітасна гнаць бязродных апрычнікаў зямель Тваіх, як гналі ваяры ВКЛ і беларускай
+                                шляхты,
+                                касінеры Касцюшкі і паўстанцы Каліноўскага.</p>
+                            <p>Бараніць кроў Тваёй нацыі, моц Тваёй зямлі і Боскі дух Твайго існавання.</p>
+                            <p>У шэрагах вольных братоў і ў палоне, на айчыне і ў выгнанні, у баі і ў падполлі.</p>
+                            <p>Няхай рукі маі сціскаюць зброю пакуль шыбеніцы не скончаць сціскаць шыі сыноў Тваіх.</p>
+                            <p>Няхай лязг майго затвора не сціхае пакуль чутны лязг кратаў за спінамі герояў Тваіх.</p>
+                            <p>Няхай хопіць мне жыцця каб адпомсціць за ўсіх закатаваных, згвалтаваных і забітых дзяцей
+                                Тваіх.</p>
+                            <p>Да астанняга блеску рэк Тваіх у маіх вачах, пакуль будзе чутны тупат Пагоні ў сэрцы маім.
+                            </p>
+                            <p>Жыць Табою, памерці за Цябе, і адрадзіць веліч Тваю.</p>
+                            <p class="text-red-600 text-5xl md:text-7xl">Жыве Беларусь! Жыве вечна!</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center space-y-12 px-6 opacity-80" aria-hidden="true">
+                        <h1 class="text-6xl md:text-8xl font-black uppercase tracking-tighter text-red-600 mb-20">Зарок
+                            ваяра</h1>
+                        <div
+                            class="text-3xl md:text-5xl font-black uppercase leading-tight tracking-tight space-y-16 italic text-gray-400">
+                            <p>Беларусь! Маці мая Радзіма!</p>
+                            <p>Клянуся вызваляць і бараніць Цябе...</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <style>
+        /* Дадай гэта ў свой CSS файл або ў тэг style */
+
+        @keyframes scroll-vertical {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-50%);
+            }
+
+            /* Перамяшчаем на палову вышыні кантэйнера */
+        }
+
+        .animate-scroll-vertical {
+            display: flex;
+            flex-direction: column;
+            animation: scroll-vertical 60s linear infinite;
+            /* Хуткасць рэгулюй тут (60s - павольна) */
+        }
+
+        /* Эфект зацямнення зверху і знізу, каб тэкст "выплываў" і "знікаў" */
+        .mask-fade {
+            mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+            -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+        }
+
+        /* Калі на тэкст навесці мышкай — анімацыя спыняецца, каб зручна было чытаць */
+        .animate-scroll-vertical:hover {
+            animation-play-state: paused;
+        }
+    </style>
+
+    <load src="/src/partials/footer.html" />
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

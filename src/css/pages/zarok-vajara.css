@@ -1,0 +1,29 @@
+@keyframes scroll-vertical {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+
+    /* Перамяшчаем на палову вышыні кантэйнера */
+}
+
+.animate-scroll-vertical {
+    display: flex;
+    flex-direction: column;
+    animation: scroll-vertical 60s linear infinite;
+    /* Хуткасць рэгулюй тут (60s - павольна) */
+}
+
+/* Эфект зацямнення зверху і знізу, каб тэкст "выплываў" і "знікаў" */
+.mask-fade {
+    mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+}
+
+/* Калі на тэкст навесці мышкай — анімацыя спыняецца, каб зручна было чытаць */
+.animate-scroll-vertical:hover {
+    animation-play-state: paused;
+}

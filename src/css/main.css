@@ -5,6 +5,15 @@
 @import "./sections/header.css";
 @import "./sections/news.css";
 @import "/src/css/pages/zarok-vajara.css";
+@import "/src/css/pages/gallery.css";
+/* @import "/src/css/pages/reports.css";
+@import "/src/css/pages/news-full.css";
+@import "/src/css/pages/contacts.css";
+@import "/src/css/sections/sidebar.css";
+@import "/src/css/sections/about.css";
+@import "/src/css/sections/footer.css"; */
+@import "/src/css/modal.css";
+
 
 @layer base {
     @import "./reset.css";

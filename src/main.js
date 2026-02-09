@@ -8,6 +8,8 @@ import { initNavigation } from "./js/navigation.js";
 import { initContacts } from "./js/contacts.js";
 import { initZarokVajara } from "./js/zarok-vajara.js";
 import { initFullNewsGrid } from "./js/news-full.js";
+import { initGallerySlider } from "./js/gallery.js";
+import { initMaterials } from "./js/materials.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initHeader();
@@ -18,4 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initContacts();
   initZarokVajara();
   initFullNewsGrid();
+  initGallerySlider();
+  initMaterials();
 });

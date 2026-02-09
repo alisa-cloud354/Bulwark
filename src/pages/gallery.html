@@ -20,16 +20,40 @@
 
 
     <main class="relative min-h-screen w-full overflow-hidden bg-black">
-        <section id="materials" class="py-24 bg-black overflow-hidden">
+        <section id="gallery" npm class="py-20 bg-black overflow-hidden">
             <div class="container-custom">
-                <div class="mb-16">
-                    <span data-i18n="nav.materials"
+                <div class="mb-10">
+                    <span data-i18n="nav.gallery"
                         class="text-red-600 font-black uppercase tracking-[0.3em] text-sm">Галерэя</span>
+                </div>
+                <div class="flex gap-2 mb-8"> <button
+                        class="gallery-prev w-10 h-10 border border-white/10 text-white flex items-center justify-center"><i
+                            class="fa-solid fa-chevron-left"></i></button> <button
+                        class="gallery-next w-10 h-10 border border-white/10 text-white flex items-center justify-center"><i
+                            class="fa-solid fa-chevron-right"></i></button> </div>
+                <div class="swiper gallery-swiper">
+                    <div class="swiper-wrapper" id="gallery-container">
+                        <div class="swiper-slide">
+                            <a href="/src/assets/img/vlad.jpg" data-pswp-width="1600" data-pswp-height="1200"
+                                class="pswp-link">
+                                <img src="/src/assets/img/vlad.jpg" alt="name photo" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/src/assets/img/alisa.jpg" data-pswp-width="1600" data-pswp-height="1200"
+                                class="pswp-link">
+                                <img src="/src/assets/img/alisa.jpg" alt="name photo" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/src/assets/img/alisa.jpg" data-pswp-width="1600" data-pswp-height="1200"
+                                class="pswp-link">
+                                <img src="/src/assets/img/alisa.jpg" alt="name photo" />
+                            </a>
+                        </div>
+                    </div>
 
                 </div>
-
-
-            </div>
         </section>
 
     </main>

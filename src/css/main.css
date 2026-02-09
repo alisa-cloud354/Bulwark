@@ -3,6 +3,7 @@
 @import "./sections/mobile-menu.css";
 @import "./sections/hero.css";
 @import "./sections/header.css";
+@import "./sections/news.css";
 @import "/src/css/pages/zarok-vajara.css";
 
 @layer base {

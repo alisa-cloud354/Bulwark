@@ -1,0 +1,20 @@
+@media (min-width: 1280px) {
+
+    /* Калі свайпер знішчаны, прымушаем wrapper быць чыстым грыдом */
+    section#news .news-slider .swiper-wrapper {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 24px !important;
+        width: 100% !important;
+        transform: none !important;
+        flex-wrap: nowrap;
+        /* Каб не спрабаваў выстройвацца ў флекс */
+    }
+
+    /* Прымушаем слайды ігнараваць флекс-базу */
+    section#news .news-slider .swiper-slide {
+        width: 100% !important;
+        margin-right: 0 !important;
+        flex-shrink: 1 !important;
+    }
+}

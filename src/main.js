@@ -7,6 +7,7 @@ import { initReportsSlider } from "./js/reports.js";
 import { initNavigation } from "./js/navigation.js";
 import { initContacts } from "./js/contacts.js";
 import { initZarokVajara } from "./js/zarok-vajara.js";
+import { initFullNewsGrid } from "./js/news-full.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initHeader();
@@ -16,4 +17,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavigation();
   initContacts();
   initZarokVajara();
+  initFullNewsGrid();
 });

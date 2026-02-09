@@ -20,6 +20,7 @@ export default defineConfig({
         news: resolve(__dirname, "src/pages/news-full.html"),
         get_help: resolve(__dirname, "src/pages/get-help.html"),
         donate: resolve(__dirname, "src/pages/donate.html"),
+        news_full: resolve(__dirname, "src/pages/news-full.html"),
 
         // Дадай астатнія (projects, reports і г.д.), калі яны гатовыя
       },

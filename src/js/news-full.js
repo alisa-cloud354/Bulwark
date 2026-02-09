@@ -3,7 +3,7 @@ export async function initFullNewsGrid() {
   if (!gridContainer) return;
 
   try {
-    const response = await fetch("/public/data/news.json");
+    const response = await fetch("/data/news.json");
     const allNews = await response.json();
 
     // Сартаванне па даце (свежыя зверху)

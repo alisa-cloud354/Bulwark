@@ -10,7 +10,7 @@ export async function initNewsSlider() {
   if (!sliderWrapper) return;
 
   try {
-    const response = await fetch("/src/data/news.json");
+    const response = await fetch("/data/news.json");
     const allNews = await response.json();
 
     const parseDate = (dateStr) => {

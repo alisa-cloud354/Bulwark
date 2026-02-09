@@ -4,39 +4,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Кантакты | Bulwark</title>
-
-
 </head>
 
-<body>
+<body class="bg-[#0a0a0a]">
 
     <load src="/src/partials/header.html" />
     <load src="/src/partials/mobile-menu.html" />
 
+    <main class="relative min-h-screen w-full pt-40 md:pt-46 pb-20">
+        <section class="container-custom">
+            <div class="mb-16 border-l-4 border-red-600 pl-6 animate-fade-in">
+                <span class="text-red-600 font-black uppercase tracking-[0.3em] text-sm block mb-2">
+                    Звязацца і падтрымаць
+                </span>
+                <h1 class="text-white text-4xl md:text-6xl font-black uppercase tracking-tighter">
+                    Кантакты і рэквізіты
+                </h1>
+            </div>
 
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
 
-    <main class="relative min-h-screen w-full overflow-hidden bg-black">
-        <section id="materials" class="py-24 bg-black overflow-hidden">
-            <div class="container-custom">
-                <div class="mb-16">
-                    <span data-i18n="nav.materials"
-                        class="text-red-600 font-black uppercase tracking-[0.3em] text-sm">Кантакты</span>
+                <div class="md:col-span-4 space-y-10 contact-sidebar">
+                    <div class="bg-white/5 border border-white/10 p-8 hover:border-white/20 transition-colors">
+                        <h2
+                            class="text-xl text-white font-black uppercase mb-8 tracking-widest border-b border-white/10 pb-4">
+                            Кантакты
+                        </h2>
+                        <div class="space-y-8">
+                            <div>
+                                <p class="text-gray-500 text-[10px] uppercase font-black tracking-widest mb-2">Пошта</p>
+                                <a href="mailto:info@bulwark.fund"
+                                    class="text-white text-xl font-bold hover:text-red-600 transition-all">info@bulwark.fund</a>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-[10px] uppercase font-black tracking-widest mb-2">Тэлефон /
+                                    Signal</p>
+                                <a href="tel:+380000000000"
+                                    class="text-white text-xl font-bold hover:text-red-600 transition-all">+380 XX XXX
+                                    XX XX</a>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="bg-red-600 p-8 shadow-2xl relative overflow-hidden group">
+                        <div class="relative z-10">
+                            <h3 class="text-white text-2xl font-black uppercase mb-4 leading-none">Патрэбна дапамога?
+                            </h3>
+                            <p class="text-white/80 text-sm mb-8 font-medium">
+                                Для беларускіх добраахвотнікаў: прававая падтрымка, псіхалагічная дапамога, матэрыяльная
+                                падтрымка.
+                            </p>
+                            <a href="https://t.me/bulwark_bot" target="_blank"
+                                class="inline-flex items-center gap-3 bg-black text-white px-6 py-4 font-black uppercase text-[10px] tracking-[0.2em] hover:bg-white hover:text-black transition-all">
+                                <span>Адкрыць Telegram-бот</span>
+                                <i class="fa-brands fa-telegram text-md"></i>
+                            </a>
+                            <p class="mt-4 text-[9px] text-black/60 font-bold uppercase tracking-tighter italic">
+                                *Націснуўшы, вы пяройдзеце ў наш афіцыйны бот
+                            </p>
+                        </div>
+                        <i
+                            class="fa-brands fa-telegram absolute -bottom-10 -right-10 text-9xl text-black/10 -rotate-12 group-hover:rotate-0 transition-transform duration-700"></i>
+                    </div>
                 </div>
 
+                <div class="md:col-span-8 space-y-12 contact-main-content">
 
+                    <div class="bg-white/5 border border-white/10 p-6 md:p-10">
+                        <div class="flex justify-between items-start mb-8 border-b border-white/10 pb-6">
+                            <div>
+                                <h2 class="text-2xl text-white font-black uppercase">Падтрымаць фонд</h2>
+                                <p class="text-red-600 font-bold text-xs uppercase mt-1">АТ «ПрыватБанк»</p>
+                            </div>
+                            <div class="text-right hidden md:block">
+                                <p class="text-gray-500 text-[10px] font-black uppercase italic tracking-widest">
+                                    Код ЕДРПОУ: 46082758
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="md:col-span-2 bg-black/40 p-4 border border-white/5">
+                                <p class="text-gray-500 text-[10px] font-black uppercase mb-1">Назва плацяжу:</p>
+                                <p class="text-white text-sm italic">Благодійний внесок на виконання цілей БФ</p>
+                            </div>
+
+                            <div class="flex flex-col bg-black/40 p-4 border border-white/5">
+                                <span class="text-red-600 text-[10px] font-black uppercase mb-2">Грыўня (UAH)</span>
+                                <div class="flex justify-between items-center gap-2">
+                                    <span
+                                        class="text-white font-mono text-xs break-all">UA613052990000026003035931199</span>
+                                    <button class="copy-btn text-gray-500 hover:text-white transition-colors"
+                                        data-copy="UA613052990000026003035931199">
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col bg-black/40 p-4 border border-white/5">
+                                <span class="text-red-600 text-[10px] font-black uppercase mb-2">Долар (USD) / SWIFT:
+                                    PBANUA2X</span>
+                                <div class="flex justify-between items-center gap-2">
+                                    <span
+                                        class="text-white font-mono text-xs break-all">UA803052990000026006035930658</span>
+                                    <button class="copy-btn text-gray-500 hover:text-white transition-colors"
+                                        data-copy="UA803052990000026006035930658">
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col bg-black/40 p-4 border border-white/5">
+                                <span class="text-red-600 text-[10px] font-black uppercase mb-2">Еўра (EUR)</span>
+                                <div class="flex justify-between items-center gap-2">
+                                    <span
+                                        class="text-white font-mono text-xs break-all">UA273052990000026007035935555</span>
+                                    <button class="copy-btn text-gray-500 hover:text-white transition-colors"
+                                        data-copy="UA273052990000026007035935555">
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col bg-black/40 p-4 border border-white/5">
+                                <span class="text-red-600 text-[10px] font-black uppercase mb-2">Злоты (PLN)</span>
+                                <div class="flex justify-between items-center gap-2">
+                                    <span
+                                        class="text-white font-mono text-xs break-all">UA723052990000026002035932199</span>
+                                    <button class="copy-btn text-gray-500 hover:text-white transition-colors"
+                                        data-copy="UA723052990000026002035932199">
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 p-6 md:p-10">
+                        <div class="flex justify-between items-start mb-8 border-b border-white/10 pb-6">
+                            <div>
+                                <h2 class="text-2xl text-white font-black uppercase">Падтрымаць байцоў</h2>
+                                <p class="text-red-600 font-bold text-xs uppercase mt-1">АТ «УНІВЕРСАЛ БАНК»</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="flex flex-col bg-black/40 p-4 border border-white/5">
+                                <span class="text-red-600 text-[10px] font-black uppercase mb-2">Грыўня (UAH)</span>
+                                <div class="flex justify-between items-center gap-2">
+                                    <span
+                                        class="text-white font-mono text-xs break-all">UA443220010000026001700010145</span>
+                                    <button class="copy-btn text-gray-500 hover:text-white transition-colors"
+                                        data-copy="UA443220010000026001700010145">
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col bg-black/40 p-4 border border-white/5">
+                                <span class="text-red-600 text-[10px] font-black uppercase mb-2">Долар (USD)</span>
+                                <div class="flex justify-between items-center gap-2">
+                                    <span
+                                        class="text-white font-mono text-xs break-all">UA443220010000026001700013249</span>
+                                    <button class="copy-btn text-gray-500 hover:text-white transition-colors"
+                                        data-copy="UA443220010000026001700013249">
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 p-6 md:p-10">
+                        <h2 class="text-2xl text-white font-black uppercase mb-8 border-b border-white/10 pb-6">
+                            Крыптавалюты
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-black/40 p-4 border border-white/5">
+                                <p class="text-orange-500 text-[10px] font-black uppercase mb-2">Bitcoin (BTC)</p>
+                                <div class="flex justify-between items-center gap-4">
+                                    <span
+                                        class="text-white font-mono text-[10px] break-all">136ktmFvk157ehbXFkrk1UNaTZEYYL5x24</span>
+                                    <button class="copy-btn text-gray-500 hover:text-white"
+                                        data-copy="136ktmFvk157ehbXFkrk1UNaTZEYYL5x24">
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bg-black/40 p-4 border border-white/5">
+                                <p class="text-green-500 text-[10px] font-black uppercase mb-2">USDT (TRC20)</p>
+                                <div class="flex justify-between items-center gap-4">
+                                    <span
+                                        class="text-white font-mono text-[10px] break-all">TCvwUpa7tLGW48xXaFxLruTRN6cmnqBLB5</span>
+                                    <button class="copy-btn text-gray-500 hover:text-white"
+                                        data-copy="TCvwUpa7tLGW48xXaFxLruTRN6cmnqBLB5">
+                                        <i class="fa-regular fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
-
     </main>
 
-
     <load src="/src/partials/footer.html" />
-
     <script type="module" src="/src/main.js"></script>
 </body>
 

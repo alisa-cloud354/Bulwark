@@ -49,7 +49,8 @@
             <img src="/src/assets/img/logo.svg" alt="Logo" class="h-12 md:h-20 w-auto object-contain mr-4">
             <div class="flex flex-col text-white uppercase font-black leading-[0.85]">
                 <span class="text-lg md:text-xl tracking-tighter">Bulwark<br>fund</span>
-                <span class="text-[10px] tracking-[0.2em] text-gray-400 font-bold mt-1 uppercase">Ukraine</span>
+                <span data-i18n="nav.location"
+                    class="text-[10px] tracking-[0.2em] text-gray-400 font-bold mt-1 uppercase">Ukraine</span>
             </div>
         </a>
 
@@ -65,52 +66,53 @@
                     <div class="group relative py-4">
                         <a href="/#about"
                             class="js-nav-link hover:text-red-600 transition-colors flex items-center gap-1 whitespace-nowrap">
-                            Пра фонд
+                            <span data-i18n="nav.about">Пра фонд</span>
                             <i
                                 class="fa-solid fa-chevron-down text-[8px] transition-transform group-hover:rotate-180"></i>
                         </a>
                         <div
                             class="absolute top-full left-0 w-64 bg-[#1a1a1a] border border-white/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-2xl">
-                            <a href="/src/pages/projects.html"
+                            <a href="/src/pages/projects.html" data-i18n="nav.projects"
                                 class="block px-6 py-4 text-[10px] text-gray-400 hover:bg-black hover:text-red-600 border-b border-white/5">Праекты</a>
-                            <a href="/src/pages/history.html"
+                            <a href="/src/pages/history.html" data-i18n="nav.history_long"
                                 class="block px-6 py-4 text-[10px] text-gray-400 hover:bg-black hover:text-red-600 border-b border-white/5">Гістарычны
                                 экскурс</a>
-                            <a href="/src/pages/reports.html"
+                            <a href="/src/pages/reports.html" data-i18n="nav.reports"
                                 class="block px-6 py-4 text-[10px] text-gray-400 hover:bg-black hover:text-red-600 border-b border-white/5">Справаздачы</a>
-                            <a href="/src/pages/materials.html"
+                            <a href="/src/pages/materials.html" data-i18n="nav.materials"
                                 class="block px-6 py-4 text-[10px] text-gray-400 hover:bg-black hover:text-red-600 border-b border-white/5">Матэрыялы</a>
-                            <a href="/src/pages/contacts.html"
+                            <a href="/src/pages/contacts.html" data-i18n="nav.requisites"
                                 class="block px-6 py-4 text-[10px] text-gray-400 hover:bg-black hover:text-red-600 border-b border-white/5">Рэквізіты</a>
-                            <a href="/src/pages/zarok-vajara.html"
+                            <a href="/src/pages/zarok-vajara.html" data-i18n="nav.vow"
                                 class="block px-6 py-4 text-[10px] text-gray-400 hover:bg-black hover:text-red-600 border-b border-white/5">Зарок
                                 ваяра</a>
-                            <a href="/src/pages/gallery.html"
+                            <a href="/src/pages/gallery.html" data-i18n="nav.gallery"
                                 class="block px-6 py-4 text-[10px] text-gray-400 hover:bg-black hover:text-red-600">Галерэя</a>
                         </div>
                     </div>
 
-                    <a href="/#news" class="js-nav-link hover:text-red-600 transition-colors">Навіны</a>
+                    <a href="/#news" data-i18n="nav.news"
+                        class="js-nav-link hover:text-red-600 transition-colors">Навіны</a>
 
                     <div class="group relative py-4">
                         <a href="/#volunteers" class="js-nav-link hover:text-red-600 flex items-center gap-1">
-                            Дапамога
+                            <span data-i18n="nav.help">Дапамога</span>
                             <i
                                 class="fa-solid fa-chevron-down text-[8px] transition-transform group-hover:rotate-180"></i>
                         </a>
                         <div
                             class="absolute top-full left-0 w-64 bg-[#1a1a1a] border border-white/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-2xl">
-                            <a href="/src/pages/get-help.html"
+                            <a href="/src/pages/get-help.html" data-i18n="nav.get_help"
                                 class="block px-6 py-4 text-[10px] text-gray-400 hover:bg-black hover:text-red-600 border-b border-white/5">Атрымаць
                                 дапамогу</a>
-                            <a href="/src/pages/donate.html"
+                            <a href="/src/pages/donate.html" data-i18n="nav.be_partner"
                                 class="block px-6 py-4 text-[10px] text-gray-400 hover:bg-black hover:text-red-600">Дапамагчы
                                 | Стаць партнёрам</a>
                         </div>
                     </div>
                 </div>
 
-                <a href="/#donate"
+                <a href="/#donate" data-i18n="nav.support"
                     class="js-nav-link bg-red-600 text-white px-8 py-2.5 hover:bg-white hover:text-black transition-all">Падтрымаць</a>
             </nav>
 

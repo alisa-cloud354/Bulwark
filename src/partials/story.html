@@ -1,118 +1,131 @@
-<section id="history" class="py-24 bg-[1a1a1a] text-white overflow-hidden">
+<section id="history" class="section-spacing bg-[#0a0a0a] text-white overflow-hidden">
     <div class="container-custom">
-        <div class="mb-16">
+        <div class="mb-12 md:mb-16">
             <div class="flex items-center gap-4 mb-4">
                 <div class="w-12 h-px bg-red-600"></div>
                 <span data-i18n="history.tag"
                     class="uppercase tracking-[0.4em] text-red-600 font-black text-[10px]">Чалавечы фактар</span>
             </div>
-            <h2 data-i18n="history.title" class="text-5xl md:text-6xl font-black uppercase tracking-tighter">Наша
-                гісторыя</h2>
+            <h2 data-i18n="history.title"
+                class="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.9]">
+                Наша гісторыя
+            </h2>
         </div>
 
         <div class="grid grid-cols-1 xl:grid-cols-12 gap-12 items-start">
 
-            <div class="xl:col-span-5 space-y-12">
+            <div class="xl:col-span-5 space-y-10">
+
                 <div class="grid grid-cols-2 gap-4">
                     <div class="relative group">
-                        <div class="aspect-3/4 bg-gray-900 border border-white/5 overflow-hidden">
+                        <div class="aspect-[3/4] bg-[#111111] border border-white/5 overflow-hidden">
                             <img src="/src/assets/img/alisa.jpg" alt="Аліса Касенка"
-                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100">
                         </div>
-                        <div class="absolute bottom-0 left-0 right-0 bg-red-600/80 backdrop-blur-sm p-3">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-red-600/90 backdrop-blur-md p-3 min-h-[55px] md:min-h-[65px] flex items-center">
                             <p data-i18n="history.alisa_label"
-                                class="text-[9px] font-black uppercase tracking-[0.2em] text-white">Аліса <br> Харкаў
+                                class="text-[10px] font-black uppercase tracking-tight text-white leading-tight">
+                                Аліса <br> Харкаў
                             </p>
                         </div>
                     </div>
 
                     <div class="relative group">
-                        <div class="aspect-3/4 bg-gray-900 border border-white/5 overflow-hidden">
+                        <div class="aspect-[3/4] bg-[#111111] border border-white/5 overflow-hidden">
                             <img src="/src/assets/img/vlad.jpg" alt="Уладзіслаў Салавей"
-                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100">
                         </div>
-                        <div class="absolute bottom-0 left-0 right-0 bg-red-600/80 backdrop-blur-sm p-3">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 bg-red-600/90 backdrop-blur-md p-3 min-h-[55px] md:min-h-[65px] flex items-center">
                             <p data-i18n="history.vlad_label"
-                                class="text-[9px] font-black uppercase tracking-[0.2em] text-white">Улад (пазыўны
-                                «Соня»)<br> Мінск</p>
+                                class="text-[10px] font-black uppercase tracking-tight text-white leading-tight">
+                                Улад («Соня»)<br> Мінск
+                            </p>
                         </div>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 gap-3 pt-4">
-                    <a href="https://www.youtube.com/watch?v=q6A4ad6-Uc4" target="_blank"
-                        class="flex items-center justify-between p-4 bg-white/5 border border-white/10 hover:border-red-600 transition-all group">
+                <div class="grid grid-cols-1 gap-4 pt-4">
+                    <a href="https://www.youtube.com/watch?v=q6A4ad6-Uc4" target="_blank" rel="noopener"
+                        class="flex items-center justify-between p-5 bg-[#111111] border border-white/5 hover:border-red-600/50 transition-all group">
                         <div class="flex flex-col">
                             <span
                                 class="text-[9px] text-red-600 font-black uppercase tracking-widest mb-1">YouTube</span>
                             <span data-i18n="history.link_youtube"
-                                class="text-[11px] font-black uppercase tracking-widest text-gray-400 group-hover:text-white">Глядзець
-                                фільм пра «Соню»</span>
+                                class="text-[12px] font-black uppercase tracking-widest text-gray-400 group-hover:text-white transition-colors">
+                                Глядзець фільм пра «Соню»
+                            </span>
                         </div>
-                        <i class="fa-brands fa-youtube text-2xl"></i>
+                        <i
+                            class="fa-brands fa-youtube text-2xl text-gray-600 group-hover:text-red-600 transition-colors"></i>
                     </a>
-                    <a href="https://spring96.org/ru/news/99103" target="_blank"
-                        class="flex items-center justify-between p-4 bg-white/5 border border-white/10 hover:border-red-600 transition-all group">
+
+                    <a href="https://spring96.org/ru/news/99103" target="_blank" rel="noopener"
+                        class="flex items-center justify-between p-5 bg-[#111111] border border-white/5 hover:border-red-600/50 transition-all group">
                         <div class="flex flex-col">
                             <span
                                 class="text-[9px] text-gray-500 font-black uppercase tracking-widest mb-1">Viasna96</span>
                             <span data-i18n="history.link_viasna"
-                                class="text-[11px] font-black uppercase tracking-widest text-gray-400 group-hover:text-white">Гісторыя
-                                рэпрэсій</span>
+                                class="text-[12px] font-black uppercase tracking-widest text-gray-400 group-hover:text-white transition-colors">
+                                Гісторыя рэпрэсій
+                            </span>
                         </div>
-                        <i class="fa-solid fa-shield-halved text-xl text-gray-600 group-hover:text-white"></i>
+                        <i
+                            class="fa-solid fa-shield-halved text-xl text-gray-600 group-hover:text-white transition-colors"></i>
                     </a>
                 </div>
             </div>
 
-            <div class="xl:col-span-7 space-y-8 xl:pl-10">
-                <div class="prose prose-invert max-w-none">
+            <div class="xl:col-span-7 xl:pl-10">
+                <div class="max-w-none">
                     <p data-i18n="history.lead"
-                        class="text-2xl font-light leading-snug text-gray-200 italic border-l-2 border-red-600 pl-6">
-                        Гісторыя «Булварка» пачалася не ў офісе, а праз сустрэчу ўкраінкі з Харкава і беларускага
+                        class="text-2xl md:text-3xl font-light leading-tight text-gray-200 italic border-l-4 border-red-600 pl-8 mb-12">
+                        Гісторыя «Bulwark» пачалася не ў офісе, а праз сустрэчу ўкраінкі з Харкава і беларускага
                         добраахвотніка.
                     </p>
 
-                    <div class="space-y-6 text-gray-400 text-base leading-relaxed mt-12">
+                    <div class="space-y-6 text-gray-400 text-base md:text-lg leading-relaxed">
                         <p>
-                            <strong data-i18n="history.alisa_name" class="text-white">Аліса Касенка</strong> <span
-                                data-i18n="history.alisa_text">нарадзілася ў Харкаве. Да 24 лютага 2022 года яна жыла
+                            <strong data-i18n="history.alisa_name" class="text-white font-bold">Аліса Касенка</strong>
+                            <span data-i18n="history.alisa_text">нарадзілася ў Харкаве. Да 24 лютага 2022 года яна жыла
                                 звычайным жыццём, але пасля пачатку ўварвання прайшла праз абстрэлы і эвакуацыю. Яна
-                                вярнулася ва Украіну з цвёрдым рашэннем: гэта яе дом, і яна ні на што яго не
-                                абмяняе.</span>
+                                вярнулася ва Украіну з цвёрдым рашэннем: гэта яе дом.</span>
                         </p>
                         <p>
-                            <span data-i18n="history.vlad_intro">Яе любімы чалавек,</span> <strong
-                                data-i18n="history.vlad_name" class="text-white">Уладзіслаў Салавей (пазыўны
-                                «Соня»)</strong>, <span data-i18n="history.vlad_text">родам з Мінска. У 2020 годзе ён
-                                прайшоў праз рэпрэсіі і
-                                катаванні ў Акрэсціне за ўдзел у мірных пратэстах. З пачаткам вялікай вайны ён без
-                                ваганняў паехаў ваяваць за свабоду Украіны і будучыню вольнай Беларусі.</span>
-                        </p>
-                        <p data-i18n="history.vlad_path">
-                            Улад прайшоў шлях ад пяхоцінца ў батальёне «Літвін» да камандзіра разведгрупы палка
-                            Каліноўскага. Зараз ён служыць у разведбаце брыгады «Хартыя».
+                            <span data-i18n="history.vlad_intro">Яе любімы чалавек,</span>
+                            <strong data-i18n="history.vlad_name" class="text-white font-bold">Уладзіслаў Салавей
+                                (пазыўны «Соня»)</strong>,
+                            <span data-i18n="history.vlad_text">родам з Мінска. У 2020 годзе ён прайшоў праз рэпрэсіі і
+                                катаванні ў Акрэсціне. З пачаткам вялікай вайны ён без ваганняў паехаў ваяваць за
+                                свабоду Украіны.</span>
                         </p>
 
-                        <div class="py-8">
+                        <div class="py-10">
                             <p data-i18n="history.slogan_label"
-                                class="text-white font-black uppercase tracking-widest text-sm mb-2">Наш лозунг:</p>
+                                class="text-gray-500 font-black uppercase tracking-[0.3em] text-[10px] mb-3">Наш лозунг
+                            </p>
                             <p data-i18n="history.slogan_text"
-                                class="text-4xl font-black uppercase text-red-600 tracking-tighter">Два народы — адна
-                                свабода</p>
+                                class="text-4xl md:text-6xl font-black uppercase text-red-600 tracking-tighter leading-none">
+                                Два народы — <br class="hidden md:block"> адна свабода
+                            </p>
                         </div>
 
-                        <p>
-                            <span data-i18n="history.conclusion_1">Сёння яны разам будуюць фонд «Булварк», аб'ядноўваючы
-                                тых, хто верыць: свабода — гэта права кожнага. Яны працуюць дзеля таго дня, калі можна
-                                будзе сказаць:</span> <strong data-i18n="history.conclusion_highlight"
-                                class="text-white uppercase tracking-wider">«Мы вяртаемся. Мы будуем новую
-                                Беларусь!»</strong>
-                        </p>
+                        <div class="text-gray-300 space-y-4">
+                            <p data-i18n="history.conclusion_1">
+                                Сёння яны разам будуюць фонд «Bulwark», аб'ядноўваючы тых, хто верыць: свабода — гэта
+                                права кожнага.
+                            </p>
+                            <p>
+                                <strong data-i18n="history.conclusion_highlight"
+                                    class="text-white uppercase tracking-wider bg-white/5 px-2 py-1 inline-block">
+                                    «Мы вяртаемся. Мы будуем новую Беларусь!»
+                                </strong>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>

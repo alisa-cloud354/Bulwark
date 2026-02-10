@@ -1,53 +1,79 @@
-<section id="volunteers" class="py-24 bg-[#121212]">
+<section id="volunteers" class="section-spacing bg-black text-white overflow-hidden">
     <div class="container-custom">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <div>
-                <h2 data-i18n="volunteers.title" class="section-title font-black text-white uppercase italic mb-8">
-                    Дапамога
-                    добраахвотнікам</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-16 items-start">
 
-                <div class="space-y-6">
-                    <div class="flex gap-4">
-                        <i class="fa-solid fa-user-check text-red-600 mt-1"></i>
-                        <p class="text-gray-300 text-sm"><strong class="text-white uppercase tracking-wider"
-                                data-i18n="volunteers.crit1_title">Для каго:</strong> <span
-                                data-i18n="volunteers.crit1_text">Толькі для беларускіх добраахвотнікаў (дзейных
-                                вайскоўцаў і ветэранаў), якія ваююць ці ваявалі ў складзе УСУ / НГУ.</span></p>
+            <div>
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-0.5 bg-red-600"></div>
+                    <span data-i18n="volunteers.tag"
+                        class="uppercase tracking-[0.4em] text-red-600 font-black text-[10px]">Дапамога</span>
+                </div>
+
+                <h2 data-i18n="volunteers.title" class="section-title mb-10 tracking-tighter">
+                    Дапамога добраахвотнікам
+                </h2>
+
+                <div class="space-y-8">
+                    <div class="flex gap-5">
+                        <i class="fa-solid fa-user-check text-red-600 mt-1 text-lg"></i>
+                        <div class="flex flex-col gap-1">
+                            <strong class="text-white uppercase tracking-wider text-[11px] font-black"
+                                data-i18n="volunteers.crit1_title">Для каго:</strong>
+                            <p class="text-gray-400 text-sm leading-relaxed" data-i18n="volunteers.crit1_text">
+                                Толькі для беларускіх добраахвотнікаў (дзейных вайскоўцаў і ветэранаў), якія ваююць ці
+                                ваявалі ў складзе УСУ / НГУ.
+                            </p>
+                        </div>
                     </div>
-                    <div class="flex gap-4">
-                        <i class="fa-solid fa-circle-info text-red-600 mt-1"></i>
-                        <p class="text-gray-300 text-sm"><strong class="text-white uppercase tracking-wider"
-                                data-i18n="volunteers.crit2_title">Што даем:</strong> <span
-                                data-i18n="volunteers.crit2_text">Кансультацыі па легалізацыі, аднаўленне дакументаў,
-                                прафесійная псіхалагічная падтрымка.</span></p>
+
+                    <div class="flex gap-5">
+                        <i class="fa-solid fa-circle-info text-red-600 mt-1 text-lg"></i>
+                        <div class="flex flex-col gap-1">
+                            <strong class="text-white uppercase tracking-wider text-[11px] font-black"
+                                data-i18n="volunteers.crit2_title">Што даем:</strong>
+                            <p class="text-gray-400 text-sm leading-relaxed" data-i18n="volunteers.crit2_text">
+                                Кансультацыі па легалізацыі, аднаўленне дакументаў, прафесійная псіхалагічная падтрымка.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="mt-10 p-6 border-l-2 border-red-600 bg-red-600/5">
+                <div class="mt-12 p-8 border border-white/5 bg-[#111111] relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-red-600"></div>
                     <p data-i18n="volunteers.warning"
-                        class="text-xs text-gray-400 leading-relaxed uppercase tracking-widest font-bold">
+                        class="text-[11px] text-gray-400 leading-relaxed uppercase tracking-widest font-bold italic">
                         Важна: Мы не займаемся зборам на зброю ці амуніцыю. Наша задача — ваш прававы і ментальны
                         статус.
                     </p>
                 </div>
             </div>
 
-            <div class="bg-[#1a1a1a] p-8 border border-white/5">
-                <form class="space-y-4">
-                    <input type="text" data-i18n-placeholder="forms.name_callsign" placeholder="Імя / Пазыўны"
-                        class="w-full bg-black/40 border border-white/10 p-3 text-white outline-none focus:border-red-600 transition-colors">
-                    <input type="text" data-i18n-placeholder="forms.status" placeholder="Статус (дзейны / ветэран)"
-                        class="w-full bg-black/40 border border-white/10 p-3 text-white outline-none focus:border-red-600 transition-colors">
-                    <textarea data-i18n-placeholder="forms.needs" placeholder="Якая дапамога патрэбна?"
-                        class="w-full bg-black/40 border border-white/10 p-3 text-white h-32 outline-none focus:border-red-600 transition-colors"></textarea>
-                    <input type="text" data-i18n-placeholder="forms.signal_tele"
-                        placeholder="Signal / Telegram для сувязі"
-                        class="w-full bg-black/40 border border-white/10 p-3 text-white outline-none focus:border-red-600 transition-colors">
+            <div class="bg-[#111111] p-8 md:p-10 border border-white/5 shadow-2xl relative">
+                <form class="space-y-5">
+                    <div>
+                        <input type="text" data-i18n-placeholder="forms.name_callsign" placeholder="Імя / Пазыўны"
+                            class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-medium">
+                    </div>
+                    <div>
+                        <input type="text" data-i18n-placeholder="forms.status" placeholder="Статус (дзейны / ветэран)"
+                            class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-medium">
+                    </div>
+                    <div>
+                        <textarea data-i18n-placeholder="forms.needs" placeholder="Якая дапамога патрэбна?"
+                            class="w-full bg-black border border-white/10 p-4 text-white text-sm h-32 outline-none focus:border-red-600 transition-all font-medium resize-none"></textarea>
+                    </div>
+                    <div>
+                        <input type="text" data-i18n-placeholder="forms.signal_tele"
+                            placeholder="Signal / Telegram для сувязі"
+                            class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-medium">
+                    </div>
                     <button type="submit" data-i18n="forms.btn_request"
-                        class="w-full bg-red-600 py-4 text-white font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all">Адправіць
-                        запыт</button>
+                        class="w-full bg-red-600 py-5 text-white font-black uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-all shadow-lg">
+                        Адправіць запыт
+                    </button>
                 </form>
             </div>
+
         </div>
     </div>
 </section>

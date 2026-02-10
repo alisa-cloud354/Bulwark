@@ -1,9 +1,4 @@
-import Swiper from "swiper";
-import { Navigation } from "swiper/modules";
-import "swiper/css";
-
-// Выносім зменную за межы функцый, каб яна была даступная ўсім
-let swiperInstance = null;
+import { openUniversalModal } from "./modal.js";
 
 export async function initNewsSlider() {
   const sliderWrapper = document.querySelector(".news-slider .swiper-wrapper");
@@ -13,15 +8,11 @@ export async function initNewsSlider() {
     const response = await fetch("/data/news.json");
     const allNews = await response.json();
 
-    const parseDate = (dateStr) => {
-      const [day, month, year] = dateStr.split(".").map(Number);
-      return new Date(year, month - 1, day);
-    };
-
+    // Сартаванне (самыя свежыя зверху)
     const sortedNews = allNews.sort((a, b) => {
-      const dateA = parseDate(a.date);
-      const dateB = parseDate(b.date);
-      return dateB - dateA || b.id - a.id;
+      const dateA = new Date(a.date.split(".").reverse().join("-"));
+      const dateB = new Date(b.date.split(".").reverse().join("-"));
+      return dateB - dateA;
     });
 
     const latestNews = sortedNews.slice(0, 3);
@@ -42,10 +33,11 @@ export async function initNewsSlider() {
               <p class="text-gray-400 text-sm mb-6 line-clamp-3 leading-relaxed">
                 ${news.excerpt}
               </p>
-              <a href="${news.link}" class="mt-auto text-white text-[10px] font-black uppercase tracking-widest flex items-center gap-2 group-hover:text-red-600">
-                <span data-i18n="materials.more">Больш</span>
+              <button class="open-news-btn mt-auto text-white text-[10px] font-black uppercase tracking-widest flex items-center gap-2 hover:text-red-600 transition-all" 
+                      data-id="${news.id}">
+                <span data-i18n="news.read_more">Чытаць цалкам</span>
                 <i class="fa-solid fa-chevron-right text-[8px]"></i>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -53,44 +45,20 @@ export async function initNewsSlider() {
       )
       .join("");
 
-    // Запускаем логіку кіравання свайперам
-    manageSwiper();
-    window.addEventListener("resize", manageSwiper);
+    // Слухач падзей (выкарыстоўваем імпартаваную функцыю)
+    sliderWrapper.addEventListener("click", (e) => {
+      const btn = e.target.closest(".open-news-btn");
+      if (btn) {
+        const newsId = btn.dataset.id;
+        const newsItem = allNews.find((n) => String(n.id) === String(newsId));
+        if (newsItem) {
+          openUniversalModal(newsItem);
+        }
+      }
+    });
+
+    if (typeof manageSwiper === "function") manageSwiper();
   } catch (error) {
     console.error("Памылка загрузкі навін:", error);
-  }
-}
-
-function manageSwiper() {
-  const sliderElement = document.querySelector(".news-slider");
-  if (!sliderElement) return;
-
-  const isDesktop = window.innerWidth >= 1280;
-
-  if (isDesktop) {
-    if (swiperInstance) {
-      // Гэта выдаліць усе стылі і класы Swiper
-      swiperInstance.destroy(true, true);
-      swiperInstance = null;
-      window.dispatchEvent(new Event("resize"));
-    }
-  } else {
-    if (!swiperInstance) {
-      swiperInstance = new Swiper(".news-slider", {
-        modules: [Navigation],
-        slidesPerView: 1,
-        spaceBetween: 16,
-        navigation: {
-          nextEl: ".news-next",
-          prevEl: ".news-prev",
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 24,
-          },
-        },
-      });
-    }
   }
 }

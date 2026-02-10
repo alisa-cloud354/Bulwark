@@ -1,53 +1,12 @@
 /* src/css/header.css */
-
-.dropdown-lang .dropdown-content {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-    pointer-events: none;
-    z-index: 60;
-    /* Дадалі, каб было па-над усім */
-}
-
+/* Пакідаем толькі для падтрымкі мабільных клікаў, калі яны ёсць */
 .dropdown-lang.is-active .dropdown-content {
-    display: block;
-    opacity: 1;
-    visibility: visible;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
     transform: translateY(0);
-    pointer-events: auto;
 }
 
 .dropdown-lang.is-active #lang-btn i {
     transform: rotate(180deg);
-}
-
-.dropdown-lang::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 15px;
-    /* Вышыня павінна перакрываць адлегласць да спіса */
-    display: none;
-}
-
-@media (min-width: 1280px) {
-    .dropdown-lang:hover .dropdown-content {
-        display: block;
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-        pointer-events: auto;
-    }
-
-    .dropdown-lang:hover #lang-btn i {
-        transform: rotate(180deg);
-    }
-
-    .dropdown-lang:hover::after {
-        display: block;
-    }
 }

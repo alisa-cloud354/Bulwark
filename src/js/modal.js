@@ -1,6 +1,6 @@
 import { modalTemplates } from "./modalTemplates.js";
 
-export function openUniversalModal(item) {
+export function openUniversalModal(item, type = null) {
   const modal = document.getElementById("material-modal");
   const dynamicContainer = document.getElementById("modal-dynamic-container");
   const modalMeta = document.getElementById("modal-meta");
@@ -10,19 +10,28 @@ export function openUniversalModal(item) {
     return;
   }
 
-  // 1. Запаўняем мета-дадзеныя (яны па-за шаблонам, у хедэры)
+  // 1. Запаўняем мета-дадзеныя
   if (modalMeta) {
     modalMeta.innerText =
       item.date || (item.category ? "#" + item.category : "");
   }
 
-  // 2. Выбіраем і ўстаўляем шаблон (Цяпер элементы з'яўляюцца ў DOM)
-  const template = item.date
-    ? modalTemplates.news(item)
-    : modalTemplates.material(item);
+  // 2. ВЫБАР ШАБЛОНА (ВЫПРАЎЛЕНА)
+  let template;
+
+  if (type && modalTemplates[type]) {
+    // Калі тып перададзены наўпрост (як 'donation')
+    template = modalTemplates[type](item);
+  } else {
+    // Аўтаматычны выбар для старых частак (навіны/матэрыялы)
+    template = item.date
+      ? modalTemplates.news(item)
+      : modalTemplates.material(item);
+  }
+
   dynamicContainer.innerHTML = template;
 
-  // 3. Шляхам пошуку ўнутра ўжо створанага кантэнту наладжваем логіку
+  // 3. Наладжваем логіку
   setupInternalLogic(dynamicContainer);
 
   // 4. Паказваем мадалку
@@ -30,7 +39,6 @@ export function openUniversalModal(item) {
   dynamicContainer.scrollTo(0, 0);
   document.body.style.overflow = "hidden";
 
-  // Калі ёсць i18next ці іншая сістэма перакладу
   if (window.updateContent) window.updateContent();
 }
 

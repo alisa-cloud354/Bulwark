@@ -12,6 +12,7 @@ import { initGallerySlider } from "./js/gallery.js";
 import { initMaterials } from "./js/materials.js";
 import { initProjects } from "./js/projects.js";
 import { initModalControl } from "./js/modal.js";
+import { initDonationSection } from "./js/donation-section.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initHeader();
@@ -26,4 +27,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initMaterials();
   initProjects();
   initModalControl();
+  initDonationSection();
 });

@@ -3,7 +3,6 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import { openUniversalModal } from "./modal.js";
 
-// Зменная за межамі функцый, каб мець доступ да інстансу
 let swiperInstance = null;
 
 export async function initNewsSlider() {
@@ -31,22 +30,29 @@ export async function initNewsSlider() {
       .map(
         (news) => `
         <div class="swiper-slide h-auto flex">
-          <div class="bg-black/20 border border-white/5 h-full flex flex-col hover:border-red-600/30 transition-all group w-full">
-            <div class="aspect-video bg-black/40 flex items-center justify-center p-8 overflow-hidden relative">
-              <img src="/src/assets/img/logo.svg" alt="Logo" class="w-20 opacity-20 group-hover:scale-110 transition-transform duration-500">
+          <div class="bg-black/20 border border-white/5 h-full flex flex-col hover:border-red-600/30 transition-all group w-full overflow-hidden">
+            
+            <div class="aspect-video bg-black/40 flex items-center justify-center overflow-hidden relative">
+              ${
+                news.image
+                  ? `<img src="${news.image}" alt="${news.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">`
+                  : `<img src="/src/assets/img/logo.svg" alt="Logo" class="w-20 opacity-20 group-hover:scale-110 transition-transform duration-500">`
+              }
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
+
             <div class="p-6 flex flex-col grow">
               <span class="text-red-600 text-[10px] font-bold uppercase tracking-widest mb-2">${news.date}</span>
-              <h4 class="text-white font-bold mb-3 line-clamp-2 italic uppercase text-sm tracking-widest group-hover:text-red-600 transition-colors">
+              <h4 class="text-white font-bold mb-3 line-clamp-2 italic uppercase text-sm tracking-widest group-hover:text-red-600 transition-colors leading-tight">
                 ${news.title}
               </h4>
-              <p class="text-gray-400 text-sm mb-6 line-clamp-3 leading-relaxed">
+              <p class="text-gray-400 text-sm mb-6 line-clamp-3 leading-relaxed font-light">
                 ${news.excerpt}
               </p>
-              <button class="open-news-btn mt-auto text-white text-[10px] font-black uppercase tracking-widest flex items-center gap-2 hover:text-red-600 transition-all" 
+              <button class="open-news-btn mt-auto text-white text-[10px] font-black uppercase tracking-widest flex items-center gap-2 hover:text-red-600 transition-all group/btn" 
                       data-id="${news.id}">
                 <span data-i18n="news.read_more">Чытаць цалкам</span>
-                <i class="fa-solid fa-chevron-right text-[8px]"></i>
+                <i class="fa-solid fa-chevron-right text-[8px] group-hover/btn:translate-x-1 transition-transform"></i>
               </button>
             </div>
           </div>
@@ -55,7 +61,6 @@ export async function initNewsSlider() {
       )
       .join("");
 
-    // Дадаем слухач для адкрыцця мадалкі
     sliderWrapper.addEventListener("click", (e) => {
       const btn = e.target.closest(".open-news-btn");
       if (btn) {
@@ -66,7 +71,6 @@ export async function initNewsSlider() {
       }
     });
 
-    // Запускаем кіраванне свайперам
     manageSwiper();
     window.addEventListener("resize", manageSwiper);
   } catch (error) {
@@ -84,7 +88,6 @@ function manageSwiper() {
     if (swiperInstance) {
       swiperInstance.destroy(true, true);
       swiperInstance = null;
-      // Дапамагаем браўзеру пералічыць сетку
       window.dispatchEvent(new Event("resize"));
     }
   } else {

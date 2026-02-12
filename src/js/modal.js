@@ -1,74 +1,74 @@
-/**
- * Універсальная мадалка для матэрыялаў і навін
- */
+import { modalTemplates } from "./modalTemplates.js";
 
 export function openUniversalModal(item) {
   const modal = document.getElementById("material-modal");
-  const modalContent = document.getElementById("modal-content");
-  const modalTitle = document.getElementById("modal-title");
+  const dynamicContainer = document.getElementById("modal-dynamic-container");
   const modalMeta = document.getElementById("modal-meta");
-  const modalInternalNav = document.getElementById("modal-internal-nav");
-  const scrollContainer = modal?.querySelector(".overflow-y-auto");
 
-  if (!modal || !modalContent) return;
-
-  // 1. Напаўняем асноўны кантэнт
-  modalMeta.innerText = item.date
-    ? item.date
-    : item.category
-      ? "#" + item.category
-      : "";
-  modalTitle.innerText = item.title;
-  modalContent.innerHTML = item.content;
-
-  // 2. Генерацыя ўнутранай навігацыі па h3
-  if (modalInternalNav) {
-    const headings = modalContent.querySelectorAll("h3");
-
-    if (headings.length > 0) {
-      modalInternalNav.innerHTML = Array.from(headings)
-        .map((h3, index) => {
-          const anchorId = `nav-anchor-${index}`;
-          h3.id = anchorId; // Прысвойваем ID кожнаму загалоўку
-          return `
-                        <button data-anchor="${anchorId}" 
-                                class="text-[10px] md:text-[11px] uppercase font-bold tracking-[0.2em] text-white/40 hover:text-red-600 transition-all py-1">
-                            ${h3.innerText}
-                        </button>
-                    `;
-        })
-        .join("");
-
-      modalInternalNav.classList.remove("hidden");
-
-      // Апрацоўка клікаў па навігацыі ўнутры мадалкі
-      modalInternalNav.onclick = (e) => {
-        const btn = e.target.closest("button");
-        if (btn) {
-          const target = document.getElementById(btn.dataset.anchor);
-          if (target && scrollContainer) {
-            scrollContainer.scrollTo({
-              top: target.offsetTop - 20,
-              behavior: "smooth",
-            });
-          }
-        }
-      };
-    } else {
-      modalInternalNav.classList.add("hidden");
-      modalInternalNav.innerHTML = "";
-    }
+  if (!modal || !dynamicContainer) {
+    console.error("Мадалка або кантэйнер не знойдзены ў DOM");
+    return;
   }
 
-  // 3. Адкрыццё мадалкі
+  // 1. Запаўняем мета-дадзеныя (яны па-за шаблонам, у хедэры)
+  if (modalMeta) {
+    modalMeta.innerText =
+      item.date || (item.category ? "#" + item.category : "");
+  }
+
+  // 2. Выбіраем і ўстаўляем шаблон (Цяпер элементы з'яўляюцца ў DOM)
+  const template = item.date
+    ? modalTemplates.news(item)
+    : modalTemplates.material(item);
+  dynamicContainer.innerHTML = template;
+
+  // 3. Шляхам пошуку ўнутра ўжо створанага кантэнту наладжваем логіку
+  setupInternalLogic(dynamicContainer);
+
+  // 4. Паказваем мадалку
   modal.classList.remove("hidden");
-  if (scrollContainer) scrollContainer.scrollTo(0, 0); // Скідваем скрол уверх
+  dynamicContainer.scrollTo(0, 0);
   document.body.style.overflow = "hidden";
 
-  // Абнаўляем пераклады (калі выкарыстоўваецца глабальная функцыя)
+  // Калі ёсць i18next ці іншая сістэма перакладу
   if (window.updateContent) window.updateContent();
 }
 
+// Унутраная логіка: Навігацыя, Капіяванне і г.д.
+function setupInternalLogic(container) {
+  const modalContent = container.querySelector("#modal-content");
+  const internalNav = container.querySelector("#modal-internal-nav");
+
+  if (!modalContent) return;
+
+  // Навігацыя па H3
+  const headings = modalContent.querySelectorAll("h3");
+  if (internalNav && headings.length > 0) {
+    internalNav.innerHTML = Array.from(headings)
+      .map((h3, i) => {
+        const id = `nav-anchor-${i}`;
+        h3.id = id;
+        return `<button data-anchor="${id}" class="text-[9px] md:text-[10px] uppercase font-bold tracking-widest text-white/40 hover:text-red-600 transition-all text-left py-1">${h3.innerText}</button>`;
+      })
+      .join("");
+
+    internalNav.onclick = (e) => {
+      const btn = e.target.closest("button");
+      if (btn) {
+        const target = document.getElementById(btn.dataset.anchor);
+        if (target)
+          container.scrollTo({
+            top: target.offsetTop - 20,
+            behavior: "smooth",
+          });
+      }
+    };
+  } else if (internalNav) {
+    internalNav.classList.add("hidden");
+  }
+}
+
+// Кіраванне мадалкай (закрыццё, друк)
 export function closeUniversalModal() {
   const modal = document.getElementById("material-modal");
   if (modal) {
@@ -81,14 +81,13 @@ export function initModalControl() {
   const modal = document.getElementById("material-modal");
   if (!modal) return;
 
-  // Кнопкі закрыцця
-  const closeBtn = document.getElementById("close-modal");
-  const closeTextBtn = document.getElementById("close-modal-text");
+  document
+    .getElementById("close-modal")
+    ?.addEventListener("click", closeUniversalModal);
+  document
+    .getElementById("close-modal-text")
+    ?.addEventListener("click", closeUniversalModal);
 
-  if (closeBtn) closeBtn.onclick = closeUniversalModal;
-  if (closeTextBtn) closeTextBtn.onclick = closeUniversalModal;
-
-  // Закрыццё па кліку на оверлэй (па-за межамі кантэйнера)
   modal.onclick = (e) => {
     if (e.target === modal || e.target.classList.contains("modal-overlay")) {
       closeUniversalModal();
@@ -96,16 +95,17 @@ export function initModalControl() {
   };
 
   // Друк
-  const printBtn = document.getElementById("print-material");
-  if (printBtn) {
-    printBtn.onclick = () => window.print();
-  }
+  document
+    .getElementById("print-material")
+    ?.addEventListener("click", () => window.print());
 
-  // Капіяванне
-  const copyBtn = document.getElementById("copy-material");
-  if (copyBtn) {
-    copyBtn.onclick = async () => {
-      const content = document.getElementById("modal-content").innerText;
+  // Капіяванне (тэкст бярэцца з дынамічнага блока)
+  document
+    .getElementById("copy-material")
+    ?.addEventListener("click", async () => {
+      const content = document.getElementById("modal-content")?.innerText;
+      if (!content) return;
+
       try {
         await navigator.clipboard.writeText(content);
         const copyTextSpan = document.getElementById("copy-text");
@@ -118,8 +118,7 @@ export function initModalControl() {
           }, 2000);
         }
       } catch (err) {
-        console.error("Не ўдалося скапіяваць:", err);
+        console.error("Copy failed:", err);
       }
-    };
-  }
+    });
 }

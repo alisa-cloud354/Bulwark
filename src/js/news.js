@@ -15,11 +15,10 @@ export async function initNewsSlider() {
       const lang = localStorage.getItem("preferred-lang") || "be";
       let fetchPath;
 
-      // ЛОГІКА ШЛЯХОЎ:
       if (lang === "be") {
-        fetchPath = "/data/news.json"; // Базавы файл
+        fetchPath = "/data/news.json";
       } else {
-        fetchPath = `/locales/news-${lang}.json`; // Пераклады (з дэфісам, як ты напісаў)
+        fetchPath = `/locales/news-${lang}.json`;
       }
 
       const response = await fetch(fetchPath);
@@ -60,9 +59,11 @@ export async function initNewsSlider() {
     </div>
     <div class="p-6 pt-4 flex flex-col grow">
       <span class="text-red-600 text-[10px] font-bold uppercase tracking-widest mb-2">${news.date}</span>
-      <h4 class="text-white font-bold mb-3 line-clamp-2 italic uppercase text-sm tracking-widest group-hover:text-red-600 transition-colors leading-tight min-h-[2.5rem]">
+      
+      <h4 class="text-white font-bold mb-3 italic uppercase text-sm tracking-widest group-hover:text-red-600 transition-colors leading-tight min-h-[3rem] md:min-h-[2.5rem] line-clamp-3 md:line-clamp-2">
         ${news.title}
       </h4>
+
       <p class="text-gray-400 text-sm mb-6 line-clamp-3 leading-relaxed font-light grow">
         ${news.excerpt}
       </p>
@@ -79,7 +80,6 @@ export async function initNewsSlider() {
 
       updateAllTranslations();
 
-      // Падзеі кліку на кнопкі
       sliderWrapper.querySelectorAll(".open-news-btn").forEach((btn) => {
         btn.onclick = () => {
           const newsItem = allNews.find(
@@ -97,7 +97,6 @@ export async function initNewsSlider() {
 
   await loadNews();
 
-  // Слухаем змену мовы
   window.addEventListener("languageChanged", () => loadNews());
   window.addEventListener("resize", manageSwiper);
 }

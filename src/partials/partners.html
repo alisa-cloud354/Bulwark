@@ -42,7 +42,7 @@
                 </h3>
                 <p data-i18n="activity.item3_text" class="text-gray-400 text-sm leading-relaxed">
                     Падрыхтоўка кадравага рэзерву для новай Беларусі і запуск праграм гуманітарнай падтрымкі сем'яў
-                    добраахвотнікаў.
+                    праваахвотнікаў.
                 </p>
             </div>
         </div>
@@ -91,28 +91,29 @@
 
             <form id="partners-form" class="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div id="partner-step-1" class="w-full">
-                    <input type="text" name="org_name" data-i18n-placeholder="forms.org" placeholder="Арганізацыя / Імя"
-                        required minlength="2" maxlength="100" autocomplete="off" autocapitalize="none"
+                    <input type="text" name="org_name" data-i18n="[placeholder]forms.org"
+                        placeholder="Арганізацыя / Імя" required minlength="2" maxlength="100" autocomplete="off"
+                        autocapitalize="none"
                         class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-colors font-medium">
                 </div>
 
-                <div id="partner-step-2" class="w-full  pointer-events-none transition-all duration-500">
-                    <input type="text" name="contact" data-i18n-placeholder="forms.contact"
+                <div id="partner-step-2" class="w-full pointer-events-none transition-all duration-500">
+                    <input type="text" name="contact" data-i18n="[placeholder]forms.contact"
                         placeholder="Email / Telegram" required
                         pattern="(@[A-Za-z0-9_]{4,}|^[^\s@]+@[^\s@]+\.[^\s@]+$|\+?[0-9]{7,20})"
                         class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-colors font-medium">
                 </div>
 
                 <div id="partner-step-3" class="md:col-span-2 pointer-events-none transition-all duration-500">
-                    <textarea name="message" rows="3" data-i18n-placeholder="forms.message"
+                    <textarea name="message" rows="3" data-i18n="[placeholder]forms.message"
                         placeholder="Як мы можам супрацоўнічаць? (мін. 10 сімвалаў)" required minlength="10"
                         maxlength="1500"
                         class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-medium resize-none tracking-wider"></textarea>
                 </div>
 
-                <button type="submit" data-i18n="partners.btn"
+                <button type="submit"
                     class="md:col-span-2 bg-red-600 py-5 text-white font-black uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-all shadow-lg flex justify-center items-center gap-2">
-                    <span>Стаць партнёрам</span>
+                    <span data-i18n="partners.btn">Стаць партнёрам</span>
                     <i class="fa-solid fa-circle-notch fa-spin hidden loader-icon" style="display: none;"></i>
                 </button>
             </form>

@@ -51,8 +51,8 @@
             <div class="bg-black/50 p-6 md:p-10 border border-white/10 shadow-2xl relative">
                 <form id="help-form" class="space-y-5">
                     <div id="help-step-1">
-                        <input type="text" name="user_name" placeholder="Імя / Пазыўны" required minlength="2"
-                            autocomplete="off" autocapitalize="none"
+                        <input type="text" name="user_name" data-i18n="[placeholder]volunteers.name_placeholder"
+                            placeholder="Імя / Пазыўны" required minlength="2" autocomplete="off" autocapitalize="none"
                             class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-medium">
                     </div>
 
@@ -60,9 +60,11 @@
                         <div class="relative">
                             <select name="user_status" required
                                 class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-medium appearance-none cursor-pointer">
-                                <option value="" disabled selected>Статус (абярыце са спіса)</option>
-                                <option value="Дзейны вайсковец">Дзейны вайсковец</option>
-                                <option value="Ветэран">Ветэран</option>
+                                <option value="" disabled selected data-i18n="volunteers.status_select">Статус (абярыце
+                                    са спіса)</option>
+                                <option value="Дзейны вайсковец" data-i18n="volunteers.status_active">Дзейны вайсковец
+                                </option>
+                                <option value="Ветэран" data-i18n="volunteers.status_veteran">Ветэран</option>
                             </select>
                             <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
                                 <i class="fa-solid fa-chevron-down text-[10px] text-gray-500"></i>
@@ -71,20 +73,21 @@
                     </div>
 
                     <div id="help-step-3" class="opacity-40 pointer-events-none transition-all duration-500">
-                        <textarea name="user_needs" placeholder="Якая дапамога патрэбна? (мін. 10 сімвалаў)" required
-                            minlength="10"
+                        <textarea name="user_needs" data-i18n="[placeholder]volunteers.needs_placeholder"
+                            placeholder="Якая дапамога патрэбна? (мін. 10 сімвалаў)" required minlength="10"
                             class="w-full bg-black border border-white/10 p-4 text-white text-sm h-32 outline-none focus:border-red-600 transition-all font-medium resize-none"></textarea>
                     </div>
 
                     <div id="help-step-4" class="opacity-40 pointer-events-none transition-all duration-500">
-                        <input type="text" name="user_contact" placeholder="Telegram @user або email" required
+                        <input type="text" name="user_contact" data-i18n="[placeholder]volunteers.contact_placeholder"
+                            placeholder="Telegram @user або email" required
                             pattern="(@[A-Za-z0-9_]{4,}|^[^\s@]+@[^\s@]+\.[^\s@]+$|\+?[0-9]{7,20})"
                             class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-medium">
                     </div>
 
                     <button type="submit"
                         class="w-full bg-red-600 py-5 text-white font-black uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-all flex justify-center items-center gap-2">
-                        <span>Адправіць запыт</span>
+                        <span data-i18n="volunteers.btn_send">Адправіць запыт</span>
 
                         <i class="fa-solid fa-circle-notch fa-spin hidden loader-icon" style="display: none;"></i>
                     </button>

@@ -1,3 +1,5 @@
+import i18next from "i18next";
+
 const TELEGRAM_TOKEN = import.meta.env.VITE_TELEGRAM_TOKEN;
 const TELEGRAM_CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID;
 
@@ -6,21 +8,21 @@ export function initForms() {
   setupForm(
     "help-form",
     (data) => `
-<b>🆘 ЗАПЫТ НА ДАПАМОГУ</b>
-<b>👤 Імя:</b> ${data.user_name}
-<b>🎖 Статус:</b> ${data.user_status}
-<b>📱 Кантакт:</b> ${data.user_contact}
-<b>📝 Патрэба:</b> ${data.user_needs}
+<b>${i18next.t("forms.tg_help_title")}</b>
+<b>${i18next.t("forms.tg_name")}:</b> ${data.user_name}
+<b>${i18next.t("forms.tg_status")}:</b> ${data.user_status}
+<b>${i18next.t("forms.tg_contact")}:</b> ${data.user_contact}
+<b>${i18next.t("forms.tg_needs")}:</b> ${data.user_needs}
   `,
   );
 
   setupForm(
     "partners-form",
     (data) => `
-<b>🤝 НОВАЯ ПРАПАНОВА ПАРТНЁРСТВА</b>
-<b>🏢 Арганізацыя:</b> ${data.org_name}
-<b>📱 Кантакт:</b> ${data.contact}
-<b>💬 Паведамленне:</b> ${data.message}
+<b>${i18next.t("forms.tg_partner_title")}</b>
+<b>${i18next.t("forms.tg_org")}:</b> ${data.org_name}
+<b>${i18next.t("forms.tg_contact")}:</b> ${data.contact}
+<b>${i18next.t("forms.tg_message")}:</b> ${data.message}
   `,
   );
 
@@ -95,7 +97,8 @@ function setupForm(formId, templateFn) {
     const success = await sendToTelegram(templateFn(data));
 
     if (success) {
-      showToast("✅ Адпраўлена!", "success");
+      // Пераклад тоста праз i18next
+      showToast(i18next.t("forms.success_toast"), "success");
       form.reset();
       // Блакіруем крокі абедзвюх форм
       [
@@ -113,7 +116,8 @@ function setupForm(formId, templateFn) {
         .querySelectorAll("input, textarea, select")
         .forEach((el) => el.blur());
     } else {
-      showToast("❌ Памылка.", "error");
+      // Пераклад тоста праз i18next
+      showToast(i18next.t("forms.error_toast"), "error");
     }
 
     btn.disabled = false;

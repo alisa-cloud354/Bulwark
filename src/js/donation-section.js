@@ -1,4 +1,5 @@
 import { openUniversalModal } from "./modal.js";
+import i18next from "i18next";
 
 /**
  * Ініцыялізацыя секцыі данатаў
@@ -37,13 +38,14 @@ export async function initDonationSection() {
     console.error("Памылка ініцыялізацыі секцыі аплаты:", error);
   }
 }
+
 // Гэта функцыя будзе даступная глабальна для кнопкі ў шаблоне
 window.handlePayment = (donationType) => {
   const amountInput = document.getElementById("custom-amount");
   const amount = amountInput.value;
 
   if (!amount || amount <= 0) {
-    alert("Калі ласка, увядзіце суму");
+    alert(i18next.t("donate.alert_enter_amount"));
     amountInput.focus();
     return;
   }
@@ -58,6 +60,6 @@ window.handlePayment = (donationType) => {
   // window.location.href = `${targetUrl}?amount=${amount}&type=${donationType}`;
 
   alert(
-    `Пераход да аплаты: ${amount} UAH. (Тут будзе шлюз, калі падключым ключ)`,
+    `${i18next.t("donate.alert_redirect")} ${amount} UAH. ${i18next.t("donate.alert_no_gateway")}`,
   );
 };

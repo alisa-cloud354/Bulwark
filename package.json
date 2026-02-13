@@ -23,6 +23,7 @@
     "vite-plugin-html-inject": "^1.1.2"
   },
   "dependencies": {
+    "i18next": "^25.8.7",
     "photoswipe": "^5.4.4",
     "swiper": "^12.1.0"
   }

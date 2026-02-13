@@ -54,7 +54,7 @@ export const modalTemplates = {
         </div>
 
         <div class="mb-12 bg-zinc-900/50 border border-white/5 p-6 md:p-8">
-          <h3 class="text-xs font-black uppercase tracking-[0.3em] text-red-600 mb-6 italic">Хуткая аплата (UAH)</h3>
+          <h3 data-i18n="donate.quick_payment" class="text-xs font-black uppercase tracking-[0.3em] text-red-600 mb-6 italic">Хуткая аплата (UAH)</h3>
           
           <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
             ${[100, 200, 500]
@@ -67,23 +67,23 @@ export const modalTemplates = {
             `,
               )
               .join("")}
-            <input type="number" id="custom-amount" placeholder="Свая сума" 
+            <input type="number" id="custom-amount" data-i18n="[placeholder]donate.custom_amount" placeholder="Свая сума" 
                    class="bg-black border border-white/10 px-4 py-3 text-white font-mono focus:outline-none focus:border-red-600 transition-all [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
           </div>
 
           <button onclick="window.handlePayment('${item.id}')" 
                   class="w-full bg-red-600 hover:bg-red-700 text-white font-black uppercase italic py-4 tracking-widest transition-all flex items-center justify-center gap-3 group">
-            Аплаціць зараз
+            <span data-i18n="donate.pay_now">Аплаціць зараз</span>
             <i class="fa-solid fa-credit-card group-hover:translate-x-1 transition-transform"></i>
           </button>
           
-          <p class="text-[9px] text-gray-500 uppercase mt-4 tracking-wider italic text-center">
+          <p data-i18n="donate.redirect_note" class="text-[9px] text-gray-500 uppercase mt-4 tracking-wider italic text-center">
             * вы будзеце перанакіраваны на старонку плацёжнага шлюза
           </p>
         </div>
 
         <div class="space-y-4 mb-12">
-          <h3 class="text-xs font-black uppercase tracking-[0.3em] text-gray-500 mb-6 italic">Банкаўскія рэквізіты</h3>
+          <h3 data-i18n="donate.bank_details" class="text-xs font-black uppercase tracking-[0.3em] text-gray-500 mb-6 italic">Банкаўскія рэквізіты</h3>
           ${
             item.accounts
               ? item.accounts
@@ -128,9 +128,9 @@ export const modalTemplates = {
         </div>
 
         <div class="p-6 bg-red-600/5 border border-red-600/10 italic">
-          <h4 class="text-[10px] font-black uppercase tracking-widest text-red-600 mb-2 italic">Абавязкова да запаўнення:</h4>
+          <h4 data-i18n="donate.purpose_title" class="text-[10px] font-black uppercase tracking-widest text-red-600 mb-2 italic">Абавязкова да запаўнення:</h4>
           <p class="text-sm text-gray-300">
-            Прызначэнне плацяжу: <span class="text-white font-bold select-all">${item.purpose}</span>
+            <span data-i18n="donate.purpose_label">Прызначэнне плацяжу:</span> <span class="text-white font-bold select-all">${item.purpose}</span>
           </p>
         </div>
       </div>

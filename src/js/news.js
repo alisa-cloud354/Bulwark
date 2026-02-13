@@ -70,6 +70,25 @@ export async function initNewsSlider() {
       )
       .join("");
 
+    // ВАЖНА: Пасля таго як мы ўставілі HTML праз innerHTML,
+    // нам трэба прымусіць i18next перакласці гэтыя новыя элементы.
+    if (window.i18next && typeof window.i18next.t === "function") {
+      import("i18next").then((m) => {
+        const i18n = m.default || window.i18next;
+        // Калі ў цябе ёсць функцыя глабальнага абнаўлення мовы, выкліч яе тут
+        // Напрысць: updateContent(); альбо проста:
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (key.includes("[placeholder]")) {
+            const k = key.replace("[placeholder]", "");
+            el.setAttribute("placeholder", i18n.t(k));
+          } else {
+            el.innerText = i18n.t(key);
+          }
+        });
+      });
+    }
+
     sliderWrapper.addEventListener("click", (e) => {
       const btn = e.target.closest(".open-news-btn");
       if (btn) {

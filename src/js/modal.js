@@ -1,4 +1,5 @@
 import { modalTemplates } from "./modalTemplates.js";
+import i18next from "i18next"; // Дадаем імпарт
 
 export function openUniversalModal(item, type = null) {
   const modal = document.getElementById("material-modal");
@@ -16,14 +17,12 @@ export function openUniversalModal(item, type = null) {
       item.date || (item.category ? "#" + item.category : "");
   }
 
-  // 2. ВЫБАР ШАБЛОНА (ВЫПРАЎЛЕНА)
+  // 2. ВЫБАР ШАБЛОНА
   let template;
 
   if (type && modalTemplates[type]) {
-    // Калі тып перададзены наўпрост (як 'donation')
     template = modalTemplates[type](item);
   } else {
-    // Аўтаматычны выбар для старых частак (навіны/матэрыялы)
     template = item.date
       ? modalTemplates.news(item)
       : modalTemplates.material(item);
@@ -39,17 +38,16 @@ export function openUniversalModal(item, type = null) {
   dynamicContainer.scrollTo(0, 0);
   document.body.style.overflow = "hidden";
 
+  // Прымусова абнаўляем пераклады ў мадалцы
   if (window.updateContent) window.updateContent();
 }
 
-// Унутраная логіка: Навігацыя, Капіяванне і г.д.
 function setupInternalLogic(container) {
   const modalContent = container.querySelector("#modal-content");
   const internalNav = container.querySelector("#modal-internal-nav");
 
   if (!modalContent) return;
 
-  // Навігацыя па H3
   const headings = modalContent.querySelectorAll("h3");
   if (internalNav && headings.length > 0) {
     internalNav.innerHTML = Array.from(headings)
@@ -76,7 +74,6 @@ function setupInternalLogic(container) {
   }
 }
 
-// Кіраванне мадалкай (закрыццё, друк)
 export function closeUniversalModal() {
   const modal = document.getElementById("material-modal");
   if (modal) {
@@ -102,12 +99,10 @@ export function initModalControl() {
     }
   };
 
-  // Друк
   document
     .getElementById("print-material")
     ?.addEventListener("click", () => window.print());
 
-  // Капіяванне (тэкст бярэцца з дынамічнага блока)
   document
     .getElementById("copy-material")
     ?.addEventListener("click", async () => {
@@ -118,10 +113,12 @@ export function initModalControl() {
         await navigator.clipboard.writeText(content);
         const copyTextSpan = document.getElementById("copy-text");
         if (copyTextSpan) {
-          const originalText = copyTextSpan.innerText;
-          copyTextSpan.innerText = "COPIED!";
+          // Выкарыстоўваем i18next для паведамлення аб поспеху
+          copyTextSpan.innerText = i18next.t("modal.copied");
+
           setTimeout(() => {
-            copyTextSpan.innerText = originalText;
+            // Вяртаем зыходны ключ праз i18next
+            copyTextSpan.innerText = i18next.t("modal.copy");
             if (window.updateContent) window.updateContent();
           }, 2000);
         }

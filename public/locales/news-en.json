@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "date": "05.02.2024",
+    "title": "New Update: Activity Expansion",
+    "excerpt": "Short text for the card on the home page...",
+    "content": "<p>Full text about how exactly the Bulwark Foundation's activities are expanding. There can be many paragraphs here.</p>"
+  },
+  {
+    "id": 2,
+    "date": "01.02.2024",
+    "title": "Legal Support Program Launch",
+    "excerpt": "We are launching a large-scale project for the legalization of Belarusians...",
+    "content": "<h3>Legal Assistance</h3><p>We help with documents, legalization, and protection of our soldiers' rights.</p>"
+  },
+  {
+    "id": 3,
+    "date": "08.02.2026",
+    "title": "Website and New Project Launch",
+    "excerpt": "We are launching a large-scale project to help Belarusian volunteers...",
+    "content": "<p>Today is a historic day — our website has started working. This is the digital front of our struggle.</p>"
+  },
+  {
+    "id": 4,
+    "date": "10.02.2026",
+    "title": "Project Development Update",
+    "excerpt": "We are launching a large-scale project to help Belarusian volunteers...",
+    "content": "<p>Additional information about the development of the Bulwark project in 2026.</p>"
+  },
+  {
+    "id": 5,
+    "date": "12.02.2026",
+    "title": "Bulwark Platform Launch: A New Stage of Support",
+    "excerpt": "We are officially launching a unified information resource to help Belarusian volunteers. Transparency, a knowledge base, and systematic support — now in one place.",
+    "image": "/img/news/news-120226.jpg",
+    "content": "<div class='modal-nav-internal'> <a href='#news-mission'>Platform Mission</a> <a href='#news-features'>Features</a> <a href='#news-partners'>For Partners</a> <a href='#news-volunteers'>For Volunteers</a> </div> <h3 id='news-mission'>Our Mission</h3> <p>Bulwark is a response to the demand for systematic support. We have created a platform that doesn't just collect donations but builds a bridge between those who help and those on the front lines.</p> <p><b>Main goal:</b> maximum efficiency of resources and legal safety of every soldier.</p> <h3 id='news-features'>What does the platform offer?</h3> <ul> <li><b>Knowledge Base:</b> detailed instructions on legalization in Ukraine, obtaining statuses, and documents.</li> <li><b>Accountability:</b> regular publications on the targeted use of funds.</li> <li><b>Fast Communication:</b> a direct channel for volunteer requests.</li> </ul> <h3 id='news-partners'>Benefits for Partners</h3> <p>We understand the importance of trust. Therefore, for large foundations and private philanthropists, we provide:</p> <ul> <li>full audit of purchases;</li> <li>photo and video confirmation of aid delivery;</li> <li>direct communication with unit commanders.</li> </ul> <h3 id='news-volunteers'>For Volunteers</h3> <p>If you are a Belarusian fighting for Ukraine, Bulwark is your rear assistant. Here you will find answers to complex questions: from how to move your family to what to do in case of legal disputes with the migration service.</p> <div class='note-block'>The site is operating in test mode. If you notice an error, please let us know via the feedback form.</div>"
+  }
+]

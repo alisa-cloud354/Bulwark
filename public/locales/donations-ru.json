@@ -1,0 +1,91 @@
+{
+  "foundation": {
+    "id": "foundation",
+    "type": "donation",
+    "title": "Поддержать фонд",
+    "description": "Операционная деятельность, административные расходы и логистика",
+    "purpose": "Благодійний внесок на виконання цілей БФ",
+    "accounts": [
+      {
+        "currency": "UAH",
+        "label": "Гривна (PrivatBank)",
+        "details": [
+          { "name": "IBAN", "value": "UA613052990000026003035931199" },
+          { "name": "ЕРДПОУ", "value": "46082758" }
+        ]
+      },
+      {
+        "currency": "USD",
+        "label": "USD (PrivatBank)",
+        "details": [
+          { "name": "IBAN", "value": "UA803052990000026006035930658" },
+          { "name": "SWIFT", "value": "PBANUA2X" }
+        ]
+      },
+      {
+        "currency": "EUR",
+        "label": "EUR (PrivatBank)",
+        "details": [
+          { "name": "IBAN", "value": "UA273052990000026007035935555" },
+          { "name": "SWIFT", "value": "PBANUA2X" }
+        ]
+      },
+      {
+        "currency": "PLN",
+        "label": "PLN (PrivatBank)",
+        "details": [
+          { "name": "IBAN", "value": "UA723052990000026002035932199" },
+          { "name": "SWIFT", "value": "PBANUA2X" }
+        ]
+      }
+    ]
+  },
+  "soldiers": {
+    "id": "soldiers",
+    "type": "donation",
+    "title": "Поддержать бойцов",
+    "description": "Снаряжение, медицина и технические средства для добровольцев",
+    "purpose": "Благодійний внесок для виконання цілей благодійного фонду",
+    "accounts": [
+      {
+        "currency": "UAH",
+        "label": "Гривна (УНИВЕРСАЛ БАНК)",
+        "details": [
+          { "name": "IBAN", "value": "UA443220010000026001700010145" },
+          { "name": "ЕРДПОУ", "value": "46082758" }
+        ]
+      },
+      {
+        "currency": "USD",
+        "label": "USD (УНИВЕРСАЛ БАНК)",
+        "details": [
+          { "name": "IBAN", "value": "UA443220010000026001700013249" },
+          { "name": "SWIFT", "value": "UNJSUAUKXXX" }
+        ]
+      },
+      {
+        "currency": "EUR",
+        "label": "EUR (УНИВЕРСАЛ БАНК)",
+        "details": [
+          { "name": "IBAN", "value": "UA353220010000026000700013251" },
+          { "name": "SWIFT", "value": "UNJSUAUKXXX" }
+        ]
+      },
+      {
+        "currency": "CRYPTO",
+        "label": "Криптовалюты",
+        "details": [
+          { "name": "BTC", "value": "136ktmFvk157ehbXFkrk1UNaTZEYYL5x24" },
+          {
+            "name": "ETH (ERC20)",
+            "value": "0x1f55d73b929fbdd2927c322f187d8b125402e188"
+          },
+          {
+            "name": "USDT (Tron)",
+            "value": "TCvwUpa7tLGW48xXaFxLruTRN6cmnqBLB5"
+          }
+        ]
+      }
+    ]
+  }
+}

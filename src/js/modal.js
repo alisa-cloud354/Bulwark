@@ -1,5 +1,5 @@
 import { modalTemplates } from "./modalTemplates.js";
-import i18next from "i18next"; // Дадаем імпарт
+import { t, updateAllTranslations } from "./i18n.js"; // Выкарыстоўваем нашы функцыі
 
 export function openUniversalModal(item, type = null) {
   const modal = document.getElementById("material-modal");
@@ -19,7 +19,6 @@ export function openUniversalModal(item, type = null) {
 
   // 2. ВЫБАР ШАБЛОНА
   let template;
-
   if (type && modalTemplates[type]) {
     template = modalTemplates[type](item);
   } else {
@@ -30,7 +29,7 @@ export function openUniversalModal(item, type = null) {
 
   dynamicContainer.innerHTML = template;
 
-  // 3. Наладжваем логіку
+  // 3. Наладжваем логіку (якарная навігацыя)
   setupInternalLogic(dynamicContainer);
 
   // 4. Паказваем мадалку
@@ -38,8 +37,8 @@ export function openUniversalModal(item, type = null) {
   dynamicContainer.scrollTo(0, 0);
   document.body.style.overflow = "hidden";
 
-  // Прымусова абнаўляем пераклады ў мадалцы
-  if (window.updateContent) window.updateContent();
+  // Прымусова абнаўляем пераклады ўнутры мадалкі пасля ўстаўкі шаблона
+  updateAllTranslations();
 }
 
 function setupInternalLogic(container) {
@@ -113,13 +112,13 @@ export function initModalControl() {
         await navigator.clipboard.writeText(content);
         const copyTextSpan = document.getElementById("copy-text");
         if (copyTextSpan) {
-          // Выкарыстоўваем i18next для паведамлення аб поспеху
-          copyTextSpan.innerText = i18next.t("modal.copied");
+          // Выкарыстоўваем нашу t() для тэксту "Скапіявана"
+          copyTextSpan.innerText = t("modal.copied");
 
           setTimeout(() => {
-            // Вяртаем зыходны ключ праз i18next
-            copyTextSpan.innerText = i18next.t("modal.copy");
-            if (window.updateContent) window.updateContent();
+            // Вяртаем зыходны тэкст "Капіяваць"
+            copyTextSpan.innerText = t("modal.copy");
+            updateAllTranslations();
           }, 2000);
         }
       } catch (err) {

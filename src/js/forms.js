@@ -1,32 +1,33 @@
-import i18next from "i18next";
+import { t } from "./i18n.js";
 
 const TELEGRAM_TOKEN = import.meta.env.VITE_TELEGRAM_TOKEN;
 const TELEGRAM_CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID;
 
 export function initForms() {
-  // 1. Ініцыялізацыя адпраўкі
+  // 1. Форма Дапамогі
   setupForm(
     "help-form",
     (data) => `
-<b>${i18next.t("forms.tg_help_title")}</b>
-<b>${i18next.t("forms.tg_name")}:</b> ${data.user_name}
-<b>${i18next.t("forms.tg_status")}:</b> ${data.user_status}
-<b>${i18next.t("forms.tg_contact")}:</b> ${data.user_contact}
-<b>${i18next.t("forms.tg_needs")}:</b> ${data.user_needs}
+<b>${t("forms.tg_help_title")}</b>
+<b>${t("volunteers.name_placeholder")}:</b> ${data.user_name}
+<b>${t("volunteers.status_select")}:</b> ${data.user_status}
+<b>${t("volunteers.contact_placeholder")}:</b> ${data.user_contact}
+<b>${t("volunteers.needs_placeholder")}:</b> ${data.user_needs}
   `,
   );
 
+  // 2. Форма Партнёраў
   setupForm(
     "partners-form",
     (data) => `
-<b>${i18next.t("forms.tg_partner_title")}</b>
-<b>${i18next.t("forms.tg_org")}:</b> ${data.org_name}
-<b>${i18next.t("forms.tg_contact")}:</b> ${data.contact}
-<b>${i18next.t("forms.tg_message")}:</b> ${data.message}
+<b>${t("forms.tg_partner_title")}</b>
+<b>${t("forms.org")}:</b> ${data.org_name}
+<b>${t("forms.contact")}:</b> ${data.contact}
+<b>${t("forms.message")}:</b> ${data.message}
   `,
   );
 
-  // 2. Жывая валідацыя для Дапамогі
+  // 3. Жывая валідацыя Дапамогі
   const helpForm = document.getElementById("help-form");
   if (helpForm) {
     const inputs = {
@@ -52,7 +53,7 @@ export function initForms() {
     });
   }
 
-  // 3. Жывая валідацыя для Партнёраў
+  // 4. Жывая валідацыя Партнёраў
   const partnersForm = document.getElementById("partners-form");
   if (partnersForm) {
     const inputs = {
@@ -97,10 +98,8 @@ function setupForm(formId, templateFn) {
     const success = await sendToTelegram(templateFn(data));
 
     if (success) {
-      // Пераклад тоста праз i18next
-      showToast(i18next.t("forms.success_toast"), "success");
+      showToast(t("forms.success_toast"), "success");
       form.reset();
-      // Блакіруем крокі абедзвюх форм
       [
         "help-step-2",
         "help-step-3",
@@ -116,8 +115,7 @@ function setupForm(formId, templateFn) {
         .querySelectorAll("input, textarea, select")
         .forEach((el) => el.blur());
     } else {
-      // Пераклад тоста праз i18next
-      showToast(i18next.t("forms.error_toast"), "error");
+      showToast(t("forms.error_toast"), "error");
     }
 
     btn.disabled = false;

@@ -21,23 +21,23 @@
             </div>
 
             <div id="lang-dropdown" class="relative group inline-block">
-                <button id="lang-btn"
-                    class="flex items-center gap-2 text-[12px] font-black text-white uppercase tracking-widest cursor-pointer py-1">
+                <button id="lang-btn" type="button"
+                    class="flex items-center gap-2 text-[12px] font-black text-white uppercase tracking-widest cursor-pointer py-2">
                     <span id="current-lang" class="text-red-600">BE</span>
                     <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
                 </button>
 
                 <div
-                    class="absolute right-0 mt-0 pt-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 group-[.is-active]:visible group-[.is-active]:opacity-100 transition-all duration-300 z-60 pointer-events-none group-hover:pointer-events-auto group-[.is-active]:pointer-events-auto">
-                    <div class="bg-[#1a1a1a] border border-white/10 py-2 w-20 shadow-2xl">
+                    class="absolute right-0 top-full w-24 pt-1 hidden group-hover:block group-[.is-active]:block z-[100]">
+                    <div class="bg-[#1a1a1a] border border-white/10 py-2 shadow-2xl relative">
                         <a href="#" data-lang="be"
-                            class="lang-switch block px-4 py-1 text-white hover:text-red-600 transition-colors text-[12px] font-black uppercase tracking-widest">BE</a>
+                            class="lang-switch block px-4 py-2 text-white hover:text-red-600 hover:bg-white/5 transition-all text-[12px] font-black uppercase tracking-widest relative z-[110]">BE</a>
                         <a href="#" data-lang="uk"
-                            class="lang-switch block px-4 py-1 text-white hover:text-red-600 transition-colors text-[12px] font-black uppercase tracking-widest">UK</a>
+                            class="lang-switch block px-4 py-2 text-white hover:text-red-600 hover:bg-white/5 transition-all text-[12px] font-black uppercase tracking-widest relative z-[110]">UK</a>
                         <a href="#" data-lang="en"
-                            class="lang-switch block px-4 py-1 text-white hover:text-red-600 transition-colors text-[12px] font-black uppercase tracking-widest">EN</a>
+                            class="lang-switch block px-4 py-2 text-white hover:text-red-600 hover:bg-white/5 transition-all text-[12px] font-black uppercase tracking-widest relative z-[110]">EN</a>
                         <a href="#" data-lang="ru"
-                            class="lang-switch block px-4 py-1 text-white hover:text-red-600 transition-colors text-[12px] font-black uppercase tracking-widest">RU</a>
+                            class="lang-switch block px-4 py-2 text-white hover:text-red-600 hover:bg-white/5 transition-all text-[12px] font-black uppercase tracking-widest relative z-[110]">RU</a>
                     </div>
                 </div>
             </div>

@@ -9,17 +9,27 @@ export function initHeader() {
   const langBtn = document.getElementById("lang-btn");
 
   // --- МОВЫ ---
+  // Унутры функцыі initHeader знайсці секцыю МОВЫ:
   function toggleLang(e) {
     e.preventDefault();
+    e.stopPropagation();
+    // Гэта прымусова паказвае меню
     langDropdown?.classList.toggle("is-active");
   }
 
+  // Дадай гэты апрацоўшчык, каб меню не закрывалася, калі ты водзіш унутры яго
+  langDropdown?.addEventListener("mouseenter", () => {
+    langDropdown.classList.add("is-active");
+  });
+
+  // Закрываем меню пры выбары мовы
   langDropdown?.addEventListener("click", (e) => {
     if (e.target.closest(".lang-switch")) {
       langDropdown.classList.remove("is-active");
     }
   });
 
+  // Закрываем меню пры кліку па-за ім
   document.addEventListener("click", (e) => {
     if (langDropdown && !langDropdown.contains(e.target)) {
       langDropdown.classList.remove("is-active");
@@ -28,8 +38,8 @@ export function initHeader() {
 
   // --- МАБАЙЛ-МЕНЮ ---
   function openMobileMenu() {
-    mobileMenu?.classList.remove("-translate-y-[120%]"); // Прыбіраем мінус-зрух уверх
-    mobileMenu?.classList.add("translate-y-0"); // Ставім у пазіцыю
+    mobileMenu?.classList.remove("-translate-y-[120%]");
+    mobileMenu?.classList.add("translate-y-0");
     overlay?.classList.remove("hidden");
     setTimeout(() => overlay?.classList.remove("opacity-0"), 10);
     document.body.style.overflow = "hidden";

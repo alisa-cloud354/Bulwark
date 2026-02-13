@@ -5,44 +5,32 @@
     background-position: center top;
     background-repeat: no-repeat;
 
-    /* МАБІЛКА: Градыент знізу ўверх, каб тэкст не зліваўся з тварамі */
+    /* МАБІЛКА: Замянілі градыент на празрыстую падложку 10% */
     background-image:
-        linear-gradient(to top, rgba(17, 17, 17, 1) 10%, rgba(17, 17, 17, 0.4) 50%, rgba(17, 17, 17, 0.2) 100%),
+        linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.55)),
         url('/src/assets/img/hero-bg-mob.webp');
 }
 
 @media (min-width: 768px) {
     .hero-bg {
-        /* ПЛАНШЭТ І ДЭСКТОП: Градыент злева направа */
+        /* ПЛАНШЭТ І ДЭСКТОП: Такая ж падложка замест градыента злева направа */
         background-image:
-            linear-gradient(to right,
-                rgba(17, 17, 17, 1) 0%,
-                rgba(17, 17, 17, 0.9) 30%,
-                rgba(17, 17, 17, 0.4) 60%,
-                rgba(17, 17, 17, 0) 100%),
+            linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.55)),
             url('/src/assets/img/hero-bg-desc.webp');
 
-        /* Захоўваем тваё пазіцыянаванне карцінкі */
-        background-position: 0 0, calc(100% + 160px) -48px;
+        background-position: 0 0, calc(100% + 160px) -90px;
         background-size: 100% 100%, 140% auto;
     }
 }
 
 @media (min-width: 1280px) {
     .hero-bg {
+        /* ДЭСКТОП: Захоўваем адзіны стыль падложкі */
         background-image:
-            linear-gradient(to right,
-                rgba(17, 17, 17, 1) 0%,
-                /* Поўны чорны пад тэкстам */
-                rgba(17, 17, 17, 0.95) 25%,
-                /* Трымаем шчыльнасць */
-                rgba(17, 17, 17, 0.5) 50%,
-                /* Пачынаем адкрываць фота */
-                rgba(17, 17, 17, 0) 80%),
-            /* Цалкам бачнае фота справа */
+            linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.55)),
             url('/src/assets/img/hero-bg-desc.webp');
 
-        background-position: 0 0, calc(100% + 260px) -210px;
+        background-position: 0 0, calc(100% + 260px) -240px;
         background-size: 100% 100%, 140% auto;
     }
 }

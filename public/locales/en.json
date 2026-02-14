@@ -179,5 +179,63 @@
     "copyright_text": "All gallery materials are the intellectual property of Bulwark. Unauthorized use of these materials is prohibited.",
     "history_text": "These shots are a living history of the struggle of Belarusian volunteers.",
     "victory_text": "Together to victory."
+  },
+
+  "projects": {
+    "page_title": "Projects | Bulwark",
+    "subtitle": "What we do",
+    "main_title": "Our projects",
+    "apply_button": "Apply now",
+    "status": {
+      "active": "Active",
+      "volunteers": "Recruiting volunteers"
+    },
+    "legal-shield": {
+      "title": "Legal Shield",
+      "category": "Legal support",
+      "description": "Full legal support: from obtaining residence permits to protection against international search and extradition.",
+      "step1": "Legalization (TRP, PRP, Citizenship)",
+      "step2": "Restoration of lost documents",
+      "step3": "Consultations on border crossing",
+      "step4": "Protection against Interpol and extradition"
+    },
+    "mental-support": {
+      "title": "Mental Support",
+      "category": "Rehabilitation",
+      "description": "Qualified assistance in overcoming the consequences of war, working with PTSD and adapting to civilian life.",
+      "step1": "Combat stress therapy",
+      "step2": "Overcoming survivor's guilt",
+      "step3": "Help with depression",
+      "step4": "Social adaptation of veterans"
+    },
+    "addiction-recovery": {
+      "title": "Addiction Recovery",
+      "category": "Recovery",
+      "description": "Confidential support for those facing alcohol, drug, or other forms of addiction.",
+      "step1": "Specialist consultations",
+      "step2": "Working with root causes",
+      "step3": "Support during rehabilitation",
+      "step4": "Complete anonymity"
+    },
+    "bulwark-hub": {
+      "title": "Volunteer Hub",
+      "category": "Community",
+      "description": "We gather specialists ready to help with their expertise: from lawyers to SMM assistants.",
+      "step1": "Legal aid",
+      "step2": "Psychological consultations",
+      "step3": "Copywriting and media",
+      "step4": "Information support"
+    },
+    "investment": {
+      "title_start": "Why it's an ",
+      "title_highlight": "investment",
+      "title_end": " not just aid?",
+      "desc1": "Every dictatorship is finite. Those we help today are the architects of tomorrow's Belarus.",
+      "desc2": "We preserve the human capital: future leaders, entrepreneurs, and doctors of a free country.",
+      "point1": "Regional security",
+      "point2": "Veterans' mental health",
+      "point3": "Solidarity of nations",
+      "bg_text": "Future"
+    }
   }
 }

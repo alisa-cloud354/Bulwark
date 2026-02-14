@@ -1,58 +1,58 @@
 [
   {
     "id": "legal-shield",
-    "title": "Прававы шчыт",
-    "category": "Прававая падтрымка",
-    "status": "Актыўны",
-    "description": "Поўнае юрыдычнае суправаджэнне: ад атрымання ВНЖ да абароны ад міжнароднага вышуку і экстрадыцыі.",
+    "title": "projects.legal-shield.title",
+    "category": "projects.legal-shield.category",
+    "status": "projects.status.active",
+    "description": "projects.legal-shield.description",
     "icon": "⚖️",
     "steps": [
-      "Легалізацыя (ВНЖ, ПМЖ, Грамадзянства)",
-      "Аднаўленне страчаных дакументаў",
-      "Кансультацыі па пераціку мяжы",
-      "Абарона ад Інтэрпола і экстрадыцыі"
+      "projects.legal-shield.step1",
+      "projects.legal-shield.step2",
+      "projects.legal-shield.step3",
+      "projects.legal-shield.step4"
     ]
   },
   {
     "id": "mental-support",
-    "title": "Псіхалагічная апора",
-    "category": "Рэабілітацыя",
-    "status": "Актыўны",
-    "description": "Кваліфікаваная дапамога ў пераадоленні наступстваў вайны, праца з ПТСР і адаптацыя да цывільнага жыцця.",
+    "title": "projects.mental-support.title",
+    "category": "projects.mental-support.category",
+    "status": "projects.status.active",
+    "description": "projects.mental-support.description",
     "icon": "🧠",
     "steps": [
-      "Тэрапія баявога стрэсу",
-      "Пераадоленне пачуцця віны",
-      "Дапамога пры дэпрэсіі",
-      "Сацыяльная адаптацыя ветэранаў"
+      "projects.mental-support.step1",
+      "projects.mental-support.step2",
+      "projects.mental-support.step3",
+      "projects.mental-support.step4"
     ]
   },
   {
     "id": "addiction-recovery",
-    "title": "Пераадоленне залежнасцяў",
-    "category": "Аднаўленне",
-    "status": "Актыўны",
-    "description": "Канфідэнцыйная падтрымка для тых, хто сутыкнуўся з алкагольнай, наркатычнай або іншымі формамі залежнасці.",
+    "title": "projects.addiction-recovery.title",
+    "category": "projects.addiction-recovery.category",
+    "status": "projects.status.active",
+    "description": "projects.addiction-recovery.description",
     "icon": "🛡️",
     "steps": [
-      "Кансультацыі спецыялістаў",
-      "Работа з прычынамі залежнасці",
-      "Падтрымка ў працэсе рэабілітацыі",
-      "Поўная ананімнасць"
+      "projects.addiction-recovery.step1",
+      "projects.addiction-recovery.step2",
+      "projects.addiction-recovery.step3",
+      "projects.addiction-recovery.step4"
     ]
   },
   {
     "id": "bulwark-hub",
-    "title": "Валанцёрскі хаб",
-    "category": "Супольнасць",
-    "status": "Набор валанцёраў",
-    "description": "Мы збіраем спецыялістаў, гатовых дапамагаць сваім вопытам: ад юрыстаў да SMM-асістэнтаў.",
+    "title": "projects.bulwark-hub.title",
+    "category": "projects.bulwark-hub.category",
+    "status": "projects.status.volunteers",
+    "description": "projects.bulwark-hub.description",
     "icon": "🤝",
     "steps": [
-      "Юрыдычная дапамога",
-      "Псіхалагічныя кансультацыі",
-      "Копірайтынг і медыя",
-      "Інфармацыйная падтрымка"
+      "projects.bulwark-hub.step1",
+      "projects.bulwark-hub.step2",
+      "projects.bulwark-hub.step3",
+      "projects.bulwark-hub.step4"
     ]
   }
 ]

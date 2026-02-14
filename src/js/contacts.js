@@ -13,7 +13,6 @@ export function initContacts() {
       navigator.clipboard
         .writeText(textToCopy)
         .then(() => {
-          // Мяняем іконку на галачку
           icon.className = "fa-solid fa-check text-green-500";
           button.classList.add("scale-110");
 
@@ -22,17 +21,14 @@ export function initContacts() {
             button.classList.remove("scale-110");
           }, 2000);
         })
-        .catch((err) => {
-          console.error("Не ўдалося скапіяваць:", err);
-        });
+        .catch((err) => console.error("Error copying:", err));
     });
   });
 
-  // 2. Анімацыя з'яўлення блокаў (Scroll Reveal)
-  // Дадаем клас reveal-item для ўсіх блокаў, якія павінны з'яўляцца
+  // 2. Анімацыя з'яўлення (Intersection Observer)
   const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px", // спрацоўвае крыху загадзя
+    threshold: 0.05,
+    rootMargin: "0px 0px -50px 0px",
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -44,9 +40,9 @@ export function initContacts() {
     });
   }, observerOptions);
 
-  // Шукаем усе кантэйнеры ў мэйн, каб аніміраваць іх
+  // Селектар для ўсіх картак у сайдбары і асноўным кантэнце
   const itemsToAnimate = document.querySelectorAll(
-    ".lg\\:col-span-4, .lg\\:col-span-8, .bg-white\\/5",
+    ".contact-sidebar > div, .contact-main-content > div",
   );
 
   itemsToAnimate.forEach((item) => {

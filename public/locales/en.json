@@ -171,8 +171,24 @@
   "contacts": {
     "title": "Contacts",
     "support_bot": "Support Bot",
-    "urgent_link": "Urgent contact",
-    "confidential": "Confidential"
+    "urgent_link": "Urgent Contact",
+    "confidential": "Confidential",
+    "page_title": "Contacts | Bulwark",
+    "subtitle": "Contact & Support",
+    "main_title": "Contacts and Details",
+    "sidebar_title": "Contacts",
+    "email_label": "Email",
+    "phone_label": "Phone / Signal",
+    "help_title": "Need Help?",
+    "help_desc": "For Belarusian volunteers: legal support, psychological aid, material support.",
+    "open_bot": "Open Telegram Bot",
+    "open_signal": "Contact via Signal",
+    "confidential_note": "*Confidentiality and security guaranteed",
+    "fund_support": "Support the Fund",
+    "fighters_support": "Support the Fighters",
+    "payment_purpose_label": "Payment purpose:",
+    "payment_purpose_value": "Благодійний внесок на виконання цілей БФ",
+    "crypto_title": "Cryptocurrencies"
   },
   "gallery": {
     "title_page": "Gallery | Bulwark",

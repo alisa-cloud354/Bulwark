@@ -175,7 +175,23 @@
     "title": "Кантакты",
     "support_bot": "Бот падтрымкі",
     "urgent_link": "Тэрміновая сувязь",
-    "confidential": "Канфідэнцыйна"
+    "confidential": "Канфідэнцыйна",
+    "page_title": "Кантакты | Bulwark",
+    "subtitle": "Звязацца і падтрымаць",
+    "main_title": "Кантакты і рэквізіты",
+    "sidebar_title": "Кантакты",
+    "email_label": "Пошта",
+    "phone_label": "Тэлефон / Signal",
+    "help_title": "Патрэбна дапамога?",
+    "help_desc": "Для беларускіх добраахвотнікаў: прававая падтрымка, псіхалагічная дапамога, матэрыяльная падтрымка.",
+    "open_bot": "Адкрыць Telegram-бот",
+    "open_signal": "Звязацца праз Signal",
+    "confidential_note": "*Канфідэнцыйнасць і бяспека гарантаваныя",
+    "fund_support": "Падтрымаць фонд",
+    "fighters_support": "Падтрымаць байцоў",
+    "payment_purpose_label": "Назва плацяжу:",
+    "payment_purpose_value": "Благодійний внесок на виконання цілей БФ",
+    "crypto_title": "Крыптавалюты"
   },
 
   "gallery": {

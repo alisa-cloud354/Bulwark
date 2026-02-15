@@ -14,7 +14,7 @@ export const modalTemplates = {
 
         <div class="order-2 w-full">
           <div class="group/img border border-white/10 bg-black overflow-hidden cursor-crosshair">
-             <img src="${item.image || "/src/assets/img/logo.svg"}" 
+             <img src="${item.image || "/img/logo.svg"}" 
                   class="${
                     item.image
                       ? "w-full h-auto object-cover transition-all duration-700 grayscale-0 hover:grayscale"
@@ -135,6 +135,38 @@ export const modalTemplates = {
             <span>${t("donate.purpose_label")}</span> <span class="text-white font-bold select-all">${item.purpose}</span>
           </p>
         </div>
+      </div>
+    </div>
+  `,
+  report: (item) => `
+    <div class="flex flex-col h-full">
+      <div class="px-5 md:px-9 xl:px-[60px] py-8 border-b border-white/5 bg-black/20">
+        <h2 class="text-2xl md:text-3xl xl:text-4xl font-black uppercase italic text-white leading-tight tracking-tighter">
+          ${item.title}
+        </h2>
+      </div>
+
+      <div class="px-5 md:px-9 xl:px-[60px] py-10 grid grid-cols-1 xl:grid-cols-[400px_1fr] gap-8 xl:gap-16 items-start overflow-y-auto">
+        
+        <div class="order-1 w-full flex justify-center xl:justify-start">
+          <div class="group/img border border-white/10 bg-black overflow-hidden w-full max-w-[400px] aspect-square">
+             <img src="${item.image || "/img/logo.svg"}" 
+                  class="w-full h-full object-cover grayscale-0 hover:grayscale transition-all duration-700" 
+                  alt="${item.title}">
+          </div>
+        </div>
+
+        <div class="order-2 flex flex-col">
+          <div class="flex items-center gap-3 mb-6">
+             <span class="text-red-600 text-[10px] font-black uppercase tracking-[0.3em] italic border-b border-red-600/40 pb-1">
+               ${item.date}
+             </span>
+          </div>
+          <div id="modal-content" class="prose prose-invert max-w-none text-gray-300 leading-relaxed font-light">
+            ${item.content}
+          </div>
+        </div>
+
       </div>
     </div>
   `,

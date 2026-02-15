@@ -1,49 +1,88 @@
+import { t } from "./i18n.js";
+import { openUniversalModal } from "./modal.js";
+
 export async function initFullReportsGrid() {
   const gridContainer = document.getElementById("reports-grid-full");
   if (!gridContainer) return;
 
-  try {
-    const response = await fetch("/data/reports.json");
-    const allNews = await response.json();
+  // Ствараем функцыю загрузкі, якую будзем выклікаць пры кожнай змене мовы
+  const loadReports = async () => {
+    try {
+      const lang = localStorage.getItem("preferred-lang") || "be";
+      // Вызначаем шлях да патрэбнага JSON-файла
+      const fetchPath =
+        lang === "be" ? "/data/reports.json" : `/locales/reports-${lang}.json`;
 
-    // Сартаванне па даце (свежыя зверху)
-    const parseDate = (dateStr) => {
-      const [day, month, year] = dateStr.split(".").map(Number);
-      return new Date(year, month - 1, day);
-    };
+      const response = await fetch(fetchPath);
+      if (!response.ok)
+        throw new Error(`Не атрымалася загрузіць справаздачы: ${fetchPath}`);
 
-    const sortedReports = allNews.sort((a, b) => {
-      const dateA = parseDate(a.date);
-      const dateB = parseDate(b.date);
-      return dateB - dateA || b.id - a.id;
-    });
+      const allReports = await response.json();
 
-    gridContainer.innerHTML = sortedReports
-      .map(
-        (reports) => `
-            <div class="bg-black/20 border border-white/5 h-full flex flex-col hover:border-red-600/30 transition-all group">
-                <div class="aspect-video bg-black/40 flex items-center justify-center p-8 overflow-hidden relative">
-                    <img src="/src/assets/img/logo.svg" alt="Logo" class="w-20 opacity-20 group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <div class="p-6 flex flex-col grow">
-                    <span class="text-red-600 text-[10px] font-bold uppercase tracking-widest mb-2">${reports.date}</span>
-                    <h4 class="text-white font-bold mb-3 line-clamp-2 italic uppercase text-sm tracking-widest group-hover:text-red-600 transition-colors">
-                        ${reports.title}
-                    </h4>
-                    <p class="text-gray-400 text-sm mb-6 line-clamp-3 leading-relaxed">
-                        ${reports.excerpt}
-                    </p>
-                    <a href="${reports.link}" class="mt-auto text-white text-[10px] font-black uppercase tracking-widest flex items-center gap-2 group-hover:text-red-600">
-                        <span data-i18n="reports.more">Больш</span>
-                        <i class="fa-solid fa-chevron-right text-[8px]"></i>
-                    </a>
-                </div>
+      // Сартаванне: самыя свежыя па даце заўсёды зверху
+      const sortedReports = allReports.sort((a, b) => {
+        const parse = (d) => new Date(d.split(".").reverse().join("-"));
+        return parse(b.date) - parse(a.date);
+      });
+
+      // Гнеруй сетку карткаў
+      gridContainer.innerHTML = sortedReports
+        .map(
+          (report) => `
+          <div class="bg-black/20 border border-white/5 h-full flex flex-col hover:border-red-600/30 transition-all group">
+            <div class="aspect-video bg-black/40 flex items-center justify-center overflow-hidden relative border-b border-white/5">
+              <img src="${report.image || "/img/logo.svg"}" 
+                   alt="${report.title}" 
+                   class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
+            
+            <div class="p-6 flex flex-col grow">
+              <span class="text-red-600 text-[10px] font-bold uppercase tracking-widest mb-2">
+                ${report.date}
+              </span>
+              
+              <h4 class="text-white font-bold mb-3 italic uppercase text-sm tracking-widest group-hover:text-red-600 transition-colors leading-tight">
+                ${report.title}
+              </h4>
+              
+              <p class="text-gray-400 text-xs mb-6 line-clamp-3 font-light grow leading-relaxed text-left">
+                ${report.excerpt}
+              </p>
+              
+              <button type="button" 
+                      class="open-report-btn mt-auto text-white text-[10px] font-black uppercase tracking-widest flex items-center gap-2 group-hover:text-red-600 transition-all" 
+                      data-id="${report.id}">
+                <span>${report.more || "Больш"}</span>
+                <i class="fa-solid fa-chevron-right text-[8px] group-hover:translate-x-1 transition-transform"></i>
+              </button>
+            </div>
+          </div>
         `,
-      )
-      .join("");
-  } catch (error) {
-    console.error("Памылка загрузкі справаздач:", error);
-    gridContainer.innerHTML = `<p class="text-white">Не ўдалося загрузіць справаздачы.</p>`;
-  }
+        )
+        .join("");
+
+      // Навешваем падзею кліку на кожную кнопку
+      gridContainer.querySelectorAll(".open-report-btn").forEach((btn) => {
+        btn.onclick = (e) => {
+          e.preventDefault();
+          const item = allReports.find(
+            (r) => String(r.id) === String(btn.dataset.id),
+          );
+          if (item) {
+            openUniversalModal(item, "report");
+          }
+        };
+      });
+    } catch (error) {
+      console.error("Памылка пры загрузцы сеткі справаздач:", error);
+      gridContainer.innerHTML = `<p class="text-white">Памылка загрузкі дадзеных.</p>`;
+    }
+  };
+
+  // Першы запуск пры загрузцы старонкі
+  await loadReports();
+
+  // Гэта ключавы момант: слухаем падзею змены мовы, каб перамаляваць кантэнт без рэфрэшу старонкі
+  window.addEventListener("languageChanged", loadReports);
 }

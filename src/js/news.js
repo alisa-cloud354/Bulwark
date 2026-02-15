@@ -13,17 +13,12 @@ export async function initNewsSlider() {
   const loadNews = async () => {
     try {
       const lang = localStorage.getItem("preferred-lang") || "be";
-      let fetchPath;
 
-      if (lang === "be") {
-        fetchPath = "/data/news.json";
-      } else {
-        fetchPath = `/locales/news-${lang}.json`;
-      }
+      // Універсальны шлях для ўсіх моў у папку locales
+      const fetchPath = `/locales/news-${lang}.json`;
 
       const response = await fetch(fetchPath);
-      if (!response.ok)
-        throw new Error(`Не атрымалася загрузіць: ${fetchPath}`);
+      if (!response.ok) throw new Error(`Failed to load: ${fetchPath}`);
 
       const allNews = await response.json();
 
@@ -91,7 +86,7 @@ export async function initNewsSlider() {
 
       manageSwiper();
     } catch (error) {
-      console.error("I18n Slider Error:", error);
+      console.error("Slider Load Error:", error);
     }
   };
 

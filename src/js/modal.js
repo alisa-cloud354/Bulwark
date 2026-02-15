@@ -11,17 +11,25 @@ export function openUniversalModal(item, type = null) {
     return;
   }
 
-  // 1. Запаўняем мета-дадзеныя
+  // 1. Запаўняем мета-дадзеныя (дата або катэгорыя зверху)
   if (modalMeta) {
     modalMeta.innerText =
       item.date || (item.category ? "#" + item.category : "");
   }
 
-  // 2. ВЫБАР ШАБЛОНА
+  // 2. ПАДРЫХТОЎКА ДАДЗЕНЫХ UI (для перакладу подпісаў унутры шаблона)
+  // Спрабуем знайсці блок 'ui' альбо ў самім item, альбо ў глабальнай зменнай window.donationData
+  const uiData =
+    item.ui || (window.donationData ? window.donationData.ui : null);
+
+  // 3. ВЫБАР ШАБЛОНА
   let template;
   if (type && modalTemplates[type]) {
-    template = modalTemplates[type](item);
+    // Перадаем item і uiData. Калі uiData будзе undefined,
+    // шаблон donation выкарыстае свае значэнні па змаўчанні (дзякуючы нашай праверцы ў шаблоне).
+    template = modalTemplates[type](item, uiData);
   } else {
+    // Логіка для навін і звычайных матэрыялаў
     template = item.date
       ? modalTemplates.news(item)
       : modalTemplates.material(item);
@@ -29,10 +37,10 @@ export function openUniversalModal(item, type = null) {
 
   dynamicContainer.innerHTML = template;
 
-  // 3. Наладжваем логіку (якарная навігацыя)
+  // 4. Наладжваем логіку (якарная навігацыя для доўгіх тэкстаў)
   setupInternalLogic(dynamicContainer);
 
-  // 4. Паказваем мадалку
+  // 5. Паказваем мадалку
   modal.classList.remove("hidden");
   dynamicContainer.scrollTo(0, 0);
   document.body.style.overflow = "hidden";

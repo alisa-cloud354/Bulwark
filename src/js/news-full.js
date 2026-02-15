@@ -1,7 +1,9 @@
 import { t } from "./i18n.js";
 import { openUniversalModal } from "./modal.js";
-import { updateAllTranslations } from "./i18n.js"; // Дадаем для вернасці
 
+/**
+ * Ініцыялізацыя поўнай сеткі навін (Архіў)
+ */
 export async function initFullNewsGrid() {
   const gridContainer = document.getElementById("news-grid-full");
   if (!gridContainer) return;
@@ -9,13 +11,16 @@ export async function initFullNewsGrid() {
   const loadNews = async () => {
     try {
       const lang = localStorage.getItem("preferred-lang") || "be";
-      const fetchPath =
-        lang === "be" ? "/data/news.json" : `/locales/news-${lang}.json`;
+
+      // Універсальны шлях: цяпер усё ў locales і з працяжнікам
+      const fetchPath = `/locales/news-${lang}.json`;
 
       const response = await fetch(fetchPath);
-      if (!response.ok) throw new Error("Загрузка навін правалена");
+      if (!response.ok) throw new Error("Failed to load news archive");
+
       const allNews = await response.json();
 
+      // Сартаванне навін па даце (ад новых да старых)
       const sortedNews = allNews.sort((a, b) => {
         const parse = (d) => new Date(d.split(".").reverse().join("-"));
         return parse(b.date) - parse(a.date);
@@ -50,7 +55,7 @@ export async function initFullNewsGrid() {
                     <button type="button" 
                             class="open-news-btn mt-auto text-white text-[10px] font-black uppercase tracking-widest flex items-center gap-2 group-hover:text-red-600 transition-all group/btn" 
                             data-id="${news.id}">
-                        <span>${t("news.read_more") || "Чытаць цалкам"}</span>
+                        <span>${t("news.read_more")}</span>
                         <i class="fa-solid fa-chevron-right text-[8px] group-hover/btn:translate-x-1 transition-transform"></i>
                     </button>
                 </div>
@@ -59,7 +64,7 @@ export async function initFullNewsGrid() {
         )
         .join("");
 
-      // Ініцыялізацыя клікаў
+      // Ініцыялізацыя клікаў па кнопках "Чытаць цалкам"
       gridContainer.querySelectorAll(".open-news-btn").forEach((btn) => {
         btn.onclick = (e) => {
           e.preventDefault();
@@ -70,11 +75,13 @@ export async function initFullNewsGrid() {
         };
       });
     } catch (error) {
-      console.error("Памылка архіва навін:", error);
-      gridContainer.innerHTML = `<p class="text-white">Памылка загрузкі.</p>`;
+      console.error("Archive Load Error:", error);
+      gridContainer.innerHTML = `<p class="text-white/50 text-center py-10">Не атрымалася загрузіць навіны.</p>`;
     }
   };
 
   await loadNews();
+
+  // Перазагружаем сетку пры змене мовы
   window.addEventListener("languageChanged", loadNews);
 }

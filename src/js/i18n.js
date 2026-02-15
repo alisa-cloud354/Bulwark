@@ -1,22 +1,22 @@
 let currentTranslations = {};
 let currentNews = [];
 
+/**
+ * Асноўная функцыя змены мовы
+ */
 export async function setLanguage(lang) {
   try {
-    // 1. Спрабуем загрузіць асноўны пераклад
+    // 1. Загружаем асноўны файл перакладаў
     const mainRes = await fetch(`/locales/${lang}.json`);
-    if (!mainRes.ok) throw new Error(`Асноўны файл не знойдзены: ${lang}`);
+    if (!mainRes.ok) throw new Error(`Translation file not found: ${lang}`);
     currentTranslations = await mainRes.json();
 
-    // 2. Спрабуем загрузіць навіны (асобна, каб не зламаць усё астатняе)
+    // 2. Загружаем файл навін
     try {
-      const newsRes = await fetch(`/locales/news_${lang}.json`);
+      const newsRes = await fetch(`/locales/news-${lang}.json`);
       if (newsRes.ok) {
         currentNews = await newsRes.json();
       } else {
-        console.warn(
-          `Файл навін news_${lang}.json не знойдзены, выкарыстоўваем пусты спіс`,
-        );
         currentNews = [];
       }
     } catch (e) {
@@ -26,11 +26,11 @@ export async function setLanguage(lang) {
     // 3. Абнаўляем тэксты на старонцы
     updateAllTranslations();
 
-    // 4. Абнаўляем індыкатар мовы ў меню
+    // 4. Абнаўляем візуальны індыкатар мовы
     const langBtnSpan = document.querySelector("#current-lang");
     if (langBtnSpan) langBtnSpan.textContent = lang.toUpperCase();
 
-    // 5. Захоўваем выбар
+    // 5. Захоўваем стан
     localStorage.setItem("preferred-lang", lang);
     document.documentElement.lang = lang;
 
@@ -41,6 +41,9 @@ export async function setLanguage(lang) {
   }
 }
 
+/**
+ * Функцыя для пошуку і замены тэкстаў па атрыбуце data-i18n
+ */
 export function updateAllTranslations() {
   if (!currentTranslations || Object.keys(currentTranslations).length === 0)
     return;
@@ -73,6 +76,9 @@ export function updateAllTranslations() {
   });
 }
 
+/**
+ * Функцыя для атрымання перакладу па ключы ў JS кодзе
+ */
 export function t(key) {
   return (
     key
@@ -81,18 +87,22 @@ export function t(key) {
   );
 }
 
+/**
+ * Функцыя для атрымання бягучага масіва навін
+ */
 export function getNews() {
   return currentNews;
 }
 
+/**
+ * Ініцыялізацыя слухача клікаў
+ */
 export function initLanguageSwitcher() {
-  // Выкарыстоўваем дэлегаванне падзей на ўвесь document
   document.addEventListener("click", (e) => {
     const btn = e.target.closest(".lang-switch");
     if (btn) {
       e.preventDefault();
       const lang = btn.getAttribute("data-lang");
-      console.log("Switching to:", lang); // Для адладкі ў кансолі
       setLanguage(lang);
     }
   });

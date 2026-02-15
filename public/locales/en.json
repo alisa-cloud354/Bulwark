@@ -254,5 +254,25 @@
       "point3": "Solidarity of nations",
       "bg_text": "Future"
     }
+  },
+  "foundation": {
+    "title": "Support the Foundation",
+    "description": "Operations, administrative expenses, and logistics",
+    "purpose": "Charitable contribution for the implementation of the goals of the CF"
+  },
+  "soldiers": {
+    "title": "Support the Fighters",
+    "description": "Equipment, medicine, and technical means for volunteers",
+    "purpose": "Charitable contribution for the implementation of the goals of the charitable foundation"
+  },
+  "ui": {
+    "bank_title": "Bank Details",
+    "recipient": "Recipient:",
+    "edrpou": "EDRPOU Code:",
+    "bank_name": "Bank Name:",
+    "swift": "SWIFT code:",
+    "purpose_label": "Payment Purpose (mandatory for transfer):",
+    "accounts_title": "Accounts for transfer",
+    "crypto_title": "Cryptocurrency Accounts"
   }
 }

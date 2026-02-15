@@ -8,7 +8,10 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
+        // Галоўная старонка (тут знаходзіцца секцыя #news)
         main: resolve(__dirname, "index.html"),
+
+        // Асобныя старонкі ў src/pages/
         history: resolve(__dirname, "src/pages/history.html"),
         zarok: resolve(__dirname, "src/pages/zarok-vajara.html"),
         projects: resolve(__dirname, "src/pages/projects.html"),
@@ -16,13 +19,11 @@ export default defineConfig({
         materials: resolve(__dirname, "src/pages/materials.html"),
         contacts: resolve(__dirname, "src/pages/contacts.html"),
         gallery: resolve(__dirname, "src/pages/gallery.html"),
-        partners: resolve(__dirname, "src/pages/partners-full.html"),
-        news: resolve(__dirname, "src/pages/news-full.html"),
         get_help: resolve(__dirname, "src/pages/get-help.html"),
         donate: resolve(__dirname, "src/pages/donate.html"),
-        news_full: resolve(__dirname, "src/pages/news-full.html"),
 
-        // Дадай астатнія (projects, reports і г.д.), калі яны гатовыя
+        // Твая поўная старонка навін
+        news_full: resolve(__dirname, "src/pages/news-full.html"),
       },
     },
   },

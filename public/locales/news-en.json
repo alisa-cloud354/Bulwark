@@ -1,35 +1,35 @@
 [
   {
     "id": 1,
-    "date": "05.02.2024",
-    "title": "New Update: Activity Expansion",
-    "excerpt": "Short text for the card on the home page...",
+    "date": "10.01.2026",
+    "title": "Bulwark Foundation Registration",
+    "excerpt": "Our foundation has been officially registered and started its activities...",
     "image": "/img/news/news-1.webp",
-    "content": "<p>Full text about how exactly the Bulwark Foundation's activities are expanding. There can be many paragraphs here.</p>"
+    "content": "<h3>Official Start</h3><p>The Bulwark Foundation has received legal registration. This allows us to work legally and openly cooperate with partners.</p><h3>Mission</h3><p>We support Belarusian volunteers in Ukraine through legal and psychological assistance, addiction recovery programs, and the creation of a volunteer hub.</p><p>This is the first step towards systematic and transparent work.</p>"
   },
   {
     "id": 2,
-    "date": "01.02.2024",
-    "title": "Legal Support Program Launch",
+    "date": "15.01.2026",
+    "title": "Domain Acquisition for the Website",
+    "excerpt": "We acquired our own domain and are preparing a communication platform...",
     "image": "/img/news/news-2.webp",
-    "excerpt": "We are launching a large-scale project for the legalization of Belarusians...",
-    "content": "<h3>Legal Assistance</h3><p>We help with documents, legalization, and protection of our soldiers' rights.</p>"
+    "content": "<h3>Own Platform</h3><p>The Bulwark Foundation has obtained its own domain, which will serve as the basis for our website.</p><h3>Convenience and Transparency</h3><p>The website will host news, reports, and instructions for volunteers. This is an important step in building a reliable information base.</p>"
   },
   {
     "id": 3,
-    "date": "08.02.2026",
-    "title": "Website and New Project Launch",
-    "excerpt": "We are launching a large-scale project to help Belarusian volunteers...",
+    "date": "05.02.2026",
+    "title": "Launch of Telegram Bot",
+    "excerpt": "We created a Telegram bot for quick communication and support...",
     "image": "/img/news/news-3.webp",
-    "content": "<p>Today is a historic day — our website has started working. This is the digital front of our struggle.</p>"
+    "content": "<h3>New Tool</h3><p>The Bulwark Foundation’s Telegram bot helps users receive news, find contacts, and quickly join volunteer programs.</p><h3>Accessibility</h3><p>The bot works around the clock and makes communication simpler and more effective.</p>"
   },
   {
     "id": 4,
-    "date": "09.02.2026",
-    "title": "Project Development Update",
-    "excerpt": "We are launching a large-scale project to help Belarusian volunteers...",
+    "date": "12.02.2026",
+    "title": "Creation of Telegram Channel",
+    "excerpt": "We opened an official channel for news and updates...",
     "image": "/img/news/news-4.webp",
-    "content": "<p>Additional information about the development of the Bulwark project in 2026.</p>"
+    "content": "<h3>Official Channel</h3><p>The Bulwark Telegram channel has become the main point for publishing news and updates.</p><h3>Community</h3><p>Here we share information about new programs, reports, and volunteer opportunities. The channel unites people who want to help and stay informed.</p>"
   },
   {
     "id": 5,

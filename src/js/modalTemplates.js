@@ -3,29 +3,25 @@ import { t, updateAllTranslations } from "./i18n.js"; // Імпартуем на
 export const modalTemplates = {
   news: (item) => `
     <div class="flex flex-col">
-      <div class="px-5 md:px-9 xl:px-[60px] py-8 grid grid-cols-1 xl:grid-cols-[1fr_minmax(auto,696px)] gap-8 xl:gap-12 items-start">
+      <div class="px-5 md:px-9 xl:px-[60px] py-8 grid grid-cols-1 xl:grid-cols-[1fr_696px] gap-8 xl:gap-12 items-start">
         
-        <div class="order-1">
-          <h2 class="text-2xl md:text-3xl lg:text-4xl font-black uppercase italic text-white leading-tight tracking-tighter mb-6">
+        <div class="order-1 flex flex-col min-w-0">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black uppercase italic text-white leading-[1.1] tracking-tighter mb-6 break-words">
             ${item.title}
           </h2>
-          <nav id="modal-internal-nav" class="flex flex-wrap gap-3 border-t border-white/5 pt-4 justify-start"></nav>
+          <nav id="modal-internal-nav" class="flex flex-wrap gap-3 border-t border-white/5 pt-4 justify-start mt-auto"></nav>
         </div>
 
-        <div class="order-2 w-full">
-          <div class="group/img border border-white/10 bg-black overflow-hidden cursor-crosshair">
+        <div class="order-2 w-full flex justify-end">
+          <div class="border border-white/10 bg-black overflow-hidden w-full max-w-[696px]">
              <img src="${item.image || "/img/logo.svg"}" 
-                  class="${
-                    item.image
-                      ? "w-full h-auto object-cover transition-all duration-700 grayscale-0 hover:grayscale"
-                      : "w-full h-auto p-20 opacity-10"
-                  }" 
+                  class="w-full h-auto object-cover grayscale-0 hover:grayscale transition-all duration-700" 
                   alt="${item.title}">
           </div>
         </div>
       </div>
 
-      <div id="modal-content" class="px-5 md:px-9 xl:px-[60px] pb-20 prose prose-invert max-w-none text-gray-300">
+      <div id="modal-content" class="px-5 md:px-9 xl:px-[60px] pb-20 prose prose-invert max-w-none text-gray-300 leading-relaxed font-light">
         ${item.content}
       </div>
     </div>

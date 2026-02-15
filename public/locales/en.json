@@ -331,5 +331,23 @@
     "title": "Knowledge Base",
     "read_more": "Read more",
     "back_to_list": "Back to list"
+  },
+  "privacy": {
+    "page_title": "Privacy Policy | Bulwark",
+    "title": "Privacy Policy",
+    "section1_title": "1. General Provisions",
+    "section1_text": "This policy explains how our foundation processes the data you provide through forms on this website. We respect your privacy and security.",
+    "section2_title": "2. Data Collection",
+    "section2_text": "We only collect information that you enter yourself: name (callsign), contact details (Email/Telegram), your status, and the nature of your request.",
+    "section3_title": "3. Use of Information",
+    "section3_text": "Your data is used solely so that we can contact you and process your request for help or partnership proposal. Information is not transferred to third parties.",
+    "section4_title": "4. Retention Period",
+    "section4_text": "Data is stored for as long as necessary to resolve your issue, after which it is deleted.",
+    "back_to_home": "Back to Home"
+  },
+  "cookies": {
+    "text": "We use cookies to enhance your experience. By continuing to visit this site you agree to our",
+    "policy_link": "Privacy Policy",
+    "accept": "Accept"
   }
 }

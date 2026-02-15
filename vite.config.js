@@ -24,6 +24,7 @@ export default defineConfig({
 
         // Твая поўная старонка навін
         news_full: resolve(__dirname, "src/pages/news-full.html"),
+        privacy: resolve(__dirname, "privacy.html"),
       },
     },
   },

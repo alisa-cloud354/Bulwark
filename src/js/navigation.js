@@ -1,5 +1,5 @@
 /**
- * Навігацыя для гібрыднага сайта (Lending + Pages)
+ * Навігацыя для гібрыднага сайта (Landing + Pages)
  */
 
 export const initNavigation = () => {
@@ -14,49 +14,63 @@ export const initNavigation = () => {
     }
   };
 
+  // 2. Апрацоўка клікаў па спасылках
   navLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       const href = link.getAttribute("href");
 
+      // Калі гэта спасылка на якар (на гэтай або іншай старонцы)
       if (href.startsWith("/#") || href.startsWith("#")) {
         const targetId = href.includes("#") ? "#" + href.split("#")[1] : null;
         const targetElement = targetId
           ? document.querySelector(targetId)
           : null;
 
+        // Калі элемент ёсць на бягучай старонцы
         if (targetElement) {
           e.preventDefault();
           closeMenu();
 
-          // ПРАВІЛЬНЫ СКРОЛ:
-          const offset = 120; // Вышыня хэдэра з запасам
-          // Вылічваем абсалютную пазіцыю элемента адносна верху старонкі
-          const elementTop = targetElement.offsetTop;
+          const offset = 100; // Вышыня хэдэра
+          const bodyRect = document.body.getBoundingClientRect().top;
+          const elementRect = targetElement.getBoundingClientRect().top;
+          const elementPosition = elementRect - bodyRect;
+          const offsetPosition = elementPosition - offset;
 
           window.scrollTo({
-            top: elementTop - offset,
+            top: offsetPosition,
             behavior: "smooth",
           });
 
+          // Абнаўляем URL без перазагрузкі
           history.pushState(null, null, targetId);
         }
       }
     });
   });
 
-  // 3. Апрацоўка пераходу з іншай старонкі
+  // 3. Апрацоўка пераходу з іншай старонкі (пры загрузцы)
   if (window.location.hash) {
-    const target = document.querySelector(window.location.hash);
+    // 1. Адразу скідаем скрол у нуль, каб не было "дзёргання"
+    window.scrollTo(0, 0);
+
+    const targetId = window.location.hash;
+    const target = document.querySelector(targetId);
+
     if (target) {
+      // 2. Чакаем, пакуль пачнецца CSS-анімацыя fadeIn (300-400мс)
       setTimeout(() => {
-        const offset = 120;
-        const elementTop = target.offsetTop;
+        const offset = 100;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = target.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
 
         window.scrollTo({
-          top: elementTop - offset,
+          top: offsetPosition,
           behavior: "smooth",
         });
-      }, 300); // Крыху больш часу для ініцыялізацыі
+      }, 400);
     }
   }
 };

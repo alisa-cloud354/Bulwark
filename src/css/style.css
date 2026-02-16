@@ -86,12 +86,24 @@
 
 @layer base {
   html {
-    /* Плыўная пракрутка */
     scroll-behavior: smooth;
   }
 
   body {
     @apply bg-black font-sans text-white antialiased;
+    /* Дадаем анімацыю з'яўлення */
+    animation: fadeInPage 0.5s ease-in-out;
   }
+
+  @keyframes fadeInPage {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
 
 }

@@ -1,0 +1,77 @@
+/* --- Секцыя Навін --- */
+
+/* Базавыя налады для Swiper на мабільных і планшэтах */
+section#news .news-slider .swiper-slide {
+    display: flex;
+    height: auto !important;
+    /* Дазваляе ўсім слайдам у шэрагу падцягвацца пад вышыню самага высокага */
+}
+
+/* Прымушаем унутраную картку займаць 100% вышыні слайда */
+section#news .news-slider .swiper-slide>div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+/* Фіксацыя загалоўка: робім аднолькавую прастору для 1 і 2 радкоў */
+section#news .news-slider h4 {
+    display: -webkit-box;
+    line-clamp: 2;
+    /* Абразае тэкст пасля 2-га радка */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /* 2.5rem (~40px) — гэта стандартная вышыня для двух радкоў text-sm з leading-tight */
+    min-height: 2.5rem;
+}
+
+/* Фіксацыя тэксту анонсу */
+section#news .news-slider p {
+    display: -webkit-box;
+    line-clamp: 3;
+    /* Абразае тэкст пасля 3-га радка */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /* Каб кнопка ніжэй заўсёды была прыціснутая да нізу, калі тэксту мала */
+    flex-grow: 1;
+}
+
+/* --- Адаптыў пад Дэсктоп (1280px+) --- */
+@media (min-width: 1280px) {
+
+    /* Ператвараем слайдэр у статычную сетку */
+    section#news .news-slider .swiper-wrapper {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 24px !important;
+        width: 100% !important;
+        transform: none !important;
+        flex-wrap: nowrap !important;
+        align-items: stretch !important;
+        /* Гарантуе аднолькавую вышыню калонак */
+    }
+
+    /* Слайды ў грыдзе */
+    section#news .news-slider .swiper-slide {
+        width: 100% !important;
+        margin-right: 0 !important;
+        flex-shrink: 1 !important;
+    }
+
+    /* Хаваем элементы кіравання Swiper */
+    .news-prev,
+    .news-next {
+        display: none !important;
+    }
+}
+
+/* --- Дадатковыя паляпшэнні для візуалу --- */
+section#news .news-slider .group:hover img {
+    transform: scale(1.05);
+    /* Лёгкае павелічэнне пры навядзенні */
+}
+
+section#news .news-slider img {
+    transition: transform 0.7s ease, filter 0.7s ease;
+}

@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+/* Базавыя стылі і кампаненты */
+@import "./style.css";
+
+/* Спецыфічныя стылі секцый (пакуль ты іх не перапісаў на Tailwind) */
+@import "./sections/hero.css";
+@import "./sections/header.css";
+@import "./sections/news.css";
+@import "/src/css/pages/zarok-vajara.css";
+@import "/src/css/pages/gallery.css";
+@import "/src/css/modal.css";
+@import "/src/css/pages/materials.css";
+@import "/src/css/forms.css";

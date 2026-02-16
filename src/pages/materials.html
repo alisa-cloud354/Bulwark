@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="be">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Матэрыялы | Bulwark</title>
+</head>
+
+<body class="bg-black text-white">
+
+    <load src="/src/partials/header.html" />
+    <load src="/src/partials/mobile-menu.html" />
+
+    <main class="relative min-h-screen w-full bg-black">
+        <section id="materials" class="bg-black">
+            <div class="container-custom mx-auto">
+
+                <div class="sticky top-[120px] z-40 bg-black/50 backdrop-blur-md pt-6 border-b border-white/10">
+                    <div>
+                        <span data-i18n="nav.materials"
+                            class="text-red-600 font-bold uppercase tracking-widest text-[10px] md:text-xs">
+                            Матэрыялы
+                        </span>
+                        <h1 data-i18n="materials.title"
+                            class="text-white text-3xl md:text-5xl xl:text-6xl font-black uppercase italic mt-2 tracking-tighter leading-[0.9]">
+                            База ведаў
+                        </h1>
+                    </div>
+
+                    <nav id="materials-nav" class="flex flex-wrap gap-x-6 gap-y-2 pt-4 border-t border-white/5">
+                    </nav>
+                </div>
+
+                <div class="grid gap-6 py-12 pb-20" id="materials-container">
+                </div>
+
+                <load src="/src/partials/modal.html" />
+            </div>
+        </section>
+    </main>
+
+    <load src="/src/partials/footer.html" />
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

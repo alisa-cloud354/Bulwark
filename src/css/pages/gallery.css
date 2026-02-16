@@ -1,0 +1,14 @@
+.pswp__bg {
+    background: #000000 !important;
+    opacity: 0.95 !important;
+}
+
+/* Каб кнопкі закрыцця былі больш яркімі */
+.pswp__button {
+    opacity: 1 !important;
+    color: #ff0000;
+}
+
+.pswp {
+    z-index: 99999 !important;
+}

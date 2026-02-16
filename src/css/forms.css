@@ -1,0 +1,107 @@
+/* 1. КАНТЭЙНЕР ДЛЯ ТОСТАЎ */
+#toast-container {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    pointer-events: none;
+}
+
+/* 2. БАЗАВЫ СТЫЛЬ ТОСТА */
+.toast {
+    pointer-events: auto;
+    background: #111;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #ef4444;
+    /* Чырвоны па дэфолце */
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transition: all 0.4s ease;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.toast-success {
+    border-left-color: #059669 !important;
+    /* Зялёны */
+}
+
+.toast-error {
+    border-color: #dc2626 !important;
+    /* Чырвоны */
+}
+
+/* 3. ВІЗУАЛЬНАЯ ВАЛІДАЦЫЯ ПАЛЁЎ */
+
+/* Прыбіраем белы фон Chrome/Safari пры аўтазапаўненні */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill {
+    -webkit-text-fill-color: white !important;
+    -webkit-box-shadow: 0 0 0px 1000px #000 inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Рамка становіцца чырвонай ПРЫ ФОКУСЕ, калі ўведзена няправільна */
+input:focus:invalid,
+textarea:focus:invalid {
+    border-color: #dc2626 !important;
+}
+
+/* Рамка становіцца зялёнай, калі поле запоўнена валідна */
+input:not(:placeholder-shown):valid,
+textarea:not(:placeholder-shown):valid,
+select:not(:invalid):not([value=""]) {
+    border-color: #059669 !important;
+}
+
+/* Стыль для Select, калі выбраны варыянт */
+select:not(:invalid) {
+    color: white !important;
+}
+
+/* 4. АНІМАЦЫІ */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* 5. ДАДАТКОВЫЯ ЭФЕКТЫ */
+.loader-icon {
+    font-size: 1rem;
+}
+
+/* Стыль для заблакаваных палёў (крокі 2, 3, 4) */
+.opacity-40 {
+    opacity: 0.25 !important;
+    /* Зрабіў крыху больш празрыстым для кантрасту */
+    filter: grayscale(1);
+    transition: all 0.5s ease;
+}
+
+.pointer-events-none {
+    pointer-events: none;
+}
+
+/* Кнопка пры адпраўцы */
+button:disabled {
+    cursor: not-allowed;
+    filter: grayscale(1);
+}

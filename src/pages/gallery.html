@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="be">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title data-i18n="gallery.title_page">Галерэя | Bulwark</title>
+</head>
+
+<body class="bg-black text-white">
+    <load src="/src/partials/header.html" />
+    <load src="/src/partials/mobile-menu.html" />
+
+    <main class="relative min-h-screen">
+        <section id="gallery" class="py-12 bg-black overflow-hidden">
+            <div class="container-custom">
+                <div class="mb-10">
+                    <span data-i18n="nav.gallery" class="text-red-600 font-black uppercase tracking-[0.3em] text-sm">
+                        Галерэя
+                    </span>
+                </div>
+
+                <div class="flex gap-2 mb-8">
+                    <button
+                        class="gallery-prev w-12 h-12 border border-white/10 text-white hover:bg-red-600/20 transition-all flex items-center justify-center">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button
+                        class="gallery-next w-12 h-12 border border-white/10 text-white hover:bg-red-600/20 transition-all flex items-center justify-center">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="swiper gallery-swiper">
+                    <div class="swiper-wrapper" id="gallery-container"></div>
+
+                    <div
+                        class="mt-12 mx-auto max-w-full md:max-w-[700px] border border-white/10 bg-white/[0.02] p-6 md:p-8 text-center md:text-left">
+                        <div class="flex flex-col gap-4">
+                            <div class="opacity-50">
+                                <p class="text-xs md:text-sm font-light leading-relaxed tracking-wide">
+                                    <span
+                                        class="text-red-600 font-bold uppercase mr-2 text-[10px] md:text-xs">Copyright:</span>
+                                    <span data-i18n="gallery.copyright_text">
+                                        Усе матэрыялы галерэі з'яўляюцца інтэлектуальнай уласнасцю Bulwark. Выкарыстанне
+                                        гэтых матэрыялаў без дазволу забаронена.
+                                    </span>
+                                </p>
+                            </div>
+
+                            <div class="h-px w-12 bg-red-600/50 mx-auto md:mx-0"></div>
+
+                            <div>
+                                <p class="text-sm md:text-base font-medium italic leading-snug">
+                                    <span data-i18n="gallery.history_text">Гэтыя кадры — жывая гісторыя барацьбы
+                                        беларускіх добраахвотнікаў.</span>
+                                    <span data-i18n="gallery.victory_text"
+                                        class="text-red-600 not-italic font-black uppercase block md:inline-block mt-2 md:mt-0 md:ml-1 tracking-wider">
+                                        Разам да перамогі.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <load src="/src/partials/footer.html" />
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

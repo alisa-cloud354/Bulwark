@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="be">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Усе навіны | Bulwark</title>
+
+
+</head>
+
+<body>
+
+    <load src="/src/partials/header.html" />
+    <load src="/src/partials/mobile-menu.html" />
+
+
+
+    <main class="relative min-h-screen w-full overflow-hidden bg-black">
+        <section id="news-full" class="py-12 bg-black overflow-hidden">
+            <div class="container-custom">
+                <div class="mb-12">
+                    <span data-i18n="news.news-full" class="text-red-600 font-black uppercase tracking-[0.3em] text-xl">
+                        Навіны (архіў)
+                    </span>
+                </div>
+
+                <div id="news-grid-full" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                    <div class="text-white/20 uppercase text-[10px] tracking-widest animate-pulse">Загрузка...</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <load src="/src/partials/footer.html" />
+    <load src="/src/partials/modal.html" />
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

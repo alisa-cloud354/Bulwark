@@ -1,0 +1,58 @@
+[
+  {
+    "id": "legal-shield",
+    "title": "projects.legal-shield.title",
+    "category": "projects.legal-shield.category",
+    "status": "projects.status.active",
+    "description": "projects.legal-shield.description",
+    "icon": "⚖️",
+    "steps": [
+      "projects.legal-shield.step1",
+      "projects.legal-shield.step2",
+      "projects.legal-shield.step3",
+      "projects.legal-shield.step4"
+    ]
+  },
+  {
+    "id": "mental-support",
+    "title": "projects.mental-support.title",
+    "category": "projects.mental-support.category",
+    "status": "projects.status.active",
+    "description": "projects.mental-support.description",
+    "icon": "🧠",
+    "steps": [
+      "projects.mental-support.step1",
+      "projects.mental-support.step2",
+      "projects.mental-support.step3",
+      "projects.mental-support.step4"
+    ]
+  },
+  {
+    "id": "addiction-recovery",
+    "title": "projects.addiction-recovery.title",
+    "category": "projects.addiction-recovery.category",
+    "status": "projects.status.active",
+    "description": "projects.addiction-recovery.description",
+    "icon": "🛡️",
+    "steps": [
+      "projects.addiction-recovery.step1",
+      "projects.addiction-recovery.step2",
+      "projects.addiction-recovery.step3",
+      "projects.addiction-recovery.step4"
+    ]
+  },
+  {
+    "id": "bulwark-hub",
+    "title": "projects.bulwark-hub.title",
+    "category": "projects.bulwark-hub.category",
+    "status": "projects.status.volunteers",
+    "description": "projects.bulwark-hub.description",
+    "icon": "🤝",
+    "steps": [
+      "projects.bulwark-hub.step1",
+      "projects.bulwark-hub.step2",
+      "projects.bulwark-hub.step3",
+      "projects.bulwark-hub.step4"
+    ]
+  }
+]

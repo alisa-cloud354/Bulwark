@@ -1,0 +1,99 @@
+<section id="volunteers" class="section-spacing bg-[#050505] text-white overflow-hidden border-t border-white/5">
+    <div class="container-custom">
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-16 items-start">
+
+            <div class="max-w-3xl xl:max-w-none">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-0.5 bg-red-600"></div>
+                    <span data-i18n="volunteers.tag"
+                        class="uppercase tracking-[0.4em] text-red-600 font-black text-[10px]">Дапамога</span>
+                </div>
+
+                <h2 data-i18n="volunteers.title" class="section-title mb-10 tracking-tighter">
+                    Дапамога добраахвотнікам
+                </h2>
+
+                <div class="space-y-8">
+                    <div class="flex gap-5">
+                        <i class="fa-solid fa-user-check text-red-600 mt-1 text-lg"></i>
+                        <div class="flex flex-col gap-1">
+                            <strong class="text-white uppercase tracking-wider text-[11px] font-black"
+                                data-i18n="volunteers.crit1_title">Для каго:</strong>
+                            <p class="text-gray-400 text-sm leading-relaxed" data-i18n="volunteers.crit1_text">
+                                Толькі для беларускіх добраахвотнікаў (дзейных вайскоўцаў і ветэранаў), якія ваююць ці
+                                ваявалі ў складзе УСУ / НГУ.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-5">
+                        <i class="fa-solid fa-circle-info text-red-600 mt-1 text-lg"></i>
+                        <div class="flex flex-col gap-1">
+                            <strong class="text-white uppercase tracking-wider text-[11px] font-black"
+                                data-i18n="volunteers.crit2_title">Што даем:</strong>
+                            <p class="text-gray-400 text-sm leading-relaxed" data-i18n="volunteers.crit2_text">
+                                Кансультацыі па легалізацыі, аднаўленне дакументаў, прафесійная псіхалагічная падтрымка.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 p-8 border border-white/10 bg-black/50 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-red-600"></div>
+                    <p data-i18n="volunteers.warning"
+                        class="text-[11px] text-gray-400 leading-relaxed uppercase tracking-widest font-bold italic">
+                        Важна: Мы не займаемся зборам на зброю ці амуніцыю. Наша задача — ваш прававы і ментальны
+                        статус.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-black/50 p-6 md:p-10 border border-white/10 shadow-2xl relative">
+                <form id="help-form" class="space-y-5">
+                    <div id="help-step-1">
+                        <input type="text" name="user_name" data-i18n="[placeholder]volunteers.name_placeholder"
+                            placeholder="Імя / Пазыўны" required minlength="2" autocomplete="off" autocapitalize="none"
+                            class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-medium">
+                    </div>
+
+                    <div id="help-step-2" class="opacity-40 pointer-events-none transition-all duration-500">
+                        <div class="relative">
+                            <select name="user_status" required
+                                class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-medium appearance-none cursor-pointer">
+                                <option value="" disabled selected data-i18n="volunteers.status_select">Статус (абярыце
+                                    са спіса)</option>
+                                <option value="Дзейны вайсковец" data-i18n="volunteers.status_active">Дзейны вайсковец
+                                </option>
+                                <option value="Ветэран" data-i18n="volunteers.status_veteran">Ветэран</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+                                <i class="fa-solid fa-chevron-down text-[10px] text-gray-500"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="help-step-3" class="opacity-40 pointer-events-none transition-all duration-500">
+                        <textarea name="user_needs" data-i18n="[placeholder]volunteers.needs_placeholder"
+                            placeholder="Якая дапамога патрэбна? (мін. 10 сімвалаў)" required minlength="10"
+                            class="w-full bg-black border border-white/10 p-4 text-white text-sm h-32 outline-none focus:border-red-600 transition-all font-medium resize-none"></textarea>
+                    </div>
+
+                    <div id="help-step-4" class="opacity-40 pointer-events-none transition-all duration-500">
+                        <input type="text" name="user_contact" data-i18n="[placeholder]volunteers.contact_placeholder"
+                            placeholder="Telegram @user або email" required
+                            pattern="(@[A-Za-z0-9_]{4,}|^[^\s@]+@[^\s@]+\.[^\s@]+$|\+?[0-9]{7,20})"
+                            class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-medium">
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-red-600 py-5 text-white font-black uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-all flex justify-center items-center gap-2">
+                        <span data-i18n="volunteers.btn_send">Адправіць запыт</span>
+
+                        <i class="fa-solid fa-circle-notch fa-spin hidden loader-icon" style="display: none;"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>

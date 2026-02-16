@@ -1,0 +1,65 @@
+{
+  "foundation": {
+    "id": "foundation",
+    "title": "Падтрымаць фонд",
+    "description": "Аперацыйная дзейнасць, адміністрацыйныя выдаткі і лагістыка",
+    "bank_details": {
+      "recipient": "БО \"БФ \"Булварк\"",
+      "edrpou": "46082758",
+      "bank_name": "ПрыватБанк / PrivatBank",
+      "swift": "PBANUA2X"
+    },
+    "purpose": "Благодійний внесок на виконання цілей БФ",
+    "accounts": [
+      { "currency": "UAH", "value": "UA613052990000026003035931199" },
+      { "currency": "USD", "value": "UA803052990000026006035930658" },
+      { "currency": "EUR", "value": "UA273052990000026007035935555" },
+      { "currency": "PLN", "value": "UA723052990000026002035932199" }
+    ]
+  },
+  "soldiers": {
+    "id": "soldiers",
+    "title": "Падтрымаць байцоў",
+    "description": "Рыштунак, медыцына і тэхнічныя сродкі для добраахвотнікаў",
+    "bank_details": {
+      "recipient": "CO \"CHARITABLE FOUNDATION \"BULWARK\"",
+      "edrpou": "46082758",
+      "bank_name": "АТ «УНІВЕРСАЛ БАНК»",
+      "swift": "UNJSUAUKXXX"
+    },
+    "purpose": "Благодійний внесок для виконання цілей благодійного фонду",
+    "accounts": [
+      { "currency": "UAH", "value": "UA443220010000026001700010145" },
+      { "currency": "USD", "value": "UA443220010000026001700013249" },
+      { "currency": "EUR", "value": "UA353220010000026000700013251" },
+      { "type": "header", "label": "Крыптавалютныя рахункі" },
+      { "currency": "BTC", "value": "136ktmFvk157ehbXFkrk1UNaTZEYYL5x24" },
+      {
+        "currency": "ETH ERC20",
+        "value": "0x1f55d73b929fbdd2927c322f187d8b125402e188"
+      },
+      {
+        "currency": "USDT Ethereum",
+        "value": "0x1f55d73b929fbdd2927c322f187d8b125402e188"
+      },
+      {
+        "currency": "USDC ETH ERC20",
+        "value": "0x1f55d73b929fbdd2927c322f187d8b125402e188"
+      },
+      {
+        "currency": "USDT Tron",
+        "value": "TCvwUpa7tLGW48xXaFxLruTRN6cmnqBLB5"
+      },
+      { "currency": "TRX Tron", "value": "TCvwUpa7tLGW48xXaFxLruTRN6cmnqBLB5" }
+    ]
+  },
+  "ui": {
+    "bank_title": "Банкаўскія рэквізіты",
+    "recipient": "Каму:",
+    "edrpou": "Код ЕДРПОУ:",
+    "bank_name": "Назва банка:",
+    "swift": "SWIFT code:",
+    "purpose_label": "Назва плацяжу (пры пераводзе абавязкова):",
+    "accounts_title": "Рахункі для пераводу"
+  }
+}

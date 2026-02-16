@@ -1,0 +1,151 @@
+/* ==========================================================================
+   MODAL: Styles & Typography
+   ========================================================================== */
+
+/* Агульныя стылі загалоўкаў унутры кантэнту */
+#modal-content h2 {
+    @apply text-2xl md:text-4xl lg:text-5xl font-black uppercase italic text-white mt-2 mb-6 leading-none tracking-tighter;
+}
+
+#modal-content h3 {
+    @apply text-xl md:text-2xl font-black uppercase italic text-red-600 mt-12 mb-6 leading-tight border-l-2 border-red-600 pl-4;
+}
+
+#modal-content h4 {
+    @apply text-lg md:text-xl font-bold text-white mt-6 mb-2;
+}
+
+#modal-content p {
+    @apply text-gray-400 mb-6 leading-relaxed text-base font-light;
+}
+
+#modal-content ul,
+#modal-content ol {
+    @apply mb-6 pl-5 space-y-2 text-gray-400 text-sm md:text-base;
+}
+
+#modal-content ul {
+    @apply list-disc;
+}
+
+#modal-content ol {
+    @apply list-decimal;
+}
+
+/* --- ЭФЕКТЫ ВЫЯВЫ --- */
+.news-image-wrapper img {
+    /* Па замаўчанні каляровая */
+    filter: grayscale(0%) contrast(1);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Эфект спрацоўвае толькі на дэсктопе пры навядзенні */
+@media (hover: hover) {
+    .news-image-wrapper:hover img {
+        filter: grayscale(100%) contrast(1.1);
+
+    }
+}
+
+/* Калі гэта лагатып-заглушка — прыбіраем фільтры */
+.news-image-wrapper img[src*="logo.svg"],
+#modal-image-container img[src*="logo.svg"] {
+    @apply bg-white/5;
+    filter: none !important;
+    transform: none !important;
+}
+
+/* --- НАВІГАЦЫЯ --- */
+#modal-internal-nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    @apply gap-x-4 gap-y-1 py-3 border-t border-white/5;
+}
+
+#modal-internal-nav button {
+    @apply relative text-[9px] md:text-[10px] uppercase font-bold tracking-widest text-white/40 hover:text-red-600 transition-all py-1;
+    text-align: left !important;
+}
+
+#modal-internal-nav button::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-0 h-px bg-red-600 transition-all duration-300;
+}
+
+#modal-internal-nav button:hover::after {
+    @apply w-full;
+}
+
+/* --- СКРОЛБАР --- */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-white/5;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-red-600;
+}
+
+.note-block {
+    @apply mt-12 p-6 bg-red-600/5 border-l-2 border-red-600 text-[11px] italic text-gray-500 leading-relaxed;
+}
+
+/* --- АДАПТЫЎНАСЦЬ --- */
+@media (max-width: 767px) {
+    #modal-title {
+        @apply text-xl mb-3;
+        display: -webkit-box;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    #modal-internal-nav {
+        @apply gap-x-3 gap-y-1;
+    }
+}
+
+@media print {
+
+    /* 1. Хаваем усё акрамя мадалкі */
+    body * {
+        visibility: hidden;
+    }
+
+    #material-modal,
+    #material-modal * {
+        visibility: visible;
+    }
+
+    /* 2. Галоўнае: робім мадалку звычайнай старонкай */
+    #material-modal {
+        position: absolute !important;
+        left: 0;
+        top: 0;
+        width: 100% !important;
+        display: block !important;
+        /* Прыбіраем flex/grid */
+    }
+
+    /* 3. Выпраўляем "вузкую палоску" — прымушаем кантэйнер і сетку расцягнуцца */
+    .container-custom,
+    #modal-dynamic-container,
+    .grid {
+        display: block !important;
+        width: 100% !important;
+        max-width: none !important;
+    }
+
+    /* 4. Хаваем кнопкі */
+    footer,
+    #close-modal,
+    #modal-internal-nav,
+    .modal-overlay {
+        display: none !important;
+    }
+}

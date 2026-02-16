@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="be">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title data-i18n="projects.page_title">Праэкты | Bulwark</title>
+</head>
+
+<body>
+
+    <load src="/src/partials/header.html" />
+    <load src="/src/partials/mobile-menu.html" />
+
+    <main class="relative min-h-screen w-full bg-black text-white">
+        <section class="py-12 bg-black">
+            <div class="container-custom">
+                <div class="mb-16 border-l-4 border-red-600 pl-6">
+                    <span data-i18n="projects.subtitle"
+                        class="text-red-600 font-black uppercase tracking-[0.3em] text-sm block mb-2">
+                        Чым мы займаемся
+                    </span>
+                    <h1 data-i18n="projects.main_title"
+                        class="text-5xl md:text-7xl font-black uppercase italic leading-none tracking-tighter">
+                        Нашы праекты
+                    </h1>
+                </div>
+
+                <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 border-y border-white/5 bg-black relative overflow-hidden">
+            <div class="container-custom relative z-10">
+                <div class="max-w-4xl">
+                    <h2 class="text-3xl md:text-5xl font-black uppercase italic mb-8 tracking-tighter">
+                        <span data-i18n="projects.investment.title_start">Чаму гэта </span>
+                        <span data-i18n="projects.investment.title_highlight" class="text-red-600">інвестыцыя</span>,
+                        <span data-i18n="projects.investment.title_end">а не проста дапамога?</span>
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="space-y-6 text-gray-400 text-lg leading-relaxed font-light">
+                            <p data-i18n="projects.investment.desc1">Любая дыктатура канечная. Тыя, каму мы дапамагаем
+                                сёння — гэта архітэктары заўтрашняй Беларусі.</p>
+                            <p data-i18n="projects.investment.desc2">Мы захоўваем кадравы рэзерв: будучых лідараў,
+                                прадпрымальнікаў і лекараў свабоднай краіны.</p>
+                        </div>
+                        <div class="border-l border-red-600/30 pl-8 space-y-4">
+                            <div class="flex items-start gap-4">
+                                <span class="text-red-600 font-bold">01</span>
+                                <p data-i18n="projects.investment.point1"
+                                    class="text-sm uppercase tracking-widest text-white font-bold">Бяспека рэгіёна</p>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <span class="text-red-600 font-bold">02</span>
+                                <p data-i18n="projects.investment.point2"
+                                    class="text-sm uppercase tracking-widest text-white font-bold">Ментальнае здароўе
+                                    ветэранаў</p>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <span class="text-red-600 font-bold">03</span>
+                                <p data-i18n="projects.investment.point3"
+                                    class="text-sm uppercase tracking-widest text-white font-bold">Салідарнасць нацый
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-i18n="projects.investment.bg_text"
+                class="absolute -bottom-10 -right-10 text-[15rem] font-black opacity-[0.02] italic pointer-events-none uppercase">
+                Future
+            </div>
+        </section>
+    </main>
+
+    <load src="/src/partials/footer.html" />
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<header id="main-header" class="sticky top-0 left-0 w-full bg-[#050505] transition-all duration-300 z-[110]">
+    <div class="bg-black/40 border-b border-white/5 py-2">
+        <div class="container-custom flex justify-end items-center gap-8">
+            <div class="flex items-center gap-6 text-white text-xl">
+                <a href="https://t.me/bulwark_fund" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-red-600 transition-colors">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="https://www.instagram.com/bulwark_fund" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-red-600 transition-colors">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1CcAVYhTi9/" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-red-600 transition-colors">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/%D0%B1%D0%BB%D0%B0%D0%B3%D0%BE%D0%B4%D1%96%D0%B9%D0%BD%D0%B8%D0%B9-%D1%84%D0%BE%D0%BD%D0%B4-bulwark-3097083a4/"
+                    target="_blank" rel="noopener noreferrer" class="hover:text-red-600 transition-colors">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+
+            <div id="lang-dropdown" class="relative group inline-block ">
+                <button id="lang-btn" type="button"
+                    class="flex items-center gap-2 text-[12px] font-black text-white uppercase tracking-widest cursor-pointer py-2">
+                    <span id="current-lang" class="text-red-600">BE</span>
+                    <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
+                </button>
+
+                <div
+                    class="absolute right-0 top-full w-24 pt-1 hidden group-hover:block group-[.is-active]:block z-[100]">
+                    <div class="bg-[#050505] border border-white/10 py-2 shadow-2xl relative">
+                        <a href="#" data-lang="be"
+                            class="lang-switch block px-4 py-2 text-white hover:text-red-600 hover:bg-white/5 transition-all text-[12px] font-black uppercase tracking-widest relative z-[110]">BE</a>
+                        <a href="#" data-lang="uk"
+                            class="lang-switch block px-4 py-2 text-white hover:text-red-600 hover:bg-white/5 transition-all text-[12px] font-black uppercase tracking-widest relative z-[110]">UK</a>
+                        <a href="#" data-lang="en"
+                            class="lang-switch block px-4 py-2 text-white hover:text-red-600 hover:bg-white/5 transition-all text-[12px] font-black uppercase tracking-widest relative z-[110]">EN</a>
+                        <a href="#" data-lang="ru"
+                            class="lang-switch block px-4 py-2 text-white hover:text-red-600 hover:bg-white/5 transition-all text-[12px] font-black uppercase tracking-widest relative z-[110]">RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-custom flex items-center justify-between py-2">
+        <a href="/" class="flex items-center shrink-0 mr-4">
+            <img src="/src/assets/img/logo.svg" alt="Logo" class="h-12 md:h-20 w-auto object-contain mr-4">
+            <div class="flex flex-col text-white uppercase font-black leading-[0.85]">
+                <span class="text-lg md:text-xl tracking-tighter">Bulwark<br>fund</span>
+                <span data-i18n="nav.location"
+                    class="text-[10px] tracking-[0.2em] text-gray-400 font-bold mt-1 uppercase">Ukraine</span>
+            </div>
+        </a>
+
+        <div class="flex items-center gap-4 md:gap-8">
+            <a href="/#hero" id="home-link"
+                class="js-nav-link text-white hover:text-red-600 transition-all duration-300 opacity-0 translate-x-5 pointer-events-none">
+                <i class="fa-solid fa-house text-xl md:text-2xl"></i>
+            </a>
+
+            <nav
+                class="hidden xl:flex items-center space-x-10 uppercase text-[13px] font-black tracking-widest text-white italic">
+                <div class="flex items-center gap-x-8">
+                    <div class="group relative py-4">
+                        <a href="/#about"
+                            class="js-nav-link hover:text-red-600 transition-colors flex items-center gap-1 whitespace-nowrap">
+                            <span data-i18n="nav.about">Пра фонд</span>
+                            <i
+                                class="fa-solid fa-chevron-down text-[8px] transition-transform group-hover:rotate-180"></i>
+                        </a>
+                        <div
+                            class="absolute top-full left-0 w-64 bg-[#050505] border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-2xl">
+                            <a href="/src/pages/projects.html" data-i18n="nav.projects"
+                                class="block px-6 py-4 text-[10px] text-gray-400 hover:bg-black hover:text-red-600 border-b border-white/5">Праекты</a>
+                            <a href="/src/pages/history.html" data-i18n="nav.history_long"
+                                class="block px-6 py-4 text-[10px] text-gray-400 hover:bg-black hover:text-red-600 border-b border-white/5">Гістарычны
+                                экскурс</a>
+                            <a href="/src/pages/reports.html" data-i18n="nav.reports"
+                                class="block px-6 py-4 text-[10px] text-gray-400 hover:bg-black hover:text-red-600 border-b border-white/5">Справаздачы</a>
+                            <a href="/src/pages/materials.html" data-i18n="nav.materials"
+                                class="block px-6 py-4 text-[10px] text-gray-400 hover:bg-black hover:text-red-600 border-b border-white/5">Матэрыялы</a>
+                            <a href="/src/pages/contacts.html" data-i18n="nav.requisites"
+                                class="block px-6 py-4 text-[10px] text-gray-400 hover:bg-black hover:text-red-600 border-b border-white/5">Рэквізіты</a>
+                            <a href="/src/pages/zarok-vajara.html" data-i18n="nav.vow"
+                                class="block px-6 py-4 text-[10px] text-gray-400 hover:bg-black hover:text-red-600 border-b border-white/5">Зарок
+                                ваяра</a>
+                            <a href="/src/pages/gallery.html" data-i18n="nav.gallery"
+                                class="block px-6 py-4 text-[10px] text-gray-400 hover:bg-black hover:text-red-600">Галерэя</a>
+                        </div>
+                    </div>
+
+                    <a href="/#news" data-i18n="nav.news"
+                        class="js-nav-link hover:text-red-600 transition-colors">Навіны</a>
+
+                    <div class="group relative py-4">
+                        <a href="/#volunteers" class="js-nav-link hover:text-red-600 flex items-center gap-1">
+                            <span data-i18n="nav.help">Дапамога</span>
+                            <i
+                                class="fa-solid fa-chevron-down text-[8px] transition-transform group-hover:rotate-180"></i>
+                        </a>
+                        <div
+                            class="absolute top-full left-0 w-64 bg-[#050505] border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-2xl">
+                            <a href="/src/pages/get-help.html" data-i18n="nav.get_help"
+                                class="block px-6 py-4 text-[10px] text-gray-400 hover:bg-black hover:text-red-600 border-b border-white/5">Атрымаць
+                                дапамогу</a>
+                            <a href="/src/pages/donate.html" data-i18n="nav.be_partner"
+                                class="block px-6 py-4 text-[10px] text-gray-400 hover:bg-black hover:text-red-600">Дапамагчы
+                                | Стаць партнёрам</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="/#donate" data-i18n="nav.support"
+                    class="js-nav-link bg-red-600 text-white px-8 py-2.5 hover:bg-white hover:text-black transition-all">Падтрымаць</a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="flex xl:hidden text-white cursor-pointer ml-2">
+                <i class="fa-solid fa-bars text-3xl"></i>
+            </button>
+        </div>
+    </div>
+</header>

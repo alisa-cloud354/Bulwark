@@ -1,0 +1,25 @@
+@layer components {
+
+
+    /* Стылі навігацыі (ідэнтычныя для старонкі і мадалкі) */
+    #materials-nav button,
+    #modal-internal-nav button {
+        @apply relative text-[10px] md:text-[11px] uppercase font-bold tracking-[0.2em] text-white/40 transition-all py-1;
+    }
+
+    #materials-nav button::after,
+    #modal-internal-nav button::after {
+        content: '';
+        @apply absolute bottom-0 left-0 w-0 h-px bg-red-600 transition-all duration-300;
+    }
+
+    #materials-nav button:hover,
+    #modal-internal-nav button:hover {
+        @apply text-red-600;
+    }
+
+    #materials-nav button:hover::after,
+    #modal-internal-nav button:hover::after {
+        @apply w-full;
+    }
+}

@@ -1,0 +1,65 @@
+{
+  "foundation": {
+    "id": "foundation",
+    "title": "Support the Foundation",
+    "description": "Operations, administrative expenses, and logistics",
+    "bank_details": {
+      "recipient": "БО \"БФ \"Булварк\"",
+      "edrpou": "46082758",
+      "bank_name": "PrivatBank",
+      "swift": "PBANUA2X"
+    },
+    "purpose": "Благодійний внесок на виконання цілей БФ",
+    "accounts": [
+      { "currency": "UAH", "value": "UA613052990000026003035931199" },
+      { "currency": "USD", "value": "UA803052990000026006035930658" },
+      { "currency": "EUR", "value": "UA273052990000026007035935555" },
+      { "currency": "PLN", "value": "UA723052990000026002035932199" }
+    ]
+  },
+  "soldiers": {
+    "id": "soldiers",
+    "title": "Support the Soldiers",
+    "description": "Equipment, medicine, and technical supplies for volunteers",
+    "bank_details": {
+      "recipient": "CO \"CHARITABLE FOUNDATION \"BULWARK\"",
+      "edrpou": "46082758",
+      "bank_name": "Universal Bank",
+      "swift": "UNJSUAUKXXX"
+    },
+    "purpose": "Благодійний внесок для виконання цілей благодійного фонду",
+    "accounts": [
+      { "currency": "UAH", "value": "UA443220010000026001700010145" },
+      { "currency": "USD", "value": "UA443220010000026001700013249" },
+      { "currency": "EUR", "value": "UA353220010000026000700013251" },
+      { "type": "header", "label": "Cryptocurrency Accounts" },
+      { "currency": "BTC", "value": "136ktmFvk157ehbXFkrk1UNaTZEYYL5x24" },
+      {
+        "currency": "ETH ERC20",
+        "value": "0x1f55d73b929fbdd2927c322f187d8b125402e188"
+      },
+      {
+        "currency": "USDT Ethereum",
+        "value": "0x1f55d73b929fbdd2927c322f187d8b125402e188"
+      },
+      {
+        "currency": "USDC ETH ERC20",
+        "value": "0x1f55d73b929fbdd2927c322f187d8b125402e188"
+      },
+      {
+        "currency": "USDT Tron",
+        "value": "TCvwUpa7tLGW48xXaFxLruTRN6cmnqBLB5"
+      },
+      { "currency": "TRX Tron", "value": "TCvwUpa7tLGW48xXaFxLruTRN6cmnqBLB5" }
+    ]
+  },
+  "ui": {
+    "bank_title": "Bank Details",
+    "recipient": "Recipient:",
+    "edrpou": "EDRPOU Code:",
+    "bank_name": "Bank Name:",
+    "swift": "SWIFT code:",
+    "purpose_label": "Payment Purpose (Required):",
+    "accounts_title": "Account Numbers"
+  }
+}

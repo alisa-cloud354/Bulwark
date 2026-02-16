@@ -1,0 +1,36 @@
+/* src/css/sections/hero.css */
+
+.hero-bg {
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    /* МАБІЛКА: Замянілі градыент на празрыстую падложку 10% */
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.55)),
+        url('/src/assets/img/hero-bg-mob.webp');
+}
+
+@media (min-width: 768px) {
+    .hero-bg {
+        /* ПЛАНШЭТ І ДЭСКТОП: Такая ж падложка замест градыента злева направа */
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.55)),
+            url('/src/assets/img/hero-bg-desc.webp');
+
+        background-position: 0 0, calc(100% + 160px) -90px;
+        background-size: 100% 100%, 140% auto;
+    }
+}
+
+@media (min-width: 1280px) {
+    .hero-bg {
+        /* ДЭСКТОП: Захоўваем адзіны стыль падложкі */
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.55)),
+            url('/src/assets/img/hero-bg-desc.webp');
+
+        background-position: 0 0, calc(100% + 260px) -240px;
+        background-size: 100% 100%, 140% auto;
+    }
+}

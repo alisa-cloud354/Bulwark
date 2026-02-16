@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "date": "10.10.2025",
+    "title": "Foundation Registered",
+    "excerpt": "We have officially registered the foundation to support Belarusian volunteers in Ukraine. This is a crucial step providing a legal basis for our activities.",
+    "image": "/img/reports/report-1.webp",
+    "content": "<h3>Legal Framework</h3><p>We have officially registered the foundation to support Belarusian volunteers in Ukraine. This is an important step, as we now have a legal basis for our operations and can work openly with partners.</p><p>The foundation offers legal aid, legalization consultations, psychological support, addiction recovery programs, and a platform for volunteers. We believe this structure will become a reliable hub for those seeking support and wishing to help others.</p>",
+    "more": "More"
+  },
+  {
+    "id": 2,
+    "date": "16.02.2026",
+    "title": "Website Launch",
+    "excerpt": "We launched the foundation's official website, which became the first point of communication with the public. Here you can find information about our goals and programs.",
+    "image": "/img/reports/report-2.webp",
+    "content": "<h3>First Point of Communication</h3><p>We launched the foundation's official website, which has become the primary channel for public communication. The site provides information about our goals, programs, and contact details.</p><p>News, updates, and opportunities to join volunteer initiatives are also available. We strive to make the site simple and user-friendly so that everyone can quickly access the information they need and feel part of the support community.</p>",
+    "more": "More"
+  },
+  {
+    "id": 3,
+    "date": "19.02.2026",
+    "title": "Payment Service",
+    "excerpt": "We integrated a modern payment service that allows for secure and fast donations. This opens new opportunities to support Belarusian volunteers.",
+    "image": "/img/reports/report-3.webp",
+    "content": "<h3>Secure Donations</h3><p>We have integrated a modern payment service that allows for secure and fast donations. This opens new opportunities for those who want to support Belarusian volunteers in Ukraine.</p><p>Funds will be directed towards legal and psychological aid, addiction recovery programs, and the development of the volunteer hub. We are grateful to everyone who joins our cause and contributes to the collective effort.</p>",
+    "more": "More"
+  },
+  {
+    "id": 4,
+    "date": "21.02.2026",
+    "title": "Telegram Bot",
+    "excerpt": "We created and launched the foundation's Telegram bot, making communication even more accessible. It's a tool for staying informed with direct access to information.",
+    "image": "/img/reports/report-4.webp",
+    "content": "<h3>Accessible Communication</h3><p>We created and launched the foundation's Telegram bot, which makes communication even more accessible. The bot allows you to quickly receive news, find necessary contacts, and learn about volunteering opportunities.</p><p>It is a tool for those who want to stay updated and have direct access to information. We see it as an essential communication channel that brings people together and helps build a supportive community.</p>",
+    "more": "More"
+  }
+]

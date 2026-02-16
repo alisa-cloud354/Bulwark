@@ -1,11 +1,11 @@
 {
   "name": "bulwark",
   "version": "1.0.0",
-  "description": "",
+  "description": "Bulwark Charity Project",
   "type": "module",
   "scripts": {
-    "build": "vite build",
     "dev": "vite",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "repository": {
@@ -14,6 +14,16 @@
   },
   "author": "Vadzim_Simanau <eks220885@gmail.com>",
   "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "i18next": "^25.8.7",
+    "node-fetch": "^2.7.0",
+    "photoswipe": "^5.4.4",
+    "swiper": "^12.1.0"
+  },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.18",
     "autoprefixer": "^10.4.23",
@@ -21,10 +31,5 @@
     "tailwindcss": "^4.1.18",
     "vite": "^7.3.1",
     "vite-plugin-html-inject": "^1.1.2"
-  },
-  "dependencies": {
-    "i18next": "^25.8.7",
-    "photoswipe": "^5.4.4",
-    "swiper": "^12.1.0"
   }
 }

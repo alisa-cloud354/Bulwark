@@ -1,1 +1,52 @@
-Bulwark project is ...
+# Bulwark Fund — Support Platform for Belarusian Fighters in Ukraine
+
+A modern, lightweight web application built to facilitate communication between volunteers, donors, and the military personnel of the Belarusian units defending Ukraine. The platform features dynamic, multi-step forms that securely transmit data directly to Telegram via a dedicated serverless backend.
+
+## 🚀 Features
+
+- **Multi-step Volunteer Forms:** User-friendly workflows for "Volunteer Assistance" and "Partnership Proposals" with real-time field validation.
+- **Smart Validation:** Hybrid contact validation (Telegram handles with `@` or international phone formats).
+- **Serverless Backend:** High-performance Node.js & Express architecture, deployed as Vercel Serverless Functions.
+- **Telegram API Integration:** Instant, formatted HTML notifications sent to private channels for immediate response.
+- **Internationalization (i18n):** Native support for Belarusian, English, and other languages.
+- **Responsive Design:** Mobile-first approach using Tailwind CSS for accessibility in field conditions.
+- **Secure Architecture:** Production-grade security using Environment Variables for sensitive API credentials.
+
+## 🛠️ Technology Stack
+
+### Frontend:
+
+- **Vite:** Next-generation frontend tooling for optimized builds.
+- **Vanilla JavaScript (ES6+):** Clean, dependency-free logic for maximum performance.
+- **Tailwind CSS:** Utility-first CSS framework for rapid UI development.
+- **i18next:** Robust internationalization framework.
+
+### Backend:
+
+- **Node.js & Express:** Robust API request handling.
+- **Vercel Functions:** Auto-scaling serverless infrastructure.
+- **Telegram Bot API:** Real-time alerting system.
+
+## ⚙️ Configuration
+
+To deploy or run locally, configure the following environment variables:
+
+`TELEGRAM_TOKEN` — Your Telegram Bot token from @BotFather.  
+`TELEGRAM_CHAT_ID` — The target Chat ID for receiving form submissions.  
+`VITE_API_URL` — (Development only) Local endpoint for API testing.
+
+## 📂 Project Structure
+
+- `/api` — Serverless backend logic (Node.js/Express).
+- `/src/js` — Frontend state management and form validation.
+- `/locales` — Localization dictionaries.
+- `/public` — Static assets, icons, and branding.
+
+## 👨‍💻 Developer
+
+Developed by **Vadzim Simanau (Vadimeks)**.  
+_Full-stack JS Developer, Veteran, and Belarusian volunteer fighting in Ukraine._ 🔗 [GitHub Profile](https://github.com/Vadimeks)
+
+---
+
+_Dedicated to supporting those who protect our freedom. Glory to the heroes._

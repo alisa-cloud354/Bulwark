@@ -1,3 +1,4 @@
+/* src/js/i18n.js */
 let currentTranslations = {};
 let currentNews = [];
 
@@ -26,24 +27,36 @@ export async function setLanguage(lang) {
     // 3. Абнаўляем тэксты на старонцы
     updateAllTranslations();
 
-    // 4. Абнаўляем візуальны індыкатар мовы
+    // 4. АБНАЎЛЕННЕ SEO (НОВАЕ)
+    // Шукаем ключы seo.title і seo.description у вашым JSON
+    const pageTitle = t("seo.title");
+    const pageDesc = t("seo.description");
+
+    if (pageTitle && pageTitle !== "seo.title") {
+      document.title = pageTitle;
+    }
+
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && pageDesc && pageDesc !== "seo.description") {
+      metaDesc.setAttribute("content", pageDesc);
+    }
+
+    // 5. Абнаўляем візуальны індыкатар мовы
     const langBtnSpan = document.querySelector("#current-lang");
     if (langBtnSpan) langBtnSpan.textContent = lang.toUpperCase();
 
-    // 5. Захоўваем стан
+    // 6. Захоўваем стан
     localStorage.setItem("preferred-lang", lang);
     document.documentElement.lang = lang;
 
-    // 6. Генерируем падзею для іншых скрыптоў
+    // 7. Генерируем падзею для іншых скрыптоў
     window.dispatchEvent(new CustomEvent("languageChanged", { detail: lang }));
   } catch (error) {
     console.error("I18n Error:", error);
   }
 }
 
-/**
- * Функцыя для пошуку і замены тэкстаў па атрыбуце data-i18n
- */
+// ... астатнія функцыі (updateAllTranslations, t, getNews, initLanguageSwitcher) пакідаем без зменаў
 export function updateAllTranslations() {
   if (!currentTranslations || Object.keys(currentTranslations).length === 0)
     return;
@@ -76,9 +89,6 @@ export function updateAllTranslations() {
   });
 }
 
-/**
- * Функцыя для атрымання перакладу па ключы ў JS кодзе
- */
 export function t(key) {
   return (
     key
@@ -87,16 +97,6 @@ export function t(key) {
   );
 }
 
-/**
- * Функцыя для атрымання бягучага масіва навін
- */
-export function getNews() {
-  return currentNews;
-}
-
-/**
- * Ініцыялізацыя слухача клікаў
- */
 export function initLanguageSwitcher() {
   document.addEventListener("click", (e) => {
     const btn = e.target.closest(".lang-switch");

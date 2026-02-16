@@ -1,7 +1,7 @@
 {
   "name": "bulwark",
   "version": "1.0.0",
-  "description": "Bulwark Charity Fund",
+  "description": "Bulwark Charity Project",
   "type": "module",
   "scripts": {
     "dev": "vite",

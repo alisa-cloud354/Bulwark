@@ -1,6 +1,6 @@
 {
+  "version": 2,
   "cleanUrls": true,
-  "trailingSlash": false,
   "rewrites": [
     { "source": "/history", "destination": "/pages/history.html" },
     { "source": "/zarok-vajara", "destination": "/pages/zarok-vajara.html" },

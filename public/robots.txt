@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Спасылка на мапу сайта
+Sitemap: https://bulwark-fund.org/sitemap.xml

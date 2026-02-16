@@ -13,8 +13,6 @@ export async function initNewsSlider() {
   const loadNews = async () => {
     try {
       const lang = localStorage.getItem("preferred-lang") || "be";
-
-      // Універсальны шлях для ўсіх моў у папку locales
       const fetchPath = `/locales/news-${lang}.json`;
 
       const response = await fetch(fetchPath);
@@ -22,15 +20,23 @@ export async function initNewsSlider() {
 
       const allNews = await response.json();
 
-      const parseDate = (dateStr) => {
-        const [day, month, year] = dateStr.split(".").map(Number);
-        return new Date(year, month - 1, day);
-      };
-
+      // Сартаванне: свежыя даты зверху, пры супадзенні дат — большы ID зверху
       const sortedNews = allNews.sort((a, b) => {
-        const dateA = parseDate(a.date);
-        const dateB = parseDate(b.date);
-        return dateB - dateA || b.id - a.id;
+        const dateToNum = (d) => {
+          const parts = d.split(".");
+          const day = parts[0].padStart(2, "0");
+          const month = parts[1].padStart(2, "0");
+          const year = parts[2];
+          return parseInt(year + month + day);
+        };
+
+        const dateA = dateToNum(a.date);
+        const dateB = dateToNum(b.date);
+
+        if (dateB !== dateA) {
+          return dateB - dateA;
+        }
+        return parseInt(b.id) - parseInt(a.id);
       });
 
       const latestNews = sortedNews.slice(0, 3);
@@ -80,7 +86,7 @@ export async function initNewsSlider() {
           const newsItem = allNews.find(
             (n) => String(n.id) === String(btn.dataset.id),
           );
-          if (newsItem) openUniversalModal(newsItem);
+          if (newsItem) openUniversalModal(newsItem, "news");
         };
       });
 
@@ -91,7 +97,6 @@ export async function initNewsSlider() {
   };
 
   await loadNews();
-
   window.addEventListener("languageChanged", () => loadNews());
   window.addEventListener("resize", manageSwiper);
 }

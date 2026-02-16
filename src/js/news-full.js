@@ -11,8 +11,6 @@ export async function initFullNewsGrid() {
   const loadNews = async () => {
     try {
       const lang = localStorage.getItem("preferred-lang") || "be";
-
-      // Універсальны шлях: цяпер усё ў locales і з працяжнікам
       const fetchPath = `/locales/news-${lang}.json`;
 
       const response = await fetch(fetchPath);
@@ -20,10 +18,23 @@ export async function initFullNewsGrid() {
 
       const allNews = await response.json();
 
-      // Сартаванне навін па даце (ад новых да старых)
+      // Сартаванне: спачатку свежыя даты, пры аднолькавых датах — большы ID зверху
       const sortedNews = allNews.sort((a, b) => {
-        const parse = (d) => new Date(d.split(".").reverse().join("-"));
-        return parse(b.date) - parse(a.date);
+        const dateToNum = (d) => {
+          const parts = d.split(".");
+          const day = parts[0].padStart(2, "0");
+          const month = parts[1].padStart(2, "0");
+          const year = parts[2];
+          return parseInt(year + month + day);
+        };
+
+        const dateA = dateToNum(a.date);
+        const dateB = dateToNum(b.date);
+
+        if (dateB !== dateA) {
+          return dateB - dateA;
+        }
+        return parseInt(b.id) - parseInt(a.id);
       });
 
       gridContainer.innerHTML = sortedNews
@@ -64,7 +75,6 @@ export async function initFullNewsGrid() {
         )
         .join("");
 
-      // Ініцыялізацыя клікаў па кнопках "Чытаць цалкам"
       gridContainer.querySelectorAll(".open-news-btn").forEach((btn) => {
         btn.onclick = (e) => {
           e.preventDefault();
@@ -81,7 +91,5 @@ export async function initFullNewsGrid() {
   };
 
   await loadNews();
-
-  // Перазагружаем сетку пры змене мовы
   window.addEventListener("languageChanged", loadNews);
 }

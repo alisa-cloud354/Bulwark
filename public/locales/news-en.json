@@ -1,42 +1,50 @@
 [
   {
     "id": 1,
-    "date": "10.01.2026",
-    "title": "Bulwark Foundation Registration",
-    "excerpt": "Our foundation has been officially registered and started its activities...",
+    "date": "17.11.2025",
+    "title": "Launch of Bulwark Foundation",
+    "excerpt": "We announce the start of the foundation's activities to provide legal and psychological support to Belarusian volunteers...",
     "image": "/img/news/news-1.webp",
-    "content": "<h3>Official Start</h3><p>The Bulwark Foundation has received legal registration. This allows us to work legally and openly cooperate with partners.</p><h3>Mission</h3><p>We support Belarusian volunteers in Ukraine through legal and psychological assistance, addiction recovery programs, and the creation of a volunteer hub.</p><p>This is the first step towards systematic and transparent work.</p>"
+    "content": "<h3>Systemic Support</h3><p>The Bulwark Foundation was established to assist Belarusians who participated in the defense of Ukraine and found themselves in a vulnerable position due to lack of stable legal status and forced emigration.</p><h3>Our Focus</h3><ul><li>Free legal consultations on legalization.</li><li>Psychological assistance for overcoming traumatic experiences.</li><li>Human rights advocacy to protect beneficiaries' rights.</li></ul><p>Our goal is to ensure a dignified and secure future for those who risked their lives for freedom.</p>"
   },
   {
     "id": 2,
-    "date": "15.01.2026",
-    "title": "Domain Acquisition for the Website",
-    "excerpt": "We acquired our own domain and are preparing a communication platform...",
+    "date": "01.12.2025",
+    "title": "Official Social Media Launch",
+    "excerpt": "Bulwark is now available on Telegram, Instagram, Facebook, and LinkedIn for closer communication...",
     "image": "/img/news/news-2.webp",
-    "content": "<h3>Own Platform</h3><p>The Bulwark Foundation has obtained its own domain, which will serve as the basis for our website.</p><h3>Convenience and Transparency</h3><p>The website will host news, reports, and instructions for volunteers. This is an important step in building a reliable information base.</p>"
+    "content": "<h3>Let's Stay Connected</h3><p>We have opened official pages on popular social networks. This will allow us to be closer to our beneficiaries and the community.</p><h3>What will you find on our channels?</h3><ul><li>Operating news about the foundation's activities.</li><li>Explanations of complex legal procedures.</li><li>Stories and opportunities for support.</li><li>Updates for volunteers and their families.</li></ul>"
   },
   {
     "id": 3,
-    "date": "05.02.2026",
-    "title": "Launch of Telegram Bot",
-    "excerpt": "We created a Telegram bot for quick communication and support...",
+    "date": "16.02.2026",
+    "title": "Bulwark Platform Launch: A New Stage of Support",
+    "excerpt": "We are officially launching a unified information resource to help Belarusian volunteers. Transparency, a knowledge base, and systemic support — all in one place.",
     "image": "/img/news/news-3.webp",
-    "content": "<h3>New Tool</h3><p>The Bulwark Foundation’s Telegram bot helps users receive news, find contacts, and quickly join volunteer programs.</p><h3>Accessibility</h3><p>The bot works around the clock and makes communication simpler and more effective.</p>"
+    "content": "<div class='modal-nav-internal'> <a href='#news-mission'>Our Mission</a> <a href='#news-features'>Features</a> <a href='#news-partners'>For Partners</a> <a href='#news-volunteers'>For Volunteers</a> </div> <h3 id='news-mission'>Our Mission</h3> <p>Bulwark is the answer to the demand for systemic support. We have created a platform that doesn't just collect donations but builds a bridge between those who help and those on the front line.</p> <p><b>Main Goal:</b> Maximum resource efficiency and legal safety for every fighter.</p> <h3 id='news-features'>What Does the Platform Provide?</h3> <ul> <li><b>Knowledge Base:</b> Detailed instructions on legalization in Ukraine, obtaining statuses, and documents.</li> <li><b>Accountability:</b> Regular publications on the targeted use of funds.</li> <li><b>Fast Contact:</b> A direct channel for volunteer inquiries.</li> </ul>"
   },
   {
     "id": 4,
-    "date": "12.02.2026",
-    "title": "Creation of Telegram Channel",
-    "excerpt": "We opened an official channel for news and updates...",
+    "date": "16.02.2026",
+    "title": "Update of the 'Materials' Section",
+    "excerpt": "We have prepared new instructions on legalization and document recovery...",
     "image": "/img/news/news-4.webp",
-    "content": "<h3>Official Channel</h3><p>The Bulwark Telegram channel has become the main point for publishing news and updates.</p><h3>Community</h3><p>Here we share information about new programs, reports, and volunteer opportunities. The channel unites people who want to help and stay informed.</p>"
+    "content": "<h3>Knowledge is Protection</h3><p>The 'Materials' section on our website has been significantly expanded. We have gathered up-to-date information to help avoid legal traps.</p><h3>New Topics:</h3><ul><li>Detailed guides on legalization in Ukraine.</li><li>Procedures for recovering lost documents.</li><li>Analysis of deportation risks and methods of legal defense.</li></ul><p>We recommend reviewing these materials before submitting any documents to state authorities.</p>"
   },
   {
     "id": 5,
     "date": "16.02.2026",
-    "title": "Bulwark Platform Launch: A New Stage of Support",
-    "excerpt": "We are officially launching a unified information resource to help Belarusian volunteers. Transparency, a knowledge base, and systematic support — now in one place.",
+    "title": "Join the Team: Looking for Volunteers",
+    "excerpt": "Join the support for Belarusian volunteers. We need your help in communication and project organization...",
     "image": "/img/news/news-5.webp",
-    "content": "<div class='modal-nav-internal'> <a href='#news-mission'>Platform Mission</a> <a href='#news-features'>Features</a> <a href='#news-partners'>For Partners</a> <a href='#news-volunteers'>For Volunteers</a> </div> <h3 id='news-mission'>Our Mission</h3> <p>Bulwark is a response to the demand for systematic support. We have created a platform that doesn't just collect donations but builds a bridge between those who help and those on the front lines.</p> <p><b>Main goal:</b> maximum efficiency of resources and legal safety of every soldier.</p> <h3 id='news-features'>What does the platform offer?</h3> <ul> <li><b>Knowledge Base:</b> detailed instructions on legalization in Ukraine, obtaining statuses, and documents.</li> <li><b>Accountability:</b> regular publications on the targeted use of funds.</li> <li><b>Fast Communication:</b> a direct channel for volunteer requests.</li> </ul> <h3 id='news-partners'>Benefits for Partners</h3> <p>We understand the importance of trust. Therefore, for large foundations and private philanthropists, we provide:</p> <ul> <li>full audit of purchases;</li> <li>photo and video confirmation of aid delivery;</li> <li>direct communication with unit commanders.</li> </ul> <h3 id='news-volunteers'>For Volunteers</h3> <p>If you are a Belarusian fighting for Ukraine, Bulwark is your rear assistant. Here you will find answers to complex questions: from how to move your family to what to do in case of legal disputes with the migration service.</p> <div class='note-block'>The site is operating in test mode. If you notice an error, please let us know via the feedback form.</div>"
+    "content": "<h3>Become a Part of Bulwark</h3><p>Our foundation is looking for volunteers ready to donate their time and talent for a common cause. Your help will allow us to reach more beneficiaries.</p><h3>Where is Help Needed?</h3><ul><li>Communication with volunteers and their families.</li><li>Organization of events and humanitarian meetings.</li><li>Preparation of information and design materials.</li><li>Administrative project support.</li></ul><p>If you want to contribute to the protection of human dignity, write to us via the contact form on the website.</p>"
+  },
+  {
+    "id": 6,
+    "date": "16.02.2026",
+    "title": "Call for Expert Cooperation",
+    "excerpt": "We invite lawyers, psychologists, and human rights specialists to join our programs...",
+    "image": "/img/news/news-6.webp",
+    "content": "<h3>Expert Support</h3><p>We invite experts in the fields of law, psychology, social work, and mediation for cooperation. Your expertise is the key to systemic solutions.</p><h3>What we offer experts:</h3><ul><li>Participation in the preparation of analytical materials.</li><li>Consultations for the foundation's beneficiaries.</li><li>Development of legal defense strategies at the state level.</li></ul><p>If you are ready to share your experience and knowledge, please contact us to discuss the format of cooperation.</p>"
   }
 ]

@@ -1,9 +1,7 @@
 {
-  "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/index.js" },
     { "source": "/history", "destination": "/pages/history.html" },
     { "source": "/zarok-vajara", "destination": "/pages/zarok-vajara.html" },
     { "source": "/projects", "destination": "/pages/projects.html" },

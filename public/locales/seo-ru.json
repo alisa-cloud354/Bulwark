@@ -1,0 +1,22 @@
+{
+  "seo": {
+    "index": {
+      "title": "Bulwark Fund | Помощь белорусским добровольцам",
+      "description": "Благотворительный фонд Bulwark. Поддержка белорусских воинов в Украине: юридическая помощь, реабилитация, кадровый резерв. Присоединяйся!",
+      "og_title": "Bulwark Fund | BY / EN",
+      "og_description": "Помощь белорусским добровольцам в Украине. Support for Belarusian volunteers in Ukraine.",
+      "og_site_name": "Bulwark Fund",
+      "twitter_title": "Bulwark Fund | BY / EN",
+      "twitter_description": "Помощь белорусским добровольцам в Украине. Support for Belarusian volunteers in Ukraine."
+    },
+    "projects": {
+      "title": "Проекты | Bulwark Fund",
+      "description": "Наши проекты: полное юридическое сопровождение, психологическая опора и реабилитация белорусских добровольцев в Украине.",
+      "og_title": "Наши проекты | Bulwark Fund",
+      "og_description": "Юридическая помощь, легализация и психологическая поддержка белорусских воинов. Узнайте больше о направлениях нашей работы.",
+      "og_site_name": "Bulwark Fund",
+      "twitter_title": "Наши проекты | Bulwark Fund",
+      "twitter_description": "Правовой щит и психологическая опора для белорусских добровольцев."
+    }
+  }
+}

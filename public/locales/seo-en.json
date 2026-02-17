@@ -2,21 +2,30 @@
   "seo": {
     "index": {
       "title": "Bulwark Fund | Support for Belarusian Volunteers",
-      "description": "Bulwark Charitable Foundation. Supporting Belarusian fighters in Ukraine: legal aid, rehabilitation, and personnel reserve. Join us!",
-      "og_title": "Bulwark Fund | BY / EN",
-      "og_description": "Support for Belarusian volunteers in Ukraine. Helping those who fight for freedom.",
+      "description": "Bulwark Charity Foundation. Support for Belarusian fighters in Ukraine: legal aid, rehabilitation, personnel reserve. Join us!",
+      "og_title": "Bulwark Fund | EN",
+      "og_description": "Support for Belarusian volunteers in Ukraine. Fighting for freedom together.",
       "og_site_name": "Bulwark Fund",
-      "twitter_title": "Bulwark Fund | BY / EN",
-      "twitter_description": "Support for Belarusian volunteers in Ukraine. Helping those who fight for freedom."
+      "twitter_title": "Bulwark Fund | EN",
+      "twitter_description": "Support for Belarusian volunteers in Ukraine."
     },
     "projects": {
-      "title": "Projects | Bulwark Fund",
-      "description": "Our projects: comprehensive legal support, psychological aid, and rehabilitation for Belarusian volunteers in Ukraine.",
+      "title": "Our Projects | Bulwark Fund",
+      "description": "Our projects: supporting Belarusian volunteers. Legal aid and rehabilitation for fighters.",
       "og_title": "Our Projects | Bulwark Fund",
-      "og_description": "Legal aid, legalization, and mental health support for Belarusian fighters. Learn more about our key initiatives.",
+      "og_description": "Legal aid and psychological support for fighters. Learn more about our mission.",
       "og_site_name": "Bulwark Fund",
       "twitter_title": "Our Projects | Bulwark Fund",
-      "twitter_description": "Legal shield and psychological support for Belarusian volunteers."
+      "twitter_description": "Supporting Belarusian volunteers in Ukraine."
+    },
+    "history": {
+      "title": "Historical Background | Bulwark Fund",
+      "description": "Shared history and the struggle for independence. Roots of our common destiny.",
+      "og_title": "Historical Background | Bulwark Fund",
+      "og_description": "Why a free Ukraine is the key to a free Belarus. Historical context of the struggle.",
+      "og_site_name": "Bulwark Fund",
+      "twitter_title": "Historical Background | Bulwark Fund",
+      "twitter_description": "Logic of history: our survival is interdependent."
     }
   }
 }

@@ -52,8 +52,6 @@ export async function setLanguage(lang) {
 
     // 8. Генерируем падзею для іншых модуляў (напрыклад, для слайдэра навін)
     window.dispatchEvent(new CustomEvent("languageChanged", { detail: lang }));
-
-    console.log(`Мова паспяхова зменена на: ${lang}`);
   } catch (error) {
     console.error("I18n Error:", error);
   }

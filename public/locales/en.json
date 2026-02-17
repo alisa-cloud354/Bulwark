@@ -1,10 +1,4 @@
 {
-  "seo": {
-    "title": "Bulwark Fund | Help for Belarusian volunteers",
-    "description": "Bulwark Charity Fund. Supporting Belarusian warriors in Ukraine: legal aid, rehabilitation, and resource reserve. Join us!",
-    "og_title": "Bulwark Fund | BY / EN",
-    "og_description": "Support for Belarusian volunteers in Ukraine. Help us defend freedom."
-  },
   "nav": {
     "location": "Ukraine",
     "about": "About the Fund",
@@ -189,7 +183,6 @@
   },
 
   "projects": {
-    "page_title": "Projects | Bulwark",
     "subtitle": "What we do",
     "main_title": "Our projects",
     "apply_button": "Apply now",

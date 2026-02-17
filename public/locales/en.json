@@ -348,5 +348,11 @@
     "text": "We use cookies to enhance your experience. By continuing to visit this site you agree to our",
     "policy_link": "Privacy Policy",
     "accept": "Accept"
+  },
+  "reports": {
+    "page_title": "Reports",
+    "loading": "Loading...",
+    "error": "Failed to load reports. Please try again later.",
+    "more_btn": "More"
   }
 }

@@ -26,6 +26,15 @@
       "og_site_name": "Bulwark Fund",
       "twitter_title": "Исторический экскурс | Bulwark Fund",
       "twitter_description": "Логика истории: наше выживание взаимозависимо."
+    },
+    "reports": {
+      "title": "Отчеты | Bulwark Fund",
+      "description": "Финансовые и программные отчеты фонда Bulwark. Прозрачность нашей работы и отчетность перед обществом.",
+      "og_title": "Отчеты | Bulwark Fund",
+      "og_description": "Прозрачность и отчетность в помощи белорусским добровольцам. Как работают ваши пожертвования.",
+      "og_site_name": "Bulwark Fund",
+      "twitter_title": "Отчеты | Bulwark Fund",
+      "twitter_description": "Узнайте, как мы используем ваши пожертвования для поддержки воинов."
     }
   }
 }

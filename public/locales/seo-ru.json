@@ -35,6 +35,15 @@
       "og_site_name": "Bulwark Fund",
       "twitter_title": "Отчеты | Bulwark Fund",
       "twitter_description": "Узнайте, как мы используем ваши пожертвования для поддержки воинов."
+    },
+    "materials": {
+      "title": "Материалы | Knowledge Base | Bulwark Fund",
+      "description": "База знаний для белорусских добровольцев: легализация в Украине, восстановление документов, безопасность и правовая защита.",
+      "og_title": "Материалы | База знаний | Bulwark Fund",
+      "og_description": "Юридические инструкции и полезные материалы по легализации и защите прав добровольцев.",
+      "og_site_name": "Bulwark Fund",
+      "twitter_title": "Материалы | Knowledge Base",
+      "twitter_description": "Пошаговые инструкции по юридическим вопросам для воинов в эмиграции."
     }
   }
 }

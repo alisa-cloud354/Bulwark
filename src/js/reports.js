@@ -5,13 +5,12 @@ export async function initFullReportsGrid() {
   const gridContainer = document.getElementById("reports-grid-full");
   if (!gridContainer) return;
 
-  // Ствараем функцыю загрузкі, якую будзем выклікаць пры кожнай змене мовы
   const loadReports = async () => {
     try {
       const lang = localStorage.getItem("preferred-lang") || "be";
-      // Вызначаем шлях да патрэбнага JSON-файла
-      const fetchPath =
-        lang === "be" ? "/data/reports.json" : `/locales/reports-${lang}.json`;
+
+      // Шлях да файла з дадзенымі справаздач
+      const fetchPath = `/locales/reports-${lang}.json`;
 
       const response = await fetch(fetchPath);
       if (!response.ok)
@@ -19,13 +18,11 @@ export async function initFullReportsGrid() {
 
       const allReports = await response.json();
 
-      // Сартаванне: самыя свежыя па даце заўсёды зверху
       const sortedReports = allReports.sort((a, b) => {
         const parse = (d) => new Date(d.split(".").reverse().join("-"));
         return parse(b.date) - parse(a.date);
       });
 
-      // Гнеруй сетку карткаў
       gridContainer.innerHTML = sortedReports
         .map(
           (report) => `
@@ -53,7 +50,7 @@ export async function initFullReportsGrid() {
               <button type="button" 
                       class="open-report-btn mt-auto text-white text-[10px] font-black uppercase tracking-widest flex items-center gap-2 group-hover:text-red-600 transition-all" 
                       data-id="${report.id}">
-                <span>${report.more || "Больш"}</span>
+                <span>${report.more || t("reports.more_btn") || "Больш"}</span>
                 <i class="fa-solid fa-chevron-right text-[8px] group-hover:translate-x-1 transition-transform"></i>
               </button>
             </div>
@@ -62,7 +59,6 @@ export async function initFullReportsGrid() {
         )
         .join("");
 
-      // Навешваем падзею кліку на кожную кнопку
       gridContainer.querySelectorAll(".open-report-btn").forEach((btn) => {
         btn.onclick = (e) => {
           e.preventDefault();
@@ -76,13 +72,11 @@ export async function initFullReportsGrid() {
       });
     } catch (error) {
       console.error("Памылка пры загрузцы сеткі справаздач:", error);
-      gridContainer.innerHTML = `<p class="text-white">Памылка загрузкі дадзеных.</p>`;
+      // Выкарыстоўваем статычны ключ для памылкі
+      gridContainer.innerHTML = `<p class="text-white/50 text-sm uppercase tracking-widest p-12 text-center">${t("reports.error") || "Памылка загрузкі."}</p>`;
     }
   };
 
-  // Першы запуск пры загрузцы старонкі
   await loadReports();
-
-  // Гэта ключавы момант: слухаем падзею змены мовы, каб перамаляваць кантэнт без рэфрэшу старонкі
   window.addEventListener("languageChanged", loadReports);
 }

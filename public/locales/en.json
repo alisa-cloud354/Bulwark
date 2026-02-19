@@ -319,5 +319,12 @@
     "loading": "Loading...",
     "error": "Failed to load reports. Please try again later.",
     "more_btn": "More"
+  },
+  "zarok": {
+    "title": "The Fighter's Oath",
+    "content": "<p>Belarus! My Motherland!</p><p>I swear to liberate and defend You wherever I am now and wherever the fate of Your liberation may lead me.</p><p>To fight until victory for Your freedom, as our ancestors fought against the Muscovite horde's oppression at Orsha, Smolensk, and Polonka.</p><p>To relentlessly drive the rootless oprichniks from Your lands, as did the warriors of the Grand Duchy of Lithuania and the Belarusian nobility, the scythe-bearers of Kosciuszko, and the rebels of Kalinouski.</p><p>To defend the blood of Your nation, the strength of Your land, and the Divine spirit of Your existence.</p><p>In the ranks of free brothers and in captivity, at home and in exile, in battle and in the underground.</p><p>May my hands grip the weapon until the gallows cease to grip the necks of Your sons.</p><p>May the clang of my bolt-action never cease as long as the clang of bars is heard behind the backs of Your heroes.</p><p>May my life be long enough to avenge all Your tortured, violated, and murdered children.</p><p>Until the last shimmer of Your rivers in my eyes, as long as the gallop of the Pahonia is heard in my heart.</p><p>To live for You, to die for You, and to restore Your greatness.</p>",
+    "slogan": "Long Live Belarus! Live Forever!",
+    "repeat_line1": "Belarus! My Motherland!",
+    "repeat_line2": "I swear to liberate and defend You..."
   }
 }

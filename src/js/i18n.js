@@ -1,6 +1,6 @@
 /* src/js/i18n.js */
 
-let currentTranslations = {};
+window.currentTranslations = {};
 let currentNews = [];
 let currentSEO = {};
 
@@ -14,7 +14,7 @@ export async function setLanguage(lang) {
     const mainRes = await fetch(`/locales/${lang}.json`);
     if (!mainRes.ok)
       throw new Error(`Асноўны файл перакладаў не знойдзены: ${lang}`);
-    currentTranslations = await mainRes.json();
+    window.currentTranslations = await mainRes.json();
 
     // 2. Загружаем файл навін для канкрэтнай мовы
     try {
@@ -132,7 +132,8 @@ export function t(key) {
   return (
     key
       .split(".")
-      .reduce((obj, i) => (obj ? obj[i] : null), currentTranslations) || key
+      .reduce((obj, i) => (obj ? obj[i] : null), window.currentTranslations) ||
+    key
   );
 }
 
@@ -140,16 +141,16 @@ export function t(key) {
  * Абнаўленне ўсіх элементаў з атрыбутам data-i18n
  */
 export function updateAllTranslations() {
-  if (!currentTranslations || Object.keys(currentTranslations).length === 0)
-    return;
+  // Выкарыстоўваем глабальны аб'ект
+  const translations = window.currentTranslations;
+
+  if (!translations || Object.keys(translations).length === 0) return;
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     let attrValue = el.getAttribute("data-i18n");
     if (!attrValue) return;
 
     let targetAttr = null;
-
-    // Падтрымка атрыбутаў, напрыклад data-i18n="[placeholder]contacts.name"
     if (attrValue.startsWith("[")) {
       const match = attrValue.match(/^\[(.+?)\](.+)$/);
       if (match) {
@@ -158,9 +159,10 @@ export function updateAllTranslations() {
       }
     }
 
+    // Пошук па актуальных даных (якія ўключаюць і асноўны файл, і дакінутыя файлы)
     const translation = attrValue
       .split(".")
-      .reduce((obj, i) => (obj ? obj[i] : null), currentTranslations);
+      .reduce((obj, i) => (obj ? obj[i] : null), translations);
 
     if (translation) {
       if (targetAttr) {

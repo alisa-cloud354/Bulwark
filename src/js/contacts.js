@@ -1,7 +1,43 @@
-export function initContacts() {
+import { updateAllTranslations } from "./i18n.js";
+
+export async function initContacts() {
+  // --- НОВАЕ: Функцыя загрузкі моўных дадзеных ---
+  async function loadContactsData() {
+    try {
+      const lang = localStorage.getItem("preferred-lang") || "be";
+      const response = await fetch(`/locales/contacts/contacts-${lang}.json`);
+
+      if (!response.ok)
+        throw new Error(`Файл кантактаў не знойдзены для мовы: ${lang}`);
+
+      const data = await response.json();
+
+      // ЗАХОЎВАЕМ ГЛАБАЛЬНА: зліваем новыя ключы (contacts, ui, foundation і г.д.)
+      // у агульны аб'ект window.currentTranslations
+      window.currentTranslations = {
+        ...(window.currentTranslations || {}),
+        ...data,
+      };
+
+      // Выклікаем рэндэр тэкстаў, каб яны замяніліся ў HTML
+      updateAllTranslations();
+    } catch (error) {
+      console.error("Contacts Data Error:", error);
+    }
+  }
+
+  // 1. Загружаем дадзеныя пры ініцыялізацыі старонкі
+  await loadContactsData();
+
+  // 2. Слухаем змену мовы (калі карыстальнік клікнуў на пераключальнік у шапцы)
+  window.addEventListener("languageChanged", async () => {
+    await loadContactsData();
+  });
+
+  // --- Твая існуючая логіка (без зменаў) ---
+
   // 1. Капіяванне рэквізітаў
   const copyButtons = document.querySelectorAll(".copy-btn");
-
   copyButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const textToCopy = button.getAttribute("data-copy");
@@ -25,7 +61,7 @@ export function initContacts() {
     });
   });
 
-  // 2. Анімацыя з'яўлення (Intersection Observer)
+  // 2. Анімацыя з'яўлення
   const observerOptions = {
     threshold: 0.05,
     rootMargin: "0px 0px -50px 0px",
@@ -40,7 +76,6 @@ export function initContacts() {
     });
   }, observerOptions);
 
-  // Селектар для ўсіх картак у сайдбары і асноўным кантэнце
   const itemsToAnimate = document.querySelectorAll(
     ".contact-sidebar > div, .contact-main-content > div",
   );

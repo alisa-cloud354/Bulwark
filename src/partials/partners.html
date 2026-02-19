@@ -92,15 +92,14 @@
             <form id="partners-form" class="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div id="partner-step-1" class="w-full">
                     <input type="text" name="org_name" data-i18n="[placeholder]forms.org"
-                        placeholder="Арганізацыя / Імя" required minlength="2" maxlength="100" autocomplete="off"
-                        autocapitalize="none"
+                        placeholder="Арганізацыя / Імя (мін.2 сімвалы)" required minlength="2" maxlength="100"
+                        autocomplete="off" autocapitalize="none"
                         class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-colors font-medium">
                 </div>
 
                 <div id="partner-step-2" class="w-full pointer-events-none transition-all duration-500">
                     <input type="text" name="contact" data-i18n="[placeholder]forms.contact"
-                        placeholder="Email / Telegram" required
-                        pattern="(@[A-Za-z0-9_]{4,}|^[^\s@]+@[^\s@]+\.[^\s@]+$|\+?[0-9]{7,20})"
+                        placeholder="Email (xxx@xx.xxx) / Phone (+38...)" required
                         class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-colors font-medium">
                 </div>
 

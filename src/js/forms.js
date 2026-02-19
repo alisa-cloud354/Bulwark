@@ -3,14 +3,26 @@ import { t } from "./i18n.js";
 const API_URL = import.meta.env.VITE_API_URL || "";
 
 /**
- * Простая валідацыя кантакту:
- * Альбо ёсць '@' (пошта/ТГ), альбо пачынаецца з '+' і далей лічбы (тэлефон/сігнал)
+ * Валідацыя кантакту:
+ * - Калі ёсць '@' (Пошта, ТГ, Signal) — мінімум 3 сімвалы.
+ * - Калі няма '@', патрабуем пачатак з '+' і лічбы (Тэлефон, Signal).
  */
 function isValidContact(value) {
   const val = value.trim();
-  if (val.includes("@")) return val.length >= 3;
-  const phoneRegex = /^\+[0-9]{7,15}$/;
-  return phoneRegex.test(val);
+
+  // 1. Калі ёсць '@' — дазваляем нікі з кропкамі, лічбамі і цірэ (Signal, TG, Email)
+  if (val.includes("@")) {
+    // Для ніка дастаткова 3 сімвалаў (напрыклад, @a.1)
+    return val.length >= 3;
+  }
+
+  // 2. Калі '@' няма, патрабуем пачатак з '+' для тэлефона
+  if (val.startsWith("+")) {
+    const cleanPhone = val.replace(/[^\d+]/g, "");
+    return cleanPhone.length >= 10 && cleanPhone.length <= 15;
+  }
+
+  return false;
 }
 
 export function initForms() {
@@ -26,7 +38,7 @@ export function initForms() {
     const inputContact = helpForm.querySelector('[name="user_contact"]');
     const submitBtn = helpForm.querySelector('button[type="submit"]');
 
-    if (inputContact) inputContact.placeholder = "@username | +375XXXXXXXXX";
+    if (inputContact) inputContact.placeholder = "@username | +380XXXXXXXXX";
 
     helpForm.addEventListener("input", () => {
       // 1. Праверка Імя (мін 2 сімвалы)

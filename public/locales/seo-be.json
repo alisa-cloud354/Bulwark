@@ -37,13 +37,13 @@
       "twitter_description": "Даведайцеся, як мы выкарыстоўваем вашы ахвяраванні для падтрымкі воінаў. Learn how we use your donations to support fighters."
     },
     "materials": {
-      "title": "Матеріали | Knowledge Base | Bulwark Fund",
-      "description": "База знань для білоруських добровольців: легалізація в Україні, відновлення документів, безпека та правовий захист.",
-      "og_title": "Матеріали | База знань | Bulwark Fund",
-      "og_description": "Юридичні інструкції та корисні матеріали з легалізації та захисту прав добровольців.",
+      "title": "Матэрыялы | База ведаў | Bulwark Fund | Knowledge Base",
+      "description": "База ведаў для беларускіх добраахвотнікаў: легалізацыя ва Украіне, аднаўленне дакументаў, бяспека і прававая абарона. | Knowledge base for Belarusian volunteers: legalization in Ukraine, document recovery, security and legal protection.",
+      "og_title": "Матэрыялы | База ведаў | Bulwark Fund",
+      "og_description": "Юрыдычныя інструкцыі і карысныя матэрыялы па легалізацыі і абароне правоў добраахвотнікаў. | Legal instructions and useful materials on legalization and protection of volunteer rights.",
       "og_site_name": "Bulwark Fund",
-      "twitter_title": "Матеріали | Knowledge Base",
-      "twitter_description": "Покрокові інструкції з юридичних питань для воїнів в еміграції."
+      "twitter_title": "Матэрыялы | Knowledge Base",
+      "twitter_description": "Пакрокавыя інструкцыі па юрыдычных пытаннях для ваяроў у эміграцыі. | Step-by-step instructions on legal issues for fighters in emigration."
     },
     "contacts": {
       "title": "Кантакты | Contacts | Bulwark Fund",
@@ -63,6 +63,24 @@
       "og_site_name": "Bulwark Fund",
       "twitter_title": "Галерэя Bulwark Fund | BY / EN",
       "twitter_description": "Гісторыя беларускага добраахвотніцкага руху ў фотаздымках. | The history of the Belarusian fighters movement in photographs."
+    },
+    "news_full": {
+      "title": "Навіны (архіў) | Bulwark Fund | News Archive",
+      "description": "Архіў навін і падзей фонду Bulwark. Сачыце за нашай дзейнасцю. | Archive of news and events of the Bulwark Fund. Follow our activities.",
+      "og_title": "Навіны (архіў) | Bulwark Fund | News Archive",
+      "og_description": "Поўны архіў падзей і дзейнасці фонду. | Full archive of the fund's events and activities.",
+      "og_site_name": "Bulwark Fund",
+      "twitter_title": "Навіны (архіў) | Bulwark Fund | News Archive",
+      "twitter_description": "Усе навіны фонду ў адным месцы. | All fund news in one place."
+    },
+    "get_help": {
+      "title": "Атрымаць дапамогу | Bulwark Fund | Get Help",
+      "description": "Падтрымка беларускіх добраахвотнікаў і ветэранаў ва Украіне: легалізацыя, прававы статус, рэабілітацыя. | Support for Belarusian volunteers and veterans in Ukraine: legalization, legal status, rehabilitation.",
+      "og_title": "Атрымаць дапамогу | Bulwark Fund | Get Help",
+      "og_description": "Бяспечны канал сувязі для атрымання падтрымкі добраахвотнікам. | A secure communication channel for obtaining support for volunteers.",
+      "og_site_name": "Bulwark Fund",
+      "twitter_title": "Атрымаць дапамогу | Bulwark Fund | Get Help",
+      "twitter_description": "Бяспечная сувязь і падтрымка нашых ваяроў. | Secure communication and support for our fighters."
     }
   }
 }

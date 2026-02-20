@@ -63,6 +63,24 @@
       "og_site_name": "Bulwark Fund",
       "twitter_title": "Bulwark Fund Gallery",
       "twitter_description": "The history of the Belarusian fighters movement in photographs."
+    },
+    "news_full": {
+      "title": "News Archive | Bulwark Fund",
+      "description": "Archive of news and events of the Bulwark Fund. Follow our activities.",
+      "og_title": "News Archive | Bulwark Fund",
+      "og_description": "Full archive of the fund's events and activities.",
+      "og_site_name": "Bulwark Fund",
+      "twitter_title": "News Archive | Bulwark Fund",
+      "twitter_description": "All fund news in one place."
+    },
+    "get_help": {
+      "title": "Get Help | Bulwark Fund",
+      "description": "Support for Belarusian volunteers and veterans in Ukraine: legalization, legal status, rehabilitation.",
+      "og_title": "Get Help | Bulwark Fund",
+      "og_description": "A secure communication channel for obtaining support for volunteers.",
+      "og_site_name": "Bulwark Fund",
+      "twitter_title": "Get Help | Bulwark Fund",
+      "twitter_description": "Secure communication and support for our fighters."
     }
   }
 }

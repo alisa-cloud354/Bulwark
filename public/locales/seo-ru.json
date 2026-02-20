@@ -63,6 +63,24 @@
       "og_site_name": "Bulwark Fund",
       "twitter_title": "Галерея Bulwark Fund",
       "twitter_description": "История белорусского добровольческого движения в фотографиях."
+    },
+    "news_full": {
+      "title": "Новости (архив) | Bulwark Fund | News Archive",
+      "description": "Архив новостей и событий фонда Bulwark. Следите за нашей деятельностью.",
+      "og_title": "Новости (архив) | Bulwark Fund | News Archive",
+      "og_description": "Полный архив событий и деятельности фонда.",
+      "og_site_name": "Bulwark Fund",
+      "twitter_title": "Новости (архив) | Bulwark Fund | News Archive",
+      "twitter_description": "Все новости фонда в одном месте."
+    },
+    "get_help": {
+      "title": "Получить помощь | Bulwark Fund | Get Help",
+      "description": "Поддержка белорусских добровольцев и ветеранов в Украине: легализация, правовой статус, реабилитация.",
+      "og_title": "Получить помощь | Bulwark Fund | Get Help",
+      "og_description": "Безопасный канал связи для получения поддержки добровольцами.",
+      "og_site_name": "Bulwark Fund",
+      "twitter_title": "Получить помощь | Bulwark Fund | Get Help",
+      "twitter_description": "Безопасная связь и поддержка наших воинов."
     }
   }
 }

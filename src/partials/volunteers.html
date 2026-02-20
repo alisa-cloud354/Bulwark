@@ -49,6 +49,10 @@
             </div>
 
             <div class="bg-black/50 p-6 md:p-10 border border-white/10 shadow-2xl relative">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-red-600"></div>
+
+                <p class="text-red-600 mb-8 uppercase font-black text-xs tracking-[0.3em] text-center"
+                    data-i18n="volunteers.cta">Патрэбна дапамога? Напішыце нам</p>
                 <form id="help-form" class="space-y-5">
                     <div id="help-step-1">
                         <input type="text" name="user_name" data-i18n="[placeholder]volunteers.name_placeholder"
@@ -65,6 +69,8 @@
                                 <option value="Дзейны вайсковец" data-i18n="volunteers.status_active">Дзейны вайсковец
                                 </option>
                                 <option value="Ветэран" data-i18n="volunteers.status_veteran">Ветэран</option>
+                                <option value="Сям'я добраахвотніка" data-i18n="volunteers.status_family">Сям'я
+                                    добраахвотніка</option>
                             </select>
                             <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
                                 <i class="fa-solid fa-chevron-down text-[10px] text-gray-500"></i>

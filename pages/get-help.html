@@ -49,9 +49,11 @@
                 <span data-i18n="get_help.tag"
                     class="text-red-600 font-black uppercase tracking-[0.3em] text-[10px] block mb-4 italic">Support
                     Service</span>
-                <h1 data-i18n="get_help.main_title"
+                <h1
                     class="text-3xl sm:text-4xl md:text-7xl font-black uppercase italic leading-none tracking-tighter mb-10 break-words">
-                    Дапамога <br><span
+                    <span data-i18n="get_help.main_title_part1">Дапамога</span>
+                    <br>
+                    <span data-i18n="get_help.main_title_accent"
                         class="text-red-600 underline decoration-2 underline-offset-8">добраахвотнікам</span>
                 </h1>
 
@@ -63,7 +65,7 @@
                             статусу і здароўя.
                         </p>
                         <div class="p-6 bg-red-600/5 border border-red-600/20">
-                            <p data-i18n="volunteers.warning"
+                            <p data-i18n="get_help.warning_text"
                                 class="text-[10px] text-gray-400 uppercase tracking-widest font-black leading-relaxed break-words">
                                 Важна: Мы не займаемся зборам на зброю ці амуніцыю. Наша задача — ваш прававы і
                                 ментальны статус.
@@ -73,18 +75,18 @@
 
                     <div class="grid grid-cols-1 gap-4">
                         <div class="p-6 bg-[#050505] border border-white/10">
-                            <h4 data-i18n="volunteers.crit1_title"
+                            <h4 data-i18n="get_help.crit1_title"
                                 class="text-red-600 font-black uppercase text-[10px] tracking-widest mb-2 italic">Для
                                 каго</h4>
-                            <p data-i18n="volunteers.crit1_text_short"
-                                class="text-sm font-bold uppercase tracking-tighter break-words">Дзейныя вайскоўцы і
-                                ветэраны-беларусы.</p>
+                            <p data-i18n="get_help.crit1_text"
+                                class="text-sm font-bold uppercase tracking-tighter break-words">Дзейныя
+                                вайскоўцы і ветэраны-беларусы.</p>
                         </div>
                         <div class="p-6 bg-[#050505] border border-white/10">
-                            <h4 data-i18n="volunteers.crit2_title"
+                            <h4 data-i18n="get_help.crit2_title"
                                 class="text-red-600 font-black uppercase text-[10px] tracking-widest mb-2 italic">
                                 Напрамкі</h4>
-                            <p data-i18n="volunteers.crit2_text_short"
+                            <p data-i18n="get_help.crit2_text"
                                 class="text-sm font-bold uppercase tracking-tighter italic text-gray-400 break-words">
                                 Легалізацыя,
                                 экстрадыцыя, ПТСР-дапамога, аднаўленне дакументаў.</p>
@@ -95,14 +97,16 @@
 
             <section class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start border-t border-white/10 pt-20">
                 <div class="space-y-12">
-                    <h2 data-i18n="get_help.form_section_title"
-                        class="text-3xl md:text-4xl font-black uppercase italic tracking-tighter break-words">Аформіць
-                        <br><span class="text-red-600">запыт</span>
+                    <h2 class="text-3xl md:text-4xl font-black uppercase italic tracking-tighter break-words">
+                        <span data-i18n="get_help.form_title_row1">Аформіць</span>
+                        <br>
+                        <span data-i18n="get_help.form_title_row2" class="text-red-600">запыт</span>
                     </h2>
 
                     <div class="space-y-8">
                         <div class="flex gap-6 items-start">
-                            <div class="text-2xl text-red-600 italic font-black">01</div>
+                            <div data-i18n="get_help.step1_number" class="text-2xl text-red-600 italic font-black">01
+                            </div>
                             <div class="min-w-0">
                                 <h4 data-i18n="get_help.step1_title" class="font-black uppercase text-sm mb-2 italic">
                                     Бяспечная сувязь</h4>
@@ -113,7 +117,8 @@
                             </div>
                         </div>
                         <div class="flex gap-6 items-start">
-                            <div class="text-2xl text-red-600 italic font-black">02</div>
+                            <div data-i18n="get_help.step2_number" class="text-2xl text-red-600 italic font-black">02
+                            </div>
                             <div class="min-w-0">
                                 <h4 data-i18n="get_help.step2_title" class="font-black uppercase text-sm mb-2 italic">
                                     Апрацоўка</h4>
@@ -134,29 +139,29 @@
                 </div>
 
                 <div class="bg-black/50 p-6 md:p-12 border border-white/10 shadow-2xl relative">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-red-600"></div>
+
+                    <p class="text-red-600 mb-8 uppercase font-black text-xs tracking-[0.3em] text-center"
+                        data-i18n="get_help.form.cta">Патрэбна
+                        дапамога? Напішыце нам</p>
+
                     <form id="help-form" class="space-y-6">
                         <div id="help-step-1">
-                            <label
-                                class="text-[10px] uppercase font-black text-gray-500 tracking-widest italic block mb-2"
-                                data-i18n="volunteers.name_label">Імя / Пазыўны</label>
-                            <input type="text" name="user_name" data-i18n="[placeholder]volunteers.name_placeholder"
+                            <input type="text" name="user_name" data-i18n="[placeholder]get_help.form.name_placeholder"
                                 placeholder="Імя / Пазыўны (мін.2 сімвалы)" required minlength="2" autocomplete="off"
-                                class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-bold uppercase">
+                                class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-bold">
                         </div>
 
                         <div id="help-step-2" class="opacity-40 pointer-events-none transition-all duration-500">
-                            <label
-                                class="text-[10px] uppercase font-black text-gray-500 tracking-widest italic block mb-2"
-                                data-i18n="volunteers.status_label">Статус</label>
                             <div class="relative">
                                 <select name="user_status" required
-                                    class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-bold appearance-none cursor-pointer uppercase">
-                                    <option value="" disabled selected data-i18n="volunteers.status_select">Статус
+                                    class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-bold appearance-none cursor-pointer">
+                                    <option value="" disabled selected data-i18n="get_help.form.status_select">Статус
                                         (абярыце са спіса)</option>
-                                    <option value="Дзейны вайсковец" data-i18n="volunteers.status_active">Дзейны
+                                    <option value="Дзейны вайсковец" data-i18n="get_help.form.status_active">Дзейны
                                         вайсковец</option>
-                                    <option value="Ветэран" data-i18n="volunteers.status_veteran">Ветэран</option>
-                                    <option value="Сям'я добраахвотніка" data-i18n="volunteers.status_family">Сям'я
+                                    <option value="Ветэран" data-i18n="get_help.form.status_veteran">Ветэран</option>
+                                    <option value="Сям'я добраахвотніка" data-i18n="get_help.form.status_family">Сям'я
                                         добраахвотніка</option>
                                 </select>
                                 <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
@@ -166,27 +171,21 @@
                         </div>
 
                         <div id="help-step-3" class="opacity-40 pointer-events-none transition-all duration-500">
-                            <label
-                                class="text-[10px] uppercase font-black text-gray-500 tracking-widest italic block mb-2"
-                                data-i18n="volunteers.needs_label">Сутнасць праблемы</label>
-                            <textarea name="user_needs" data-i18n="[placeholder]volunteers.needs_placeholder"
+                            <textarea name="user_needs" data-i18n="[placeholder]get_help.form.needs_placeholder"
                                 placeholder="Якая дапамога патрэбна? (мін.10 сімвалаў)" required minlength="10"
-                                class="w-full bg-black border border-white/10 p-4 text-white text-sm h-32 outline-none focus:border-red-600 transition-all font-bold resize-none uppercase"></textarea>
+                                class="w-full bg-black border border-white/10 p-4 text-white text-sm h-32 outline-none focus:border-red-600 transition-all font-bold resize-none "></textarea>
                         </div>
 
                         <div id="help-step-4" class="opacity-40 pointer-events-none transition-all duration-500">
-                            <label
-                                class="text-[10px] uppercase font-black text-gray-500 tracking-widest italic block mb-2"
-                                data-i18n="volunteers.contact_label">Кантакт (Signal / Telegram)</label>
                             <input type="text" name="user_contact"
-                                data-i18n="[placeholder]volunteers.contact_placeholder"
+                                data-i18n="[placeholder]get_help.form.contact_placeholder"
                                 placeholder="Telegram/Signal(@user) або Phone(+38..)" required
-                                class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-bold uppercase">
+                                class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-bold ">
                         </div>
 
                         <button type="submit"
                             class="w-full bg-red-600 py-6 text-white font-black uppercase tracking-[0.4em] text-xs hover:bg-white hover:text-black transition-all duration-700 flex justify-center items-center gap-2">
-                            <span data-i18n="volunteers.btn_send">Адправіць запыт</span>
+                            <span data-i18n="get_help.form.btn_send">Адправіць запыт</span>
                             <i class="fa-solid fa-circle-notch fa-spin loader-icon"
                                 style="display: none !important;"></i>
                         </button>

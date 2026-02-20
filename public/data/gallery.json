@@ -1,14 +1,64 @@
 [
-  { "src": "gallery-1.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-2.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-3.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-4.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-5.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-6.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-7.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-8.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-9.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-10.webp", "alt": "belarussian warriors defend Ukraine" },
+  {
+    "src": "gallery-1.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-2.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-3.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-4.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-5.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-6.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-7.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-8.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-9.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-10.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
   {
     "src": "gallery-11.webp",
     "alt": "belarussian warriors defend Ukraine",
@@ -27,26 +77,106 @@
     "width": 1200,
     "height": 800
   },
-  { "src": "gallery-14.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-15.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-16.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-17.webp", "alt": "belarussian warriors defend Ukraine" },
+  {
+    "src": "gallery-14.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-15.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-16.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-17.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
   {
     "src": "gallery-18.webp",
     "alt": "belarussian warriors defend Ukraine",
     "width": 1200,
     "height": 800
   },
-  { "src": "gallery-19.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-20.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-21.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-22.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-23.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-24.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-25.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-26.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-27.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-28.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-29.webp", "alt": "belarussian warriors defend Ukraine" },
-  { "src": "gallery-30.webp", "alt": "belarussian warriors defend Ukraine" }
+  {
+    "src": "gallery-19.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-20.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-21.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-22.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-23.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-24.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-25.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-26.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-27.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-28.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-29.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  },
+  {
+    "src": "gallery-30.webp",
+    "alt": "belarussian warriors defend Ukraine",
+    "width": 1000,
+    "height": 1000
+  }
 ]

@@ -53,6 +53,17 @@
       "og_site_name": "Bulwark Fund",
       "twitter_title": "Contacts | Bulwark Fund",
       "twitter_description": "Contact and support details for Belarusian volunteers."
+    },
+    "seo": {
+      "gallery": {
+        "title": "Gallery | Live History | Bulwark Fund",
+        "description": "The history of the Belarusian volunteer movement in photographs.",
+        "og_title": "Bulwark Fund Gallery",
+        "og_description": "Visual history of the Belarusian volunteer movement in Ukraine.",
+        "og_site_name": "Bulwark Fund",
+        "twitter_title": "Bulwark Fund Gallery",
+        "twitter_description": "The history of the Belarusian fighters movement in photographs."
+      }
     }
   }
 }

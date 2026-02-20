@@ -13,9 +13,28 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-i18n="seo.gallery.title">Галерэя | Жывая гісторыя | Bulwark Fund | Gallery | Live History</title>
+
+    <meta name="description" data-i18n="[content]seo.gallery.description"
+        content="Гісторыя беларускага добраахвотніцкага руху ў фотаздымках. | The history of the Belarusian volunteer movement in photographs.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bulwark-fund.org/pages/gallery.html">
+    <meta property="og:description" data-i18n="[content]seo.gallery.og_description"
+        content="Візуальная гісторыя беларускага дабраахвотніцкага руху ва Украіне. | Visual history of the Belarusian volunteer movement in Ukraine.">
+    <meta property="og:image" content="https://bulwark-fund.org/og-image.jpg">
+    <meta property="og:site_name" content="Bulwark Fund">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" data-i18n="[content]seo.gallery.twitter_title" content="Галерэя Bulwark Fund">
+    <meta name="twitter:description" data-i18n="[content]seo.gallery.twitter_description"
+        content="Гісторыя беларускага добраахвотніцкага руху ў фотаздымках. | The history of the Belarusian volunteer movement in photographs.">
+    <meta name="twitter:image" content="https://bulwark-fund.org/og-image.jpg">
+
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="canonical" href="https://bulwark-fund.org/pages/gallery.html">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title data-i18n="gallery.title_page">Галерэя | Bulwark</title>
 </head>
 
 <body class="bg-black text-white">
@@ -23,10 +42,10 @@
     <load src="/src/partials/mobile-menu.html" />
 
     <main class="relative min-h-screen">
-        <section id="gallery" class="py-12 bg-black overflow-hidden">
+        <section id="gallery" class="py-10 bg-black overflow-hidden">
             <div class="container-custom">
-                <div class="mb-10">
-                    <span data-i18n="nav.gallery" class="text-red-600 font-black uppercase tracking-[0.3em] text-sm">
+                <div class="mb-8">
+                    <span data-i18n="gallery.label" class="text-red-600 font-black uppercase tracking-[0.3em] text-xl">
                         Галерэя
                     </span>
                 </div>
@@ -50,7 +69,7 @@
                         <div class="flex flex-col gap-4">
                             <div class="opacity-50">
                                 <p class="text-xs md:text-sm font-light leading-relaxed tracking-wide">
-                                    <span
+                                    <span data-i18n="gallery.copyright_label"
                                         class="text-red-600 font-bold uppercase mr-2 text-[10px] md:text-xs">Copyright:</span>
                                     <span data-i18n="gallery.copyright_text">
                                         Усе матэрыялы галерэі з'яўляюцца інтэлектуальнай уласнасцю Bulwark. Выкарыстанне
@@ -79,6 +98,7 @@
     </main>
 
     <load src="/src/partials/footer.html" />
+    <script defer src="/_vercel/insights/script.js"></script>
     <script type="module" src="/src/main.js"></script>
 </body>
 

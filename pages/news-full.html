@@ -11,11 +11,24 @@
 
         gtag('config', 'G-6BJJXM6BRD');
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Усе навіны | Bulwark</title>
+    <title data-i18n="seo.news_full.title">Навіны (архіў) | Bulwark Fund | News Archive</title>
+
+    <meta name="description" data-i18n="[content]seo.news_full.description"
+        content="Архіў навін і падзей фонду Bulwark. Сачыце за нашай дзейнасцю. | Archive of news and events of the Bulwark Fund. Follow our activities.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bulwark-fund.org/pages/news-full.html">
+    <meta property="og:title" data-i18n="[content]seo.news_full.og_title"
+        content="Навіны (архіў) | Bulwark Fund | News Archive">
+    <meta property="og:description" data-i18n="[content]seo.news_full.og_description"
+        content="Поўны архіў падзей і дзейнасці фонду. | Full archive of the fund's events and activities.">
+    <meta property="og:site_name" data-i18n="[content]seo.news_full.og_site_name" content="Bulwark Fund">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" data-i18n="[content]seo.news_full.twitter_title"
+        content="Навіны (архіў) | Bulwark Fund | News Archive">
+    <meta name="twitter:description" data-i18n="[content]seo.news_full.twitter_description"
+        content="Усе навіны фонду ў адным месцы. | All fund news in one place.">
 
 </head>
 
@@ -30,13 +43,15 @@
         <section id="news-full" class="py-12 bg-black overflow-hidden">
             <div class="container-custom">
                 <div class="mb-12">
-                    <span data-i18n="news.news-full" class="text-red-600 font-black uppercase tracking-[0.3em] text-xl">
+                    <span data-i18n="news-full.label"
+                        class="text-red-600 font-black uppercase tracking-[0.3em] text-xl">
                         Навіны (архіў)
                     </span>
                 </div>
 
                 <div id="news-grid-full" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-                    <div class="text-white/20 uppercase text-[10px] tracking-widest animate-pulse">Загрузка...</div>
+                    <div data-i18n="news-full.loading"
+                        class="text-white/20 uppercase text-[10px] tracking-widest animate-pulse">Загрузка...</div>
                 </div>
             </div>
         </section>

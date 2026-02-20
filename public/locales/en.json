@@ -136,8 +136,12 @@
   "news": {
     "title": "Latest Events",
     "all_news_btn": "All News",
-    "read_more": "Read more",
-    "news-full": "News (Archive)"
+    "read_more": "Read more"
+  },
+  "news-full": {
+    "label": "News Archive",
+    "loading": "Loading...",
+    "error_load": "Failed to load news."
   },
   "common": {
     "slogan": "Your Reliable Bulwark"

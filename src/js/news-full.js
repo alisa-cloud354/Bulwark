@@ -86,7 +86,7 @@ export async function initFullNewsGrid() {
       });
     } catch (error) {
       console.error("Archive Load Error:", error);
-      gridContainer.innerHTML = `<p class="text-white/50 text-center py-10">Не атрымалася загрузіць навіны.</p>`;
+      gridContainer.innerHTML = `<p class="text-white/50 text-center py-10">${t("news-full.error_load")}</p>`;
     }
   };
 

@@ -348,5 +348,53 @@
       "contact_placeholder": "Telegram/Signal(@user) або Phone(+38..)",
       "btn_send": "Надіслати запит"
     }
+  },
+  "donate_page": {
+    "tag": "Допомога та Партнерство",
+    "title_part1": "Твоя підтримка —",
+    "title_accent": "наша міць",
+    "hero_text": "Кожен ресурс, який ви інвестуєте в «Булварк», працює на збереження людського капіталу Білорусі.",
+    "hero_subtext": "Ваша допомога може бути фінансовою, експертною або медійною — будь-який внесок наближає нас до спільної мети: безпеки тих, хто нас захищає.",
+    "usage_title": "На що йдуть кошти",
+    "item1_title": "Правовий щит",
+    "item1_text": "Легалізація в Україні та юридичний консалтинг для воїнів.",
+    "item2_title": "Психологія",
+    "item2_text": "Допомога при ПТСР та адаптація воїнів до цивільного життя.",
+    "item3_title": "Майбутнє",
+    "item3_text": "Кадровий резерв та підтримка сімей добровольців.",
+    "finance_title_part1": "Фінансовий",
+    "finance_title_accent": "внесок",
+    "donate_direct_title": "Допомогти бійцям/фонду",
+    "donate_direct_text": "Пряма фінансова підтримка наших захисників через швидкі платежі",
+    "btn_donate": "Підтримати",
+    "requisites_title": "Варіанти оплати",
+    "requisites_text": "Карткою онлайн / Переказ на рахунок / Криптовалюти",
+    "btn_requisites": "Дивитися реквізити",
+    "partner_title_part1": "Стати",
+    "partner_title_accent": "партнером",
+    "type_expert_title": "Експертна допомога",
+    "type_expert_text": "Безкоштовна професійна допомога (pro bono): юридичні послуги, медицина, психологія, IT або медіа-підтримка.",
+    "type_business_title": "Бізнес-співпраця",
+    "type_business_text": "Корпоративні внески або ресурсна підтримка.",
+    "type_volunteer_title": "Волонтерство",
+    "type_volunteer_text": "Допомога з перекладами, комунікацією чи організацією.",
+    "cta_title_part1": "Маєте",
+    "cta_title_accent": "пропозицію?",
+    "cta_subtext": "Ми завжди відкриті до нових ідей. Напишіть нам або скористайтеся ботом.",
+    "cta_bot_button": "@bulwark_fund_bot",
+    "form": {
+      "label": "Хочете співпрацювати? Напишіть",
+      "org_placeholder": "Організація / Ім'я (мін. 2 символи)",
+      "contact_placeholder": "Email (xxx@xx.xxx) / Phone (+38...)",
+      "message_placeholder": "Як ми можемо співпрацювати? (мін. 10 символів)",
+      "btn_submit": "Стати партнером"
+    },
+    "alliances_title": "Стратегічні партнери",
+    "partners": [
+      { "name": "FREEDOM_INIT", "logo": "img/partners/p1.svg" },
+      { "name": "LEGAL_SHIELD", "logo": "img/partners/p2.svg" },
+      { "name": "WAR_THERAPY", "logo": "img/partners/p3.svg" },
+      { "name": "VETERAN_CORPS", "logo": "img/partners/p4.svg" }
+    ]
   }
 }

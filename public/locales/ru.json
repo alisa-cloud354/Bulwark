@@ -348,5 +348,53 @@
       "contact_placeholder": "Telegram/Signal(@user) или Phone(+38..)",
       "btn_send": "Отправить запрос"
     }
+  },
+  "donate_page": {
+    "tag": "Помощь и Партнерство",
+    "title_part1": "Твоя поддержка —",
+    "title_accent": "наша мощь",
+    "hero_text": "Каждый ресурс, который вы инвестируете в «Булварк», работает на сохранение человеческого капитала Беларуси.",
+    "hero_subtext": "Ваша помощь может быть финансовой, экспертной или медийной — любой вклад приближает нас к общей цели: безопасности тех, кто нас защищает.",
+    "usage_title": "На что идут средства",
+    "item1_title": "Правовой щит",
+    "item1_text": "Легализация в Украине и юридический консалтинг для воинов.",
+    "item2_title": "Психология",
+    "item2_text": "Помощь при ПТСР и адаптация воинов к гражданской жизни.",
+    "item3_title": "Будущее",
+    "item3_text": "Кадровый резерв и поддержка семей добровольцев.",
+    "finance_title_part1": "Финансовый",
+    "finance_title_accent": "взнос",
+    "donate_direct_title": "Помочь бойцам/фонду",
+    "donate_direct_text": "Прямая финансовая поддержка наших защитников через быстрые платежи",
+    "btn_donate": "Поддержать",
+    "requisites_title": "Варианты оплаты",
+    "requisites_text": "Картой онлайн / Перевод на счет / Криптовалюты",
+    "btn_requisites": "Смотреть реквизиты",
+    "partner_title_part1": "Стать",
+    "partner_title_accent": "партнером",
+    "type_expert_title": "Экспертная помощь",
+    "type_expert_text": "Бесплатная профессиональная помощь (pro bono): юридические услуги, медицина, психология, IT или медиа-поддержка.",
+    "type_business_title": "Бизнес-сотрудничество",
+    "type_business_text": "Корпоративные взносы или ресурсная поддержка.",
+    "type_volunteer_title": "Волонтерство",
+    "type_volunteer_text": "Помощь с переводами, коммуникацией или организацией.",
+    "cta_title_part1": "Есть",
+    "cta_title_accent": "предложение?",
+    "cta_subtext": "Мы всегда открыты для новых идей. Напишите нам или воспользуйтесь ботом.",
+    "cta_bot_button": "@bulwark_fund_bot",
+    "form": {
+      "label": "Хотите сотрудничать? Напишите",
+      "org_placeholder": "Организация / Имя (мин. 2 символа)",
+      "contact_placeholder": "Email (xxx@xx.xxx) / Phone (+38...)",
+      "message_placeholder": "Как мы можем сотрудничать? (мин. 10 символов)",
+      "btn_submit": "Стать партнером"
+    },
+    "alliances_title": "Стратегические партнеры",
+    "partners": [
+      { "name": "FREEDOM_INIT", "logo": "img/partners/p1.svg" },
+      { "name": "LEGAL_SHIELD", "logo": "img/partners/p2.svg" },
+      { "name": "WAR_THERAPY", "logo": "img/partners/p3.svg" },
+      { "name": "VETERAN_CORPS", "logo": "img/partners/p4.svg" }
+    ]
   }
 }

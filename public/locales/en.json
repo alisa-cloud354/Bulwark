@@ -348,5 +348,53 @@
       "contact_placeholder": "Telegram/Signal(@user) or Phone(+38..)",
       "btn_send": "Send Request"
     }
+  },
+  "donate_page": {
+    "tag": "Support & Partnership",
+    "title_part1": "Your support is",
+    "title_accent": "our strength",
+    "hero_text": "Every resource you invest in Bulwark works to preserve Belarus's human capital.",
+    "hero_subtext": "Your help can be financial, expert, or media-based — any contribution brings us closer to our goal: the security of those who protect us.",
+    "usage_title": "Fund distribution",
+    "item1_title": "Legal Shield",
+    "item1_text": "Legalization in Ukraine and legal consulting for fighters.",
+    "item2_title": "Psychology",
+    "item2_text": "PTSD assistance and reintegration of fighters into civilian life.",
+    "item3_title": "The Future",
+    "item3_text": "Personnel reserve and support for volunteers' families.",
+    "finance_title_part1": "Financial",
+    "finance_title_accent": "contribution",
+    "donate_direct_title": "Help fighters/fund",
+    "donate_direct_text": "Direct financial support for our defenders via quick payments",
+    "btn_donate": "Support now",
+    "requisites_title": "Payment options",
+    "requisites_text": "Online by card / Bank transfer / Cryptocurrencies",
+    "btn_requisites": "View details",
+    "partner_title_part1": "Become a",
+    "partner_title_accent": "partner",
+    "type_expert_title": "Expert assistance",
+    "type_expert_text": "Free professional help (pro bono): legal services, medicine, psychology, IT, or media support.",
+    "type_business_title": "Business cooperation",
+    "type_business_text": "Corporate contributions or resource support.",
+    "type_volunteer_title": "Volunteering",
+    "type_volunteer_text": "Help with translations, communication, or organization.",
+    "cta_title_part1": "Have a",
+    "cta_title_accent": "proposal?",
+    "cta_subtext": "We are always open to new ideas. Write to us or use our bot.",
+    "cta_bot_button": "@bulwark_fund_bot",
+    "form": {
+      "label": "Want to collaborate? Contact us",
+      "org_placeholder": "Organization / Name (min. 2 chars)",
+      "contact_placeholder": "Email (xxx@xx.xxx) / Phone (+...)",
+      "message_placeholder": "How can we collaborate? (min. 10 chars)",
+      "btn_submit": "Become a partner"
+    },
+    "alliances_title": "Strategic Partners",
+    "partners": [
+      { "name": "FREEDOM_INIT", "logo": "img/partners/p1.svg" },
+      { "name": "LEGAL_SHIELD", "logo": "img/partners/p2.svg" },
+      { "name": "WAR_THERAPY", "logo": "img/partners/p3.svg" },
+      { "name": "VETERAN_CORPS", "logo": "img/partners/p4.svg" }
+    ]
   }
 }

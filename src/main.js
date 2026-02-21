@@ -14,6 +14,7 @@ import { initModalControl } from "./js/modal.js";
 import { initDonationSection } from "./js/donation-section.js";
 import { initForms } from "./js/forms.js";
 import { initCookies } from "./js/cookies.js";
+import { initPartners } from "./js/partners.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initHeader();
@@ -30,4 +31,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initDonationSection();
   initForms();
   initCookies();
+  initPartners();
 });

@@ -249,38 +249,7 @@
     "contact_placeholder": "Telegram/Signal(@user) или Phone(+38..)",
     "btn_send": "Отправить запрос"
   },
-  "support": {
-    "page_title": "Помочь | Bulwark",
-    "tag": "Помощь и Партнерство",
-    "main_title": "Твоя поддержка — наша мощь",
-    "hero_text": "Каждый ресурс, который вы инвестируете в «Булварк», работает на сохранение человеческого капитала Беларуси.",
-    "hero_subtext": "Ваша помощь может быть финансовой, экспертной или медийной — любой вклад приближает нас к общей цели: безопасности тех, кто нас защищает.",
-    "usage_title": "На что идут средства",
-    "item1_title": "Правовой щит",
-    "item1_text": "Легализация в Украине и юридический консалтинг для воинов.",
-    "item2_title": "Психология",
-    "item2_text": "Помощь при ПТСР и адаптация воинов к гражданской жизни.",
-    "item3_title": "Будущее",
-    "item3_text": "Кадровый резерв и поддержка семей добровольцев.",
-    "finance_title": "Финансовый вклад",
-    "donate_direct_title": "Помочь бойцам/фонду",
-    "donate_direct_text": "Прямая финансовая поддержка наших защитников через быстрые платежи",
-    "requisites_title": "Варианты оплаты",
-    "requisites_text": "Картой онлайн / Перевод на счет / Криптовалюты",
-    "partner_title": "Стать партнером",
-    "type2_title": "Экспертная помощь",
-    "type2_text": "Юридические услуги, медицина или IT pro bono.",
-    "type3_title": "Бизнес-сотрудничество",
-    "type3_text": "Корпоративные взносы или ресурсная поддержка.",
-    "volunteer_title": "Волонтерство",
-    "volunteer_text": "Помощь с переводами, коммуникацией или организацией.",
-    "cta_title": "Есть предложение?",
-    "cta_subtext": "Мы всегда открыты для новых идей. Напишите нам или воспользуйтесь ботом.",
-    "cta_form_label": "Отправить запрос через форму",
-    "btn_submit": "Стать партнером",
-    "btn_donate": "Поддержать",
-    "btn_requisites": "Смотреть реквизиты"
-  },
+  
   "materials": {
     "label": "Материалы",
     "title": "База знаний",
@@ -391,10 +360,10 @@
     },
     "alliances_title": "Стратегические партнеры",
     "partners": [
-      { "name": "FREEDOM_INIT", "logo": "img/partners/p1.svg" },
-      { "name": "LEGAL_SHIELD", "logo": "img/partners/p2.svg" },
-      { "name": "WAR_THERAPY", "logo": "img/partners/p3.svg" },
-      { "name": "VETERAN_CORPS", "logo": "img/partners/p4.svg" }
+      { "name": "FREEDOM_INIT", "logo": "/img/partners/p1.svg" },
+      { "name": "LEGAL_SHIELD", "logo": "/img/partners/p2.svg" },
+      { "name": "WAR_THERAPY", "logo": "/img/partners/p3.svg" },
+      { "name": "VETERAN_CORPS", "logo": "/img/partners/p4.svg" }
     ]
   }
 }

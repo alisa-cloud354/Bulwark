@@ -249,38 +249,7 @@
     "contact_placeholder": "Telegram/Signal(@user) або Phone(+38..)",
     "btn_send": "Надіслати запит"
   },
-  "support": {
-    "page_title": "Допомогти | Bulwark",
-    "tag": "Допомога та Партнерство",
-    "main_title": "Твоя підтримка — наша міць",
-    "hero_text": "Кожен ресурс, який ви інвестуєте в «Булварк», працює на збереження людського капіталу Білорусі.",
-    "hero_subtext": "Ваша допомога може бути фінансовою, експертною або медійною — будь-який внесок наближає нас до спільної мети: безпеки тих, хто нас захищає.",
-    "usage_title": "На що йдуть кошти",
-    "item1_title": "Правовий щит",
-    "item1_text": "Легалізація в Україні та юридичний консалтинг для воїнів.",
-    "item2_title": "Психологія",
-    "item2_text": "Допомога при ПТСР та адаптація воїнів до цивільного життя.",
-    "item3_title": "Майбутнє",
-    "item3_text": "Кадровий резерв та підтримка сімей добровольців.",
-    "finance_title": "Фінансовий внесок",
-    "donate_direct_title": "Допомогти бійцям/фонду",
-    "donate_direct_text": "Пряма фінансова підтримка наших захисників через швидкі платежі",
-    "requisites_title": "Варіанти оплати",
-    "requisites_text": "Карткою онлайн / Переказ на рахунок / Криптовалюти",
-    "partner_title": "Стати партнером",
-    "type2_title": "Експертна допомога",
-    "type2_text": "Юридичні послуги, медицина або IT pro bono.",
-    "type3_title": "Бізнес-співпраця",
-    "type3_text": "Корпоративні внески або ресурсна підтримка.",
-    "volunteer_title": "Волонтерство",
-    "volunteer_text": "Допомога з перекладами, комунікацією чи організацією.",
-    "cta_title": "Маєте пропозицію?",
-    "cta_subtext": "Ми завжди відкриті до нових ідей. Напишіть нам або скористайтеся ботом.",
-    "cta_form_label": "Надіслати запит через форму",
-    "btn_submit": "Стати партнером",
-    "btn_donate": "Підтримати",
-    "btn_requisites": "Дивитися реквізити"
-  },
+
   "materials": {
     "label": "Матеріали",
     "title": "База знань",
@@ -391,10 +360,10 @@
     },
     "alliances_title": "Стратегічні партнери",
     "partners": [
-      { "name": "FREEDOM_INIT", "logo": "img/partners/p1.svg" },
-      { "name": "LEGAL_SHIELD", "logo": "img/partners/p2.svg" },
-      { "name": "WAR_THERAPY", "logo": "img/partners/p3.svg" },
-      { "name": "VETERAN_CORPS", "logo": "img/partners/p4.svg" }
+      { "name": "FREEDOM_INIT", "logo": "/img/partners/p1.svg" },
+      { "name": "LEGAL_SHIELD", "logo": "/img/partners/p2.svg" },
+      { "name": "WAR_THERAPY", "logo": "/img/partners/p3.svg" },
+      { "name": "VETERAN_CORPS", "logo": "/img/partners/p4.svg" }
     ]
   }
 }

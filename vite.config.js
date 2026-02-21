@@ -6,37 +6,7 @@ export default defineConfig({
   root: "./",
   plugins: [
     injectHTML(),
-    {
-      name: "dev-rewrite",
-      configureServer(server) {
-        server.middlewares.use((req, res, next) => {
-          // Спіс нашых старонак для рэрайта
-          const pages = [
-            "/history",
-            "/zarok-vajara",
-            "/projects",
-            "/reports",
-            "/materials",
-            "/contacts",
-            "/gallery",
-            "/get-help",
-            "/donate",
-            "/news-full",
-            "/privacy",
-          ];
-
-          // Калі запыт супадае з адной са старонак — дадаем шлях да файла
-          if (pages.includes(req.url)) {
-            if (req.url === "/privacy") {
-              req.url = "/privacy.html";
-            } else {
-              req.url = `/pages${req.url}.html`;
-            }
-          }
-          next();
-        });
-      },
-    },
+    // Мы выдалілі dev-rewrite, бо спасылкі ў HTML цяпер будуць прамымі
   ],
   build: {
     rollupOptions: {

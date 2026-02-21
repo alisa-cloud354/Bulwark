@@ -5,33 +5,35 @@
 export const initNavigation = () => {
   const navLinks = document.querySelectorAll(".js-nav-link");
   const mobileMenu = document.querySelector(".mobile-menu");
-  const menuBurger = document.querySelector(".burger-button");
 
-  // 1. Функцыя закрыцця мабільнага меню
   const closeMenu = () => {
     if (mobileMenu && mobileMenu.classList.contains("is-open")) {
       mobileMenu.classList.remove("is-open");
     }
   };
 
-  // 2. Апрацоўка клікаў па спасылках
   navLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       const href = link.getAttribute("href");
 
-      // Калі гэта спасылка на якар (на гэтай або іншай старонцы)
-      if (href.startsWith("/#") || href.startsWith("#")) {
+      // ПРАВЕРКА: ці вядзе спасылка на якар (на гэтай або галоўнай старонцы)
+      // Дадаем праверку на /index.html#
+      if (
+        href.startsWith("#") ||
+        href.startsWith("/#") ||
+        href.includes("index.html#")
+      ) {
         const targetId = href.includes("#") ? "#" + href.split("#")[1] : null;
         const targetElement = targetId
           ? document.querySelector(targetId)
           : null;
 
-        // Калі элемент ёсць на бягучай старонцы
+        // Калі мы на той жа старонцы, дзе і элемент
         if (targetElement) {
           e.preventDefault();
           closeMenu();
 
-          const offset = 100; // Вышыня хэдэра
+          const offset = 100;
           const bodyRect = document.body.getBoundingClientRect().top;
           const elementRect = targetElement.getBoundingClientRect().top;
           const elementPosition = elementRect - bodyRect;
@@ -42,23 +44,22 @@ export const initNavigation = () => {
             behavior: "smooth",
           });
 
-          // Абнаўляем URL без перазагрузкі
           history.pushState(null, null, targetId);
         }
+        // Калі элемента няма (значыць, мы на іншай старонцы),
+        // браўзер проста пяройдзе па спасылцы /index.html#target - гэта нам і трэба.
       }
     });
   });
 
-  // 3. Апрацоўка пераходу з іншай старонкі (пры загрузцы)
+  // Апрацоўка прызямлення з іншай старонкі (застаецца без зменаў)
   if (window.location.hash) {
-    // 1. Адразу скідаем скрол у нуль, каб не было "дзёргання"
     window.scrollTo(0, 0);
 
     const targetId = window.location.hash;
     const target = document.querySelector(targetId);
 
     if (target) {
-      // 2. Чакаем, пакуль пачнецца CSS-анімацыя fadeIn (300-400мс)
       setTimeout(() => {
         const offset = 100;
         const bodyRect = document.body.getBoundingClientRect().top;
@@ -75,5 +76,4 @@ export const initNavigation = () => {
   }
 };
 
-// Выклікаем функцыю
 initNavigation();

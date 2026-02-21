@@ -81,6 +81,15 @@
       "og_site_name": "Bulwark Fund",
       "twitter_title": "Отримати допомогу | Bulwark Fund | Get Help",
       "twitter_description": "Безпечний зв'язок та підтримка наших воїнів."
+    },
+    "donate": {
+      "title": "Підтримка білоруських добровольців | Допомогти Bulwark",
+      "description": "Підтримайте білоруських добровольців в Україні. Фінансовий внесок, юридична та психологічна допомога.",
+      "og_title": "Підтримати Bulwark Fund | Допомога білоруським воїнам",
+      "og_description": "Твоя підтримка — наша міць. Приєднуйся до допомоги білоруським воїнам.",
+      "og_site_name": "Bulwark Fund",
+      "twitter_title": "Donate to Bulwark Fund | UK",
+      "twitter_description": "Зроби свій внесок у безпеку білоруських добровольців."
     }
   }
 }

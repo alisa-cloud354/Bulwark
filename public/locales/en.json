@@ -54,7 +54,7 @@
     "slogan_text": "Two Nations — One Freedom",
     "conclusion_1": "Today, they are building the Bulwark Foundation together, uniting those who believe that freedom is everyone's right.",
     "conclusion_highlight": "“We are returning. We are building a new Belarus!”",
-
+    "top_label": "Common history — common future",
     "title_1": "Historical",
     "title_2": "Overview",
     "sec1_lead": "For centuries, Belarus and Ukraine have existed side by side, sharing similar fates, trials, and threats. Both nations have passed through periods of statelessness and attempts to destroy their right to a future.",
@@ -249,7 +249,7 @@
     "contact_placeholder": "Telegram/Signal(@user) or Phone(+...)",
     "btn_send": "Send Request"
   },
- 
+
   "materials": {
     "label": "Materials",
     "title": "Knowledge Base",
@@ -358,7 +358,7 @@
       "message_placeholder": "How can we collaborate? (min. 10 chars)",
       "btn_submit": "Become a partner"
     },
-   "alliances_title": "Strategic Partners",
+    "alliances_title": "Strategic Partners",
     "partners": [
       { "name": "FREEDOM_INIT", "logo": "/img/partners/p1.svg" },
       { "name": "LEGAL_SHIELD", "logo": "/img/partners/p2.svg" },

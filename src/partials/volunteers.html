@@ -1,23 +1,25 @@
-<section id="volunteers" class="section-spacing bg-[#050505] text-white overflow-hidden border-t border-white/5">
+<section id="volunteers" class="section-spacing bg-[#050505] text-white overflow-hidden py-8 md:py-12 xl:py-16">
     <div class="container-custom">
+        <div class="flex flex-col mb-6">
+            <div class="flex items-center gap-4 w-full">
+                <span data-i18n="volunteers.tag"
+                    class="uppercase tracking-[0.3em] text-red-600 font-black text-xs leading-tight whitespace-nowrap md:whitespace-normal">Дапамога</span>
+                <div class="flex-1 h-px bg-red-600"></div>
+            </div>
+        </div>
         <div class="grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-16 items-start">
 
-            <div class="max-w-3xl xl:max-w-none">
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-12 h-0.5 bg-red-600"></div>
-                    <span data-i18n="volunteers.tag"
-                        class="uppercase tracking-[0.4em] text-red-600 font-black text-[10px]">Дапамога</span>
-                </div>
-
-                <h2 data-i18n="volunteers.title" class="section-title mb-10 tracking-tighter">
+            <div class="max-w-3xl xl:max-w-none space-y-10">
+                <h2 data-i18n="volunteers.title"
+                    class="text-2xl md:text-3xl xl:text-5xl font-black uppercase tracking-tighter">
                     Дапамога добраахвотнікам
                 </h2>
 
-                <div class="space-y-8">
+                <div class="space-y-10">
                     <div class="flex gap-5">
                         <i class="fa-solid fa-user-check text-red-600 mt-1 text-lg"></i>
                         <div class="flex flex-col gap-1">
-                            <strong class="text-white uppercase tracking-wider text-[11px] font-black"
+                            <strong class="text-white uppercase tracking-wider text-xs font-black"
                                 data-i18n="volunteers.crit1_title">Для каго:</strong>
                             <p class="text-gray-400 text-sm leading-relaxed" data-i18n="volunteers.crit1_text">
                                 Толькі для беларускіх добраахвотнікаў (дзейных вайскоўцаў і ветэранаў), якія ваююць ці
@@ -29,7 +31,7 @@
                     <div class="flex gap-5">
                         <i class="fa-solid fa-circle-info text-red-600 mt-1 text-lg"></i>
                         <div class="flex flex-col gap-1">
-                            <strong class="text-white uppercase tracking-wider text-[11px] font-black"
+                            <strong class="text-white uppercase tracking-wider text-xs font-black"
                                 data-i18n="volunteers.crit2_title">Што даем:</strong>
                             <p class="text-gray-400 text-sm leading-relaxed" data-i18n="volunteers.crit2_text">
                                 Кансультацыі па легалізацыі, аднаўленне дакументаў, прафесійная псіхалагічная падтрымка.
@@ -38,32 +40,33 @@
                     </div>
                 </div>
 
-                <div class="mt-12 p-8 border border-white/10 bg-black/50 relative overflow-hidden group">
+                <div class=" p-8 border border-white/10 bg-black/80 relative overflow-hidden group">
                     <div class="absolute top-0 left-0 w-1 h-full bg-red-600"></div>
                     <p data-i18n="volunteers.warning"
-                        class="text-[11px] text-gray-400 leading-relaxed uppercase tracking-widest font-bold italic">
+                        class="text-xs text-gray-400 leading-relaxed uppercase tracking-widest font-bold italic">
                         Важна: Мы не займаемся зборам на зброю ці амуніцыю. Наша задача — ваш прававы і ментальны
                         статус.
                     </p>
                 </div>
             </div>
 
-            <div class="bg-black/50 p-6 md:p-10 border border-white/10 shadow-2xl relative">
+            <div class="bg-black/80 p-6 md:p-8 border border-white/10 shadow-2xl relative">
                 <div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-red-600"></div>
 
-                <p class="text-red-600 mb-8 uppercase font-black text-xs tracking-[0.3em] text-center"
+                <p class="text-xs md:text-sm leading-tight text-red-600 mb-5 uppercase font-black tracking-[0.3em] text-center"
                     data-i18n="volunteers.cta">Патрэбна дапамога? Напішыце нам</p>
                 <form id="help-form" class="space-y-5">
                     <div id="help-step-1">
                         <input type="text" name="user_name" data-i18n="[placeholder]volunteers.name_placeholder"
-                            placeholder="Імя / Пазыўны" required minlength="2" autocomplete="off" autocapitalize="none"
-                            class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-medium">
+                            placeholder="Імя / Пазыўны (мін.2 сімвалы)" required minlength="2" autocomplete="off"
+                            autocapitalize="none"
+                            class="w-full bg-black border border-white/10 p-2 md:p-4 text-white text-base outline-none focus:border-red-600 transition-all font-medium">
                     </div>
 
                     <div id="help-step-2" class="opacity-40 pointer-events-none transition-all duration-500">
                         <div class="relative">
                             <select name="user_status" required
-                                class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-medium appearance-none cursor-pointer">
+                                class="w-full bg-black border border-white/10 p-4 text-white text-base outline-none focus:border-red-600 transition-all font-medium appearance-none cursor-pointer">
                                 <option value="" disabled selected data-i18n="volunteers.status_select">Статус (абярыце
                                     са спіса)</option>
                                 <option value="Дзейны вайсковец" data-i18n="volunteers.status_active">Дзейны вайсковец
@@ -73,7 +76,7 @@
                                     добраахвотніка</option>
                             </select>
                             <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
-                                <i class="fa-solid fa-chevron-down text-[10px] text-gray-500"></i>
+                                <i class="fa-solid fa-chevron-down text-xs text-gray-500"></i>
                             </div>
                         </div>
                     </div>
@@ -81,13 +84,13 @@
                     <div id="help-step-3" class="opacity-40 pointer-events-none transition-all duration-500">
                         <textarea name="user_needs" data-i18n="[placeholder]volunteers.needs_placeholder"
                             placeholder="Якая дапамога патрэбна? (мін. 10 сімвалаў)" required minlength="10"
-                            class="w-full bg-black border border-white/10 p-4 text-white text-sm h-32 outline-none focus:border-red-600 transition-all font-medium resize-none"></textarea>
+                            class="w-full bg-black border border-white/10 p-4 text-white text-base h-32 outline-none focus:border-red-600 transition-all font-medium resize-none"></textarea>
                     </div>
 
                     <div id="help-step-4" class="opacity-40 pointer-events-none transition-all duration-500">
                         <input type="text" name="user_contact" data-i18n="[placeholder]volunteers.contact_placeholder"
                             placeholder="Telegram/Signal(@user) або Phone(+38..)" required
-                            class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-medium">
+                            class="w-full bg-black border border-white/10 p-4 text-white text-base outline-none focus:border-red-600 transition-all font-medium">
                     </div>
 
                     <button type="submit"

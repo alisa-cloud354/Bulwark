@@ -87,11 +87,12 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+
   }
+
 
   body {
     @apply bg-black font-sans text-white antialiased;
-    /* Дадаем анімацыю з'яўлення */
     animation: fadeInPage 0.5s ease-in-out;
   }
 
@@ -106,4 +107,66 @@
   }
 
 
+}
+
+/* ГЛАБАЛЬНЫ СКРОЛБАР */
+
+/* 1. Агульная шырыня */
+::-webkit-scrollbar {
+  width: 12px !important;
+  height: 12px !important;
+  display: block !important;
+}
+
+/* 2. Дарожка (Track) */
+::-webkit-scrollbar-track {
+  background: #050505 !important;
+  border-left: 2px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 3. Бегунок (Thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: #dc2626 !important;
+  border: 2px solid #050505 !important;
+  border-radius: 4px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ffffff !important;
+}
+
+/* 4. КНОПКІ (Тыя самыя трыкутнікі зверху і знізу) */
+::-webkit-scrollbar-button:single-button {
+  background-color: #050505;
+  display: block;
+  border-style: solid;
+  height: 12px;
+  width: 12px;
+}
+
+/* Трохвугольнік уверх */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  border-width: 0 6px 6px 6px;
+  border-color: transparent transparent #dc2626 transparent;
+}
+
+/* Трохвугольнік уніз */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  border-width: 6px 6px 0 6px;
+  border-color: #dc2626 transparent transparent transparent;
+}
+
+::-webkit-scrollbar-button:vertical:single-button:hover {
+  border-color: transparent transparent #ffffff transparent;
+  /* Для верхняй */
+}
+
+::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+  border-color: #ffffff transparent transparent transparent;
+  /* Для ніжняй */
+}
+
+/* Каб у мадалцы не было анамалій з шырынёй */
+#material-modal *::-webkit-scrollbar {
+  width: 10px !important;
 }

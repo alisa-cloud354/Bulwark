@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "date": "10.10.2025",
+    "date": "18.11.2025",
     "title": "Foundation Registered",
     "excerpt": "We have officially registered the foundation to support Belarusian volunteers in Ukraine. This is a crucial step providing a legal basis for our activities.",
     "image": "/img/reports/report-1.webp",
@@ -19,16 +19,16 @@
   },
   {
     "id": 3,
-    "date": "19.02.2026",
+    "date": "20.02.2026",
     "title": "Payment Service",
-    "excerpt": "We integrated a modern payment service that allows for secure and fast donations. This opens new opportunities to support Belarusian volunteers.",
+    "excerpt": "We are integrating a modern payment service that will allow for safe and fast donations. This opens up new opportunities for supporting Belarusian volunteers.",
     "image": "/img/reports/report-3.webp",
-    "content": "<h3>Secure Donations</h3><p>We have integrated a modern payment service that allows for secure and fast donations. This opens new opportunities for those who want to support Belarusian volunteers in Ukraine.</p><p>Funds will be directed towards legal and psychological aid, addiction recovery programs, and the development of the volunteer hub. We are grateful to everyone who joins our cause and contributes to the collective effort.</p>",
+    "content": "<h3>Secure Donations</h3><p>We are integrating a modern payment service that will allow for safe and fast donations. This opens up new opportunities for those who wish to support Belarusian volunteers in Ukraine.</p><p>Funds will be directed toward legal and psychological assistance, addiction recovery programs, and the development of the volunteer hub. We are grateful to everyone who joins our cause and contributes to the collective support.</p>",
     "more": "More"
   },
   {
     "id": 4,
-    "date": "21.02.2026",
+    "date": "22.02.2026",
     "title": "Telegram Bot",
     "excerpt": "We created and launched the foundation's Telegram bot, making communication even more accessible. It's a tool for staying informed with direct access to information.",
     "image": "/img/reports/report-4.webp",

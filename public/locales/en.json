@@ -278,6 +278,7 @@
     "accept": "Accept"
   },
   "reports": {
+    "tag": "Completed",
     "page_title": "Reports",
     "loading": "Loading...",
     "error": "Failed to load reports. Please try again later.",

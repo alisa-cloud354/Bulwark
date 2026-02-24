@@ -68,7 +68,8 @@ export async function initNewsSlider() {
       <p class="text-gray-400 text-sm mb-6 line-clamp-3 leading-relaxed font-light grow">
         ${news.excerpt}
       </p>
-      <button class="bg-black/80 border-white/10 open-news-btn mt-auto text-white text-xs font-black uppercase tracking-widest flex items-center gap-2 hover:text-red-600 transition-all group/btn" 
+       <button type="button" 
+                class="open-report-btn mt-auto text-red-600 text-xs font-black uppercase tracking-widest flex items-center gap-2 hover:text-white transition-all group/btn"  
               data-id="${news.id}">
         <span data-i18n="news.read_more">Чытаць цалкам</span>
         <i class="fa-solid fa-chevron-right text-xs group-hover/btn:translate-x-1 transition-transform"></i>

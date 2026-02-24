@@ -47,21 +47,29 @@
     <load src="/src/partials/header.html" />
     <load src="/src/partials/mobile-menu.html" />
 
-
-
     <main class="relative min-h-screen w-full overflow-hidden bg-black">
-        <section id="reports" class="py-12 bg-black overflow-hidden">
+        <section id="reports" class="bg-black text-white overflow-hidden py-8 md:py-12 xl:py-16">
             <div class="container-custom">
-                <div class="mb-12">
-                    <span data-i18n="reports.page_title"
-                        class="text-red-600 font-black uppercase tracking-[0.3em] text-xl">
-                        Справаздачы
-                    </span>
+                <div class="flex flex-col mb-6">
+                    <div class="flex items-end gap-4 w-full">
+                        <span
+                            class="tracking-[0.3em] text-red-600 font-black text-sm leading-tight whitespace-nowrap md:whitespace-normal"
+                            data-i18n="reports.tag">
+                            Зроблена
+                        </span>
+                        <div class="flex-1 h-px bg-red-600 mb-1"></div>
+                    </div>
                 </div>
+                <h1
+                    class="text-white text-4xl md:text-5xl xl:text-7xl font-black uppercase leading-[1] tracking-tighter mb-10">
+                    <span data-i18n="reports.page_title">Справаздачы</span>
+                </h1>
+
+
 
                 <div id="reports-grid-full" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                     <div data-i18n="reports.loading"
-                        class="text-white/20 uppercase text-[10px] tracking-widest animate-pulse">
+                        class="text-white/20 uppercase text-xs tracking-widest animate-pulse">
                         Загрузка...
                     </div>
                 </div>

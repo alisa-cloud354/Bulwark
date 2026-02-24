@@ -49,57 +49,67 @@
     <load src="/src/partials/mobile-menu.html" />
 
     <main class="relative min-h-screen w-full bg-black text-white">
-        <section class="py-12 bg-black pt-12">
+        <section class="bg-black text-white overflow-hidden py-8 md:py-12 xl:py-16">
             <div class="container-custom">
-                <div class="mb-16 border-l-4 border-red-600 pl-6">
-                    <span data-i18n="projects.subtitle"
-                        class="text-red-600 font-black uppercase tracking-[0.3em] text-sm block mb-2">
-                        Чым мы займаемся
-                    </span>
-                    <h1 data-i18n="projects.main_title"
-                        class="text-5xl md:text-7xl font-black uppercase italic leading-none tracking-tighter">
-                        Нашы праекты
-                    </h1>
+                <div class="flex flex-col mb-6">
+                    <div class="flex items-center gap-4 w-full">
+                        <span data-i18n="projects.subtitle"
+                            class="tracking-[0.3em] text-red-600 font-black text-sm leading-tight whitespace-nowrap md:whitespace-normal">
+                            Чым мы займаемся
+                        </span>
+                        <div class="flex-1 h-px bg-red-600"></div>
+                    </div>
                 </div>
-
+                <h1 data-i18n="projects.main_title"
+                    class="text-white text-4xl md:text-5xl xl:text-7xl font-black uppercase leading-[1] tracking-tighter mb-10">
+                    Нашы праекты
+                </h1>
                 <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                     <div
-                        class="border border-white/10 bg-[#050505] p-8 flex flex-col justify-between hover:border-red-600/50 transition-all group relative">
+                        class="border border-white/10 bg-[#050505] p-4 xl:p-6 flex flex-col h-full hover:border-red-600/50 transition-all group relative">
                         <div
-                            class="absolute top-4 right-4 text-[9px] font-black uppercase tracking-widest text-red-600 bg-red-600/10 px-2 py-1">
+                            class="absolute top-4 right-4 text-xs font-black uppercase tracking-widest text-red-600 bg-red-600/10 px-2 py-1">
                             <span data-i18n="projects.status.active">Актыўны</span>
                         </div>
-                        <div>
-                            <div class="text-4xl mb-6">⚖️</div>
+                        <div class="h-14 flex items-start">
+                            <div class="text-4xl">⚖️</div>
+                        </div>
+                        <div class="min-h-[110px]">
                             <span data-i18n="projects.legal-shield.category"
-                                class="text-red-600/60 text-[10px] uppercase font-bold tracking-widest mb-2 block">
+                                class="text-red-600/60 text-xs uppercase font-bold tracking-widest mb-2 block">
                                 Прававая падтрымка
                             </span>
                             <h3 data-i18n="projects.legal-shield.title"
-                                class="text-2xl font-black uppercase italic text-white mb-4 group-hover:text-red-600 transition-colors leading-none">
+                                class=" text-2xl font-black uppercase italic text-white mb-4 group-hover:text-red-600 transition-colors leading-none">
                                 Прававы шчыт
                             </h3>
+                        </div>
+                        <div class="flex-grow">
                             <p data-i18n="projects.legal-shield.description"
-                                class="text-gray-400 text-sm mb-6 leading-relaxed">
+                                class="text-gray-400 text-sm md:text-xl mb-6 leading-relaxed">
                                 Поўнае юрыдычнае суправаджэнне: ад атрымання ВНЖ да абароны ад міжнароднага вышуку і
                                 экстрадыцыі.
                             </p>
+                        </div>
+                        <div class="mt-auto">
                             <ul class="space-y-2 mb-8">
-                                <li class="text-[10px] uppercase tracking-wider text-gray-500 flex items-center gap-2">
+                                <li class="text-xs uppercase tracking-wider text-gray-500 flex items-center gap-2">
                                     <span class="w-1 h-1 bg-red-600"></span>
                                     <span data-i18n="projects.legal-shield.step1">Легалізацыя (ВНЖ, ПМЖ,
                                         Грамадзянства)</span>
                                 </li>
-                                <li class="text-[10px] uppercase tracking-wider text-gray-500 flex items-center gap-2">
+                                <li class="text-xs uppercase tracking-wider text-gray-500 flex items-center gap-2">
                                     <span class="w-1 h-1 bg-red-600"></span>
-                                    <span data-i18n="projects.legal-shield.step2">Аднаўленне страчаных дакументаў</span>
+                                    <span data-i18n="projects.legal-shield.step2">Аднаўленне страчаных
+                                        дакументаў</span>
                                 </li>
-                                <li class="text-[10px] uppercase tracking-wider text-gray-500 flex items-center gap-2">
+                                <li class="text-xs uppercase tracking-wider text-gray-500 flex items-center gap-2">
                                     <span class="w-1 h-1 bg-red-600"></span>
-                                    <span data-i18n="projects.legal-shield.step3">Кансультацыі па пераціку мяжы</span>
+                                    <span data-i18n="projects.legal-shield.step3">Кансультацыі па пераціку
+                                        мяжы</span>
                                 </li>
-                                <li class="text-[10px] uppercase tracking-wider text-gray-500 flex items-center gap-2">
+                                <li class="text-xs uppercase tracking-wider text-gray-500 flex items-center gap-2">
                                     <span class="w-1 h-1 bg-red-600"></span>
                                     <span data-i18n="projects.legal-shield.step4">Абарона ад Інтэрпола і
                                         экстрадыцыі</span>
@@ -107,147 +117,180 @@
                             </ul>
                         </div>
                         <a href="https://t.me/bulwark_fund_bot" target="_blank" data-i18n="projects.apply_button"
-                            class="inline-block w-full py-4 bg-white text-black text-center font-black uppercase text-[10px] tracking-[0.2em] hover:bg-red-600 hover:text-white transition-all">
+                            class="inline-block w-full py-4 bg-red-600 text-white hover:bg-white hover:text-black text-center font-black uppercase text-xs tracking-[0.3em] transition-all">
                             Падаць заяўку
                         </a>
                     </div>
 
                     <div
-                        class="border border-white/10 bg-[#050505] p-8 flex flex-col justify-between hover:border-red-600/50 transition-all group relative">
+                        class="border border-white/10 bg-[#050505] p-4 xl:p-6 flex flex-col h-full hover:border-red-600/50 transition-all group relative">
                         <div
-                            class="absolute top-4 right-4 text-[9px] font-black uppercase tracking-widest text-red-600 bg-red-600/10 px-2 py-1">
+                            class="absolute top-4 right-4 text-xs font-black uppercase tracking-widest text-red-600 bg-red-600/10 px-2 py-1">
                             <span data-i18n="projects.status.active">Актыўны</span>
                         </div>
-                        <div>
-                            <div class="text-4xl mb-6">🧠</div>
+
+                        <div class="h-14 flex items-start">
+                            <div class="text-4xl">🧠</div>
+                        </div>
+
+                        <div class="min-h-[110px]">
                             <span data-i18n="projects.mental-support.category"
-                                class="text-red-600/60 text-[10px] uppercase font-bold tracking-widest mb-2 block">
+                                class="text-red-600/60 text-xs uppercase font-bold tracking-widest mb-2 block">
                                 Рэабілітацыя
                             </span>
                             <h3 data-i18n="projects.mental-support.title"
                                 class="text-2xl font-black uppercase italic text-white mb-4 group-hover:text-red-600 transition-colors leading-none">
                                 Псіхалагічная апора
                             </h3>
+                        </div>
+
+                        <div class="flex-grow">
                             <p data-i18n="projects.mental-support.description"
-                                class="text-gray-400 text-sm mb-6 leading-relaxed">
-                                Кваліфікаваная дапамога ў пераадоленні наступстваў вайны, праца з ПТСР і адаптацыя да
+                                class="text-gray-400 text-sm md:text-xl mb-6 leading-relaxed">
+                                Кваліфікаваная дапамога ў пераадоленні наступстваў вайны, праца з ПТСР і адаптацыя
+                                да
                                 цывільнага жыцця.
                             </p>
+                        </div>
+                        <div class="mt-auto">
                             <ul class="space-y-2 mb-8">
-                                <li class="text-[10px] uppercase tracking-wider text-gray-500 flex items-center gap-2">
+                                <li class="text-xs uppercase tracking-wider text-gray-500 flex items-center gap-2">
                                     <span class="w-1 h-1 bg-red-600"></span>
                                     <span data-i18n="projects.mental-support.step1">Тэрапія баявога стрэсу</span>
                                 </li>
-                                <li class="text-[10px] uppercase tracking-wider text-gray-500 flex items-center gap-2">
+                                <li class="text-xs uppercase tracking-wider text-gray-500 flex items-center gap-2">
                                     <span class="w-1 h-1 bg-red-600"></span>
                                     <span data-i18n="projects.mental-support.step2">Пераадоленне пачуцця віны</span>
                                 </li>
-                                <li class="text-[10px] uppercase tracking-wider text-gray-500 flex items-center gap-2">
+                                <li class="text-xs uppercase tracking-wider text-gray-500 flex items-center gap-2">
                                     <span class="w-1 h-1 bg-red-600"></span>
                                     <span data-i18n="projects.mental-support.step3">Дапамога пры дэпрэсіі</span>
                                 </li>
-                                <li class="text-[10px] uppercase tracking-wider text-gray-500 flex items-center gap-2">
+                                <li class="text-xs uppercase tracking-wider text-gray-500 flex items-center gap-2">
                                     <span class="w-1 h-1 bg-red-600"></span>
                                     <span data-i18n="projects.mental-support.step4">Сацыяльная адаптацыя
                                         ветэранаў</span>
                                 </li>
                             </ul>
                         </div>
+
+
                         <a href="https://t.me/bulwark_fund_bot" target="_blank" data-i18n="projects.apply_button"
-                            class="inline-block w-full py-4 bg-white text-black text-center font-black uppercase text-[10px] tracking-[0.2em] hover:bg-red-600 hover:text-white transition-all">
+                            class="inline-block w-full py-4 bg-red-600 text-white hover:bg-white hover:text-black text-center font-black uppercase text-xs tracking-[0.3em]  transition-all">
                             Падаць заяўку
                         </a>
                     </div>
 
                     <div
-                        class="border border-white/10 bg-[#050505] p-8 flex flex-col justify-between hover:border-red-600/50 transition-all group relative">
+                        class="border border-white/10 bg-[#050505] p-4 xl:p-6 flex flex-col h-full hover:border-red-600/50 transition-all group relative">
                         <div
-                            class="absolute top-4 right-4 text-[9px] font-black uppercase tracking-widest text-red-600 bg-red-600/10 px-2 py-1">
+                            class="absolute top-4 right-4 text-xs font-black uppercase tracking-widest text-red-600 bg-red-600/10 px-2 py-1">
                             <span data-i18n="projects.status.active">Актыўны</span>
                         </div>
-                        <div>
-                            <div class="text-4xl mb-6">🛡️</div>
+
+                        <div class="h-14 flex items-start">
+                            <div class="text-4xl">🛡️</div>
+                        </div>
+                        <div class="min-h-[110px]">
                             <span data-i18n="projects.addiction-recovery.category"
-                                class="text-red-600/60 text-[10px] uppercase font-bold tracking-widest mb-2 block">
+                                class="text-red-600/60 text-xs uppercase font-bold tracking-widest mb-2 block">
                                 Аднаўленне
                             </span>
                             <h3 data-i18n="projects.addiction-recovery.title"
                                 class="text-2xl font-black uppercase italic text-white mb-4 group-hover:text-red-600 transition-colors leading-none">
                                 Пераадоленне залежнасцяў
                             </h3>
+                        </div>
+
+                        <div class="flex-grow">
                             <p data-i18n="projects.addiction-recovery.description"
-                                class="text-gray-400 text-sm mb-6 leading-relaxed">
-                                Канфідэнцыйная падтрымка для тых, хто сутыкнуўся з алкагольнай, наркатычнай або іншымі
+                                class="text-gray-400 text-sm md:text-xl mb-6 leading-relaxed">
+                                Канфідэнцыйная падтрымка для тых, хто сутыкнуўся з алкагольнай, наркатычнай або
+                                іншымі
                                 формамі залежнасці.
                             </p>
+                        </div>
+                        <div class="mt-auto">
                             <ul class="space-y-2 mb-8">
-                                <li class="text-[10px] uppercase tracking-wider text-gray-500 flex items-center gap-2">
+                                <li class="text-xs uppercase tracking-wider text-gray-500 flex items-center gap-2">
                                     <span class="w-1 h-1 bg-red-600"></span>
-                                    <span data-i18n="projects.addiction-recovery.step1">Кансультацыі спецыялістаў</span>
+                                    <span data-i18n="projects.addiction-recovery.step1">Кансультацыі
+                                        спецыялістаў</span>
                                 </li>
-                                <li class="text-[10px] uppercase tracking-wider text-gray-500 flex items-center gap-2">
+                                <li class="text-xs uppercase tracking-wider text-gray-500 flex items-center gap-2">
                                     <span class="w-1 h-1 bg-red-600"></span>
                                     <span data-i18n="projects.addiction-recovery.step2">Работа з прычынамі
                                         залежнасці</span>
                                 </li>
-                                <li class="text-[10px] uppercase tracking-wider text-gray-500 flex items-center gap-2">
+                                <li class="text-xs uppercase tracking-wider text-gray-500 flex items-center gap-2">
                                     <span class="w-1 h-1 bg-red-600"></span>
                                     <span data-i18n="projects.addiction-recovery.step3">Падтрымка ў працэсе
                                         рэабілітацыі</span>
                                 </li>
-                                <li class="text-[10px] uppercase tracking-wider text-gray-500 flex items-center gap-2">
+                                <li class="text-xs uppercase tracking-wider text-gray-500 flex items-center gap-2">
                                     <span class="w-1 h-1 bg-red-600"></span>
-                                    <span data-i18n="projects.addiction-recovery.step4">Поўная ананімнасць</span>
+                                    <span data-i18n="projects.addiction-recovery.step4">Поўная
+                                        ананімнасць</span>
                                 </li>
                             </ul>
                         </div>
                         <a href="https://t.me/bulwark_fund_bot" target="_blank" data-i18n="projects.apply_button"
-                            class="inline-block w-full py-4 bg-white text-black text-center font-black uppercase text-[10px] tracking-[0.2em] hover:bg-red-600 hover:text-white transition-all">
+                            class="inline-block w-full py-4 bg-red-600 text-white hover:bg-white hover:text-black text-center font-black uppercase text-xs tracking-[0.3em]  transition-all">
                             Падаць заяўку
                         </a>
                     </div>
 
                     <div
-                        class="border border-white/10 bg-[#050505] p-8 flex flex-col justify-between hover:border-red-600/50 transition-all group relative">
+                        class="border border-white/10 bg-[#050505] p-4 xl:p-6 flex flex-col h-full hover:border-red-600/50 transition-all group relative">
                         <div
-                            class="absolute top-4 right-4 text-[9px] font-black uppercase tracking-widest text-red-600 bg-red-600/10 px-2 py-1">
+                            class="absolute top-4 right-4 text-xs font-black uppercase tracking-widest text-red-600 bg-red-600/10 px-2 py-1">
                             <span data-i18n="projects.status.volunteers">Набор валанцёраў</span>
                         </div>
-                        <div>
-                            <div class="text-4xl mb-6">🤝</div>
+
+                        <div class="h-14 flex items-start">
+                            <div class="text-4xl">🤝</div>
+                        </div>
+                        <div class="min-h-[110px]">
                             <span data-i18n="projects.bulwark-hub.category"
-                                class="text-red-600/60 text-[10px] uppercase font-bold tracking-widest mb-2 block">
+                                class="text-red-600/60 text-xs uppercase font-bold tracking-widest mb-2 block">
                                 Супольнасць
                             </span>
                             <h3 data-i18n="projects.bulwark-hub.title"
-                                class="text-2xl font-black uppercase italic text-white mb-4 group-hover:text-red-600 transition-colors leading-none">
+                                class=" text-2xl font-black uppercase italic text-white mb-4 group-hover:text-red-600 transition-colors leading-none">
                                 Валанцёрскі хаб
                             </h3>
+                        </div>
+
+                        <div class="flex-grow">
                             <p data-i18n="projects.bulwark-hub.description"
-                                class="text-gray-400 text-sm mb-6 leading-relaxed">
-                                Мы збіраем спецыялістаў, гатовых дапамагаць сваім вопытам: ад юрыстаў да SMM-асістэнтаў.
+                                class="text-gray-400 text-sm md:text-xl mb-6 leading-relaxed">
+                                Мы збіраем спецыялістаў, гатовых дапамагаць сваім вопытам: ад юрыстаў да
+                                SMM-асістэнтаў.
                             </p>
+                        </div>
+                        <div class="mt-auto">
                             <ul class="space-y-2 mb-8">
-                                <li class="text-[10px] uppercase tracking-wider text-gray-500 flex items-center gap-2">
+                                <li class="text-xs uppercase tracking-wider text-gray-500 flex items-center gap-2">
                                     <span class="w-1 h-1 bg-red-600"></span>
                                     <span data-i18n="projects.bulwark-hub.step1">Юрыдычная дапамога</span>
                                 </li>
-                                <li class="text-[10px] uppercase tracking-wider text-gray-500 flex items-center gap-2">
+                                <li class="text-xs uppercase tracking-wider text-gray-500 flex items-center gap-2">
                                     <span class="w-1 h-1 bg-red-600"></span>
-                                    <span data-i18n="projects.bulwark-hub.step2">Псіхалагічныя кансультацыі</span>
+                                    <span data-i18n="projects.bulwark-hub.step2">Псіхалагічныя
+                                        кансультацыі</span>
                                 </li>
-                                <li class="text-[10px] uppercase tracking-wider text-gray-500 flex items-center gap-2">
+                                <li class="text-xs uppercase tracking-wider text-gray-500 flex items-center gap-2">
                                     <span class="w-1 h-1 bg-red-600"></span>
                                     <span data-i18n="projects.bulwark-hub.step3">Копірайтынг і медыя</span>
                                 </li>
-                                <li class="text-[10px] uppercase tracking-wider text-gray-500 flex items-center gap-2">
+                                <li class="text-xs uppercase tracking-wider text-gray-500 flex items-center gap-2">
                                     <span class="w-1 h-1 bg-red-600"></span>
                                     <span data-i18n="projects.bulwark-hub.step4">Інфармацыйная падтрымка</span>
                                 </li>
                             </ul>
                         </div>
                         <a href="https://t.me/bulwark_fund_bot" target="_blank" data-i18n="projects.apply_button"
-                            class="inline-block w-full py-4 bg-white text-black text-center font-black uppercase text-[10px] tracking-[0.2em] hover:bg-red-600 hover:text-white transition-all">
+                            class="inline-block w-full py-4 bg-red-600 text-white hover:bg-white hover:text-black text-center font-black uppercase text-xs tracking-[0.3em]  transition-all">
                             Падаць заяўку
                         </a>
                     </div>
@@ -256,16 +299,24 @@
             </div>
         </section>
 
-        <section class="py-12 border-y border-white/5 bg-black relative overflow-hidden">
-            <div class="container-custom relative z-10">
+        <section class=" bg-black relative overflow-hidden py-8 md:py-12 xl:py-16">
+            <div class="container-custom">
+
+                <div class="flex flex-col mb-6">
+                    <div class="flex items-center gap-4 w-full">
+                        <span data-i18n="projects.investment.bg_text"
+                            class="tracking-[0.3em] text-red-600 font-black text-sm leading-tight whitespace-nowrap md:whitespace-normal">Future</span>
+                        <div class="flex-1 h-px bg-red-600"></div>
+                    </div>
+                </div>
                 <div class="max-w-4xl">
-                    <h2 class="text-3xl md:text-5xl font-black uppercase italic mb-8 tracking-tighter">
+                    <h2 class="text-2xl md:text-3xl xl:text-5xl font-black uppercase tracking-tighter mb-6">
                         <span data-i18n="projects.investment.title_start">Чаму гэта </span>
                         <span data-i18n="projects.investment.title_highlight" class="text-red-600">інвестыцыя</span>
                         <span data-i18n="projects.investment.title_end"> а не проста дапамога?</span>
                     </h2>
                     <div class="grid md:grid-cols-2 gap-12">
-                        <div class="space-y-6 text-gray-400 text-lg leading-relaxed font-light">
+                        <div class="space-y-6 text-gray-400 text-sm md:text-lg leading-relaxed font-light">
                             <p data-i18n="projects.investment.desc1">Любая дыктатура канечная. Тыя, каму мы дапамагаем
                                 сёння — гэта архітэктары заўтрашняй Беларусі.</p>
                             <p data-i18n="projects.investment.desc2">Мы захоўваем кадравы рэзерв: будучых лідараў,
@@ -294,10 +345,7 @@
                     </div>
                 </div>
             </div>
-            <div data-i18n="projects.investment.bg_text"
-                class="absolute -bottom-10 -right-10 text-[15rem] font-black opacity-[0.02] italic pointer-events-none uppercase">
-                Future
-            </div>
+
         </section>
     </main>
 

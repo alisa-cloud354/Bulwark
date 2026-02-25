@@ -1,6 +1,6 @@
 {
   "contacts": {
-    "subtitle": "Contact & Support",
+    "subtitle": "Contact/Support",
     "main_title": "Contacts & Details",
     "sidebar_title": "Contacts",
     "email_label": "Email",
@@ -38,7 +38,7 @@
     "edrpou_value": "46082758",
     "bank_privat": "PrivatBank",
     "swift_privat": "PBANUA2X",
-    "payment_purpose": "Charitable contribution for the implementation of the Foundation's goals",
+    "payment_purpose": "Благодійний внесок на виконання цілей БФ",
     "currency_uah": "UAH",
     "iban_uah": "UA613052990000026003035931199",
     "currency_usd": "USD",
@@ -55,7 +55,7 @@
     "edrpou_value": "46082758",
     "bank_name": "JSC UNIVERSAL BANK",
     "swift_value": "UNJSUAUKXXX",
-    "payment_purpose": "Charitable contribution for the implementation of the charitable foundation's goals",
+    "payment_purpose": "Благодійний внесок для виконання цілей благодійного фонду",
     "currency_uah": "UAH",
     "currency_usd": "USD",
     "currency_eur": "EUR",

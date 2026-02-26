@@ -19,7 +19,10 @@
     "social_bot_link": "https://t.me/bulwark_fund_bot",
     "open_signal": "Связаться через Signal",
     "social_signal_link": "https://signal.me/#eu/KMAqbBp0k4GcSPEitaVRhF9fDYmXi-n5vHNjWPqivXyaSTlEUFNCrKU-fA7-lqR2",
-    "confidential_note": "*Конфиденциальность и безопасность гарантированы"
+    "confidential_note": "*Конфиденциальность и безопасность гарантированы",
+    "legal_name": "Благодійна організація \"Благодійний фонд \"Булварк\" (БО \"БФ \"Булварк\")",
+    "legal_code": "Код ЄДРПОУ: 46082758",
+    "legal_address": "Україна, м. Київ, вул. Білика Івана, 11-94, 03193"
   },
   "ui": {
     "bank_title": "Банковские реквизиты",

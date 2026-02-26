@@ -45,228 +45,252 @@
 
     <load src="/src/partials/header.html" />
     <load src="/src/partials/mobile-menu.html" />
+    <main class="relative min-h-screen w-full bg-black text-white">
+        <section id="get-help" class="bg-black text-white overflow-hidden py-8 md:py-12 xl:py-16">
+            <div class="container-custom">
+                <div class="flex flex-col mb-6">
+                    <div class="flex items-end gap-4 w-full">
+                        <span
+                            class="tracking-[0.3em] text-red-600 font-black text-sm leading-tight whitespace-nowrap md:whitespace-normal"
+                            data-i18n="donate_page.tag">
+                            Дапамагчы
+                        </span>
+                        <div class="flex-1 h-px bg-red-600 mb-1"></div>
+                    </div>
+                </div>
 
-    <main class="pt-8 pb-12 overflow-x-hidden">
-        <div class="container-custom mx-auto">
-
-            <header class="mb-16 md:mb-20">
-                <span data-i18n="donate_page.tag"
-                    class="text-red-600 font-black uppercase tracking-[0.3em] text-[10px] block mb-4 italic">
-                    Дапамога і Партнёрства
-                </span>
-                <h1 class="text-4xl md:text-6xl font-black uppercase italic leading-none tracking-tighter mb-8">
-                    <span data-i18n="donate_page.title_part1">Твая падтрымка —</span>
-                    <span data-i18n="donate_page.title_accent"
-                        class="text-red-600 underline decoration-2 underline-offset-8">наша моц</span>
+                <h1
+                    class="text-white text-2xl md:text-3xl xl:text-5xl font-black uppercase leading-[1] tracking-tighter mb-10">
+                    <span data-i18n="donate_page.title_part1">Дапамога</span>
+                    <span data-i18n="donate_page.title_accent" class="text-red-600">і Партнёрства</span>
                 </h1>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                    <div class="border-l-2 border-red-600 pl-6">
+                    <div class="border-l-2 border-red-600 pl-4">
                         <p data-i18n="donate_page.hero_text"
-                            class="text-lg md:text-xl text-white font-light leading-tight italic">
+                            class="text-sm xl:text-xl text-white font-light leading-tight italic mb-6">
                             Кожны рэсурс, які вы інвестуеце ў «Булварк», працуе на захаванне чалавечага капіталу
                             Беларусі.
                         </p>
+                        <p
+                            class="text-1xl xl:text-2xl font-black uppercase text-red-600 tracking-tighter leading-none ">
+                            <span data-i18n="donate_page.slogan_text1">Твая падтрымка —</span>
+                            <span data-i18n="donate_page.slogan_text2">наша моц</span>
+                        </p>
                     </div>
-                    <div class="text-gray-400 space-y-4 text-sm font-light italic">
+                    <div
+                        class="text-gray-400 text-xs xl:text-sm font-medium bg-black/80 border border-red-600 tracking-wider p-4">
                         <p data-i18n="donate_page.hero_subtext">
-                            Ваша дапамога можа быць фінансавай, экспертнай або медыйнай — любы ўнёсак набліжае нас да
+                            Ваша дапамога можа быць фінансавай, экспертнай або медыйнай — любы ўнёсак набліжае нас
+                            да
                             агульнай мэты: бяспекі тых, хто нас абараняе.
                         </p>
                     </div>
                 </div>
-            </header>
 
-            <section class="mb-24">
-                <div class="mb-8">
-                    <h2 data-i18n="donate_page.usage_title"
-                        class="text-[10px] uppercase font-black tracking-[0.5em] text-gray-600 italic">На што ідуць
-                        сродкі</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <a href="/pages/projects.html" target="_blank" rel="noopener noreferrer"
-                        class="group p-8 border border-white/10 bg-[#050505] hover:border-red-600/50 transition-all duration-500">
-                        <i
-                            class="fa-solid fa-scale-balanced text-2xl text-red-600 mb-6 group-hover:scale-110 transition-transform"></i>
-                        <h3 data-i18n="donate_page.item1_title"
-                            class="text-lg font-black uppercase italic mb-3 tracking-tight text-white group-hover:text-red-600 transition-colors">
-                            Прававы шчыт</h3>
-                        <p data-i18n="donate_page.item1_text"
-                            class="text-[11px] text-gray-400 font-light leading-relaxed uppercase tracking-wider italic">
-                            Легалізацыя ва Украіне і юрыдычны кансалтынг для воінаў.</p>
-                    </a>
-                    <a href="/pages/projects.html" target="_blank" rel="noopener noreferrer"
-                        class="group p-8 border border-white/10 bg-[#050505] hover:border-red-600/50 transition-all duration-500">
-                        <i
-                            class="fa-solid fa-brain text-2xl text-red-600 mb-6 group-hover:scale-110 transition-transform"></i>
-                        <h3 data-i18n="donate_page.item2_title"
-                            class="text-lg font-black uppercase italic mb-3 tracking-tight text-white group-hover:text-red-600 transition-colors">
-                            Псіхалогія</h3>
-                        <p data-i18n="donate_page.item2_text"
-                            class="text-[11px] text-gray-400 font-light leading-relaxed uppercase tracking-wider italic">
-                            Дапамога пры ПТСР і адаптацыя воінаў да цывільнага жыцця.</p>
-                    </a>
-                    <a href="/pages/projects.html" target="_blank" rel="noopener noreferrer"
-                        class="group p-8 border border-white/10 bg-[#050505] hover:border-red-600/50 transition-all duration-500">
-                        <i
-                            class="fa-solid fa-seedling text-2xl text-red-600 mb-6 group-hover:scale-110 transition-transform"></i>
-                        <h3 data-i18n="donate_page.item3_title"
-                            class="text-lg font-black uppercase italic mb-3 tracking-tight text-white group-hover:text-red-600 transition-colors">
-                            Будучыня</h3>
-                        <p data-i18n="donate_page.item3_text"
-                            class="text-[11px] text-gray-400 font-light leading-relaxed uppercase tracking-wider italic">
-                            Кадравы рэзерв і падтрымка сем'яў добраахвотнікаў.</p>
-                    </a>
-                </div>
-            </section>
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 py-8 md:py-12 xl:py-16 items-stretch">
 
-            <section class="mb-24" id="donate">
-                <h2
-                    class="text-3xl md:text-4xl font-black uppercase italic mb-10 tracking-tighter text-center md:text-left">
-                    <span data-i18n="donate_page.finance_title_part1">Фінансавы</span>
-                    <span data-i18n="donate_page.finance_title_accent" class="text-red-600">ўнёсак</span>
-                </h2>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div
-                        class="p-10 border border-red-600/30 bg-red-600/5 flex flex-col items-center text-center group hover:border-red-600 transition-all duration-500">
-                        <i class="fa-solid fa-hand-holding-heart text-3xl text-red-600 mb-6"></i>
-                        <h4 data-i18n="donate_page.donate_direct_title"
-                            class="text-xl font-black uppercase italic mb-4">
-                            Дапамагчы байцам/фонду</h4>
-                        <p data-i18n="donate_page.donate_direct_text"
-                            class="text-[10px] text-gray-500 uppercase mb-8 grow tracking-[0.2em] leading-relaxed max-w-xs">
-                            Наўпроставая фінансавая падтрымка нашых абаронцаў праз хуткія плацяжы
-                        </p>
-                        <a href="/index.html#donate" target="_blank" rel="noopener noreferrer"
-                            data-i18n="donate_page.btn_donate"
-                            class=" w-full bg-red-600 py-5 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-white hover:text-black transition-all text-center">
-                            Падтрымаць
-                        </a>
-                    </div>
-
-                    <div
-                        class="p-10 border border-white/10 bg-black flex flex-col items-center text-center group hover:border-red-600 transition-all duration-500">
-                        <i class="fa-solid fa-building-columns text-3xl text-red-600 mb-6"></i>
-                        <h4 data-i18n="donate_page.requisites_title" class="text-xl font-black uppercase italic mb-4">
-                            Варыянты аплаты</h4>
-                        <p data-i18n="donate_page.requisites_text"
-                            class="text-[10px] text-gray-500 uppercase mb-8 grow tracking-[0.2em] leading-relaxed max-w-xs">
-                            Картай онлайн / Перавод на рахунак / Крыптавалюты
-                        </p>
-                        <a href="/pages/contacts.html.html" target="_blank" rel="noopener noreferrer"
-                            data-i18n="donate_page.btn_requisites"
-                            class="w-full border border-red-600 py-5 text-[11px] font-black uppercase tracking-[0.4em]  hover:bg-red-600 transition-all text-center">
-                            Глядзець рэквізіты
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="mb-24">
-                <h2
-                    class="text-3xl md:text-4xl font-black uppercase italic mb-10 tracking-tighter text-center md:text-left">
-                    <span data-i18n="donate_page.partner_title_part1">Стаць</span>
-                    <span data-i18n="donate_page.partner_title_accent" class="text-red-600">партнёрам</span>
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-[#050505] p-8 border border-white/5 hover:border-red-600/30 transition-all">
-                        <i class="fa-solid fa-handshake-angle text-red-600 text-2xl mb-6"></i>
-                        <h4 data-i18n="donate_page.type_expert_title"
-                            class="font-black uppercase italic text-lg mb-2 tracking-tighter">
-                            Экспертная дапамога</h4>
-                        <p data-i18n="donate_page.type_expert_text"
-                            class="text-[11px] text-gray-500 uppercase font-light italic leading-relaxed">
-                            Бясплатная прафесійная дапамога (pro bono): юрыдычныя паслугі, медыцына, псіхалогія, IT або
-                            медыя-падтрымка.
-                        </p>
-                    </div>
-                    <div class="bg-[#050505] p-8 border border-white/5 hover:border-red-600/30 transition-all">
-                        <i class="fa-solid fa-briefcase text-red-600 text-2xl mb-6"></i>
-                        <h4 data-i18n="donate_page.type_business_title"
-                            class="font-black uppercase italic text-lg mb-2 tracking-tighter">Бізнес-супраца</h4>
-                        <p data-i18n="donate_page.type_business_text"
-                            class="text-[11px] text-gray-500 uppercase font-light italic leading-relaxed">
-                            Карпаратыўныя ўнёскі або рэсурсная падтрымка.
-                        </p>
-                    </div>
-                    <div class="bg-[#050505] p-8 border border-white/5 hover:border-red-600/30 transition-all">
-                        <i class="fa-solid fa-users-gear text-red-600 text-2xl mb-6"></i>
-                        <h4 data-i18n="donate_page.type_volunteer_title"
-                            class="font-black uppercase italic text-lg mb-2 tracking-tighter">Валанцёрства</h4>
-                        <p data-i18n="donate_page.type_volunteer_text"
-                            class="text-[11px] text-gray-500 uppercase font-light italic leading-relaxed">
-                            Дапамога з перакладамі, камунікацыяй ці арганізацыяй.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="partner-form" class="py-16 border-t border-white/10">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start mb-20">
-                    <div>
-                        <h2
-                            class="text-3xl md:text-5xl font-black uppercase italic mb-6 leading-none tracking-tighter break-words">
-                            <span data-i18n="donate_page.cta_title_part1">Маеце</span>
-                            <span data-i18n="donate_page.cta_title_accent"
-                                class="text-red-600 uppercase">прапанову?</span>
+                    <div class="flex flex-col h-full">
+                        <h2 data-i18n="donate_page.usage_title"
+                            class="text-sm md:text-lg xl:text-2xl font-black uppercase tracking-tighter text-gray-500 mb-6">
+                            На што ідуць сродкі
                         </h2>
-                        <p data-i18n="donate_page.cta_subtext"
-                            class="text-base text-gray-400 mb-8 italic font-light max-w-sm">
-                            Мы заўсёды адкрытыя да новых ідэй. Напішыце нам або скарыстайцеся ботам.
-                        </p>
-                        <a href="https://t.me/bulwark_fund_bot" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.2em] bg-red-600 text-white px-8 py-5 hover:bg-white hover:text-black transition-all italic">
-                            <i class="fa-brands fa-telegram text-xl"></i>
-                            <span data-i18n="donate_page.cta_bot_button">@bulwark_fund_bot</span>
-                        </a>
+
+                        <div class="flex flex-col gap-4 flex-1">
+                            <a href="/pages/projects.html"
+                                class="group p-4 border border-white/10 bg-black/80 hover:border-red-600/30 transition-all duration-500 h-full">
+                                <i
+                                    class="fa-solid fa-scale-balanced text-2xl text-red-600 mb-3 group-hover:scale-105 transition-transform"></i>
+                                <h3 data-i18n="donate_page.item1_title"
+                                    class="text-lg font-black uppercase italic mb-3 tracking-tight text-white group-hover:text-red-600 transition-colors">
+                                    Прававы шчыт</h3>
+                                <p data-i18n="donate_page.item1_text"
+                                    class="text-xs text-gray-400 font-light leading-relaxed uppercase tracking-wider italic">
+                                    Легалізацыя
+                                    ва Украіне і юрыдычны кансалтынг для воінаў.</p>
+                            </a>
+
+                            <a href="/pages/projects.html"
+                                class="group p-4 border border-white/10 bg-black/80 hover:border-red-600/30 transition-all duration-500 h-full">
+                                <i
+                                    class="fa-solid fa-brain text-2xl text-red-600 mb-3 group-hover:scale-105 transition-transform"></i>
+                                <h3 data-i18n="donate_page.item2_title"
+                                    class="text-lg font-black uppercase italic mb-3 tracking-tight text-white group-hover:text-red-600 transition-colors">
+                                    Псіхалогія</h3>
+                                <p data-i18n="donate_page.item2_text"
+                                    class="text-xs text-gray-400 font-light leading-relaxed uppercase tracking-wider italic">
+                                    Дапамога
+                                    пры ПТСР і адаптацыя воінаў да цывільнага жыцця.</p>
+                            </a>
+
+                            <a href="/pages/projects.html"
+                                class="group p-4 border border-white/10 bg-black/80 hover:border-red-600/30 transition-all duration-500 h-full">
+                                <i
+                                    class="fa-solid fa-seedling text-2xl text-red-600 mb-3 group-hover:scale-105 transition-transform"></i>
+                                <h3 data-i18n="donate_page.item3_title"
+                                    class="text-lg font-black uppercase italic mb-3 tracking-tight text-white group-hover:text-red-600 transition-colors">
+                                    Будучыня</h3>
+                                <p data-i18n="donate_page.item3_text"
+                                    class="text-xs text-gray-400 font-light leading-relaxed uppercase tracking-wider italic">
+                                    Кадравы
+                                    рэзерв і падтрымка сем'яў добраахвотнікаў.</p>
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="w-full bg-black/50 p-8 md:p-10 border border-white/10 relative shadow-2xl">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-red-600"></div>
+                    <div class="flex flex-col h-full" id="donate">
+                        <h2
+                            class="text-sm md:text-lg xl:text-2xl font-black uppercase tracking-tighter text-gray-500 mb-6">
+                            <span data-i18n="donate_page.finance_title_part1">Фінансавы</span>
+                            <span data-i18n="donate_page.finance_title_accent">ўнёсак</span>
+                        </h2>
 
-                        <p class="text-red-600 mb-8 uppercase font-black text-[10px] tracking-[0.3em] text-center"
-                            data-i18n="donate_page.form.label">
-                            Хочаце супрацоўнічаць? Напішыце
-                        </p>
-
-                        <form id="partners-form" class="grid grid-cols-1 gap-6">
-                            <div id="partner-step-1" class="w-full">
-                                <input type="text" name="org_name"
-                                    data-i18n="[placeholder]donate_page.form.org_placeholder"
-                                    placeholder="Арганізацыя / Імя (мін. 2 сімвалы)" required minlength="2"
-                                    maxlength="100" autocomplete="off"
-                                    class="w-full bg-black border border-white/10 p-4 text-white text-xs outline-none focus:border-red-600 transition-colors font-bold tracking-widest">
+                        <div class="flex flex-col gap-4 flex-1">
+                            <div
+                                class="p-4 border border-white/10 bg-black/80 flex flex-col items-start text-left group hover:border-red-600 transition-all duration-500 flex-1">
+                                <i class="fa-solid fa-hand-holding-heart text-3xl text-red-600 mb-6"></i>
+                                <h4 data-i18n="donate_page.donate_direct_title"
+                                    class="text-lg font-black uppercase italic mb-3 tracking-tight text-white group-hover:text-red-600 transition-colors">
+                                    Дапамагчы байцам/фонду</h4>
+                                <p data-i18n="donate_page.donate_direct_text"
+                                    class="text-xs text-gray-400 font-light leading-relaxed uppercase tracking-wider italic mb-6">
+                                    Наўпроставая фінансавая падтрымка нашых абаронцаў праз хуткія плацяжы</p>
+                                <a href="/index.html#donate" data-i18n="donate_page.btn_donate"
+                                    class="mt-auto w-full bg-red-600 py-4 text-xs font-black uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all text-center">Падтрымаць</a>
                             </div>
 
-                            <div id="partner-step-2"
-                                class="w-full pointer-events-none transition-all duration-500 opacity-40">
-                                <input type="text" name="contact"
-                                    data-i18n="[placeholder]donate_page.form.contact_placeholder"
-                                    placeholder="Email (xxx@xx.xxx) / Phone (+38...)" required
-                                    class="w-full bg-black border border-white/10 p-4 text-white text-xs outline-none focus:border-red-600 transition-colors font-bold tracking-widest">
+                            <div
+                                class="p-4 border border-white/10 bg-black/80 flex flex-col items-start text-left group hover:border-red-600 transition-all duration-500 flex-1">
+                                <i class="fa-solid fa-building-columns text-3xl text-red-600 mb-6"></i>
+                                <h4 data-i18n="donate_page.requisites_title"
+                                    class="text-lg font-black uppercase italic mb-3 tracking-tight text-white group-hover:text-red-600 transition-colors">
+                                    Варыянты аплаты</h4>
+                                <p data-i18n="donate_page.requisites_text"
+                                    class="text-xs text-gray-400 font-light leading-relaxed uppercase tracking-wider italic mb-6">
+                                    Картай
+                                    онлайн / Перавод на рахунак / Крыптавалюты</p>
+                                <a href="/pages/contacts.html" data-i18n="donate_page.btn_requisites"
+                                    class="mt-auto w-full bg-red-600 py-4 text-xs font-black uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all text-center">Глядзець
+                                    рэквізіты</a>
                             </div>
-
-                            <div id="partner-step-3" class="pointer-events-none transition-all duration-500 opacity-40">
-                                <textarea name="message" rows="3"
-                                    data-i18n="[placeholder]donate_page.form.message_placeholder"
-                                    placeholder="Як мы можам супрацоўнічаць? (мін. 10 сімвалаў)" required minlength="10"
-                                    maxlength="1500"
-                                    class="w-full bg-black border border-white/10 p-4 text-white text-xs outline-none focus:border-red-600 transition-all font-bold resize-none tracking-widest"></textarea>
-                            </div>
-
-                            <button type="submit"
-                                class="bg-red-600 py-5 text-white font-black tracking-[0.3em] text-[10px] hover:bg-white hover:text-black transition-all shadow-lg flex justify-center items-center gap-3">
-                                <span data-i18n="donate_page.form.btn_submit">Стаць партнёрам</span>
-                                <i class="fa-solid fa-circle-notch fa-spin hidden loader-icon"
-                                    style="display: none !important;"></i>
-                            </button>
-                        </form>
+                        </div>
                     </div>
                 </div>
 
-                <div class="pt-12 border-t border-white/5 text-center">
-                    <h5 class="text-[9px] uppercase font-black tracking-[0.4em] text-white mb-10 italic"
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 py-8 md:py-12 xl:py-16 items-stretch">
+
+
+                    <div class="flex flex-col h-full">
+                        <h2
+                            class="text-sm md:text-lg xl:text-2xl font-black uppercase tracking-tighter text-gray-500 mb-6">
+                            <span data-i18n="donate_page.partner_title_part1">Стаць</span>
+                            <span data-i18n="donate_page.partner_title_accent">партнёрам</span>
+                        </h2>
+                        <div class="flex flex-col gap-4 flex-1">
+                            <div
+                                class="group p-4 border border-white/10 bg-black/80 hover:border-red-600/30 transition-all duration-500 h-full">
+                                <i class="fa-solid fa-handshake-angle text-red-600 text-2xl mb-3"></i>
+                                <h4 data-i18n="donate_page.type_expert_title"
+                                    class="text-lg font-black uppercase italic mb-3 tracking-tight text-white group-hover:text-red-600 transition-colors">
+                                    Экспертная дапамога</h4>
+                                <p data-i18n="donate_page.type_expert_text"
+                                    class="text-xs text-gray-400 font-light leading-relaxed uppercase tracking-wider italic">
+                                    Бясплатная прафесійная дапамога (pro bono): юрыдычныя паслугі, медыцына, псіхалогія,
+                                    IT
+                                    або
+                                    медыя-падтрымка.
+                                </p>
+                            </div>
+                            <div
+                                class="group p-4 border border-white/10 bg-black/80 hover:border-red-600/30 transition-all duration-500 h-full">
+                                <i class="fa-solid fa-briefcase text-red-600 text-2xl mb-3"></i>
+                                <h4 data-i18n="donate_page.type_business_title"
+                                    class="text-lg font-black uppercase italic mb-3 tracking-tight text-white group-hover:text-red-600 transition-colors">
+                                    Бізнес-супраца
+                                </h4>
+                                <p data-i18n="donate_page.type_business_text"
+                                    class="text-xs text-gray-400 font-light leading-relaxed uppercase tracking-wider italic">
+                                    Карпаратыўныя ўнёскі або рэсурсная падтрымка.
+                                </p>
+                            </div>
+                            <div
+                                class="group p-4 border border-white/10 bg-black/80 hover:border-red-600/30 transition-all duration-500 h-full">
+                                <i class="fa-solid fa-users-gear text-red-600 text-2xl mb-6"></i>
+                                <h4 data-i18n="donate_page.type_volunteer_title"
+                                    class="text-lg font-black uppercase italic mb-3 tracking-tight text-white group-hover:text-red-600 transition-colors">
+                                    Валанцёрства</h4>
+                                <p data-i18n="donate_page.type_volunteer_text"
+                                    class="text-xs text-gray-400 font-light leading-relaxed uppercase tracking-wider italic">
+                                    Дапамога з перакладамі, камунікацыяй ці арганізацыяй.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="partner-form" class="flex flex-col h-full">
+                        <h2
+                            class="text-sm md:text-lg xl:text-2xl font-black uppercase tracking-tighter text-gray-500 mb-6">
+                            <span data-i18n="donate_page.cta_title_part1">Маеце</span>
+                            <span data-i18n="donate_page.cta_title_accent">прапанову?</span>
+                        </h2>
+                        <div class="flex flex-col gap-4 flex-1">
+
+                            <div class="w-full bg-black/80 p-4 md:p-6 border border-white/10 relative shadow-2xl">
+
+                                <p class="text-red-600 mb-6 uppercase font-black text-xs tracking-[0.3em] text-center"
+                                    data-i18n="donate_page.form.label">
+                                    Хочаце супрацоўнічаць? Напішыце
+                                </p>
+
+                                <form id="partners-form" class="grid grid-cols-1 gap-6">
+                                    <div id="partner-step-1" class="w-full">
+                                        <input type="text" name="org_name"
+                                            data-i18n="[placeholder]donate_page.form.org_placeholder"
+                                            placeholder="Арганізацыя / Імя (мін. 2 сімвалы)" required minlength="2"
+                                            maxlength="100" autocomplete="off"
+                                            class="w-full bg-black/80 border border-white/10 p-4 text-white text-xs outline-none focus:border-red-600 transition-colors font-bold tracking-widest">
+                                    </div>
+
+                                    <div id="partner-step-2"
+                                        class="w-full pointer-events-none transition-all duration-500 opacity-40">
+                                        <input type="text" name="contact"
+                                            data-i18n="[placeholder]donate_page.form.contact_placeholder"
+                                            placeholder="Email (xxx@xx.xxx) / Phone (+38...)" required
+                                            class="w-full bg-black/80 border border-white/10 p-4 text-white text-xs outline-none focus:border-red-600 transition-colors font-bold tracking-widest">
+                                    </div>
+
+                                    <div id="partner-step-3"
+                                        class="pointer-events-none transition-all duration-500 opacity-40">
+                                        <textarea name="message" rows="3"
+                                            data-i18n="[placeholder]donate_page.form.message_placeholder"
+                                            placeholder="Як мы можам супрацоўнічаць? (мін. 10 сімвалаў)" required
+                                            minlength="10" maxlength="1500"
+                                            class="w-full bg-black/80 border border-white/10 p-4 text-white text-xs outline-none focus:border-red-600 transition-all font-bold resize-none tracking-widest"></textarea>
+                                    </div>
+
+                                    <button type="submit"
+                                        class="bg-red-600 py-5 text-white font-black tracking-[0.3em] text-xs hover:bg-white hover:text-black transition-all shadow-lg flex justify-center items-center gap-3">
+                                        <span data-i18n="donate_page.form.btn_submit">Стаць партнёрам</span>
+                                        <i class="fa-solid fa-circle-notch fa-spin hidden loader-icon"
+                                            style="display: none !important;"></i>
+                                    </button>
+                                    <p data-i18n="donate_page.cta_subtext"
+                                        class="text-xs text-gray-400 font-light leading-relaxed uppercase tracking-wider text-center italic ">
+                                        Мы заўсёды адкрытыя да новых ідэй. Напішыце нам або скарыстайцеся ботам.
+                                    </p>
+                                    <a href="https://t.me/bulwark_fund_bot" target="_blank" rel="noopener noreferrer"
+                                        class="inline-flex items-center  bg-red-600 py-5 text-white font-black tracking-[0.3em] text-xs hover:bg-white hover:text-black transition-all shadow-lg justify-center gap-3">
+                                        <i class="fa-brands fa-telegram text-xl"></i>
+                                        <span data-i18n="donate_page.cta_bot_button">@bulwark_fund_bot</span></a>
+                                </form>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="pt-4 border-t border-white/10 text-left">
+                    <h5 class="text-xs uppercase font-black tracking-[0.3em] text-white mb-10 italic"
                         data-i18n="donate_page.alliances_title">
                         Стратэгічныя партнёры
                     </h5>
@@ -274,11 +298,12 @@
                     <div id="partners-list" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
 
                 </div>
+            </div>
 
 
-            </section>
 
-        </div>
+
+        </section>
     </main>
 
     <load src="/src/partials/footer.html" />

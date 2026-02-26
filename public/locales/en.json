@@ -293,7 +293,7 @@
     "repeat_line2": "I swear to liberate and defend You..."
   },
   "get_help": {
-    "tag": "Support",
+    "tag": "Get Help",
     "main_title_part1": "Support for ",
     "main_title_accent": "volunteers",
     "hero_text": "We support Belarusian volunteers and veterans (AFU / NGU) in critical matters of status and health.",
@@ -324,9 +324,11 @@
     }
   },
   "donate_page": {
-    "tag": "Support & Partnership",
-    "title_part1": "Your support is",
-    "title_accent": "our strength",
+    "tag": "Support Us",
+    "title_part1": "Help",
+    "title_accent": "& Partnership",
+    "slogan_text1": "Your support is",
+    "slogan_text2": "Our strength",
     "hero_text": "Every resource you invest in Bulwark works to preserve Belarus's human capital.",
     "hero_subtext": "Your help can be financial, expert, or media-based — any contribution brings us closer to our goal: the security of those who protect us.",
     "usage_title": "Fund distribution",

@@ -43,156 +43,174 @@
     <load src="/src/partials/header.html" />
     <load src="/src/partials/mobile-menu.html" />
 
-    <main class="pt-12 pb-16">
-        <div class="container-custom mx-auto overflow-hidden">
-            <header class="mb-20">
-                <span data-i18n="get_help.tag"
-                    class="text-red-600 font-black uppercase tracking-[0.3em] text-[10px] block mb-4 italic">Support
-                    Service</span>
+    <main class="relative min-h-screen w-full bg-black text-white">
+        <section id="get-help" class="bg-black text-white overflow-hidden py-8 md:py-12 xl:py-16">
+            <div class="container-custom">
+                <div class="flex flex-col mb-6">
+                    <div class="flex items-end gap-4 w-full">
+                        <span
+                            class="tracking-[0.3em] text-red-600 font-black text-sm leading-tight whitespace-nowrap md:whitespace-normal"
+                            data-i18n="get_help.tag">
+                            Support Service
+                        </span>
+                        <div class="flex-1 h-px bg-red-600 mb-1"></div>
+                    </div>
+                </div>
+
                 <h1
-                    class="text-3xl sm:text-4xl md:text-7xl font-black uppercase italic leading-none tracking-tighter mb-10 break-words">
+                    class="text-white text-2xl md:text-3xl xl:text-5xl font-black uppercase leading-[1] tracking-tighter mb-10">
                     <span data-i18n="get_help.main_title_part1">Дапамога</span>
                     <br>
-                    <span data-i18n="get_help.main_title_accent"
-                        class="text-red-600 underline decoration-2 underline-offset-8">добраахвотнікам</span>
+                    <span data-i18n="get_help.main_title_accent" class="text-red-600">добраахвотнікам</span>
                 </h1>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-                    <div class="space-y-6 border-l-2 border-red-600 pl-6">
-                        <p data-i18n="get_help.hero_text"
-                            class="text-lg md:text-2xl font-light italic leading-tight break-words">
-                            Мы падтрымліваем беларускіх добраахвотнікаў і ветэранаў (УСУ / НГУ) у крытычных пытаннях
-                            статусу і здароўя.
-                        </p>
-                        <div class="p-6 bg-red-600/5 border border-red-600/20">
-                            <p data-i18n="get_help.warning_text"
-                                class="text-[10px] text-gray-400 uppercase tracking-widest font-black leading-relaxed break-words">
-                                Важна: Мы не займаемся зборам на зброю ці амуніцыю. Наша задача — ваш прававы і
-                                ментальны статус.
+                <div class="mb-20">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                        <div class="space-y-6 border-l-2 border-red-600 pl-4">
+                            <p data-i18n="get_help.hero_text"
+                                class="text-sm md:text-1xl font-light italic leading-tight break-words">
+                                Мы падтрымліваем беларускіх добраахвотнікаў і ветэранаў (УСУ / НГУ) у крытычных пытаннях
+                                статусу і здароўя.
                             </p>
+                            <div class="p-4 bg-black/80 border border-red-600/20">
+                                <p data-i18n="get_help.warning_text"
+                                    class="text-xs text-gray-400 uppercase tracking-widest font-black leading-relaxed break-words">
+                                    Важна: Мы не займаемся зборам на зброю ці амуніцыю. Наша задача — ваш прававы і
+                                    ментальны статус.
+                                </p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="grid grid-cols-1 gap-4">
-                        <div class="p-6 bg-[#050505] border border-white/10">
+
+                        <div class="p-4 bg-black/80 border border-white/10 space-y-4">
                             <h4 data-i18n="get_help.crit1_title"
-                                class="text-red-600 font-black uppercase text-[10px] tracking-widest mb-2 italic">Для
+                                class="text-red-600 font-black uppercase text-xs tracking-widest mb-2 italic">
+                                Для
                                 каго</h4>
                             <p data-i18n="get_help.crit1_text"
-                                class="text-sm font-bold uppercase tracking-tighter break-words">Дзейныя
+                                class="text-sm font-bold uppercase tracking-tighter break-words">
+                                Дзейныя
                                 вайскоўцы і ветэраны-беларусы.</p>
-                        </div>
-                        <div class="p-6 bg-[#050505] border border-white/10">
                             <h4 data-i18n="get_help.crit2_title"
-                                class="text-red-600 font-black uppercase text-[10px] tracking-widest mb-2 italic">
+                                class="text-red-600 font-black uppercase text-xs tracking-widest mb-2 italic">
                                 Напрамкі</h4>
                             <p data-i18n="get_help.crit2_text"
-                                class="text-sm font-bold uppercase tracking-tighter italic text-gray-400 break-words">
+                                class="text-sm font-bold uppercase tracking-tighter italic text-white break-words">
                                 Легалізацыя,
                                 экстрадыцыя, ПТСР-дапамога, аднаўленне дакументаў.</p>
                         </div>
+
+
                     </div>
                 </div>
-            </header>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                    <div class="space-y-8 border border-white/10 p-4 bg-black/80">
+                        <h2 data-i18n="get_help.form_title_row1"
+                            class="text-2xl md:text-3xl xl:text-5xl font-black uppercase tracking-tighter break-words">
+                            Аформіць запыт
+                        </h2>
 
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start border-t border-white/10 pt-20">
-                <div class="space-y-12">
-                    <h2 class="text-3xl md:text-4xl font-black uppercase italic tracking-tighter break-words">
-                        <span data-i18n="get_help.form_title_row1">Аформіць</span>
-                        <br>
-                        <span data-i18n="get_help.form_title_row2" class="text-red-600">запыт</span>
-                    </h2>
-
-                    <div class="space-y-8">
-                        <div class="flex gap-6 items-start">
-                            <div data-i18n="get_help.step1_number" class="text-2xl text-red-600 italic font-black">01
+                        <div class="space-y-8">
+                            <div class="flex gap-4 items-start">
+                                <div data-i18n="get_help.step1_number" class="text-2xl text-gray-500 font-black">
+                                    01
+                                </div>
+                                <div class="min-w-0">
+                                    <h4 data-i18n="get_help.step1_title"
+                                        class="font-black uppercase text-sm mb-2 text-red-600">
+                                        Бяспечная сувязь</h4>
+                                    <p data-i18n="get_help.step1_text"
+                                        class="text-xs text-white uppercase leading-relaxed tracking-wider break-words">
+                                        Усе дадзеныя
+                                        перадаюцца праз абароненыя каналы. Вы можаце выкарыстоўваць пазыўны.</p>
+                                </div>
                             </div>
-                            <div class="min-w-0">
-                                <h4 data-i18n="get_help.step1_title" class="font-black uppercase text-sm mb-2 italic">
-                                    Бяспечная сувязь</h4>
-                                <p data-i18n="get_help.step1_text"
-                                    class="text-xs text-gray-500 uppercase leading-relaxed tracking-wider break-words">
-                                    Усе дадзеныя
-                                    перадаюцца праз абароненыя каналы. Вы можаце выкарыстоўваць пазыўны.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-6 items-start">
-                            <div data-i18n="get_help.step2_number" class="text-2xl text-red-600 italic font-black">02
-                            </div>
-                            <div class="min-w-0">
-                                <h4 data-i18n="get_help.step2_title" class="font-black uppercase text-sm mb-2 italic">
-                                    Апрацоўка</h4>
-                                <p data-i18n="get_help.step2_text"
-                                    class="text-xs text-gray-500 uppercase leading-relaxed tracking-wider break-words">
-                                    Нашы юрысты
-                                    ці псіхолагі звяжуцца з вамі на працягу 48 гадзін.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="inline-flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.2em] bg-white text-black px-6 py-4 italic max-w-full">
-                        <i class="fa-solid fa-lock text-red-600"></i>
-                        <span data-i18n="get_help.encrypted_label" class="break-words">Абаронена скразным
-                            шыфраваннем</span>
-                    </div>
-                </div>
-
-                <div class="bg-black/50 p-6 md:p-12 border border-white/10 shadow-2xl relative">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-red-600"></div>
-
-                    <p class="text-red-600 mb-8 uppercase font-black text-xs tracking-[0.3em] text-center"
-                        data-i18n="get_help.form.cta">Патрэбна
-                        дапамога? Напішыце нам</p>
-
-                    <form id="help-form" class="space-y-6">
-                        <div id="help-step-1">
-                            <input type="text" name="user_name" data-i18n="[placeholder]get_help.form.name_placeholder"
-                                placeholder="Імя / Пазыўны (мін.2 сімвалы)" required minlength="2" autocomplete="off"
-                                class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-bold">
-                        </div>
-
-                        <div id="help-step-2" class="opacity-40 pointer-events-none transition-all duration-500">
-                            <div class="relative">
-                                <select name="user_status" required
-                                    class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-bold appearance-none cursor-pointer">
-                                    <option value="" disabled selected data-i18n="get_help.form.status_select">Статус
-                                        (абярыце са спіса)</option>
-                                    <option value="Дзейны вайсковец" data-i18n="get_help.form.status_active">Дзейны
-                                        вайсковец</option>
-                                    <option value="Ветэран" data-i18n="get_help.form.status_veteran">Ветэран</option>
-                                    <option value="Сям'я добраахвотніка" data-i18n="get_help.form.status_family">Сям'я
-                                        добраахвотніка</option>
-                                </select>
-                                <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
-                                    <i class="fa-solid fa-chevron-down text-[10px] text-gray-500"></i>
+                            <div class="flex gap-6 items-start">
+                                <div data-i18n="get_help.step2_number" class="text-2xl text-gray-500  font-black">
+                                    02
+                                </div>
+                                <div class="min-w-0">
+                                    <h4 data-i18n="get_help.step2_title"
+                                        class="font-black uppercase text-sm mb-2 text-red-600">
+                                        Апрацоўка</h4>
+                                    <p data-i18n="get_help.step2_text"
+                                        class="text-xs text-white uppercase leading-relaxed tracking-wider break-words">
+                                        Нашы спецыялісты падрыхтуюць усю неабходную інфармацыю па вашаму пытанню і
+                                        звяжуцца з вамі
+                                        бліжэйшым часам</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div id="help-step-3" class="opacity-40 pointer-events-none transition-all duration-500">
-                            <textarea name="user_needs" data-i18n="[placeholder]get_help.form.needs_placeholder"
-                                placeholder="Якая дапамога патрэбна? (мін.10 сімвалаў)" required minlength="10"
-                                class="w-full bg-black border border-white/10 p-4 text-white text-sm h-32 outline-none focus:border-red-600 transition-all font-bold resize-none "></textarea>
+                        <div
+                            class="inline-flex items-center gap-4 text-xs font-black uppercase tracking-[0.3em] bg-black/80 text-red-600 p-4 italic max-w-full">
+                            <i class="fa-solid fa-lock text-red-600"></i>
+                            <span data-i18n="get_help.encrypted_label" class="break-words">Канфідэнцыяльнасць
+                                гарантавана</span>
                         </div>
+                    </div>
 
-                        <div id="help-step-4" class="opacity-40 pointer-events-none transition-all duration-500">
-                            <input type="text" name="user_contact"
-                                data-i18n="[placeholder]get_help.form.contact_placeholder"
-                                placeholder="Telegram/Signal(@user) або Phone(+38..)" required
-                                class="w-full bg-black border border-white/10 p-4 text-white text-sm outline-none focus:border-red-600 transition-all font-bold ">
-                        </div>
+                    <div class="bg-black/80 p-4 md:p-6 border border-white/10 shadow-2xl relative">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-red-600"></div>
 
-                        <button type="submit"
-                            class="w-full bg-red-600 py-6 text-white font-black uppercase tracking-[0.4em] text-xs hover:bg-white hover:text-black transition-all duration-700 flex justify-center items-center gap-2">
-                            <span data-i18n="get_help.form.btn_send">Адправіць запыт</span>
-                            <i class="fa-solid fa-circle-notch fa-spin loader-icon"
-                                style="display: none !important;"></i>
-                        </button>
-                    </form>
+                        <p class="text-red-600 mb-4 uppercase font-black text-xs tracking-[0.3em] text-center"
+                            data-i18n="get_help.form.cta">Патрэбна
+                            дапамога? Напішыце нам</p>
+
+                        <form id="help-form" class="space-y-6">
+                            <div id="help-step-1">
+                                <input type="text" name="user_name"
+                                    data-i18n="[placeholder]get_help.form.name_placeholder"
+                                    placeholder="Імя / Пазыўны (мін.2 сімвалы)" required minlength="2"
+                                    autocomplete="off"
+                                    class="w-full bg-black/80 border border-white/10 p-4 text-white text-xs outline-none focus:border-red-600 transition-all font-black">
+                            </div>
+
+                            <div id="help-step-2" class="opacity-40 pointer-events-none transition-all duration-500">
+                                <div class="relative">
+                                    <select name="user_status" required
+                                        class="w-full bg-black/80 border border-white/10 p-4 text-white text-xs outline-none focus:border-red-600 transition-all font-black appearance-none cursor-pointer">
+                                        <option value="" disabled selected data-i18n="get_help.form.status_select">
+                                            Статус
+                                            (абярыце са спіса)</option>
+                                        <option value="Дзейны вайсковец" data-i18n="get_help.form.status_active">Дзейны
+                                            вайсковец</option>
+                                        <option value="Ветэран" data-i18n="get_help.form.status_veteran">Ветэран
+                                        </option>
+                                        <option value="Сям'я добраахвотніка" data-i18n="get_help.form.status_family">
+                                            Сям'я
+                                            добраахвотніка</option>
+                                    </select>
+                                    <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
+                                        <i class="fa-solid fa-chevron-down text-xs text-gray-500"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="help-step-3" class="opacity-40 pointer-events-none transition-all duration-500">
+                                <textarea name="user_needs" data-i18n="[placeholder]get_help.form.needs_placeholder"
+                                    placeholder="Якая дапамога патрэбна? (мін.10 сімвалаў)" required minlength="10"
+                                    class="w-full bg-black/80 border border-white/10 p-4 text-white text-xs h-32 outline-none focus:border-red-600 transition-all font-black resize-none "></textarea>
+                            </div>
+
+                            <div id="help-step-4" class="opacity-40 pointer-events-none transition-all duration-500">
+                                <input type="text" name="user_contact"
+                                    data-i18n="[placeholder]get_help.form.contact_placeholder"
+                                    placeholder="Telegram/Signal(@user) або Phone(+38..)" required
+                                    class="w-full bg-black/80 border border-white/10 p-4 text-white text-xs outline-none focus:border-red-600 transition-all font-black ">
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-red-600 p-4 text-white font-black uppercase tracking-[0.3em] text-xs hover:bg-white hover:text-black transition-all duration-700 flex justify-center items-center gap-2">
+                                <span data-i18n="get_help.form.btn_send">Адправіць запыт</span>
+                                <i class="fa-solid fa-circle-notch fa-spin loader-icon"
+                                    style="display: none !important;"></i>
+                            </button>
+                        </form>
+                    </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 
     <load src="/src/partials/footer.html" />

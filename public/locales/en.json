@@ -142,7 +142,8 @@
     "read_more": "Read more"
   },
   "news-full": {
-    "label": "News Archive",
+    "tag": "Archive",
+    "label": "News",
     "loading": "Loading...",
     "error_load": "Failed to load news."
   },
@@ -301,15 +302,15 @@
     "crit1_text": "Active-duty military and Belarusian veterans.",
     "crit2_title": "Focus areas",
     "crit2_text": "Legalization, extradition, PTSD support, document recovery.",
-    "form_title_row1": "Submit a",
-    "form_title_row2": "request",
+    "form_title_row1": "Submit a request",
+
     "step1_number": "01",
     "step1_title": "Secure communication",
     "step1_text": "All data is transmitted via protected channels. You may use a callsign.",
     "step2_number": "02",
     "step2_title": "Processing",
-    "step2_text": "Our lawyers or psychologists will contact you within 48 hours.",
-    "encrypted_label": "Protected by end-to-end encryption",
+    "step2_text": "Our specialists will prepare all the necessary information regarding your inquiry and will contact you as soon as possible",
+    "encrypted_label": "Confidentiality guaranteed",
     "form": {
       "cta": "Need help? Contact us",
       "name_placeholder": "Name / Callsign (min. 2 characters)",

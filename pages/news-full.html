@@ -44,19 +44,25 @@
 
 
 
-    <main class="relative min-h-screen w-full overflow-hidden bg-black">
-        <section id="news-full" class="py-12 bg-black overflow-hidden">
+    <main class="relative min-h-screen w-full bg-[#050505] text-white">
+        <section id="news-full" class="bg-[#050505] text-white overflow-hidden py-4 md:py-8 xl:py-12">
             <div class="container-custom">
-                <div class="mb-12">
-                    <span data-i18n="news-full.label"
-                        class="text-red-600 font-black uppercase tracking-[0.3em] text-xl">
-                        Навіны (архіў)
-                    </span>
+                <div class="flex flex-col mb-6">
+                    <div class="flex items-center gap-4 w-full">
+                        <span data-i18n="news-full.tag"
+                            class="tracking-[0.3em] text-red-600 font-black text-sm leading-tight whitespace-nowrap md:whitespace-normal">Архіў</span>
+                        <div class="flex-1 h-px bg-red-600"></div>
+                    </div>
                 </div>
+                <h1 data-i18n="news-full.label"
+                    class="text-red-600 text-center text-4xl md:text-5xl xl:text-7xl font-black uppercase leading-[1] tracking-tighter mb-10">
+                    Навіны
+                </h1>
+
 
                 <div id="news-grid-full" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                     <div data-i18n="news-full.loading"
-                        class="text-white/20 uppercase text-[10px] tracking-widest animate-pulse">Загрузка...</div>
+                        class="text-white/20 uppercase text-xs tracking-widest animate-pulse">Загрузка...</div>
                 </div>
             </div>
         </section>

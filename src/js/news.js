@@ -48,8 +48,9 @@ export async function initNewsSlider() {
       <div class="aspect-video bg-black/80 flex items-center justify-center overflow-hidden relative border border-white/10">
         ${
           news.image
-            ? `<img src="${news.image}" alt="${news.title}"
-                class="w-full h-full object-cover grayscale-0 group-hover:grayscale transition-all duration-700">`
+            ? `<img src="${news.image_thumb || news.image}" alt="${news.title}"
+      width="494" height="278"
+      class="w-full h-full object-cover grayscale-0 group-hover:grayscale transition-all duration-700">`
             : `<img src="/img/logo.svg" alt="Logo"
                 class="w-20 opacity-20 transition-opacity duration-500">`
         }

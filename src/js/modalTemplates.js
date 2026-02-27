@@ -99,7 +99,7 @@ export const modalTemplates = {
             </div>
             <div class="flex items-center justify-between grow bg-black/40 p-2 border border-white/5">
               <code class="text-[10px] md:text-xs text-red-500 font-mono">${acc.value}</code>
-              <button onclick="navigator.clipboard.writeText('${acc.value.replace(/\s/g, "")}');" class="text-gray-600 hover:text-white px-2">
+              <button onclick="navigator.clipboard.writeText('${acc.value.replace(/\s/g, "")}');" class="text-gray-500 hover:text-white px-2">
                 <i class="fa-regular fa-copy"></i>
               </button>
             </div>

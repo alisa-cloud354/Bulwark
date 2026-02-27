@@ -96,7 +96,10 @@
     "tg_message": "💬 Паведамленне",
     "org": "Арганізацыя / Імя (мін.2 сімвалы)",
     "contact": "Email (xxx@xx.xxx) / Phone (+38...)",
-    "message": "Як мы можам супрацоўнічаць? (мін. 10 сімвалаў)"
+    "message": "Як мы можам супрацоўнічаць? (мін. 10 сімвалаў)",
+    "org_label": "Арганізацыя / Імя",
+    "message_label": "Паведамленне",
+    "contact_label": "Кантакт"
   },
   "activity": {
     "tag": "Напрамкі працы",
@@ -261,7 +264,8 @@
     "status_family": "Сям'я добраахвотніка",
     "needs_placeholder": "Якая дапамога патрэбна? (мін. 10 сімвалаў)",
     "contact_placeholder": "Telegram/Signal(@user) або Phone(+38..)",
-    "btn_send": "Адправіць запыт"
+    "btn_send": "Адправіць запыт",
+    "contact_label": "Кантакт"
   },
 
   "materials": {

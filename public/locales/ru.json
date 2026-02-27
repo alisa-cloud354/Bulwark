@@ -94,7 +94,10 @@
     "tg_message": "💬 Сообщение",
     "org": "Организация / Имя (мин. 2 символа)",
     "contact": "Email (xxx@xx.xxx) / Phone (+...)",
-    "message": "Как мы можем сотрудничать? (мин. 10 символов)"
+    "message": "Как мы можем сотрудничать? (мин. 10 символов)",
+    "org_label": "Организация / Имя",
+    "message_label": "Сообщение",
+    "contact_label": "Контакт"
   },
   "activity": {
     "tag": "Направления работы",
@@ -259,7 +262,8 @@
     "status_family": "Семья добровольца",
     "needs_placeholder": "Какая помощь нужна? (мин. 10 символов)",
     "contact_placeholder": "Telegram/Signal(@user) или Phone(+38..)",
-    "btn_send": "Отправить запрос"
+    "btn_send": "Отправить запрос",
+    "contact_label": "Контакт"
   },
 
   "materials": {

@@ -94,7 +94,10 @@
     "tg_message": "💬 Message",
     "org": "Organization / Name (min. 2 chars)",
     "contact": "Email (xxx@xx.xxx) / Phone (+...)",
-    "message": "How can we cooperate? (min. 10 chars)"
+    "message": "How can we cooperate? (min. 10 chars)",
+    "org_label": "Organization / Name",
+    "message_label": "Message",
+    "contact_label": "Contact"
   },
   "activity": {
     "tag": "Fields of Work",
@@ -260,7 +263,8 @@
     "status_family": "Volunteer's family",
     "needs_placeholder": "What help is needed? (min. 10 characters)",
     "contact_placeholder": "Telegram/Signal(@user) or Phone(+...)",
-    "btn_send": "Send Request"
+    "btn_send": "Send Request",
+    "contact_label": "Contact"
   },
 
   "materials": {

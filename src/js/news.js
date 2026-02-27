@@ -59,9 +59,9 @@ export async function initNewsSlider() {
     <div class="p-6 pt-4 flex flex-col grow">
       <span class="text-red-600 text-xs font-bold uppercase tracking-widest mb-2">${news.date}</span>
 
-      <h4 class="text-white font-bold mb-3 italic uppercase text-sm tracking-widest group-hover:text-red-600 transition-colors leading-tight min-h-[3rem] md:min-h-[2.5rem] line-clamp-3 md:line-clamp-2">
+      <h3 class="text-white font-bold mb-3 italic uppercase text-sm tracking-widest group-hover:text-red-600 transition-colors leading-tight min-h-[3rem] md:min-h-[2.5rem] line-clamp-3 md:line-clamp-2">
         ${news.title}
-      </h4>
+      </h3>
 
       <p class="text-gray-400 text-sm mb-6 line-clamp-3 leading-relaxed font-light grow">
         ${news.excerpt}

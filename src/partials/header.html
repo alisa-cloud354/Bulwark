@@ -3,41 +3,54 @@
     <div class="bg-black/80 border-b border-white/5 ">
         <div class="container-custom flex justify-end items-center gap-8">
             <div class="flex items-center gap-6 text-white text-xl">
-                <a href="https://t.me/bulwark_fund" target="_blank" rel="noopener noreferrer"
+                <a href="https://t.me/bulwark_fund" data-i18n="[href]social.telegram;[aria-label]social.telegram_label"
+                    aria-label="Telegram" target="_blank" rel="noopener noreferrer"
                     class="hover:text-red-600 transition-colors">
-                    <i class="fa-brands fa-telegram"></i>
+                    <i class="fa-brands fa-telegram" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.instagram.com/bulwark_fund" target="_blank" rel="noopener noreferrer"
-                    class="hover:text-red-600 transition-colors">
-                    <i class="fa-brands fa-instagram"></i>
+                <a href="https://www.instagram.com/bulwark_fund"
+                    data-i18n="[href]social.instagram;[aria-label]social.instagram_label" aria-label="Instagram"
+                    target="_blank" rel="noopener noreferrer" class="hover:text-red-600 transition-colors">
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.facebook.com/share/1CcAVYhTi9/" target="_blank" rel="noopener noreferrer"
-                    class="hover:text-red-600 transition-colors">
-                    <i class="fa-brands fa-facebook"></i>
+                <a href="https://www.facebook.com/share/1CcAVYhTi9/"
+                    data-i18n="[href]social.facebook;[aria-label]social.facebook_label" aria-label="Facebook"
+                    target="_blank" rel="noopener noreferrer" class="hover:text-red-600 transition-colors">
+                    <i class="fa-brands fa-facebook" aria-hidden="true"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/%D0%B1%D0%BB%D0%B0%D0%B3%D0%BE%D0%B4%D1%96%D0%B9%D0%BD%D0%B8%D0%B9-%D1%84%D0%BE%D0%BD%D0%B4-bulwark-ab51513b2/"
+                    data-i18n="[href]social.linkedin;[aria-label]social.linkedin_label" aria-label="LinkedIn"
                     target="_blank" rel="noopener noreferrer" class="hover:text-red-600 transition-colors">
-                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                 </a>
             </div>
 
-            <div id="lang-dropdown" class="relative group inline-block ">
-                <button id="lang-btn" type="button"
+            <div id="lang-dropdown" aria-label="Выбар мовы" class="relative group inline-block">
+                <button id="lang-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Змяніць мову"
+                    data-i18n="[aria-label]ui.change_lang"
                     class="flex items-center gap-2 text-xs font-black text-white uppercase tracking-widest cursor-pointer py-2">
-                    <span id="current-lang" class="text-red-600">BE</span>
-                    <i class="fa-solid fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
+                    <span id="current-lang" class="text-red-600" aria-hidden="true">BE</span>
+                    <i class="fa-solid fa-chevron-down text-xs transition-transform group-hover:rotate-180"
+                        aria-hidden="true"></i>
                 </button>
 
-                <div
+                <div id="lang-menu" role="menu" aria-controls="lang-menu"
                     class="absolute right-0 top-full w-24 pt-1 hidden group-hover:block group-[.is-active]:block z-[100]">
                     <div class="bg-[#050505] border border-white/10 py-2 shadow-2xl relative">
-                        <a href="#" data-lang="be"
+                        <a href="#" role="menuitem" data-lang="be" aria-label="Беларуская мова"
+                            data-i18n="[aria-label]ui.lang_be"
                             class="lang-switch block px-4 py-2 text-white hover:text-red-600 hover:bg-white/5 transition-all text-xs font-black uppercase tracking-widest relative z-[110]">BE</a>
-                        <a href="#" data-lang="uk"
+
+                        <a href="#" role="menuitem" data-lang="uk" aria-label="Українська мова"
+                            data-i18n="[aria-label]ui.lang_uk"
                             class="lang-switch block px-4 py-2 text-white hover:text-red-600 hover:bg-white/5 transition-all text-xs font-black uppercase tracking-widest relative z-[110]">UK</a>
-                        <a href="#" data-lang="en"
+
+                        <a href="#" role="menuitem" data-lang="en" aria-label="English language"
+                            data-i18n="[aria-label]ui.lang_en"
                             class="lang-switch block px-4 py-2 text-white hover:text-red-600 hover:bg-white/5 transition-all text-xs font-black uppercase tracking-widest relative z-[110]">EN</a>
-                        <a href="#" data-lang="ru"
+
+                        <a href="#" role="menuitem" data-lang="ru" aria-label="Русский язык"
+                            data-i18n="[aria-label]ui.lang_ru"
                             class="lang-switch block px-4 py-2 text-white hover:text-red-600 hover:bg-white/5 transition-all text-xs font-black uppercase tracking-widest relative z-[110]">RU</a>
                     </div>
                 </div>
@@ -46,8 +59,9 @@
     </div>
 
     <div class="container-custom flex items-center justify-between py-2">
-        <a href="/" class="flex items-center shrink-0 mr-4">
-            <img src="/src/assets/img/logo.svg" alt="Logo" class="h-12 md:h-20 w-auto object-contain mr-4">
+        <a href="/" aria-label="Bulwark Fund — на галоўную" data-i18n="[aria-label]nav.home_label"
+            class="flex items-center shrink-0 mr-4">
+            <img src="/src/assets/img/logo.svg" alt="" class="h-12 md:h-20 w-auto object-contain mr-4">
             <div class="flex flex-col text-white uppercase font-black leading-[0.85]">
                 <span class="text-lg md:text-xl tracking-tighter">Bulwark<br>fund</span>
                 <span data-i18n="nav.location"
@@ -56,9 +70,10 @@
         </a>
 
         <div class="flex items-center gap-4 md:gap-8">
-            <a href="/index.html#hero" id="home-link"
+            <a href="/index.html#hero" id="home-link" aria-label="Bulwark Fund — на галоўную"
+                data-i18n="[aria-label]nav.home_label"
                 class="js-nav-link text-white hover:text-red-600 transition-all duration-300 opacity-0 translate-x-5 pointer-events-none">
-                <i class="fa-solid fa-house text-xl md:text-2xl"></i>
+                <i class="fa-solid fa-house text-xl md:text-2xl" aria-hidden="true"></i>
             </a>
 
             <nav class="hidden xl:flex items-center space-x-10 uppercase text-xs font-black tracking-widest text-white">
@@ -114,8 +129,9 @@
                     class="js-nav-link bg-red-600 text-white text-xs px-8 py-2.5 hover:bg-white hover:text-black transition-all">Падтрымаць</a>
             </nav>
 
-            <button id="mobile-menu-btn" class="flex xl:hidden text-white cursor-pointer ml-2">
-                <i class="fa-solid fa-bars text-3xl"></i>
+            <button id="mobile-menu-btn" aria-label="Адкрыць меню" data-i18n="[aria-label]ui.open_menu"
+                aria-haspopup="true" aria-expanded="false" class="flex xl:hidden text-white cursor-pointer ml-2">
+                <i class="fa-solid fa-bars text-3xl" aria-hidden="true"></i>
             </button>
         </div>
     </div>

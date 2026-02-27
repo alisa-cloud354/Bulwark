@@ -3,13 +3,12 @@
     <div class="container-custom flex flex-col md:flex-row items-center justify-between gap-4">
         <p class="text-sm text-gray-400 text-center md:text-left">
             <span data-i18n="cookies.text">We use cookies...</span>
-            <a href="./privacy.html" data-i18n="cookies.policy_link"
-                class="text-primary hover:underline target=_blank">Privacy
-                Policy</a>
+            <a href="./privacy.html" data-i18n="cookies.policy_link" target="_blank" rel="noopener noreferrer"
+                class="text-primary hover:underline">Privacy Policy</a>
         </p>
-        <button id="accept-cookies"
-            class="bg-white hover:bg-red-600 text-black px-8 py-2 rounded-none font-bold uppercase text-xs tracking-widest transition-all"
-            data-i18n="cookies.accept">
+        <button id="accept-cookies" aria-label="Прыняць кукі"
+            data-i18n="cookies.accept;[aria-label]cookies.accept_label"
+            class="bg-white hover:bg-red-600 text-black px-8 py-2 rounded-none font-bold uppercase text-xs tracking-widest transition-all">
             Accept
         </button>
     </div>

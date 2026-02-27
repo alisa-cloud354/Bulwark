@@ -49,7 +49,7 @@ export async function initMaterials() {
                       <h4 class="text-white font-black mb-3 text-sm xl:text-lg uppercase tracking-tight group-hover:text-red-600 transition-colors">
                           ${item.title}
                       </h4>
-                      <p class="text-gray-500 text-sm mb-8 leading-relaxed line-clamp-2">
+                      <p class="text-gray-400 text-sm mb-8 leading-relaxed line-clamp-2">
                           ${item.short}
                       </p>
                   </div>

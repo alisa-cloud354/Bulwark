@@ -49,7 +49,14 @@
     "currency_eur": "EUR",
     "iban_eur": "UA273052990000026007035935555",
     "currency_pln": "PLN",
-    "iban_pln": "UA723052990000026002035932199"
+    "iban_pln": "UA723052990000026002035932199",
+    "copy_edrpou": "Скапіяваць ЕДРПОУ",
+    "copy_swift": "Скапіяваць SWIFT",
+    "copy_purpose": "Скапіяваць назву плацяжу",
+    "copy_iban_uah": "Скапіяваць рахунак у грыўнях",
+    "copy_iban_usd": "Скапіяваць рахунак у доларах",
+    "copy_iban_eur": "Скапіяваць рахунак у еўра",
+    "copy_iban_pln": "Скапіяваць рахунак у злотых"
   },
   "soldiers": {
     "title": "Падтрымаць байцоў",
@@ -64,7 +71,13 @@
     "currency_eur": "EUR",
     "iban_uah": "UA443220010000026001700010145",
     "iban_usd": "UA443220010000026001700013249",
-    "iban_eur": "UA353220010000026000700013251"
+    "iban_eur": "UA353220010000026000700013251",
+    "copy_edrpou": "Скапіяваць ЕДРПОУ",
+    "copy_swift": "Скапіяваць SWIFT",
+    "copy_purpose": "Скапіяваць назву плацяжу",
+    "copy_iban_uah": "Скапіяваць рахунак у грыўнях",
+    "copy_iban_usd": "Скапіяваць рахунак у доларах",
+    "copy_iban_eur": "Скапіяваць рахунак у еўра"
   },
   "crypto": {
     "name_btc": "BTC",
@@ -78,6 +91,18 @@
     "name_usdt_tron": "USDT Tron",
     "address_usdt_tron": "TCvwUpa7tLGW48xXaFxLruTRN6cmnqBLB5",
     "name_trx": "TRX Tron",
-    "address_trx": "TCvwUpa7tLGW48xXaFxLruTRN6cmnqBLB5"
+    "address_trx": "TCvwUpa7tLGW48xXaFxLruTRN6cmnqBLB5",
+    "copy_address_btc": "Скапіяваць BTC рахунак",
+    "copy_address_eth": "Скапіяваць ETH рахунак",
+    "copy_address_usdt_eth": "Скапіяваць USDT Ethereum рахунак",
+    "copy_address_usdc_eth": "Скапіяваць USDC ETH ERC20 рахунак",
+    "copy_address_usdt_tron": "Скапіяваць USDT Tron рахунак",
+    "copy_address_trx": "Скапіяваць TRX Tron рахунак"
+  },
+  "social": {
+    "telegram_label": "Telegram",
+    "instagram_label": "Instagram",
+    "facebook_label": "Facebook",
+    "linkedin_label": "LinkedIn"
   }
 }

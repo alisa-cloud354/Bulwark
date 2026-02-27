@@ -56,19 +56,19 @@ export const modalTemplates = {
       <h3 class="text-red-600 text-[10px] font-black uppercase tracking-[0.3em] mb-4 italic">${ui.bank_title}</h3>
       <div class="space-y-3 text-xs md:text-sm">
         <div class="flex flex-col md:flex-row md:justify-between border-b border-white/5 pb-2">
-          <span class="text-gray-500 uppercase text-[9px] font-bold">${ui.recipient}</span>
+          <span class="text-gray-400 uppercase text-[9px] font-bold">${ui.recipient}</span>
           <span class="text-white font-mono text-right">${item.bank_details.recipient}</span>
         </div>
         <div class="flex flex-col md:flex-row md:justify-between border-b border-white/5 pb-2">
-          <span class="text-gray-500 uppercase text-[9px] font-bold">${ui.edrpou}</span>
+          <span class="text-gray-400 uppercase text-[9px] font-bold">${ui.edrpou}</span>
           <span class="text-white font-mono text-right">${item.bank_details.edrpou}</span>
         </div>
         <div class="flex flex-col md:flex-row md:justify-between border-b border-white/5 pb-2">
-          <span class="text-gray-500 uppercase text-[9px] font-bold">${ui.bank_name}</span>
+          <span class="text-gray-400 uppercase text-[9px] font-bold">${ui.bank_name}</span>
           <span class="text-white font-mono text-right">${item.bank_details.bank_name}</span>
         </div>
         <div class="flex flex-col md:flex-row md:justify-between">
-          <span class="text-gray-500 uppercase text-[9px] font-bold">${ui.swift}</span>
+          <span class="text-gray-400 uppercase text-[9px] font-bold">${ui.swift}</span>
           <span class="text-white font-mono text-right">${item.bank_details.swift}</span>
         </div>
       </div>
@@ -76,7 +76,7 @@ export const modalTemplates = {
 
     <div class="mb-8 bg-[#050505] border border-white/10 p-4 flex items-center justify-between gap-4">
       <div class="grow">
-        <span class="text-[9px] text-gray-500 font-black uppercase tracking-widest block mb-1">${ui.purpose_label}</span>
+        <span class="text-[9px] text-gray-400 font-black uppercase tracking-widest block mb-1">${ui.purpose_label}</span>
         <p class="text-sm text-white italic font-bold leading-tight select-all">${item.purpose}</p>
       </div>
       <button onclick="navigator.clipboard.writeText('${item.purpose}');" 
@@ -85,7 +85,7 @@ export const modalTemplates = {
       </button>
     </div>
 
-    <h3 class="text-gray-500 text-[10px] font-black uppercase tracking-[0.3em] mb-4 italic">${ui.accounts_title}</h3>
+    <h3 class="text-gray-400 text-[10px] font-black uppercase tracking-[0.3em] mb-4 italic">${ui.accounts_title}</h3>
     <div class="space-y-2">
       ${item.accounts
         .map((acc) => {

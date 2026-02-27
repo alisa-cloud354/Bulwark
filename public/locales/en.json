@@ -13,7 +13,8 @@
     "help": "Assistance",
     "get_help": "Get Help",
     "be_partner": "Help | Become a Partner",
-    "support": "Support"
+    "support": "Support",
+    "home_label": "Bulwark Fund — go to homepage"
   },
   "hero": {
     "title_part1": "Your",
@@ -139,7 +140,9 @@
   "news": {
     "title": "Latest Events",
     "all_news_btn": "All News",
-    "read_more": "Read more"
+    "read_more": "Read more",
+    "prev": "Previous news",
+    "next": "Next news"
   },
   "news-full": {
     "tag": "Archive",
@@ -153,13 +156,17 @@
   "footer": {
     "nav_title": "Navigation",
     "privacy": "Privacy Policy",
-    "cookies": "Cookies"
+    "cookies": "Cookies",
+    "accept_label": "Accept cookies"
   },
   "modal": {
     "print": "Print",
     "copy": "Copy",
     "copied": "Copied!",
-    "close": "Close"
+    "close": "Close",
+    "print_aria": "Print material",
+    "copy_aria": "Copy material",
+    "close_aria": "Close window"
   },
 
   "gallery": {
@@ -167,7 +174,9 @@
     "copyright_label": "Copyright:",
     "copyright_text": "All gallery materials are the intellectual property of Bulwark. Unauthorized use of these materials is prohibited.",
     "history_text": "These shots are a living history of the struggle of Belarusian volunteers.",
-    "victory_text": "Together to victory."
+    "victory_text": "Together to victory.",
+    "prev_btn": "Previous photo",
+    "next_btn": "Next photo"
   },
 
   "projects": {
@@ -363,7 +372,8 @@
       "org_placeholder": "Organization / Name (min. 2 chars)",
       "contact_placeholder": "Email (xxx@xx.xxx) / Phone (+...)",
       "message_placeholder": "How can we collaborate? (min. 10 chars)",
-      "btn_submit": "Become a partner"
+      "btn_submit": "Become a partner",
+      "btn_submit_label": "Submit partnership form"
     },
     "alliances_title": "Strategic Partners",
     "partners": [
@@ -372,5 +382,21 @@
       { "name": "WAR_THERAPY", "logo": "/img/partners/p3.svg" },
       { "name": "VETERAN_CORPS", "logo": "/img/partners/p4.svg" }
     ]
+  },
+  "ui": {
+    "lang_be": "Belarusian language",
+    "lang_uk": "Ukrainian language",
+    "lang_en": "English language",
+    "lang_ru": "Russian language",
+    "close_menu": "Close menu",
+    "close_modal": "Close window",
+    "open_menu": "Open menu"
+  },
+
+  "social": {
+    "telegram_label": "Telegram",
+    "instagram_label": "Instagram",
+    "facebook_label": "Facebook",
+    "linkedin_label": "LinkedIn"
   }
 }

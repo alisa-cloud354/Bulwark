@@ -112,7 +112,7 @@
 
                         <div class="space-y-8">
                             <div class="flex gap-4 items-start">
-                                <div data-i18n="get_help.step1_number" class="text-2xl text-gray-500 font-black">
+                                <div data-i18n="get_help.step1_number" class="text-2xl text-gray-400 font-black">
                                     01
                                 </div>
                                 <div class="min-w-0">
@@ -126,7 +126,7 @@
                                 </div>
                             </div>
                             <div class="flex gap-6 items-start">
-                                <div data-i18n="get_help.step2_number" class="text-2xl text-gray-500  font-black">
+                                <div data-i18n="get_help.step2_number" class="text-2xl text-gray-400  font-black">
                                     02
                                 </div>
                                 <div class="min-w-0">
@@ -168,11 +168,12 @@
 
                             <div id="help-step-2" class="opacity-40 pointer-events-none transition-all duration-500">
                                 <div class="relative">
-                                    <select name="user_status" required
+                                    <label for="user_status" class="sr-only"
+                                        data-i18n="get_help.form.status_select">Статус</label>
+                                    <select id="user_status" name="user_status" required
                                         class="w-full bg-black/80 border border-white/10 p-4 text-white text-xs outline-none focus:border-red-600 transition-all font-black appearance-none cursor-pointer">
                                         <option value="" disabled selected data-i18n="get_help.form.status_select">
-                                            Статус
-                                            (абярыце са спіса)</option>
+                                            Статус (абярыце са спіса)</option>
                                         <option value="Дзейны вайсковец" data-i18n="get_help.form.status_active">Дзейны
                                             вайсковец</option>
                                         <option value="Ветэран" data-i18n="get_help.form.status_veteran">Ветэран
@@ -182,7 +183,8 @@
                                             добраахвотніка</option>
                                     </select>
                                     <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none">
-                                        <i class="fa-solid fa-chevron-down text-xs text-gray-500"></i>
+                                        <i class="fa-solid fa-chevron-down text-xs text-gray-400"
+                                            aria-hidden="true"></i>
                                     </div>
                                 </div>
                             </div>
@@ -203,7 +205,7 @@
                             <button type="submit"
                                 class="w-full bg-red-600 p-4 text-white font-black uppercase tracking-[0.3em] text-xs hover:bg-white hover:text-black transition-all duration-700 flex justify-center items-center gap-2">
                                 <span data-i18n="get_help.form.btn_send">Адправіць запыт</span>
-                                <i class="fa-solid fa-circle-notch fa-spin loader-icon"
+                                <i class="fa-solid fa-circle-notch fa-spin loader-icon" aria-hidden="true"
                                     style="display: none !important;"></i>
                             </button>
                         </form>

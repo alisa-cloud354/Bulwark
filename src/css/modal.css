@@ -92,7 +92,7 @@
 }
 
 .note-block {
-    @apply mt-12 p-6 bg-red-600/5 border-l-2 border-red-600 text-xs italic text-gray-500 leading-relaxed;
+    @apply mt-12 p-6 bg-red-600/5 border-l-2 border-red-600 text-xs italic text-gray-400 leading-relaxed;
 }
 
 /* --- АДАПТЫЎНАСЦЬ --- */

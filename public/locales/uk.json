@@ -13,7 +13,8 @@
     "help": "Допомога",
     "get_help": "Отримати допомогу",
     "be_partner": "Допомогти | Стати партнером",
-    "support": "Підтримати"
+    "support": "Підтримати",
+    "home_label": "Bulwark Fund — на головну"
   },
   "hero": {
     "title_part1": "Ваш",
@@ -139,7 +140,9 @@
   "news": {
     "title": "Останні події",
     "all_news_btn": "Усі новини",
-    "read_more": "Читати повністю"
+    "read_more": "Читати повністю",
+    "prev": "Попередня новина",
+    "next": "Наступна новина"
   },
   "news-full": {
     "tag": "Архів",
@@ -159,7 +162,10 @@
     "print": "Друк",
     "copy": "Копіювати",
     "copied": "Скопійовано!",
-    "close": "Закрити"
+    "close": "Закрити",
+    "print_aria": "Надрукувати матеріал",
+    "copy_aria": "Скопіювати матеріал",
+    "close_aria": "Закрити вікно"
   },
 
   "gallery": {
@@ -167,7 +173,9 @@
     "copyright_label": "Copyright:",
     "copyright_text": "Усі матеріали галереї є інтелектуальною власністю Bulwark. Використання цих матеріалів без дозволу заборонено.",
     "history_text": "Ці кадри — жива історія боротьби білоруських добровольців.",
-    "victory_text": "Разом да перемоги."
+    "victory_text": "Разом да перемоги.",
+    "prev_btn": "Попереднє фото",
+    "next_btn": "Наступне фото"
   },
 
   "projects": {
@@ -276,7 +284,8 @@
   "cookies": {
     "text": "Ми використовуємо файли cookie для покращення роботи сайту. Залишаючись на сайті, ви погоджуєтеся з нашою",
     "policy_link": "політикою конфіденційності",
-    "accept": "Згоден"
+    "accept": "Згоден",
+    "accept_label": "Прийняти куки"
   },
   "reports": {
     "tag": "Виконано",
@@ -363,7 +372,8 @@
       "org_placeholder": "Організація / Ім'я (мін. 2 символи)",
       "contact_placeholder": "Email (xxx@xx.xxx) / Phone (+38...)",
       "message_placeholder": "Як ми можемо співпрацювати? (мін. 10 символів)",
-      "btn_submit": "Стати партнером"
+      "btn_submit": "Стати партнером",
+      "btn_submit_label": "Надіслати форму партнерства"
     },
     "alliances_title": "Стратегічні партнери",
     "partners": [
@@ -372,5 +382,20 @@
       { "name": "WAR_THERAPY", "logo": "/img/partners/p3.svg" },
       { "name": "VETERAN_CORPS", "logo": "/img/partners/p4.svg" }
     ]
+  },
+  "ui": {
+    "lang_be": "Білоруська мова",
+    "lang_uk": "Українська мова",
+    "lang_en": "English language",
+    "lang_ru": "Русский язык",
+    "close_menu": "Закрити меню",
+    "close_modal": "Закрити вікно",
+    "open_menu": "Відкрити меню"
+  },
+  "social": {
+    "telegram_label": "Telegram",
+    "instagram_label": "Instagram",
+    "facebook_label": "Facebook",
+    "linkedin_label": "LinkedIn"
   }
 }

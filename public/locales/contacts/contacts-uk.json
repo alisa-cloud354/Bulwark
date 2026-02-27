@@ -49,7 +49,14 @@
     "currency_eur": "EUR",
     "iban_eur": "UA273052990000026007035935555",
     "currency_pln": "PLN",
-    "iban_pln": "UA723052990000026002035932199"
+    "iban_pln": "UA723052990000026002035932199",
+    "copy_edrpou": "Скопіювати ЄДРПОУ",
+    "copy_swift": "Скопіювати SWIFT",
+    "copy_purpose": "Скопіювати призначення платежу",
+    "copy_iban_uah": "Скопіювати рахунок у гривнях",
+    "copy_iban_usd": "Скопіювати рахунок у доларах",
+    "copy_iban_eur": "Скопіювати рахунок у євро",
+    "copy_iban_pln": "Скопіювати рахунок у злотих"
   },
   "soldiers": {
     "title": "Підтримати бійців",
@@ -64,7 +71,13 @@
     "currency_eur": "EUR",
     "iban_uah": "UA443220010000026001700010145",
     "iban_usd": "UA443220010000026001700013249",
-    "iban_eur": "UA353220010000026000700013251"
+    "iban_eur": "UA353220010000026000700013251",
+    "copy_edrpou": "Скопіювати ЄДРПОУ",
+    "copy_swift": "Скопіювати SWIFT",
+    "copy_purpose": "Скопіювати призначення платежу",
+    "copy_iban_uah": "Скопіювати рахунок у гривнях",
+    "copy_iban_usd": "Скопіювати рахунок у доларах",
+    "copy_iban_eur": "Скопіювати рахунок у євро"
   },
   "crypto": {
     "name_btc": "BTC",
@@ -78,6 +91,18 @@
     "name_usdt_tron": "USDT Tron",
     "address_usdt_tron": "TCvwUpa7tLGW48xXaFxLruTRN6cmnqBLB5",
     "name_trx": "TRX Tron",
-    "address_trx": "TCvwUpa7tLGW48xXaFxLruTRN6cmnqBLB5"
+    "address_trx": "TCvwUpa7tLGW48xXaFxLruTRN6cmnqBLB5",
+    "copy_address_btc": "Скопіювати BTC рахунок",
+    "copy_address_eth": "Скопіювати ETH рахунок",
+    "copy_address_usdt_eth": "Скопіювати USDT Ethereum рахунок",
+    "copy_address_usdc_eth": "Скопіювати USDC ETH ERC20 рахунок",
+    "copy_address_usdt_tron": "Скопіювати USDT Tron рахунок",
+    "copy_address_trx": "Скопіювати TRX Tron рахунок"
+  },
+  "social": {
+    "telegram_label": "Telegram",
+    "instagram_label": "Instagram",
+    "facebook_label": "Facebook",
+    "linkedin_label": "LinkedIn"
   }
 }

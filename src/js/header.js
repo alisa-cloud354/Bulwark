@@ -1,5 +1,6 @@
 export function initHeader() {
   const mobileMenu = document.getElementById("mobile-menu");
+  const mobileWrapper = document.getElementById("mobile-menu-wrapper");
   const overlay = document.getElementById("mobile-menu-overlay");
   const closeBtn = document.getElementById("close-mobile-menu");
   const mobileBtn = document.getElementById("mobile-menu-btn");
@@ -8,48 +9,79 @@ export function initHeader() {
   const langDropdown = document.getElementById("lang-dropdown");
   const langBtn = document.getElementById("lang-btn");
 
-  // --- МОВЫ ---
-  // Унутры функцыі initHeader знайсці секцыю МОВЫ:
-  function toggleLang(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    // Гэта прымусова паказвае меню
-    langDropdown?.classList.toggle("is-active");
+  // ─── ПАЧАТКОВЫ СТАН ───────────────────────────────────────────────────────
+  // aria-expanded павінен быць выстаўлены адразу пры загрузцы
+  langBtn?.setAttribute("aria-expanded", "false");
+
+  // Дынамічная вышыня хедара для меню і оверлея
+  function updateHeaderHeight() {
+    const h = header?.offsetHeight ?? 128;
+    document.documentElement.style.setProperty("--header-h", h + "px");
+  }
+  updateHeaderHeight();
+  window.addEventListener("resize", updateHeaderHeight);
+
+  // ─── МОВА ─────────────────────────────────────────────────────────────────
+  function openLang() {
+    langDropdown?.classList.add("is-active");
+    langBtn?.setAttribute("aria-expanded", "true");
   }
 
-  // Дадай гэты апрацоўшчык, каб меню не закрывалася, калі ты водзіш унутры яго
-  langDropdown?.addEventListener("mouseenter", () => {
-    langDropdown.classList.add("is-active");
+  function closeLang() {
+    langDropdown?.classList.remove("is-active");
+    langBtn?.setAttribute("aria-expanded", "false");
+  }
+
+  // Hover працуе толькі на прыладах з мышай
+  if (window.matchMedia("(hover: hover)").matches) {
+    langDropdown?.addEventListener("mouseenter", openLang);
+    langDropdown?.addEventListener("mouseleave", closeLang);
+  }
+
+  // Клік — для touch-прылад і клавіятуры
+  langBtn?.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const isOpen = langDropdown?.classList.contains("is-active");
+    isOpen ? closeLang() : openLang();
   });
 
-  // Закрываем меню пры выбары мовы
+  // Закрыць пры выбары мовы
   langDropdown?.addEventListener("click", (e) => {
     if (e.target.closest(".lang-switch")) {
-      langDropdown.classList.remove("is-active");
+      closeLang();
     }
   });
 
-  // Закрываем меню пры кліку па-за ім
+  // Закрыць пры кліку па-за дропдаўнам
   document.addEventListener("click", (e) => {
     if (langDropdown && !langDropdown.contains(e.target)) {
-      langDropdown.classList.remove("is-active");
+      closeLang();
     }
   });
 
-  // --- МАБАЙЛ-МЕНЮ ---
+  // ─── МАБАЙЛ-МЕНЮ ──────────────────────────────────────────────────────────
   function openMobileMenu() {
     mobileMenu?.classList.remove("-translate-y-[120%]");
     mobileMenu?.classList.add("translate-y-0");
+    mobileBtn?.setAttribute("aria-expanded", "true");
     overlay?.classList.remove("hidden");
-    setTimeout(() => overlay?.classList.remove("opacity-0"), 10);
+    // невялікі дэлей, каб transition спрацаваў
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        overlay?.classList.remove("opacity-0");
+      });
+    });
     document.body.style.overflow = "hidden";
   }
 
   function closeMobileMenu() {
     mobileMenu?.classList.remove("translate-y-0");
     mobileMenu?.classList.add("-translate-y-[120%]");
+    mobileBtn?.setAttribute("aria-expanded", "false");
     overlay?.classList.add("opacity-0");
     setTimeout(() => {
+      // толькі хаваем калі меню сапраўды закрыта (не адкрылі зноў за 300мс)
       if (mobileMenu?.classList.contains("-translate-y-[120%]")) {
         overlay?.classList.add("hidden");
       }
@@ -57,33 +89,49 @@ export function initHeader() {
     document.body.style.overflow = "";
   }
 
+  // Закрыць пры кліку на любую спасылку ў меню
   mobileMenu?.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", closeMobileMenu);
   });
 
-  // --- СКРОЛ ---
+  // ─── ESCAPE ───────────────────────────────────────────────────────────────
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeMobileMenu();
+      closeLang();
+    }
+  });
+
+  // ─── СКРОЛ ────────────────────────────────────────────────────────────────
   function handleScroll() {
     const isScrolled = window.scrollY > 300;
+
+    // Хатняя іконка
     homeLink?.classList.toggle("opacity-0", !isScrolled);
     homeLink?.classList.toggle("translate-x-5", !isScrolled);
     homeLink?.classList.toggle("pointer-events-none", !isScrolled);
     homeLink?.classList.toggle("opacity-100", isScrolled);
     homeLink?.classList.toggle("translate-x-0", isScrolled);
 
+    // Фон хедара
+    // УВАГА: кіруем класамі на самім #main-header,
+    // упэўніся, што ў HTML на <header> ёсць bg-[#050505] як дэфолт
     if (isScrolled) {
-      header?.classList.remove("bg-[#1a1a1a]");
-      header?.classList.add("bg-black/60", "backdrop-blur-md", "shadow-2xl");
+      header?.classList.remove("bg-[#050505]");
+      header?.classList.add("bg-black/50", "backdrop-blur-md", "shadow-2xl");
     } else {
-      header?.classList.add("bg-[#1a1a1a]");
-      header?.classList.remove("bg-black/60", "backdrop-blur-md", "shadow-2xl");
+      header?.classList.add("bg-[#050505]");
+      header?.classList.remove("bg-black/50", "backdrop-blur-md", "shadow-2xl");
     }
   }
 
-  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("scroll", handleScroll, { passive: true });
+
+  // ─── ПРЫВЯЗКА ПАДЗЕЙ ──────────────────────────────────────────────────────
   mobileBtn?.addEventListener("click", openMobileMenu);
   closeBtn?.addEventListener("click", closeMobileMenu);
   overlay?.addEventListener("click", closeMobileMenu);
-  langBtn?.addEventListener("click", toggleLang);
 
+  // ─── ІНІЦЫЯЛІЗАЦЫЯ ────────────────────────────────────────────────────────
   handleScroll();
 }

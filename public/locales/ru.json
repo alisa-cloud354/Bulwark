@@ -13,7 +13,8 @@
     "help": "Помощь",
     "get_help": "Получить помощь",
     "be_partner": "Помочь | Стать партнером",
-    "support": "Поддержать"
+    "support": "Поддержать",
+    "home_label": "Bulwark Fund — на главную"
   },
   "hero": {
     "title_part1": "Ваша",
@@ -139,7 +140,9 @@
   "news": {
     "title": "Последние события",
     "all_news_btn": "Все новости",
-    "read_more": "Читать полностью"
+    "read_more": "Читать полностью",
+    "prev": "Предыдущая новость",
+    "next": "Следующая новость"
   },
   "news-full": {
     "tag": "Архив",
@@ -159,7 +162,10 @@
     "print": "Печать",
     "copy": "Копировать",
     "copied": "Скопировано!",
-    "close": "Закрыть"
+    "close": "Закрыть",
+    "print_aria": "Распечатать материал",
+    "copy_aria": "Скопировать материал",
+    "close_aria": "Закрыть окно"
   },
 
   "gallery": {
@@ -167,7 +173,9 @@
     "copyright_label": "Copyright:",
     "copyright_text": "Все материалы галереи являются интеллектуальной собственностью Bulwark. Использование этих материалов без разрешения запрещено.",
     "history_text": "Эти кадры — живая история борьбы белорусских добровольцев.",
-    "victory_text": "Вместе к победе."
+    "victory_text": "Вместе к победе.",
+    "prev_btn": "Предыдущее фото",
+    "next_btn": "Следующее фото"
   },
 
   "projects": {
@@ -276,7 +284,8 @@
   "cookies": {
     "text": "Мы используем файлы cookie для улучшения работы сайта. Оставаясь на сайте, вы соглашаетесь с нашей",
     "policy_link": "политикой конфиденциальности",
-    "accept": "Согласен"
+    "accept": "Согласен",
+    "accept_label": "Принять куки"
   },
   "reports": {
     "tag": "Выполнено",
@@ -363,7 +372,8 @@
       "org_placeholder": "Организация / Имя (мин. 2 символа)",
       "contact_placeholder": "Email (xxx@xx.xxx) / Phone (+38...)",
       "message_placeholder": "Как мы можем сотрудничать? (мин. 10 символов)",
-      "btn_submit": "Стать партнером"
+      "btn_submit": "Стать партнером",
+      "btn_submit_label": "Отправить форму партнёрства"
     },
     "alliances_title": "Стратегические партнеры",
     "partners": [
@@ -372,5 +382,20 @@
       { "name": "WAR_THERAPY", "logo": "/img/partners/p3.svg" },
       { "name": "VETERAN_CORPS", "logo": "/img/partners/p4.svg" }
     ]
+  },
+  "ui": {
+    "lang_be": "Белорусский язык",
+    "lang_uk": "Украинский язык",
+    "lang_en": "English language",
+    "lang_ru": "Русский язык",
+    "close_menu": "Закрыть меню",
+    "close_modal": "Закрыть окно",
+    "open_menu": "Открыть меню"
+  },
+  "social": {
+    "telegram_label": "Telegram",
+    "instagram_label": "Instagram",
+    "facebook_label": "Facebook",
+    "linkedin_label": "LinkedIn"
   }
 }

@@ -1,5 +1,8 @@
 import { modalTemplates } from "./modalTemplates.js";
-import { t, updateAllTranslations } from "./i18n.js"; // Выкарыстоўваем нашы функцыі
+import { t, updateAllTranslations } from "./i18n.js";
+
+// Захоўваем элемент які адкрыў мадал — для вяртання фокуса пры закрыцці
+let previousFocus = null;
 
 export function openUniversalModal(item, type = null) {
   const modal = document.getElementById("material-modal");
@@ -11,25 +14,24 @@ export function openUniversalModal(item, type = null) {
     return;
   }
 
+  // Запамінаем адкуль адкрылі — каб вярнуць фокус пры закрыцці
+  previousFocus = document.activeElement;
+
   // 1. Запаўняем мета-дадзеныя (дата або катэгорыя зверху)
   if (modalMeta) {
-    modalMeta.innerText =
+    modalMeta.textContent =
       item.date || (item.category ? "#" + item.category : "");
   }
 
-  // 2. ПАДРЫХТОЎКА ДАДЗЕНЫХ UI (для перакладу подпісаў унутры шаблона)
-  // Спрабуем знайсці блок 'ui' альбо ў самім item, альбо ў глабальнай зменнай window.donationData
+  // 2. ПАДРЫХТОЎКА ДАДЗЕНЫХ UI
   const uiData =
     item.ui || (window.donationData ? window.donationData.ui : null);
 
   // 3. ВЫБАР ШАБЛОНА
   let template;
   if (type && modalTemplates[type]) {
-    // Перадаем item і uiData. Калі uiData будзе undefined,
-    // шаблон donation выкарыстае свае значэнні па змаўчанні (дзякуючы нашай праверцы ў шаблоне).
     template = modalTemplates[type](item, uiData);
   } else {
-    // Логіка для навін і звычайных матэрыялаў
     template = item.date
       ? modalTemplates.news(item)
       : modalTemplates.material(item);
@@ -44,6 +46,9 @@ export function openUniversalModal(item, type = null) {
   modal.classList.remove("hidden");
   dynamicContainer.scrollTo(0, 0);
   document.body.style.overflow = "hidden";
+
+  // Пераводзім фокус на кнопку закрыцця
+  document.getElementById("close-modal")?.focus();
 
   // Прымусова абнаўляем пераклады ўнутры мадалкі пасля ўстаўкі шаблона
   updateAllTranslations();
@@ -61,21 +66,22 @@ function setupInternalLogic(container) {
       .map((h3, i) => {
         const id = `nav-anchor-${i}`;
         h3.id = id;
-        return `<button data-anchor="${id}" class="text-[9px] md:text-[10px] uppercase font-bold tracking-widest text-white/40 hover:text-red-600 transition-all text-left py-1">${h3.innerText}</button>`;
+        return `<button data-anchor="${id}" class="text-[9px] md:text-[10px] uppercase font-bold tracking-widest text-white/40 hover:text-red-600 transition-all text-left py-1">${h3.textContent}</button>`;
       })
       .join("");
 
-    internalNav.onclick = (e) => {
+    internalNav.addEventListener("click", (e) => {
       const btn = e.target.closest("button");
       if (btn) {
         const target = document.getElementById(btn.dataset.anchor);
-        if (target)
+        if (target) {
           container.scrollTo({
             top: target.offsetTop - 20,
             behavior: "smooth",
           });
+        }
       }
-    };
+    });
   } else if (internalNav) {
     internalNav.classList.add("hidden");
   }
@@ -83,10 +89,14 @@ function setupInternalLogic(container) {
 
 export function closeUniversalModal() {
   const modal = document.getElementById("material-modal");
-  if (modal) {
-    modal.classList.add("hidden");
-    document.body.style.overflow = "";
-  }
+  if (!modal) return;
+
+  modal.classList.add("hidden");
+  document.body.style.overflow = "";
+
+  // Вяртаем фокус на элемент які адкрыў мадал
+  previousFocus?.focus();
+  previousFocus = null;
 }
 
 export function initModalControl() {
@@ -96,15 +106,24 @@ export function initModalControl() {
   document
     .getElementById("close-modal")
     ?.addEventListener("click", closeUniversalModal);
+
   document
     .getElementById("close-modal-text")
     ?.addEventListener("click", closeUniversalModal);
 
-  modal.onclick = (e) => {
+  // Закрыццё па кліку на оверлей або фон мадала
+  modal.addEventListener("click", (e) => {
     if (e.target === modal || e.target.classList.contains("modal-overlay")) {
       closeUniversalModal();
     }
-  };
+  });
+
+  // Закрыццё па Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+      closeUniversalModal();
+    }
+  });
 
   document
     .getElementById("print-material")
@@ -116,21 +135,27 @@ export function initModalControl() {
       const content = document.getElementById("modal-content")?.innerText;
       if (!content) return;
 
+      const copyTextSpan = document.getElementById("copy-text");
+
       try {
         await navigator.clipboard.writeText(content);
-        const copyTextSpan = document.getElementById("copy-text");
-        if (copyTextSpan) {
-          // Выкарыстоўваем нашу t() для тэксту "Скапіявана"
-          copyTextSpan.innerText = t("modal.copied");
 
+        if (copyTextSpan) {
+          copyTextSpan.textContent = t("modal.copied");
           setTimeout(() => {
-            // Вяртаем зыходны тэкст "Капіяваць"
-            copyTextSpan.innerText = t("modal.copy");
+            copyTextSpan.textContent = t("modal.copy");
             updateAllTranslations();
           }, 2000);
         }
       } catch (err) {
         console.error("Copy failed:", err);
+        if (copyTextSpan) {
+          copyTextSpan.textContent = t("modal.copy_error") ?? "Памылка";
+          setTimeout(() => {
+            copyTextSpan.textContent = t("modal.copy");
+            updateAllTranslations();
+          }, 2000);
+        }
       }
     });
 }

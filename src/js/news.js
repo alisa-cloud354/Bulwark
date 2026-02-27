@@ -33,9 +33,7 @@ export async function initNewsSlider() {
         const dateA = dateToNum(a.date);
         const dateB = dateToNum(b.date);
 
-        if (dateB !== dateA) {
-          return dateB - dateA;
-        }
+        if (dateB !== dateA) return dateB - dateA;
         return parseInt(b.id) - parseInt(a.id);
       });
 
@@ -46,13 +44,13 @@ export async function initNewsSlider() {
           (news) => `
 <div class="swiper-slide h-auto flex">
   <div class="bg-black/80 border border-white/10 h-full flex flex-col hover:border-red-600/30 transition-all group w-full overflow-hidden">
-    <div class="px-3 pt-3"> 
+    <div class="px-3 pt-3">
       <div class="aspect-video bg-black/80 flex items-center justify-center overflow-hidden relative border border-white/10">
         ${
           news.image
-            ? `<img src="${news.image}" alt="${news.title}" 
+            ? `<img src="${news.image}" alt="${news.title}"
                 class="w-full h-full object-cover grayscale-0 group-hover:grayscale transition-all duration-700">`
-            : `<img src="/img/logo.svg" alt="Logo" 
+            : `<img src="/img/logo.svg" alt="Logo"
                 class="w-20 opacity-20 transition-opacity duration-500">`
         }
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -60,7 +58,7 @@ export async function initNewsSlider() {
     </div>
     <div class="p-6 pt-4 flex flex-col grow">
       <span class="text-red-600 text-xs font-bold uppercase tracking-widest mb-2">${news.date}</span>
-      
+
       <h4 class="text-white font-bold mb-3 italic uppercase text-sm tracking-widest group-hover:text-red-600 transition-colors leading-tight min-h-[3rem] md:min-h-[2.5rem] line-clamp-3 md:line-clamp-2">
         ${news.title}
       </h4>
@@ -68,9 +66,10 @@ export async function initNewsSlider() {
       <p class="text-gray-400 text-sm mb-6 line-clamp-3 leading-relaxed font-light grow">
         ${news.excerpt}
       </p>
-       <button type="button" 
-                class="open-report-btn mt-auto text-red-600 text-xs font-black uppercase tracking-widest flex items-center gap-2 hover:text-white transition-all group/btn"  
-              data-id="${news.id}">
+
+      <button type="button"
+        class="open-news-btn mt-auto text-red-600 text-xs font-black uppercase tracking-widest flex items-center gap-2 hover:text-white transition-all group/btn"
+        data-id="${news.id}">
         <span data-i18n="news.read_more">Чытаць цалкам</span>
         <i class="fa-solid fa-chevron-right text-xs group-hover/btn:translate-x-1 transition-transform"></i>
       </button>
@@ -82,13 +81,14 @@ export async function initNewsSlider() {
 
       updateAllTranslations();
 
+      // Вешаем клікі на кнопкі адкрыцця навіны
       sliderWrapper.querySelectorAll(".open-news-btn").forEach((btn) => {
-        btn.onclick = () => {
+        btn.addEventListener("click", () => {
           const newsItem = allNews.find(
             (n) => String(n.id) === String(btn.dataset.id),
           );
           if (newsItem) openUniversalModal(newsItem, "news");
-        };
+        });
       });
 
       manageSwiper();

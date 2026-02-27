@@ -49,7 +49,14 @@
     "currency_eur": "EUR",
     "iban_eur": "UA273052990000026007035935555",
     "currency_pln": "PLN",
-    "iban_pln": "UA723052990000026002035932199"
+    "iban_pln": "UA723052990000026002035932199",
+    "copy_edrpou": "Copy EDRPOU code",
+    "copy_swift": "Copy SWIFT code",
+    "copy_purpose": "Copy payment purpose",
+    "copy_iban_uah": "Copy UAH account",
+    "copy_iban_usd": "Copy USD account",
+    "copy_iban_eur": "Copy EUR account",
+    "copy_iban_pln": "Copy PLN account"
   },
   "soldiers": {
     "title": "Support the soldiers",
@@ -64,7 +71,13 @@
     "currency_eur": "EUR",
     "iban_uah": "UA443220010000026001700010145",
     "iban_usd": "UA443220010000026001700013249",
-    "iban_eur": "UA353220010000026000700013251"
+    "iban_eur": "UA353220010000026000700013251",
+    "copy_edrpou": "Copy EDRPOU code",
+    "copy_swift": "Copy SWIFT code",
+    "copy_purpose": "Copy payment purpose",
+    "copy_iban_uah": "Copy UAH account",
+    "copy_iban_usd": "Copy USD account",
+    "copy_iban_eur": "Copy EUR account"
   },
   "crypto": {
     "name_btc": "BTC",
@@ -78,6 +91,18 @@
     "name_usdt_tron": "USDT Tron",
     "address_usdt_tron": "TCvwUpa7tLGW48xXaFxLruTRN6cmnqBLB5",
     "name_trx": "TRX Tron",
-    "address_trx": "TCvwUpa7tLGW48xXaFxLruTRN6cmnqBLB5"
+    "address_trx": "TCvwUpa7tLGW48xXaFxLruTRN6cmnqBLB5",
+    "copy_address_btc": "Copy BTC address",
+    "copy_address_eth": "Copy ETH address",
+    "copy_address_usdt_eth": "Copy USDT Ethereum address",
+    "copy_address_usdc_eth": "Copy USDC ETH ERC20 address",
+    "copy_address_usdt_tron": "Copy USDT Tron address",
+    "copy_address_trx": "Copy TRX Tron address"
+  },
+  "social": {
+    "telegram_label": "Telegram",
+    "instagram_label": "Instagram",
+    "facebook_label": "Facebook",
+    "linkedin_label": "LinkedIn"
   }
 }

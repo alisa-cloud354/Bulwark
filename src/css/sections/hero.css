@@ -7,18 +7,22 @@
     object-position: center center;
 }
 
+@media (max-width: 767px) {
+    .hero-img {
+        object-position: 50% center;
+    }
+}
+
 @media (min-width: 768px) {
     .hero-img {
-        object-position: calc(50% + 140px) center;
-        transform: scale(1.2);
-        transform-origin: center center;
+        object-position: calc(50% + 180px) center;
+
     }
 }
 
 @media (min-width: 1280px) {
     .hero-img {
-        object-position: calc(50% + 240px) center;
-        transform: scale(1.2);
-        transform-origin: center center;
+        object-position: calc(50% + 280px) center;
+
     }
 }

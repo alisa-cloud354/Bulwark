@@ -1,12 +1,16 @@
 <section
-    class="hero-bg  relative flex flex-col items-start overflow-hidden bg-black mx-auto w-full max-w-[350px] md:max-w-[768px] xl:max-w-[1280px] py-12 md:py-16 xl:py-20"
-    id="hero"><!-- Толькі для LCP на мабільным, візуальна схаваны -->
-    <img src="/src/assets/img/hero-bg-mob-lcp.webp" alt="" fetchpriority="high" width="525" height="719"
-        class="absolute -top-full left-0 w-full md:hidden">
+    class="relative flex flex-col items-start overflow-hidden bg-black mx-auto w-full max-w-[350px] md:max-w-[768px] xl:max-w-[1280px] py-12 md:py-16 xl:py-20"
+    id="hero">
+
+    <img src="/src/assets/img/hero-bg.webp" alt="" fetchpriority="high" width="2600" height="672"
+        class="absolute inset-0 w-full h-full object-cover hero-img">
+
+    <div class="absolute inset-0 bg-gradient-to-b from-black/85 to-black/55"></div>
+
     <div class="container-custom relative z-10 w-full">
         <div class="flex flex-col gap-6">
             <h1
-                class="text-white text-4xl md:text-5xl xl:text-7xl font-black uppercase leading-[1]  max-w-full md:max-w-[450px] xl:max-w-[700px] tracking-tighter">
+                class="text-white text-4xl md:text-5xl xl:text-7xl font-black uppercase leading-[1] max-w-full md:max-w-[450px] xl:max-w-[700px] tracking-tighter">
                 <span data-i18n="hero.title_part1">Ваша</span> <br>
                 <span class="text-red-600" data-i18n="hero.title_part2">надзейная</span> <br>
                 <span data-i18n="hero.title_part3">абарона</span>

@@ -112,7 +112,7 @@ function setupForm(formId, formDisplayName) {
 
     btn.disabled = true;
     btn.classList.add("opacity-50", "cursor-not-allowed");
-    if (loader) loader.classList.remove("hidden");
+    if (loader) loader.style.removeProperty("display");
 
     const success = await sendToBackend(formDisplayName, data);
 
@@ -136,7 +136,7 @@ function setupForm(formId, formDisplayName) {
 
     btn.disabled = false;
     btn.classList.remove("opacity-50", "cursor-not-allowed");
-    if (loader) loader.classList.add("hidden");
+    if (loader) loader.style.display = "none";
   });
 }
 

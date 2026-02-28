@@ -82,7 +82,7 @@ export function initHeader() {
     overlay?.classList.add("opacity-0");
     setTimeout(() => {
       // толькі хаваем калі меню сапраўды закрыта (не адкрылі зноў за 300мс)
-      if (mobileMenu?.classList.contains("-translate-y-[150%]")) {
+      if (mobileMenu?.classList.contains("-translate-y-[200%]")) {
         overlay?.classList.add("hidden");
       }
     }, 300);

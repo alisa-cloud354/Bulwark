@@ -18,6 +18,9 @@
     "logo_src": "/src/assets/img/logo.svg",
     "logo_alt": "Bulwark Fund"
   },
+  "common": {
+    "slogan": "Ваш надійний захист"
+  },
   "hero": {
     "title_part1": "Ваш",
     "title_part2": "надійний",
@@ -131,7 +134,8 @@
     "contact_placeholder": "Telegram/Signal(@user) або Phone(+38..)",
     "btn_send": "Надіслати запит",
     "message_label": "Повідомлення",
-    "contact_label": "Контакт"
+    "contact_label": "Контакт",
+    "partners_btn": "Стати партнером"
   },
   "activity": {
     "tag": "Напрямки роботи",
@@ -152,8 +156,15 @@
     "type2_text": "Якщо ви юрист чи психолог і готові консультувати pro bono — приєднуйтесь.",
     "type3_title": "Бізнесу",
     "type3_text": "Знижки на послуги, програми реабілітації чи локації для зустрічей.",
-    "cta": "Маєте пропозицію? Напишіть нам",
-    "btn": "Стати партнером"
+    "cta": "Маєте пропозицію? Напишіть нам"
+  },
+  "news": {
+    "tag": "Новини",
+    "title": "Останні події",
+    "all_news_btn": "Усі новини",
+    "read_more": "Читати повністю",
+    "prev": "Попередня новина",
+    "next": "Наступна новина"
   },
   "donate": {
     "tag": "Підтримка",
@@ -174,27 +185,6 @@
     "purpose_title": "Обов'язково до заповнення:",
     "purpose_label": "Призначення платежу:"
   },
-  "news": {
-    "title": "Останні події",
-    "all_news_btn": "Усі новини",
-    "read_more": "Читати повністю",
-    "prev": "Попередня новина",
-    "next": "Наступна новина"
-  },
-  "news-full": {
-    "tag": "Архів",
-    "label": "Новини",
-    "loading": "Завантаження...",
-    "error_load": "Не вдалося завантажити новини."
-  },
-  "common": {
-    "slogan": "Ваш надійний захист"
-  },
-  "footer": {
-    "nav_title": "Навігація",
-    "privacy": "Privacy Policy",
-    "cookies": "Cookies"
-  },
   "modal": {
     "print": "Друк",
     "copy": "Копіювати",
@@ -203,6 +193,32 @@
     "print_aria": "Надрукувати матеріал",
     "copy_aria": "Скопіювати матеріал",
     "close_aria": "Закрити вікно"
+  },
+  "footer": {
+    "nav_title": "Навігація",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookies",
+    "accept_label": "Accept cookies",
+    "email": "info@bulwark-fund.org",
+    "phone": "+380 (96) 659 49 23",
+    "copyright": "© 2026 CO \"CF \"BULWARK\". ALL RIGHTS RESERVED.",
+    "email_href": "mailto:info@bulwark-fund.org",
+    "phone_href": "tel:+380966594923",
+    "signal_name": "Signal"
+  },
+  "contacts": {
+    "title": "Контакти",
+    "support_bot": "Бот підтримки",
+    "urgent_link": "Терміновий зв'язок",
+    "confidential": "Конфіденційно",
+    "bot_url": "https://t.me/bulwark_fund_bot",
+    "signal_url": "https://signal.me/#eu/KMAqbBp0k4GcSPEitaVRhF9fDYmXi-n5vHNjWPqivXyaSTlEUFNCrKU-fA7-lqR2"
+  },
+  "news-full": {
+    "tag": "Архів",
+    "label": "Новини",
+    "loading": "Завантаження...",
+    "error_load": "Не вдалося завантажити новини."
   },
 
   "gallery": {
@@ -270,12 +286,6 @@
       "point3": "Солідарність націй",
       "bg_text": "Майбутнє"
     }
-  },
-  "contacts": {
-    "title": "Контакти",
-    "support_bot": "Бот підтримки",
-    "urgent_link": "Терміновий зв'язок",
-    "confidential": "Конфіденційно"
   },
 
   "materials": {

@@ -18,6 +18,9 @@
     "logo_src": "/src/assets/img/logo.svg",
     "logo_alt": "Bulwark Fund"
   },
+  "common": {
+    "slogan": "Ваша надзейная абарона"
+  },
   "hero": {
     "title_part1": "Ваша",
     "title_part2": "надзейная",
@@ -131,7 +134,8 @@
     "contact_placeholder": "Telegram/Signal(@user) або Phone(+38..)",
     "btn_send": "Адправіць запыт",
     "message_label": "Паведамленне",
-    "contact_label": "Кантакт"
+    "contact_label": "Кантакт",
+    "partners_btn": "Стаць партнёрам"
   },
   "activity": {
     "tag": "Напрамкі працы",
@@ -152,10 +156,16 @@
     "type2_text": "Калі вы юрыст, ці псіхолаг і гатовы кансультаваць pro bono — далучайцеся.",
     "type3_title": "Бізнесу",
     "type3_text": "Зніжкі на паслугі, праграмы рэабілітацыі ці лакацыі для сустрэч.",
-    "cta": "Маеце прапанову? Напішыце нам",
-    "btn": "Стаць партнёрам"
+    "cta": "Маеце прапанову? Напішыце нам"
   },
-
+  "news": {
+    "tag": "Навіны",
+    "title": "Апошнія падзеі",
+    "all_news_btn": "Усе навіны",
+    "read_more": "Чытаць цалкам",
+    "prev": "Папярэдняя навіна",
+    "next": "Наступная навіна"
+  },
   "donate": {
     "tag": "Падтрымка",
     "title": "Фінансаванне перамогі",
@@ -175,27 +185,6 @@
     "purpose_title": "Абавязкова да запаўнення:",
     "purpose_label": "Прызначэнне плацяжу:"
   },
-  "news": {
-    "title": "Апошнія падзеі",
-    "all_news_btn": "Усе навіны",
-    "read_more": "Чытаць цалкам",
-    "prev": "Папярэдняя навіна",
-    "next": "Наступная навіна"
-  },
-  "news-full": {
-    "tag": "Архіў",
-    "label": "Навіны",
-    "loading": "Загрузка...",
-    "error_load": "Не атрымалася загрузіць навіны."
-  },
-  "common": {
-    "slogan": "Ваша надзейная абарона"
-  },
-  "footer": {
-    "nav_title": "Навігацыя",
-    "privacy": "Privacy Policy",
-    "cookies": "Cookies"
-  },
   "modal": {
     "print": "Друк",
     "copy": "Капіяваць",
@@ -205,7 +194,32 @@
     "copy_aria": "Скапіяваць матэрыял",
     "close_aria": "Закрыць акно"
   },
-
+  "footer": {
+    "nav_title": "Навігацыя",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookies",
+    "accept_label": "Accept cookies",
+    "email": "info@bulwark-fund.org",
+    "phone": "+380 (96) 659 49 23",
+    "copyright": "© 2026 CO \"CF \"BULWARK\". ALL RIGHTS RESERVED.",
+    "email_href": "mailto:info@bulwark-fund.org",
+    "phone_href": "tel:+380966594923",
+    "signal_name": "Signal"
+  },
+  "contacts": {
+    "title": "Кантакты",
+    "support_bot": "Бот падтрымкі",
+    "urgent_link": "Тэрміновая сувязь",
+    "confidential": "Канфідэнцыйна",
+    "bot_url": "https://t.me/bulwark_fund_bot",
+    "signal_url": "https://signal.me/#eu/KMAqbBp0k4GcSPEitaVRhF9fDYmXi-n5vHNjWPqivXyaSTlEUFNCrKU-fA7-lqR2"
+  },
+  "news-full": {
+    "tag": "Архіў",
+    "label": "Навіны",
+    "loading": "Загрузка...",
+    "error_load": "Не атрымалася загрузіць навіны."
+  },
   "gallery": {
     "label": "Галерэя",
     "copyright_label": "Copyright:",
@@ -271,12 +285,6 @@
       "bg_text": "Будычыня"
     }
   },
-  "contacts": {
-    "title": "Кантакты",
-    "support_bot": "Бот падтрымкі",
-    "urgent_link": "Тэрміновая сувязь",
-    "confidential": "Канфідэнцыйна"
-  },
 
   "materials": {
     "label": "Матэрыялы",
@@ -328,7 +336,6 @@
     "crit2_title": "Напрамкі",
     "crit2_text": "Легалізацыя, экстрадыцыя, ПТСР-дапамога, аднаўленне дакументаў.",
     "form_title_row1": "Аформіць запыт",
-
     "step1_number": "01",
     "step1_title": "Бяспечная сувязь",
     "step1_text": "Усе дадзеныя перадаюцца праз абароненыя каналы. Вы можаце выкарыстоўваць пазыўны.",

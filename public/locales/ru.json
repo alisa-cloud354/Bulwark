@@ -18,6 +18,9 @@
     "logo_src": "/src/assets/img/logo.svg",
     "logo_alt": "Bulwark Fund"
   },
+  "common": {
+    "slogan": "Ваша надежная защита"
+  },
   "hero": {
     "title_part1": "Ваша",
     "title_part2": "надежная",
@@ -131,7 +134,8 @@
     "contact_placeholder": "Telegram/Signal(@user) или Phone(+38..)",
     "btn_send": "Отправить запрос",
     "message_label": "Сообщение",
-    "contact_label": "Контакт"
+    "contact_label": "Контакт",
+    "partners_btn": "Стать партнером"
   },
   "activity": {
     "tag": "Направления работы",
@@ -152,8 +156,15 @@
     "type2_text": "Если вы юрист или психолог и готовы консультировать pro bono — присоединяйтесь.",
     "type3_title": "Бизнесу",
     "type3_text": "Скидки на услуги, программы реабилитации или локации для встреч.",
-    "cta": "Есть предложение? Напишите нам",
-    "btn": "Стать партнером"
+    "cta": "Есть предложение? Напишите нам"
+  },
+  "news": {
+    "tag": "Новости",
+    "title": "Последние события",
+    "all_news_btn": "Все новости",
+    "read_more": "Читать полностью",
+    "prev": "Предыдущая новость",
+    "next": "Следующая новость"
   },
   "donate": {
     "tag": "Поддержка",
@@ -174,27 +185,6 @@
     "purpose_title": "Обязательно к заполнению:",
     "purpose_label": "Назначение платежа:"
   },
-  "news": {
-    "title": "Последние события",
-    "all_news_btn": "Все новости",
-    "read_more": "Читать полностью",
-    "prev": "Предыдущая новость",
-    "next": "Следующая новость"
-  },
-  "news-full": {
-    "tag": "Архив",
-    "label": "Новости",
-    "loading": "Загрузка...",
-    "error_load": "Не удалось загрузить новости."
-  },
-  "common": {
-    "slogan": "Ваша надежная защита"
-  },
-  "footer": {
-    "nav_title": "Навигация",
-    "privacy": "Privacy Policy",
-    "cookies": "Cookies"
-  },
   "modal": {
     "print": "Печать",
     "copy": "Копировать",
@@ -204,7 +194,32 @@
     "copy_aria": "Скопировать материал",
     "close_aria": "Закрыть окно"
   },
-
+  "footer": {
+    "nav_title": "Навигация",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookies",
+    "accept_label": "Accept cookies",
+    "email": "info@bulwark-fund.org",
+    "phone": "+380 (96) 659 49 23",
+    "copyright": "© 2026 CO \"CF \"BULWARK\". ALL RIGHTS RESERVED.",
+    "email_href": "mailto:info@bulwark-fund.org",
+    "phone_href": "tel:+380966594923",
+    "signal_name": "Signal"
+  },
+  "contacts": {
+    "title": "Контакты",
+    "support_bot": "Бот поддержки",
+    "urgent_link": "Срочная связь",
+    "confidential": "Конфиденциально",
+    "bot_url": "https://t.me/bulwark_fund_bot",
+    "signal_url": "https://signal.me/#eu/KMAqbBp0k4GcSPEitaVRhF9fDYmXi-n5vHNjWPqivXyaSTlEUFNCrKU-fA7-lqR2"
+  },
+  "news-full": {
+    "tag": "Архив",
+    "label": "Новости",
+    "loading": "Загрузка...",
+    "error_load": "Не удалось загрузить новости."
+  },
   "gallery": {
     "label": "Галерея",
     "copyright_label": "Copyright:",
@@ -270,12 +285,6 @@
       "point3": "Солидарность наций",
       "bg_text": "Будущее"
     }
-  },
-  "contacts": {
-    "title": "Контакты",
-    "support_bot": "Бот поддержки",
-    "urgent_link": "Срочная связь",
-    "confidential": "Конфиденциально"
   },
 
   "materials": {

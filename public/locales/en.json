@@ -18,6 +18,9 @@
     "logo_src": "/src/assets/img/logo.svg",
     "logo_alt": "Bulwark Fund"
   },
+  "common": {
+    "slogan": "Your Reliable Defense"
+  },
   "hero": {
     "title_part1": "Your",
     "title_part2": "Reliable",
@@ -131,7 +134,8 @@
     "contact_placeholder": "Telegram/Signal(@user) or Phone(+...)",
     "btn_send": "Send Request",
     "message_label": "Message",
-    "contact_label": "Contact"
+    "contact_label": "Contact",
+    "partners_btn": "Become a Partner"
   },
   "activity": {
     "tag": "Fields of Work",
@@ -152,8 +156,15 @@
     "type2_text": "If you are a lawyer or psychologist and ready to consult pro bono — join us.",
     "type3_title": "For Business",
     "type3_text": "Discounts on services, rehabilitation programs, or locations for meetings.",
-    "cta": "Have an offer? Contact us",
-    "btn": "Become a Partner"
+    "cta": "Have an offer? Contact us"
+  },
+  "news": {
+    "tag": "News",
+    "title": "Latest Events",
+    "all_news_btn": "All News",
+    "read_more": "Read more",
+    "prev": "Previous news",
+    "next": "Next news"
   },
   "donate": {
     "tag": "Support",
@@ -174,28 +185,6 @@
     "purpose_title": "Mandatory field:",
     "purpose_label": "Payment purpose:"
   },
-  "news": {
-    "title": "Latest Events",
-    "all_news_btn": "All News",
-    "read_more": "Read more",
-    "prev": "Previous news",
-    "next": "Next news"
-  },
-  "news-full": {
-    "tag": "Archive",
-    "label": "News",
-    "loading": "Loading...",
-    "error_load": "Failed to load news."
-  },
-  "common": {
-    "slogan": "Your Reliable Defense"
-  },
-  "footer": {
-    "nav_title": "Navigation",
-    "privacy": "Privacy Policy",
-    "cookies": "Cookies",
-    "accept_label": "Accept cookies"
-  },
   "modal": {
     "print": "Print",
     "copy": "Copy",
@@ -204,6 +193,32 @@
     "print_aria": "Print material",
     "copy_aria": "Copy material",
     "close_aria": "Close window"
+  },
+  "footer": {
+    "nav_title": "Navigation",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookies",
+    "accept_label": "Accept cookies",
+    "email": "info@bulwark-fund.org",
+    "phone": "+380 (96) 659 49 23",
+    "copyright": "© 2026 CO \"CF \"BULWARK\". ALL RIGHTS RESERVED.",
+    "email_href": "mailto:info@bulwark-fund.org",
+    "phone_href": "tel:+380966594923",
+    "signal_name": "Signal"
+  },
+  "contacts": {
+    "title": "Contacts",
+    "support_bot": "Support Bot",
+    "urgent_link": "Urgent Contact",
+    "confidential": "Confidential",
+    "bot_url": "https://t.me/bulwark_fund_bot",
+    "signal_url": "https://signal.me/#eu/KMAqbBp0k4GcSPEitaVRhF9fDYmXi-n5vHNjWPqivXyaSTlEUFNCrKU-fA7-lqR2"
+  },
+  "news-full": {
+    "tag": "Archive",
+    "label": "News",
+    "loading": "Loading...",
+    "error_load": "Failed to load news."
   },
 
   "gallery": {
@@ -271,12 +286,6 @@
       "point3": "Solidarity of nations",
       "bg_text": "Future"
     }
-  },
-  "contacts": {
-    "title": "Contacts",
-    "support_bot": "Support Bot",
-    "urgent_link": "Urgent Contact",
-    "confidential": "Confidential"
   },
 
   "materials": {

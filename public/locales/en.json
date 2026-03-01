@@ -14,7 +14,9 @@
     "get_help": "Get Help",
     "be_partner": "Help | Become a Partner",
     "support": "Support",
-    "home_label": "Bulwark Fund — go to homepage"
+    "home_label": "Bulwark Fund — go to homepage",
+    "logo_src": "/src/assets/img/logo.svg",
+    "logo_alt": "Bulwark Fund"
   },
   "hero": {
     "title_part1": "Your",
@@ -22,7 +24,10 @@
     "title_part3": "Bulwark",
     "description": "Helping those who defend our peace. The Bulwark Fund stands for transparency, integrity, and effective support.",
     "btn_get_help": "Get Help",
-    "btn_support": "Support"
+    "btn_support": "Support",
+    "img_mob_src": "/src/assets/img/hero-bg.webp",
+    "img_desk_src": "/src/assets/img/hero-bg-desk.webp",
+    "img_alt": ""
   },
   "about": {
     "tag": "Mission and Vision",
@@ -58,7 +63,13 @@
     "conclusion_1": "Today, they are building the Bulwark Foundation together, uniting those who believe that freedom is everyone's right.",
     "conclusion_highlight": "“We are returning. We are building a new Belarus!”",
     "alisa_img_alt": "Alisa Kosenko",
-    "vlad_img_alt": "Vladislav Solovey"
+    "vlad_img_alt": "Vladislav Solovey",
+    "alisa_img_src": "/src/assets/img/alisa.webp",
+    "vlad_img_src": "/src/assets/img/vlad.webp",
+    "link_youtube_label": "YouTube",
+    "link_youtube_url": "https://www.youtube.com/watch?v=q6A4ad6-Uc4",
+    "link_viasna_label": "Viasna96",
+    "link_viasna_url": "https://spring96.org/ru/news/99103"
   },
   "history": {
     "top_label": "Survival",

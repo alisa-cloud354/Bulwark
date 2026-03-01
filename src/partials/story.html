@@ -23,8 +23,9 @@
                 <div class="grid grid-cols-2 gap-4">
                     <div class="grid grid-rows-[auto_1fr] group">
                         <div class="aspect-[3/4] bg-[#111111] border border-white/5 overflow-hidden">
-                            <img src="/src/assets/img/alisa.webp" data-i18n="[alt]story.alisa_img_alt"
-                                alt="Аліса Касенка" width="400" height="535"
+                            <img src="/src/assets/img/alisa.webp"
+                                data-i18n="[src]story.alisa_img_src;[alt]story.alisa_img_alt" alt="Аліса Касенка"
+                                width="400" height="535"
                                 class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
                                 loading="lazy">
                         </div>
@@ -39,7 +40,7 @@
                     <div class="grid grid-rows-[auto_1fr] group">
                         <div class="aspect-[3/4] bg-[#111111] border border-white/5 overflow-hidden">
                             <img src="/src/assets/img/vlad.webp" alt="Уладзіслаў Салавей"
-                                data-i18n="[alt]story.vlad_img_alt" width="400" height="535"
+                                data-i18n="[src]story.vlad_img_src;[alt]story.vlad_img_alt" width="400" height="535"
                                 class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
                                 loading="lazy">
                         </div>
@@ -54,9 +55,11 @@
 
                 <div class="grid grid-cols-1 gap-4">
                     <a href="https://www.youtube.com/watch?v=q6A4ad6-Uc4" target="_blank" rel="noopener"
+                        data-i18n="[href]story.link_youtube_url"
                         class="flex items-center justify-between p-5 bg-black/80 border border-white/10 hover:border-red-600/50 transition-all group">
                         <div class="flex flex-col">
-                            <span class="text-xs text-red-600 font-black uppercase tracking-widest mb-1">YouTube</span>
+                            <span data-i18n="story.link_youtube_label"
+                                class="text-xs text-red-600 font-black uppercase tracking-widest mb-1">YouTube</span>
                             <span data-i18n="story.link_youtube"
                                 class="text-xs font-black uppercase tracking-widest text-gray-400 group-hover:text-white transition-colors">
                                 Глядзець фільм пра «Соню»
@@ -67,9 +70,11 @@
                     </a>
 
                     <a href="https://spring96.org/ru/news/99103" target="_blank" rel="noopener"
+                        data-i18n="[href]story.link_viasna_url"
                         class="flex items-center justify-between p-5 bg-black/80 border border-white/10 hover:border-red-600/50 transition-all group">
                         <div class="flex flex-col">
-                            <span class="text-xs text-red-600 font-black uppercase tracking-widest mb-1">Viasna96</span>
+                            <span data-i18n="story.link_viasna_label"
+                                class="text-xs text-red-600 font-black uppercase tracking-widest mb-1">Viasna96</span>
                             <span data-i18n="story.link_viasna"
                                 class="text-xs font-black uppercase tracking-widest text-gray-400 group-hover:text-white transition-colors">
                                 Гісторыя рэпрэсій

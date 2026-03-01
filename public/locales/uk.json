@@ -14,7 +14,9 @@
     "get_help": "Отримати допомогу",
     "be_partner": "Допомогти | Стати партнером",
     "support": "Підтримати",
-    "home_label": "Bulwark Fund — на головну"
+    "home_label": "Bulwark Fund — на головну",
+    "logo_src": "/src/assets/img/logo.svg",
+    "logo_alt": "Bulwark Fund"
   },
   "hero": {
     "title_part1": "Ваш",
@@ -22,7 +24,10 @@
     "title_part3": "захист",
     "description": "Допомагаємо тим, хто захищає наш спокій. Фонд Bulwark — це прозорість, щирість та ефективна підтримка.",
     "btn_get_help": "Отримати допомогу",
-    "btn_support": "Підтримати"
+    "btn_support": "Підтримати",
+    "img_mob_src": "/src/assets/img/hero-bg.webp",
+    "img_desk_src": "/src/assets/img/hero-bg-desk.webp",
+    "img_alt": ""
   },
   "about": {
     "tag": "Місія та візія",
@@ -58,7 +63,13 @@
     "conclusion_1": "Сьогодні вони разом будують фонд «Bulwark», об'єднуючи тих, хто вірить: свобода — це право кожного.",
     "conclusion_highlight": "«Ми повертаємося. Ми будуємо нову Білорусь!»",
     "alisa_img_alt": "Аліса Косенко",
-    "vlad_img_alt": "Владислав Соловей"
+    "vlad_img_alt": "Владислав Соловей",
+    "alisa_img_src": "/src/assets/img/alisa.webp",
+    "vlad_img_src": "/src/assets/img/vlad.webp",
+    "link_youtube_label": "YouTube",
+    "link_youtube_url": "https://www.youtube.com/watch?v=q6A4ad6-Uc4",
+    "link_viasna_label": "Viasna96",
+    "link_viasna_url": "https://spring96.org/ru/news/99103"
   },
   "history": {
     "top_label": "Виживання",

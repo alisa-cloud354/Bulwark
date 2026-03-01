@@ -15,14 +15,14 @@
 
 @media (min-width: 768px) {
     .hero-img {
-        object-position: calc(50% + 180px) center;
+        object-position: 50% center;
 
     }
 }
 
 @media (min-width: 1280px) {
     .hero-img {
-        object-position: calc(50% + 280px) center;
+        object-position: calc(50% + 80px) center;
 
     }
 }

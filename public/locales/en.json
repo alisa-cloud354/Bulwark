@@ -39,7 +39,7 @@
     "stat_desc_2": "Every dictator falls. We are preparing the builders of a new Belarus.",
     "quote": "\"Freedom has no borders, and tyranny is a common threat to the entire region.\""
   },
-  "history": {
+  "story": {
     "tag": "Human Factor",
     "title": "Our Story",
     "lead": "The story of Bulwark began not in an office, but through the meeting of a Ukrainian woman from Kharkiv and a Belarusian volunteer.",
@@ -57,6 +57,10 @@
     "slogan_text1": "Common history — common future!",
     "conclusion_1": "Today, they are building the Bulwark Foundation together, uniting those who believe that freedom is everyone's right.",
     "conclusion_highlight": "“We are returning. We are building a new Belarus!”",
+    "alisa_img_alt": "Alisa Kosenko",
+    "vlad_img_alt": "Vladislav Solovey"
+  },
+  "history": {
     "top_label": "Survival",
     "title_1": "Historical",
     "title_2": "Overview",

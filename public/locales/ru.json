@@ -28,8 +28,8 @@
     "description": "Помогаем тем, кто защищает наш покой. Фонд Bulwark — это прозрачность, искренность и эффективная поддержка.",
     "btn_get_help": "Получить помощь",
     "btn_support": "Поддержать",
-    "img_mob_src": "/src/assets/img/hero-bg.webp",
-    "img_desk_src": "/src/assets/img/hero-bg-desk.webp",
+    "img_mob_src": "/img/hero-bg.webp",
+    "img_desk_src": "/img/hero-bg-desk.webp",
     "img_alt": ""
   },
   "about": {

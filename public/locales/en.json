@@ -192,7 +192,8 @@
     "close": "Close",
     "print_aria": "Print material",
     "copy_aria": "Copy material",
-    "close_aria": "Close window"
+    "close_aria": "Close window",
+    "copy_error": "Error"
   },
   "footer": {
     "nav_title": "Navigation",

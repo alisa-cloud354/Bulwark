@@ -30,13 +30,13 @@
                     data-i18n="[aria-label]ui.change_lang"
                     class="flex items-center gap-2 text-xs font-black text-white uppercase tracking-widest cursor-pointer py-2">
                     <span id="current-lang" class="text-red-600" aria-hidden="true">BE</span>
-                    <i class="fa-solid fa-chevron-down text-xs transition-transform group-hover:rotate-180"
+                    <i class="fa-solid fa-chevron-down text-xs transition-transform [.is-active_&]:rotate-180"
                         aria-hidden="true"></i>
                 </button>
 
                 <div id="lang-menu" role="menu" aria-controls="lang-menu"
                     class="absolute right-0 top-full w-24 pt-1 hidden group-hover:block group-[.is-active]:block z-[100]">
-                    <div class="bg-[#050505] border border-white/10 py-2 shadow-2xl relative">
+                    <div class="bg-[#050505] border border-white/5 py-2 shadow-2xl relative">
                         <a href="#" role="menuitem" data-lang="be" aria-label="Беларуская мова"
                             data-i18n="[aria-label]ui.lang_be"
                             class="lang-switch block px-4 py-2 text-white hover:text-red-600 hover:bg-white/5 transition-all text-xs font-black uppercase tracking-widest relative z-[110]">BE</a>
@@ -86,7 +86,7 @@
                             <i class="fa-solid fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
                         </a>
                         <div
-                            class="absolute top-full left-0 w-64 bg-[#050505] border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-2xl">
+                            class="absolute top-full left-0 w-64 bg-[#050505] border border-white/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-2xl">
                             <a href="/pages/projects.html" data-i18n="nav.projects"
                                 class="block px-6 py-4 text-xs text-gray-400 hover:bg-black hover:text-red-600 border-b border-white/5">Праекты</a>
                             <a href="/pages/history.html" data-i18n="nav.history_long"
@@ -115,7 +115,7 @@
                             <i class="fa-solid fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
                         </a>
                         <div
-                            class="absolute top-full left-0 w-64 bg-[#050505] border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-2xl">
+                            class="absolute top-full left-0 w-64 bg-[#050505] border border-white/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-2xl">
                             <a href="/pages/get-help.html" data-i18n="nav.get_help"
                                 class="block px-6 py-4 text-xs text-gray-400 hover:bg-black hover:text-red-600 border-b border-white/5">Атрымаць
                                 дапамогу</a>

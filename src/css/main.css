@@ -5,7 +5,7 @@
 
 /* Спецыфічныя стылі секцый (пакуль ты іх не перапісаў на Tailwind) */
 @import "./sections/hero.css";
-@import "./sections/header.css";
+
 @import "./sections/news.css";
 @import "/src/css/pages/zarok-vajara.css";
 @import "/src/css/pages/gallery.css";

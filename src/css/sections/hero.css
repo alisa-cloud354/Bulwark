@@ -23,6 +23,6 @@
 @media (min-width: 1280px) {
     .hero-img {
         object-position: calc(50% + 80px) center;
-        height: 580px;
+
     }
 }

@@ -14,9 +14,9 @@ export const modalTemplates = {
 
         <div class="order-2 w-full flex justify-end">
           <div class="border border-white/10 bg-black overflow-hidden w-full max-w-[696px]">
-             <img src="${item.image || "/img/logo.svg"}" 
-                  class="w-full h-auto object-cover grayscale-0 hover:grayscale transition-all duration-700" 
-                  alt="${item.title}">
+             <img src="${item.image || "/img/news/temp.webp"}" 
+     class="w-full h-auto object-cover grayscale-0 hover:grayscale transition-all duration-700" 
+     alt="${item.title}">
           </div>
         </div>
       </div>

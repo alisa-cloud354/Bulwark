@@ -1,9 +1,15 @@
 <section class="relative flex flex-col items-start overflow-hidden bg-black w-full py-8 md:py-12 xl:py-16" id="hero">
 
     <picture>
-        <source media="(min-width: 768px)" srcset="/img/hero-bg-desk.webp">
-        <img src="/img/hero-bg.webp" alt="Bulwark Fund — Support for Belarusian fighters in Ukraine"
-            fetchpriority="high" width="2600" height="672" class="hero-img">
+        <!-- Desktop -->
+        <source media="(min-width: 1280px)" srcset="/img/hero-bg-desk.webp" type="image/webp" width="2600" height="672">
+
+        <!-- Tablet -->
+        <source media="(min-width: 768px)" srcset="/img/hero-bg-tab.webp" type="image/webp" width="1280" height="470">
+
+        <!-- Mobile fallback -->
+        <img src="/img/hero-bg-mob.webp" alt="Bulwark Fund — Support for Belarusian fighters in Ukraine"
+            fetchpriority="high" class="hero-img" width="768" height="380">
     </picture>
 
     <!-- <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-90"></div> -->

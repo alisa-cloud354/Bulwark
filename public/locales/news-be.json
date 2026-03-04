@@ -1,14 +1,5 @@
 [
   {
-    "id": 7,
-    "date": "04.03.2026",
-    "title": "Хтось штось зрабіў",
-    "excerpt": "Хтось штось калісь зрабіў і гэта збс",
-    "image": "/img/news/temp.webp",
-    "image_thumb": "/img/news/temp-thumb.webp",
-    "content": "<p>Хтось штось зрабіў</p><p>Хтось штось калісь зрабіў і гэта збс</p><p><strong>Хтось штось зрабіў</strong></p><p><strong>Хтось штось калісь зрабіў і гэта збс</strong></p><p><strong>Хтось штось зрабіў</strong><span class=\"ql-cursor\">﻿</span></p><p><strong>Хтось штось калісь зрабіў і гэта збс</strong></p><p><strong>Хтось штось зрабіў</strong></p><p><strong>Хтось штось калісь зрабіў і гэта збс</strong></p>"
-  },
-  {
     "id": 6,
     "date": "22.02.2026",
     "title": "бла бла бла бла ",

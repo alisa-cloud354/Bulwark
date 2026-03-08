@@ -1,14 +1,5 @@
 [
   {
-    "id": 7,
-    "date": "08.03.2026",
-    "title": "Кто-то сделал что-то",
-    "excerpt": "Кто-то сделал что-то",
-    "content": "<h2>Кто-то сделал что-то</h2><p></p>",
-    "image": "/img/news/news-7-full.webp",
-    "image_thumb": "/img/news/news-7-full.webp"
-  },
-  {
     "id": 1,
     "date": "18.11.2025",
     "title": "Начало работы фонда Bulwark",

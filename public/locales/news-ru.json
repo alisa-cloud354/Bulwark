@@ -1,5 +1,14 @@
 [
   {
+    "id": 7,
+    "date": "08.03.2026",
+    "title": "",
+    "excerpt": "",
+    "content": "",
+    "image": "/img/news/temp.webp",
+    "image_thumb": "/img/news/temp-thumb.webp"
+  },
+  {
     "id": 1,
     "date": "18.11.2025",
     "title": "Начало работы фонда Bulwark",

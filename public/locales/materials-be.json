@@ -33,5 +33,12 @@
     "title": "Хтось штось зрабіў",
     "short": "Фікс прайс ыав",
     "content": "<p>if (deleteBtn) { if (!confirm(\"Выдаліць матэрыял ва ўсіх мовах?\")) return; const targetId = String(<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://deleteBtn.dataset.id\">deleteBtn.dataset.id</a>); deleteBtn.disabled = true; deleteBtn.textContent = \"...\"; try { for (const lang of langs) { const res = await getFile<code>public/locales/materials-${lang}.json</code>); const updated = res.json.filter((n) =&gt; String(<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://n.id\">n.id</a>) !== targetId); await saveFile<code>public/locales/materials-${lang}.json</code>, updated, res.sha); await new Promise((r) =&gt; setTimeout(r, 1500)); } loadMaterials(); } catch (err) { console.error(err); if (err.message.includes(\"409\")) { alert(\"GitHub яшчэ апрацоўвае змены. Пачакайце 30 секунд і паўтарыце.\"); } else { alert(\"Памылка пры выдаленні: \" + err.message); } loadMaterials(); } }</p><p></p>"
+  },
+  {
+    "id": "fix price",
+    "category": "Фікс прайс ыав",
+    "title": "Хтось штось зрабіў",
+    "short": "Фікс прайс ыав",
+    "content": "<p>if (deleteBtn) { if (!confirm(\"Выдаліць матэрыял ва ўсіх мовах?\")) return; const targetId = String(<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://deleteBtn.dataset.id\">deleteBtn.dataset.id</a>); deleteBtn.disabled = true; deleteBtn.textContent = \"...\"; try { for (const lang of langs) { const res = await getFile<code>public/locales/materials-${lang}.json</code>); const updated = res.json.filter((n) =&gt; String(<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"http://n.id\">n.id</a>) </p><p></p>"
   }
 ]

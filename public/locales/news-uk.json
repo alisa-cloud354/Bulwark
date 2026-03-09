@@ -1,14 +1,5 @@
 [
   {
-    "id": 7,
-    "date": "09.03.2026",
-    "title": "Хтось штось зрабіў",
-    "excerpt": "  function fillForm(lang) {\n    const news = langData[lang]?.news;\n    if (!news) return;\n    const it = news.find((n) => String(n.id) === String(item.id)) || {};\n    // Дату запаўняем толькі калі поле пустое\n    if (!document.getElementById(\"f-date\").value) {\n      document.getElementById(\"f-date\").value = toInputDate(\n        it.date || item.date || \"\",\n      );\n    }\n    document.getElementById(\"f-title\").value = it.title || \"\";\n    document.getElementById(\"f-excerpt\").value = it.excerpt || \"\";\n    editor.commands.setContent(it.content || \"\");\n  }\n\n  async function switchLang(lang) {\n    if (!langData[lang]) {\n      try {\n        const res = await getFile(`public/locales/news-${lang}.json`);\n        langData[lang] = { news: res.json, sha: res.sha };\n      } catch {\n        langData[lang] = { news: [], sha: null };\n      }\n    }\n    currentLang = lang;\n    document.querySelectorAll(\".lang-tab\").forEach((btn) => {\n      const active = btn.dataset.lang === lang;\n      btn.style.border = `1px solid ${active ? \"#dc2626\" : \"#333\"}`;\n      btn.style.background = active ? \"#dc2626\" : \"transparent\";\n      btn.style.color = active ? \"#fff\" : \"#666\";\n    });\n    fillForm(lang);\n  }\n\n  document.querySelectorAll(\".lang-tab\").forEach((btn) => {\n    btn.addEventListener(\"click\", () => switchLang(btn.dataset.lang));\n  });\n\n  fillForm(\"be\");",
-    "content": "<p>Хтось штось зрабіў</p>",
-    "image": "/img/news/news-7-full.webp",
-    "image_thumb": "/img/news/news-7-full.webp"
-  },
-  {
     "id": 1,
     "date": "18.11.2025",
     "title": "Початок роботи фонду Bulwark",

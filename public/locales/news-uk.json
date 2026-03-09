@@ -1,5 +1,14 @@
 [
   {
+    "id": 7,
+    "date": "09.03.2026",
+    "title": "Хтось щось зробив",
+    "excerpt": "Хтось щось зробив",
+    "content": "<p>Хтось щось зробив</p>",
+    "image": "/img/news/news-7-full.webp",
+    "image_thumb": "/img/news/news-7-full.webp"
+  },
+  {
     "id": 1,
     "date": "18.11.2025",
     "title": "Початок роботи фонду Bulwark",

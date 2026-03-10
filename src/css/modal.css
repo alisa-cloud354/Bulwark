@@ -39,6 +39,10 @@
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+#close-modal:focus-visible {
+    outline: none;
+}
+
 /* Эфект спрацоўвае толькі на дэсктопе пры навядзенні */
 @media (hover: hover) {
     .news-image-wrapper:hover img {

@@ -29,7 +29,7 @@ export function newsCardTemplate(news) {
       ${news.excerpt}
     </p>
     <button type="button"
-      class="open-news-btn mt-auto text-red-600 text-xs font-black uppercase tracking-widest flex items-center gap-2 hover:text-white transition-all group/btn"
+      class="open-news-btn mt-auto text-red-600 text-xs font-black uppercase flex items-center gap-1 hover:text-white transition-all group/btn"
       data-id="${news.id}">
       <span data-i18n="news.read_more">Чытаць цалкам</span>
       <i class="fa-solid fa-chevron-right text-xs group-hover/btn:translate-x-1 transition-transform"></i>

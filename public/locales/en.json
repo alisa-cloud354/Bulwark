@@ -222,6 +222,7 @@
   },
 
   "gallery": {
+    "tag": "Photos",
     "label": "Gallery",
     "copyright_label": "Copyright:",
     "copyright_text": "All gallery materials are the intellectual property of Bulwark. Unauthorized use of these materials is prohibited.",

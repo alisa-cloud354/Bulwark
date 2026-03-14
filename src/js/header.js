@@ -1,6 +1,5 @@
 export function initHeader() {
   const mobileMenu = document.getElementById("mobile-menu");
-  const mobileWrapper = document.getElementById("mobile-menu-wrapper");
   const overlay = document.getElementById("mobile-menu-overlay");
   const closeBtn = document.getElementById("close-mobile-menu");
   const mobileBtn = document.getElementById("mobile-menu-btn");

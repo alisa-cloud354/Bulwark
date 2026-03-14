@@ -7,7 +7,7 @@ export const initNavigation = () => {
   const mobileMenu = document.querySelector(".mobile-menu");
 
   const closeMenu = () => {
-    if (mobileMenu && mobileMenu.classList.contains("is-open")) {
+    if (mobileMenu?.classList.contains("is-open")) {
       mobileMenu.classList.remove("is-open");
     }
   };

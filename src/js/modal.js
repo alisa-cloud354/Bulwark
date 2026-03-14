@@ -28,14 +28,12 @@ export function openUniversalModal(item, type = null) {
     item.ui || (window.donationData ? window.donationData.ui : null);
 
   // 3. ВЫБАР ШАБЛОНА
-  let template;
-  if (type && modalTemplates[type]) {
-    template = modalTemplates[type](item, uiData);
-  } else {
-    template = item.date
-      ? modalTemplates.news(item)
-      : modalTemplates.material(item);
-  }
+  const template =
+    type && modalTemplates[type]
+      ? modalTemplates[type](item, uiData)
+      : item.date
+        ? modalTemplates.news(item)
+        : modalTemplates.material(item);
 
   dynamicContainer.innerHTML = template;
 

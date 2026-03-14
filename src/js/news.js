@@ -13,9 +13,9 @@ export function newsCardTemplate(news) {
       ${
         news.image
           ? `<img src="${news.image_thumb || news.image}" alt="${news.title}" width="494" height="278"
-            class="w-full h-full object-cover grayscale-0 group-hover:grayscale transition-all duration-700">`
+            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">`
           : `<img src="/img/news/temp-thumb.webp" alt="Bulwark Fund"
-            class="w-full h-full object-cover grayscale-0 group-hover:grayscale transition-all duration-700">`
+            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">`
       }
       <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
     </div>

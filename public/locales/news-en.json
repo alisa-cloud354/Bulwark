@@ -1,5 +1,14 @@
 [
   {
+    "id": 7,
+    "date": "14.03.2026",
+    "title": "New line of activity — medical support",
+    "excerpt": "Primary medical consultations, assistance in finding treatment and rehabilitation centers",
+    "content": "<h2>New line of activity — medical support</h2><p></p><p>Primary medical consultations, assistance in finding treatment and rehabilitation centers.</p><p></p><ul><li><p>Primary medical consultations</p></li><li><p>Search for treatment and rehabilitation facilities</p></li><li><p>Assistance with filing reports and MEC (Medical Examination Commission)</p></li><li><p>Monitoring of medical documentation</p></li></ul><p></p>",
+    "image": "/img/news/news-7-full.webp",
+    "image_thumb": "/img/news/news-7-thumb.webp"
+  },
+  {
     "id": 1,
     "date": "18.11.2025",
     "title": "Launch of Bulwark Foundation",

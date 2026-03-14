@@ -15,15 +15,13 @@ export async function initDonationSection() {
       const fetchPath = `/locales/donations-${lang}.json`;
 
       const response = await fetch(fetchPath);
-      let data;
-
-      if (!response.ok) {
-        const baseRes = await fetch("/locales/donations-be.json");
-        if (!baseRes.ok) throw new Error("Base donation file not found");
-        data = await baseRes.json();
-      } else {
-        data = await response.json();
-      }
+      const data = response.ok
+        ? await response.json()
+        : await (async () => {
+            const baseRes = await fetch("/locales/donations-be.json");
+            if (!baseRes.ok) throw new Error("Base donation file not found");
+            return baseRes.json();
+          })();
 
       // ЗАХОЎВАЕМ ГЛАБАЛЬНА, каб modal.js мог дастаць блок ui
       window.donationData = data;
@@ -60,7 +58,7 @@ export async function initDonationSection() {
 /**
  * Глабальная функцыя аплаты
  */
-window.handlePayment = (donationType) => {
+window.handlePayment = (_donationType) => {
   const amountInput = document.getElementById("custom-amount");
   const amount = amountInput ? amountInput.value : null;
 

@@ -20,7 +20,7 @@ export function newsCardTemplate(news) {
       <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
     </div>
   </div>
-  <div class="p-6 pt-4 flex flex-col grow">
+  <div class="p-4 flex flex-col grow">
     <span class="text-red-600 text-xs font-bold uppercase tracking-widest mb-2">${news.date}</span>
     <h3 class="text-white font-bold mb-3 italic uppercase text-sm tracking-widest group-hover:text-red-600 transition-colors leading-tight min-h-[3rem] md:min-h-[2.5rem] line-clamp-3 md:line-clamp-2">
       ${news.title}

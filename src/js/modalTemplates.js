@@ -1,5 +1,3 @@
-import { t, updateAllTranslations } from "./i18n.js"; // Імпартуем нашы інструменты
-
 export const modalTemplates = {
   news: (item) => `
     <div class="flex flex-col">

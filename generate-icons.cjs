@@ -22,6 +22,7 @@ fontawesomeSubset(
       "hand-holding-heart",
       "handshake",
       "handshake-angle",
+      "hospital",
       "house",
       "lock",
       "phone",

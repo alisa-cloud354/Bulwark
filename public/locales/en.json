@@ -286,6 +286,15 @@
       "point2": "Veterans' mental health",
       "point3": "Solidarity of nations",
       "bg_text": "Future"
+    },
+    "medical-support": {
+      "title": "Medical Support",
+      "category": "Medical Assistance",
+      "description": "Primary medical consultations, assistance in finding treatment and rehabilitation facilities.",
+      "step1": "Primary medical consultations",
+      "step2": "Finding treatment and rehabilitation facilities",
+      "step3": "Assistance with reports and medical board",
+      "step4": "Medical documentation control"
     }
   },
 

@@ -71,7 +71,9 @@ export default async function handler(req, res) {
           productCount,
           productPrice,
           merchantSignature: signature,
-          returnUrl: "https://bulwark-fund.org/pages/donate.html",
+          returnUrl:
+            "https://bulwark-fund.org/pages/donate.html?payment=success",
+          returnUrlMethod: "GET",
           serviceUrl: "https://bulwark-fund.org/api/wayforpay-callback",
           language: "UA",
         },

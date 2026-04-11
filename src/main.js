@@ -14,6 +14,7 @@ import { initMaterials } from "./js/materials.js";
 import { initDonationSection } from "./js/donation-section.js";
 import { initForms } from "./js/forms.js";
 import { initPartners } from "./js/partners.js";
+import { initDonatePage } from "./js/donate-page.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Заўсёды на ўсіх старонках
@@ -34,4 +35,5 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector("#donate")) initDonationSection();
   if (document.querySelector("#help-form, #partners-form")) initForms();
   if (document.querySelector("#partners-list")) initPartners();
+  if (document.querySelector("#btn-open-payment")) initDonatePage();
 });

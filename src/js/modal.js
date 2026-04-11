@@ -25,7 +25,11 @@ export function openUniversalModal(item, type = null) {
 
   // 2. ПАДРЫХТОЎКА ДАДЗЕНЫХ UI
   const uiData =
-    item.ui || (window.donationData ? window.donationData.ui : null);
+    type === "payment"
+      ? window.donationData
+        ? window.donationData.payment_ui
+        : null
+      : item.ui || (window.donationData ? window.donationData.ui : null);
 
   // 3. ВЫБАР ШАБЛОНА
   const template =

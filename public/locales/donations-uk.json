@@ -61,5 +61,16 @@
     "swift": "SWIFT code:",
     "purpose_label": "Призначення платежу (обов'язково):",
     "accounts_title": "Рахунки для переказу"
+  },
+  "payment_ui": {
+    "title": "Оплата карткою",
+    "select_label": "Призначення:",
+    "option_foundation": "Підтримати фонд",
+    "option_soldiers": "Підтримати бійців",
+    "amount_label": "Сума (UAH):",
+    "amount_placeholder": "Наприклад: 500",
+    "btn_pay": "Оплатити карткою",
+    "btn_cancel": "Назад",
+    "note": "Вас буде перенаправлено на захищену сторінку WayForPay"
   }
 }

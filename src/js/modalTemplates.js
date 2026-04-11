@@ -140,4 +140,50 @@ export const modalTemplates = {
       </div>
     </div>
   `,
+  payment: (item, ui) => `
+<div class="flex flex-col text-left">
+  <div class="px-5 md:px-9 py-8">
+
+    <div class="mb-6 pl-2">
+      <h2 class="text-2xl md:text-3xl xl:text-5xl text-red-600 font-black uppercase tracking-tighter mb-4">
+        ${ui.title}
+      </h2>
+      <p class="text-gray-400 text-xs font-bold tracking-[0.3em] italic">
+        ${item.description || ""}
+      </p>
+    </div>
+
+    <form id="wayforpay-form" class="flex flex-col gap-4">
+
+      <div class="flex flex-col gap-2">
+        <label class="text-gray-400 uppercase text-xs font-bold tracking-[0.2em]">${ui.select_label}</label>
+        <select id="payment-type" name="payment-type"
+          class="w-full bg-black border border-white/10 p-4 text-white text-xs font-bold tracking-widest outline-none focus:border-red-600 transition-colors">
+          <option value="foundation">${ui.option_foundation}</option>
+          <option value="soldiers">${ui.option_soldiers}</option>
+        </select>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label class="text-gray-400 uppercase text-xs font-bold tracking-[0.2em]">${ui.amount_label}</label>
+        <input id="payment-amount" type="number" min="1" name="amount"
+          placeholder="${ui.amount_placeholder}"
+          class="w-full bg-black border border-white/10 p-4 text-white text-xs font-bold tracking-widest outline-none focus:border-red-600 transition-colors" />
+      </div>
+
+      <button type="button" onclick="window.handlePayment()"
+    class="w-full bg-red-600 py-4 text-white text-xs font-black uppercase tracking-[0.1em] hover:bg-white hover:text-black transition-all flex items-center justify-center gap-3">
+    <i class="fa-solid fa-credit-card"></i>
+    <span>${ui.btn_pay}</span>
+    <i class="fa-solid fa-circle-notch fa-spin loader-icon" style="display:none"></i>
+</button>
+
+      <p class="text-[10px] text-gray-400 font-light uppercase tracking-wider text-center italic">
+        ${ui.note}
+      </p>
+
+    </form>
+  </div>
+</div>
+`,
 };

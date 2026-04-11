@@ -36,7 +36,7 @@ export async function initFullReportsGrid() {
         </div>
       </div>
       
-      <div class="p-6 pt-4 flex flex-col grow">
+      <div class="p-4 flex flex-col grow">
         <span class="text-red-600 text-xs font-bold uppercase tracking-widest mb-2">
           ${report.date}
         </span>

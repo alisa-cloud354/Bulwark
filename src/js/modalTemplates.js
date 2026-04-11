@@ -1,5 +1,3 @@
-import { t, updateAllTranslations } from "./i18n.js"; // Імпартуем нашы інструменты
-
 export const modalTemplates = {
   news: (item) => `
     <div class="flex flex-col">
@@ -43,65 +41,64 @@ export const modalTemplates = {
 <div class="flex flex-col text-left">
   <div class="px-5 md:px-9 py-8">
     
-    <div class="mb-8 border-l-4 border-red-600 pl-6">
-      <h2 class="text-3xl md:text-5xl font-black uppercase italic text-white leading-none tracking-tighter mb-2">
+    <div class="mb-6 pl-2">
+      <h2 class="text-2xl md:text-3xl xl:text-5xl text-red-600 font-black uppercase tracking-tighter mb-4">
         ${item.title}
       </h2>
-      <p class="text-gray-400 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] italic">
+      <p class="text-gray-400 text-xs font-bold tracking-[0.3em] italic">
         ${item.description}
       </p>
     </div>
 
-    <div class="bg-[#050505] border border-white/10 p-6 mb-6 relative overflow-hidden group">
-      <h3 class="text-red-600 text-[10px] font-black uppercase tracking-[0.3em] mb-4 italic">${ui.bank_title}</h3>
-      <div class="space-y-3 text-xs md:text-sm">
-        <div class="flex flex-col md:flex-row md:justify-between border-b border-white/5 pb-2">
-          <span class="text-gray-400 uppercase text-[9px] font-bold">${ui.recipient}</span>
-          <span class="text-white font-mono text-right">${item.bank_details.recipient}</span>
+    <div class="bg-black/80 border border-white/5 p-2 mb-4">
+      <h3 class="text-white text-xs font-black uppercase tracking-[0.3em] mb-4 italic">${ui.bank_title}</h3>
+      <div class="space-y-2 text-xs md:text-sm">
+        <div class="flex flex-col md:flex-row md:justify-between border-b border-t border-white/5 py-1 gap-1">
+          <span class="text-gray-400 uppercase text-xs font-bold">${ui.recipient}</span>
+          <span class="text-white font-mono">${item.bank_details.recipient}</span>
         </div>
-        <div class="flex flex-col md:flex-row md:justify-between border-b border-white/5 pb-2">
-          <span class="text-gray-400 uppercase text-[9px] font-bold">${ui.edrpou}</span>
-          <span class="text-white font-mono text-right">${item.bank_details.edrpou}</span>
+        <div class="flex flex-col md:flex-row md:justify-between border-b border-white/5 py-1 gap-1">
+          <span class="text-gray-400 uppercase text-xs font-bold">${ui.edrpou}</span>
+          <span class="text-white font-mono">${item.bank_details.edrpou}</span>
         </div>
-        <div class="flex flex-col md:flex-row md:justify-between border-b border-white/5 pb-2">
-          <span class="text-gray-400 uppercase text-[9px] font-bold">${ui.bank_name}</span>
-          <span class="text-white font-mono text-right">${item.bank_details.bank_name}</span>
+        <div class="flex flex-col md:flex-row md:justify-between border-b border-white/5 py-1 gap-1">
+          <span class="text-gray-400 uppercase text-xs font-bold">${ui.bank_name}</span>
+          <span class="text-white font-mono">${item.bank_details.bank_name}</span>
         </div>
-        <div class="flex flex-col md:flex-row md:justify-between">
-          <span class="text-gray-400 uppercase text-[9px] font-bold">${ui.swift}</span>
-          <span class="text-white font-mono text-right">${item.bank_details.swift}</span>
+        <div class="flex flex-col md:flex-row md:justify-between py-1">
+          <span class="text-gray-400 uppercase text-xs font-bold">${ui.swift}</span>
+          <span class="text-white font-mono">${item.bank_details.swift}</span>
         </div>
       </div>
     </div>
 
-    <div class="mb-8 bg-[#050505] border border-white/10 p-4 flex items-center justify-between gap-4">
+    <div class="mb-4 bg-black/80 border border-white/5 p-2 flex items-center justify-between gap-4">
       <div class="grow">
-        <span class="text-[9px] text-gray-400 font-black uppercase tracking-widest block mb-1">${ui.purpose_label}</span>
-        <p class="text-sm text-white italic font-bold leading-tight select-all">${item.purpose}</p>
+        <h3 class="text-gray-400 uppercase text-xs font-bold mb-2">${ui.purpose_label}</h3>
+        <p class="text-white font-mono leading-tight select-all">${item.purpose}</p>
       </div>
-      <button onclick="navigator.clipboard.writeText('${item.purpose}');" 
-              class="text-red-600 hover:text-white transition-colors p-2">
-        <i class="fa-regular fa-copy"></i>
-      </button>
+      <button data-copy="${item.purpose}" 
+        class="copy-btn text-red-600 hover:text-white transition-colors px-2">
+  <i class="fa-regular fa-copy"></i>
+</button>
     </div>
 
-    <h3 class="text-gray-400 text-[10px] font-black uppercase tracking-[0.3em] mb-4 italic">${ui.accounts_title}</h3>
-    <div class="space-y-2">
+    <h3 class="text-white text-xs font-black uppercase tracking-[0.3em] mb-4 italic pl-2">${ui.accounts_title}</h3>
+    <div class="grid grid-cols-1 gap-2 mb-6">
       ${item.accounts
         .map((acc) => {
           if (acc.type === "header") {
-            return `<h3 class="text-red-600 text-[10px] font-black uppercase tracking-[0.3em] mt-8 mb-4 italic border-b border-red-600/20 pb-2">${acc.label}</h3>`;
+            return `<h3 class="text-white text-xs font-black uppercase tracking-[0.3em] mt-4 mb-2 italic pl-2">${acc.label}</h3>`;
           }
           return `
-          <div class="flex flex-col md:flex-row md:items-center bg-[#050505] border border-white/10 p-3 gap-3">
-            <div class="flex items-center gap-3 md:w-40 shrink-0">
-              <span class="text-[9px] font-black text-gray-300 uppercase italic">${acc.currency}</span>
-            </div>
-            <div class="flex items-center justify-between grow bg-black/40 p-2 border border-white/5">
-              <code class="text-[10px] md:text-xs text-red-500 font-mono">${acc.value}</code>
-              <button onclick="navigator.clipboard.writeText('${acc.value.replace(/\s/g, "")}');" class="text-gray-500 hover:text-white px-2">
-                <i class="fa-regular fa-copy"></i>
-              </button>
+          <div class="flex flex-col md:flex-row md:items-center bg-[#050505] border border-white/5">
+            <span class="text-xs font-black text-gray-400 md:uppercase md:w-32 p-2">${acc.currency}</span>
+            <div class="flex items-center justify-between grow bg-black/80 p-2 border border-white/5">
+              <code class="text-[9px] md:text-xs text-white font-mono">${acc.value}</code>
+             <button data-copy="${acc.value.replace(/\s/g, "")}" 
+        class="copy-btn text-red-600 hover:text-white transition-colors px-2">
+  <i class="fa-regular fa-copy"></i>
+</button>
             </div>
           </div>
         `;

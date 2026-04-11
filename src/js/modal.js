@@ -28,14 +28,12 @@ export function openUniversalModal(item, type = null) {
     item.ui || (window.donationData ? window.donationData.ui : null);
 
   // 3. ВЫБАР ШАБЛОНА
-  let template;
-  if (type && modalTemplates[type]) {
-    template = modalTemplates[type](item, uiData);
-  } else {
-    template = item.date
-      ? modalTemplates.news(item)
-      : modalTemplates.material(item);
-  }
+  const template =
+    type && modalTemplates[type]
+      ? modalTemplates[type](item, uiData)
+      : item.date
+        ? modalTemplates.news(item)
+        : modalTemplates.material(item);
 
   dynamicContainer.innerHTML = template;
 
@@ -48,7 +46,7 @@ export function openUniversalModal(item, type = null) {
   document.body.style.overflow = "hidden";
 
   // Пераводзім фокус на кнопку закрыцця
-  document.getElementById("close-modal")?.focus();
+  document.getElementById("close-modal")?.focus({ preventScroll: true });
 
   // Прымусова абнаўляем пераклады ўнутры мадалкі пасля ўстаўкі шаблона
   updateAllTranslations();
@@ -58,35 +56,55 @@ function setupInternalLogic(container) {
   const modalContent = container.querySelector("#modal-content");
   const internalNav = container.querySelector("#modal-internal-nav");
 
-  if (!modalContent) return;
+  if (modalContent) {
+    const headings = modalContent.querySelectorAll("h3");
+    if (internalNav && headings.length > 0) {
+      internalNav.innerHTML = Array.from(headings)
+        .map((h3, i) => {
+          const id = `nav-anchor-${i}`;
+          h3.id = id;
+          return `<button data-anchor="${id}" class="text-[9px] md:text-[10px] uppercase font-bold tracking-widest text-white/40 hover:text-red-600 transition-all text-left py-1">${h3.textContent}</button>`;
+        })
+        .join("");
 
-  const headings = modalContent.querySelectorAll("h3");
-  if (internalNav && headings.length > 0) {
-    internalNav.innerHTML = Array.from(headings)
-      .map((h3, i) => {
-        const id = `nav-anchor-${i}`;
-        h3.id = id;
-        return `<button data-anchor="${id}" class="text-[9px] md:text-[10px] uppercase font-bold tracking-widest text-white/40 hover:text-red-600 transition-all text-left py-1">${h3.textContent}</button>`;
-      })
-      .join("");
-
-    internalNav.addEventListener("click", (e) => {
-      const btn = e.target.closest("button");
-      if (btn) {
-        const target = document.getElementById(btn.dataset.anchor);
-        if (target) {
-          const containerRect = container.getBoundingClientRect();
-          const targetRect = target.getBoundingClientRect();
-          container.scrollTo({
-            top: container.scrollTop + targetRect.top - containerRect.top - 20,
-            behavior: "smooth",
-          });
+      internalNav.addEventListener("click", (e) => {
+        const btn = e.target.closest("button");
+        if (btn) {
+          const target = document.getElementById(btn.dataset.anchor);
+          if (target) {
+            const containerRect = container.getBoundingClientRect();
+            const targetRect = target.getBoundingClientRect();
+            container.scrollTo({
+              top:
+                container.scrollTop + targetRect.top - containerRect.top - 20,
+              behavior: "smooth",
+            });
+          }
         }
+      });
+    } else if (internalNav) {
+      internalNav.classList.add("hidden");
+    }
+  }
+
+  container.querySelectorAll(".copy-btn").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const text = btn.dataset.copy;
+      if (!text) return;
+      try {
+        await navigator.clipboard.writeText(text);
+        const icon = btn.querySelector("i");
+        if (icon) {
+          icon.className = "fa-solid fa-check text-green-500";
+          setTimeout(() => {
+            icon.className = "fa-regular fa-copy";
+          }, 2000);
+        }
+      } catch (err) {
+        console.error("Copy failed:", err);
       }
     });
-  } else if (internalNav) {
-    internalNav.classList.add("hidden");
-  }
+  });
 }
 
 export function closeUniversalModal() {

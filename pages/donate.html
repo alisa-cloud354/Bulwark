@@ -2,7 +2,15 @@
 <html lang="be">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9SQTBYS7QR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
+        gtag('config', 'G-9SQTBYS7QR');
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,7 +54,7 @@
                 <div class="flex flex-col mb-6">
                     <div class="flex items-end gap-4 w-full">
                         <span
-                            class="tracking-[0.3em] text-red-600 font-black text-sm leading-tight whitespace-nowrap md:whitespace-normal"
+                            class=" text-red-600 font-black text-sm uppercase leading-tight whitespace-nowrap md:whitespace-normal"
                             data-i18n="donate_page.tag">
                             Дапамагчы
                         </span>
@@ -151,7 +159,7 @@
                                     class="text-xs text-gray-400 font-light leading-relaxed uppercase tracking-wider italic mb-6">
                                     Наўпроставая фінансавая падтрымка нашых абаронцаў праз хуткія плацяжы</p>
                                 <a href="/index.html#donate" data-i18n="donate_page.btn_donate"
-                                    class="mt-auto w-full bg-red-600 py-4 text-xs font-black uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all text-center">Падтрымаць</a>
+                                    class="mt-auto w-full bg-red-600 py-4 text-xs font-black uppercase tracking-[0.1em] hover:bg-white hover:text-black transition-all text-center">Падтрымаць</a>
                             </div>
 
                             <div
@@ -165,7 +173,7 @@
                                     Картай
                                     онлайн / Перавод на рахунак / Крыптавалюты</p>
                                 <a href="/pages/contacts.html" data-i18n="donate_page.btn_requisites"
-                                    class="mt-auto w-full bg-red-600 py-4 text-xs font-black uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all text-center">Глядзець
+                                    class="mt-auto w-full bg-red-600 py-4 text-xs font-black uppercase tracking-[0.1em] hover:bg-white hover:text-black transition-all text-center">Глядзець
                                     рэквізіты</a>
                             </div>
                         </div>
@@ -231,7 +239,7 @@
 
                             <div class="w-full bg-black/80 p-4 md:p-6 border border-white/10 relative shadow-2xl">
 
-                                <p class="text-red-600 mb-6 uppercase font-black text-xs tracking-[0.3em] text-center"
+                                <p class="text-red-600 mb-6 uppercase font-black text-xs tracking-[0.1em] text-center"
                                     data-i18n="donate_page.form.label">
                                     Хочаце супрацоўнічаць? Напішыце
                                 </p>
@@ -269,17 +277,17 @@
                                     </div>
 
                                     <button type="submit"
-                                        class="bg-red-600 py-5 text-white uppercase font-black tracking-[0.3em] text-xs hover:bg-white hover:text-black transition-all shadow-lg flex justify-center items-center gap-3">
+                                        class="bg-red-600 py-5 text-white uppercase font-black tracking-[0.1em] text-xs hover:bg-white hover:text-black transition-all shadow-lg flex justify-center items-center gap-3">
                                         <span data-i18n="donate_page.form.btn_submit">Стаць партнёрам</span>
                                         <i class="fa-solid fa-circle-notch fa-spin loader-icon" aria-hidden="true"
                                             style="display: none !important;"></i>
                                     </button>
                                     <p data-i18n="donate_page.cta_subtext"
-                                        class="text-xs text-gray-400 font-light leading-relaxed uppercase tracking-wider text-center italic ">
+                                        class="text-[10px] text-gray-400 font-light leading-relaxed uppercase tracking-wider text-center italic ">
                                         Мы заўсёды адкрытыя да новых ідэй. Напішыце нам або скарыстайцеся ботам.
                                     </p>
                                     <a href="https://t.me/bulwark_fund_bot" target="_blank" rel="noopener noreferrer"
-                                        class="inline-flex items-center  bg-red-600 py-5 text-white uppercase font-black tracking-[0.3em] text-[10px] md:text-xs hover:bg-white hover:text-black transition-all shadow-lg justify-center gap-2">
+                                        class="inline-flex items-center  bg-red-600 py-5 text-white uppercase font-black tracking-[0.1em] text-[10px] md:text-xs hover:bg-white hover:text-black transition-all shadow-lg justify-center gap-2">
                                         <i class="fa-brands fa-telegram text-xl" aria-hidden="true"></i>
                                         <span data-i18n="donate_page.cta_bot_button">@bulwark_fund_bot</span></a>
                                 </form>
@@ -310,13 +318,7 @@
     <load src="/src/partials/footer.html" />
     <script defer src="/_vercel/insights/script.js"></script>
     <script type="module" src="/src/main.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BJJXM6BRD"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-6BJJXM6BRD');
-    </script>
+
 </body>
 
 </html>

@@ -61,10 +61,10 @@ export async function initMaterials() {
                           ${item.short}
                       </p>
                   </div>
-                  <button class="read-more-btn text-red-600 font-black text-xs tracking-[0.3em] flex items-center gap-3 hover:text-white transition-all group/btn" 
+                  <button class="read-more-btn text-red-600 font-black text-xs uppercase tracking-widest flex items-center gap-1 hover:text-white transition-all group/btn" 
         data-id="${item.id}">
     <span data-i18n="materials.read_more">${t("materials.read_more") || "Чытаць матэрыял"}</span> 
-    <i class="fa-solid fa-arrow-right text-[10px] group-hover/btn:translate-x-2 transition-transform"></i>
+    <i class="fa-solid fa-arrow-right text-xs group-hover/btn:translate-x-2 transition-transform"></i>
 </button>
               </div>
           </div>

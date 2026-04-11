@@ -1,7 +1,6 @@
 /* src/js/i18n.js */
 
 window.currentTranslations = {};
-let currentNews = [];
 let currentSEO = {};
 
 /**
@@ -10,19 +9,19 @@ let currentSEO = {};
  */
 export async function setLanguage(lang) {
   try {
-    // 1. Загружаем асноўны файл перакладаў (кантэнт)
     const mainRes = await fetch(`/locales/${lang}.json`);
     if (!mainRes.ok)
       throw new Error(`Асноўны файл перакладаў не знойдзены: ${lang}`);
     window.currentTranslations = await mainRes.json();
 
-    // 2. Загружаем файл навін для канкрэтнай мовы
     try {
-      const newsRes = await fetch(`/locales/news-${lang}.json`);
-      currentNews = newsRes.ok ? await newsRes.json() : [];
-    } catch (e) {
-      console.warn("Файл навін не знойдзены, выкарыстоўваем пусты масіў");
-      currentNews = [];
+      const seoRes = await fetch(`/locales/seo-${lang}.json`);
+      if (!seoRes.ok)
+        throw new Error(`SEO файл не знойдзены: seo-${lang}.json`);
+      currentSEO = await seoRes.json();
+    } catch {
+      console.error("Памылка загрузкі SEO");
+      currentSEO = {};
     }
 
     // 3. Загружаем файл SEO мета-дадзеных

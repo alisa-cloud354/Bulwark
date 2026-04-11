@@ -148,13 +148,13 @@ async function sendToBackend(formName, formData) {
       body: JSON.stringify({ formName, formData }),
     });
     return response.ok;
-  } catch (error) {
+  } catch {
     return false;
   }
 }
 
 function showToast(message, type = "success") {
-  let container =
+  const container =
     document.getElementById("toast-container") || createToastContainer();
   const toast = document.createElement("div");
   toast.innerText = message;

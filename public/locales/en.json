@@ -416,7 +416,9 @@
       { "name": "LEGAL_SHIELD", "logo": "/img/partners/p2.svg" },
       { "name": "WAR_THERAPY", "logo": "/img/partners/p3.svg" },
       { "name": "VETERAN_CORPS", "logo": "/img/partners/p4.svg" }
-    ]
+    ],
+    "btn_donate_foundation": "Support the Fund",
+    "btn_donate_soldiers": "Support the Fighters"
   },
   "ui": {
     "lang_be": "Belarusian language",

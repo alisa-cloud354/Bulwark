@@ -61,5 +61,16 @@
     "swift": "SWIFT code:",
     "purpose_label": "Payment Purpose (Required):",
     "accounts_title": "Account Numbers"
+  },
+  "payment_ui": {
+    "title": "Card Payment",
+    "select_label": "Purpose:",
+    "option_foundation": "Support the Fund",
+    "option_soldiers": "Support the Fighters",
+    "amount_label": "Amount (UAH):",
+    "amount_placeholder": "For example: 500",
+    "btn_pay": "Pay by Card",
+    "btn_cancel": "Back",
+    "note": "You will be redirected to the secure WayForPay page"
   }
 }

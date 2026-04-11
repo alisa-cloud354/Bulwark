@@ -47,6 +47,7 @@
 <body class="bg-black text-white antialiased">
 
     <load src="/src/partials/header.html" />
+    <load src="/src/partials/modal.html" />
     <load src="/src/partials/mobile-menu.html" />
     <main class="relative min-h-screen w-full bg-black text-white">
         <section id="get-help" class="bg-black text-white overflow-hidden py-8 md:py-12 xl:py-16">
@@ -158,8 +159,8 @@
                                 <p data-i18n="donate_page.donate_direct_text"
                                     class="text-xs text-gray-400 font-light leading-relaxed uppercase tracking-wider italic mb-6">
                                     Наўпроставая фінансавая падтрымка нашых абаронцаў праз хуткія плацяжы</p>
-                                <a href="/index.html#donate" data-i18n="donate_page.btn_donate"
-                                    class="mt-auto w-full bg-red-600 py-4 text-xs font-black uppercase tracking-[0.1em] hover:bg-white hover:text-black transition-all text-center">Падтрымаць</a>
+                                <button id="btn-open-payment" data-i18n="donate_page.btn_donate"
+                                    class="mt-auto w-full bg-red-600 py-4 text-xs font-black uppercase tracking-[0.1em] hover:bg-white hover:text-black transition-all text-center">Падтрымаць</button>
                             </div>
 
                             <div

@@ -1,14 +1,9 @@
 import { openUniversalModal } from "./modal.js";
-import { t } from "./i18n.js";
 
-/**
- * Ініцыялізацыя секцыі данатаў
- */
 export async function initDonationSection() {
   const donationSection = document.querySelector("#donate");
   if (!donationSection) return;
 
-  // Функцыя загрузкі цяпер запісвае дадзеныя ў window.donationData
   async function loadDonationData() {
     try {
       const lang = localStorage.getItem("preferred-lang") || "be";
@@ -23,52 +18,109 @@ export async function initDonationSection() {
             return baseRes.json();
           })();
 
-      // ЗАХОЎВАЕМ ГЛАБАЛЬНА, каб modal.js мог дастаць блок ui
       window.donationData = data;
     } catch (error) {
       console.error("Donation Data Error:", error);
     }
   }
 
-  // 1. Загружаем дадзеныя пры старце
   await loadDonationData();
 
-  // 2. Апрацоўшчык клікаў
   donationSection.addEventListener("click", (e) => {
     const card = e.target.closest("[data-donation-type]");
+    if (!card) return;
 
-    if (card) {
-      const type = card.dataset.donationType;
-      // Бярэм актуальныя дадзеныя з глабальнай пераменнай
-      const item = window.donationData ? window.donationData[type] : null;
+    const type = card.dataset.donationType;
+    const action = e.target.closest("[data-action]")?.dataset.action;
+    const item = window.donationData ? window.donationData[type] : null;
+    if (!item) return;
 
-      if (item) {
-        // Выклікаем мадалку. modal.js сам возьме window.donationData.ui
-        openUniversalModal(item, "donation");
-      }
+    if (action === "pay") {
+      const paymentUi = window.donationData?.payment_ui;
+      if (!paymentUi) return;
+      openUniversalModal(item, "payment");
+    } else {
+      openUniversalModal(item, "donation");
     }
   });
 
-  // 3. Слухаем змену мовы
   window.addEventListener("languageChanged", async () => {
     await loadDonationData();
   });
 }
 
-/**
- * Глабальная функцыя аплаты
- */
-window.handlePayment = (_donationType) => {
-  const amountInput = document.getElementById("custom-amount");
-  const amount = amountInput ? amountInput.value : null;
+// ── Глабальная функцыя аплаты праз WayForPay ──────────────────
+window.handlePayment = async () => {
+  const amountInput = document.getElementById("payment-amount");
+  const typeSelect = document.getElementById("payment-type");
+  const submitBtn = document.querySelector(
+    "#wayforpay-form button[type='submit']",
+  );
+  const loader = submitBtn?.querySelector(".loader-icon");
 
-  if (!amount || amount <= 0) {
-    alert(t("donate.alert_enter_amount"));
-    if (amountInput) amountInput.focus();
+  const amount = amountInput?.value;
+  const donationType = typeSelect?.value || "foundation";
+
+  // Валідацыя сумы
+  if (!amount || parseFloat(amount) <= 0) {
+    amountInput?.focus();
+    amountInput?.classList.add("border-red-600");
+    setTimeout(() => amountInput?.classList.remove("border-red-600"), 2000);
     return;
   }
 
-  alert(
-    `${t("donate.alert_redirect")} ${amount} UAH. ${t("donate.alert_no_gateway")}`,
-  );
+  // Вызначаем назву плацяжу паводле тыпу
+  const donationData = window.donationData;
+  const purpose = donationData?.[donationType]?.purpose || "Благодійний внесок";
+
+  // Паказваем лоадэр
+  if (loader) loader.style.display = "inline-block";
+  if (submitBtn) submitBtn.disabled = true;
+
+  try {
+    // 1. Запытваем подпіс з нашага API
+    const res = await fetch("/api/wayforpay", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ amount, currency: "UAH", purpose, donationType }),
+    });
+
+    const data = await res.json();
+
+    if (!data.success || !data.params) {
+      throw new Error("API не вярнуў параметры");
+    }
+
+    // 2. Ствараем форму і адпраўляем на WayForPay
+    const form = document.createElement("form");
+    form.method = "POST";
+    form.action = "https://secure.wayforpay.com/pay";
+
+    const fields = {
+      ...data.params,
+      "productName[]": data.params.productName,
+      "productCount[]": data.params.productCount,
+      "productPrice[]": data.params.productPrice,
+    };
+
+    // Выдаляем не-масіўныя версіі
+    delete fields.productName;
+    delete fields.productCount;
+    delete fields.productPrice;
+
+    Object.entries(fields).forEach(([key, value]) => {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = key;
+      input.value = value;
+      form.appendChild(input);
+    });
+
+    document.body.appendChild(form);
+    form.submit();
+  } catch (error) {
+    console.error("WayForPay error:", error);
+    if (loader) loader.style.display = "none";
+    if (submitBtn) submitBtn.disabled = false;
+  }
 };

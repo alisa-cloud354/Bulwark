@@ -19,3 +19,4 @@ export default async function handler(req, res) {
   const token = jwt.sign({ email }, JWT_SECRET, { expiresIn: "8h" });
   return res.status(200).json({ success: true, token });
 }
+//камент каб зрабіць рэдэплойй
